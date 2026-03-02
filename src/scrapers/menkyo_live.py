@@ -39,6 +39,9 @@ PREFECTURE_RE = re.compile(
 )
 
 
+MAX_PAGES = 20  # 安全弁
+
+
 class MenkyoLiveScraper(BaseScraper):
     source_name = "menkyo_live"
 
@@ -60,7 +63,7 @@ class MenkyoLiveScraper(BaseScraper):
         plans: list[PlanInfo] = []
         page = 1
 
-        while True:
+        while page <= MAX_PAGES:
             params = {
                 "search": "1",
                 "kibou_month": month,
@@ -107,23 +110,21 @@ class MenkyoLiveScraper(BaseScraper):
     def _parse_search_results(self, soup: BeautifulSoup, month: str) -> list[PlanInfo]:
         plans: list[PlanInfo] = []
 
-        # リスティング要素を検索（li要素のリスト）
-        listings = soup.select("ul li")
-        if not listings:
-            listings = soup.find_all("li")
+        # 実際の検索結果は .profileDes 内のテーブルに含まれる
+        listings = soup.select(".profileDes")
 
-        for li in listings:
-            plan = self._parse_listing(li, month)
+        for item in listings:
+            plan = self._parse_listing(item, month)
             if plan:
                 plans.append(plan)
 
         return plans
 
-    def _parse_listing(self, li: Tag, month: str) -> PlanInfo | None:
-        text = li.get_text(separator="\n", strip=True)
+    def _parse_listing(self, item: Tag, month: str) -> PlanInfo | None:
+        text = item.get_text(separator="\n", strip=True)
 
         # 学校詳細リンクがあるか確認（detail_{ID}.php）
-        detail_link = li.find("a", href=re.compile(r"detail_\d+\.php"))
+        detail_link = item.find("a", href=re.compile(r"detail_\d+\.php"))
         if not detail_link:
             return None
 
@@ -201,17 +202,13 @@ class MenkyoLiveScraper(BaseScraper):
         )
 
     def _has_next_page(self, soup: BeautifulSoup, current_page: int) -> bool:
-        # 「次へ」リンクまたは次のページ番号リンクを探す
-        next_link = soup.find("a", string=re.compile(r"次へ|次の|Next"))
-        if next_link:
-            return True
-
-        # ページ番号リンクで確認
-        page_links = soup.find_all("a", href=re.compile(r"page=\d+"))
-        for link in page_links:
-            href = link.get("href", "")
-            m = re.search(r"page=(\d+)", href)
-            if m and int(m.group(1)) > current_page:
-                return True
-
+        paging = soup.select_one(".pagingList")
+        if not paging:
+            return False
+        for li in paging.select(".selectionOff"):
+            a = li.find("a", href=re.compile(r"page="))
+            if a:
+                m = re.search(r"page=(\d+)", a.get("href", ""))
+                if m and int(m.group(1)) > current_page:
+                    return True
         return False
