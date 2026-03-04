@@ -14,7 +14,7 @@ from datetime import date
 
 from bs4 import BeautifulSoup, Tag
 
-from ..config import TARGET_START_DATE
+from ..config import TARGET_END_DATE, TARGET_START_DATE
 from ..models import PlanInfo
 from .base import BaseScraper
 
@@ -24,8 +24,9 @@ BASE_URL = "https://menkyolive.net"
 SEARCH_URL = f"{BASE_URL}/application_list.php"
 
 TARGET_DATE = date.fromisoformat(TARGET_START_DATE)
-# 7月〜9月をスキャン
-TARGET_MONTHS = ["2026-07", "2026-08", "2026-09"]
+TARGET_END = date.fromisoformat(TARGET_END_DATE)
+# 対象期間に含まれる月のみスキャン
+TARGET_MONTHS = [f"{TARGET_DATE.year}-{m:02d}" for m in range(TARGET_DATE.month, TARGET_END.month + 1)]
 
 # 都道府県パターン
 PREFECTURE_RE = re.compile(
@@ -156,18 +157,27 @@ class MenkyoLiveScraper(BaseScraper):
         except ValueError:
             return None
 
-        if entry_date < TARGET_DATE:
+        if entry_date < TARGET_DATE or entry_date > TARGET_END:
             return None
 
         start_date = entry_date.isoformat()
 
         # 宿泊日数
         duration: int | None = None
-        duration_match = re.search(r"(\d+)日", text)
-        if duration_match:
-            d = int(duration_match.group(1))
-            if 10 <= d <= 30:  # 合宿免許の妥当な日数範囲
-                duration = d
+        for dur_pattern in [
+            r"(?:AT|ＡＴ).*?最短\s*(\d+)\s*日",
+            r"最短\s*(\d+)\s*日",
+            r"(\d+)\s*泊\s*(\d+)\s*日",
+            r"教習期間[：:]\s*(\d+)\s*日",
+            r"(\d+)\s*日間",
+            r"(\d+)\s*日",
+        ]:
+            dur_match = re.search(dur_pattern, text)
+            if dur_match:
+                d = int(dur_match.group(2)) if dur_match.lastindex and dur_match.lastindex >= 2 else int(dur_match.group(1))
+                if 10 <= d <= 30:
+                    duration = d
+                    break
 
         # 部屋タイプ
         room_type = ""

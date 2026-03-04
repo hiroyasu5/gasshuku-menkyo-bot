@@ -8,8 +8,10 @@ from .config import DISCORD_WEBHOOK_URL
 from .models import PlanInfo
 from .notifier import notify_diff, notify_error
 from .scrapers.dream_licence import DreamLicenceScraper
+from .scrapers.island import IslandScraper
 from .scrapers.menkyo_live import MenkyoLiveScraper
 from .scrapers.menkyo084 import Menkyo084Scraper
+from .scrapers.mycom import MycomScraper
 from .storage import compute_diff, load_history, save_history, update_history
 
 logging.basicConfig(
@@ -23,6 +25,8 @@ SCRAPERS = [
     MenkyoLiveScraper,
     DreamLicenceScraper,
     Menkyo084Scraper,
+    MycomScraper,
+    IslandScraper,
 ]
 
 

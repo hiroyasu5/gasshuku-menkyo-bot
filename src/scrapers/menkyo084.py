@@ -16,7 +16,7 @@ from datetime import date
 
 from bs4 import BeautifulSoup
 
-from ..config import TARGET_START_DATE
+from ..config import TARGET_END_DATE, TARGET_START_DATE
 from ..models import PlanInfo
 from .base import BaseScraper
 
@@ -26,6 +26,7 @@ BASE_URL = "https://drivers-license.jp"
 LIST_URL = f"{BASE_URL}/list/"
 
 TARGET_DATE = date.fromisoformat(TARGET_START_DATE)
+TARGET_END = date.fromisoformat(TARGET_END_DATE)
 
 # 都道府県パターン
 PREFECTURE_RE = re.compile(
@@ -129,6 +130,9 @@ class Menkyo084Scraper(BaseScraper):
         # AT入校日カレンダーの解析
         entry_dates = self._extract_entry_dates(soup)
 
+        # 期間（日数）をページから取得
+        duration = self._extract_duration(soup)
+
         if not entry_dates:
             # 入校日カレンダーがない場合、料金期間からプランを作成
             for room_type, seasons in price_data.items():
@@ -140,6 +144,7 @@ class Menkyo084Scraper(BaseScraper):
                             school_name=school_name,
                             location=location,
                             start_date=TARGET_START_DATE,
+                            duration_days=duration,
                             price_min=price,
                             room_type=room_type,
                             detail_url=url,
@@ -152,7 +157,7 @@ class Menkyo084Scraper(BaseScraper):
                 except ValueError:
                     continue
 
-                if entry_date < TARGET_DATE:
+                if entry_date < TARGET_DATE or entry_date > TARGET_END:
                     continue
 
                 for room_type, seasons in price_data.items():
@@ -162,12 +167,34 @@ class Menkyo084Scraper(BaseScraper):
                         school_name=school_name,
                         location=location,
                         start_date=entry_date_str,
+                        duration_days=duration,
                         price_min=price,
                         room_type=room_type,
                         detail_url=url,
                     ))
 
         return plans
+
+    @staticmethod
+    def _extract_duration(soup: BeautifulSoup) -> int | None:
+        """ページテキストから教習期間（日数）を抽出"""
+        text = soup.get_text()
+        # 優先順位高: 「最短N日」「AT最短N日」
+        for pattern in [
+            r"(?:AT|ＡＴ).*?最短\s*(\d+)\s*日",
+            r"最短\s*(\d+)\s*日",
+            r"(\d+)\s*泊\s*(\d+)\s*日",
+            r"教習期間[：:]\s*(\d+)\s*日",
+            r"(\d+)\s*日間",
+            r"(\d+)\s*日",
+        ]:
+            m = re.search(pattern, text)
+            if m:
+                # 「N泊M日」パターンの場合はM日を使う
+                days = int(m.group(2)) if m.lastindex and m.lastindex >= 2 else int(m.group(1))
+                if 10 <= days <= 30:
+                    return days
+        return None
 
     def _extract_room_types(self, soup: BeautifulSoup) -> list[str]:
         rooms: list[str] = []
@@ -250,21 +277,24 @@ class Menkyo084Scraper(BaseScraper):
         return sorted(set(dates))
 
     def _period_includes_target(self, period: str) -> bool:
-        """期間文字列が対象日（7/26以降）を含むか"""
+        """期間文字列が対象期間（7/26〜8/1）と重なるか"""
         # "7/1～9/30" のようなパターン
         m = re.search(r"(\d{1,2})/(\d{1,2})～(\d{1,2})/(\d{1,2})", period)
         if not m:
             return False
         start_month = int(m.group(1))
+        start_day = int(m.group(2))
         end_month = int(m.group(3))
         end_day = int(m.group(4))
 
         try:
-            end_date = date(TARGET_DATE.year, end_month, end_day)
+            period_start = date(TARGET_DATE.year, start_month, start_day)
+            period_end = date(TARGET_DATE.year, end_month, end_day)
         except ValueError:
             return False
 
-        return end_date >= TARGET_DATE and start_month <= 9
+        # 期間が対象範囲と重なるか（period_start <= TARGET_END かつ period_end >= TARGET_DATE）
+        return period_start <= TARGET_END and period_end >= TARGET_DATE
 
     def _get_price_for_date(
         self, target: date, seasons: list[tuple[str, int | None]]

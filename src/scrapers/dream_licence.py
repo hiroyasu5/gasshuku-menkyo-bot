@@ -16,7 +16,7 @@ from xml.etree import ElementTree
 
 from bs4 import BeautifulSoup
 
-from ..config import TARGET_START_DATE
+from ..config import TARGET_END_DATE, TARGET_START_DATE
 from ..models import PlanInfo
 from .base import BaseScraper
 
@@ -27,8 +27,9 @@ SCHOOL_BASE = "https://dream-licence.jp/school"
 AJAX_URL = "https://manage.dream-licence.jp/public/ajax/calendarselect"
 
 TARGET_DATE = date.fromisoformat(TARGET_START_DATE)
-# 7月〜9月をスキャン
-TARGET_MONTHS = [(TARGET_DATE.year, m) for m in (7, 8, 9)]
+TARGET_END = date.fromisoformat(TARGET_END_DATE)
+# 対象期間に含まれる月のみスキャン
+TARGET_MONTHS = [(TARGET_DATE.year, m) for m in range(TARGET_DATE.month, TARGET_END.month + 1)]
 
 
 class DreamLicenceScraper(BaseScraper):
@@ -107,6 +108,9 @@ class DreamLicenceScraper(BaseScraper):
             hotels = [("", "")]
             rooms = [("", "")]
 
+        # ページからデフォルトの教習期間を取得（カレンダーで取れなかった場合のフォールバック用）
+        default_duration = self._extract_duration(soup)
+
         plans: list[PlanInfo] = []
 
         for hotel_id, hotel_name in hotels:
@@ -115,12 +119,31 @@ class DreamLicenceScraper(BaseScraper):
                     new_plans = self._fetch_calendar(
                         slug, school_name, location,
                         hotel_id, room_id, room_name or hotel_name,
-                        year, month, url,
+                        year, month, url, default_duration,
                     )
                     plans.extend(new_plans)
                     time.sleep(0.3)  # リクエスト間隔
 
         return plans
+
+    @staticmethod
+    def _extract_duration(soup: BeautifulSoup) -> int | None:
+        """ページテキストから教習期間（日数）を抽出"""
+        text = soup.get_text()
+        for pattern in [
+            r"(?:AT|ＡＴ).*?最短\s*(\d+)\s*日",
+            r"最短\s*(\d+)\s*日",
+            r"(\d+)\s*泊\s*(\d+)\s*日",
+            r"教習期間[：:]\s*(\d+)\s*日",
+            r"(\d+)\s*日間",
+            r"(\d+)\s*日",
+        ]:
+            m = re.search(pattern, text)
+            if m:
+                days = int(m.group(2)) if m.lastindex and m.lastindex >= 2 else int(m.group(1))
+                if 10 <= days <= 30:
+                    return days
+        return None
 
     def _extract_location(self, soup: BeautifulSoup) -> str:
         # パンくずリストや住所から都道府県を抽出
@@ -172,6 +195,7 @@ class DreamLicenceScraper(BaseScraper):
         year: int,
         month: int,
         detail_url: str,
+        default_duration: int | None = None,
     ) -> list[PlanInfo]:
         params = {
             "school": slug,
@@ -191,7 +215,8 @@ class DreamLicenceScraper(BaseScraper):
             return []
 
         return self._parse_calendar_html(
-            resp.text, school_name, location, room_name, detail_url, year
+            resp.text, school_name, location, room_name, detail_url, year,
+            default_duration,
         )
 
     def _parse_calendar_html(
@@ -202,6 +227,7 @@ class DreamLicenceScraper(BaseScraper):
         room_name: str,
         detail_url: str,
         year: int,
+        default_duration: int | None = None,
     ) -> list[PlanInfo]:
         soup = BeautifulSoup(html, "lxml")
         plans: list[PlanInfo] = []
@@ -226,7 +252,7 @@ class DreamLicenceScraper(BaseScraper):
             except ValueError:
                 continue
 
-            if entry_date < TARGET_DATE:
+            if entry_date < TARGET_DATE or entry_date > TARGET_END:
                 continue
 
             # 満室チェック
@@ -249,7 +275,7 @@ class DreamLicenceScraper(BaseScraper):
                 cells = parent_row.find_all("td")
                 for cell in cells:
                     cell_text = cell.get_text(strip=True)
-                    m = re.match(r"(\d{2})/(\d{2})", cell_text)
+                    m = re.match(r"(\d{1,2})/(\d{1,2})", cell_text)
                     if m:
                         grad_month = int(m.group(1))
                         grad_day = int(m.group(2))
@@ -265,7 +291,7 @@ class DreamLicenceScraper(BaseScraper):
                 school_name=school_name or "不明",
                 location=location,
                 start_date=date_str,
-                duration_days=duration,
+                duration_days=duration or default_duration,
                 price_min=price,
                 room_type=room_name,
                 detail_url=detail_url,
