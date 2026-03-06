@@ -1,6 +1,19 @@
 {
-  "last_updated": "2026-03-06T09:02:17+09:00",
+  "last_updated": "2026-03-07T08:39:49+09:00",
   "plans": {
+    "916582b1ce2c6d0d": {
+      "source": "menkyo_live",
+      "school_name": "千葉県君津モータースクール",
+      "location": "千葉県",
+      "start_date": "2026-07-27",
+      "duration_days": 27,
+      "price_min": null,
+      "room_type": "ツイン",
+      "detail_url": "https://menkyolive.net/detail_14451.php",
+      "first_seen": "2026-03-07",
+      "last_seen": "2026-03-07",
+      "plan_id": "916582b1ce2c6d0d"
+    },
     "77a20537ff71aa43": {
       "source": "menkyo_live",
       "school_name": "岡山県岡山県・沼自動車学校",
@@ -11,7 +24,7 @@
       "room_type": "シングル",
       "detail_url": "https://menkyolive.net/detail_17213.php",
       "first_seen": "2026-03-06",
-      "last_seen": "2026-03-06",
+      "last_seen": "2026-03-07",
       "plan_id": "77a20537ff71aa43"
     },
     "25d29d1a7b7621bd": {
@@ -24,8 +37,34 @@
       "room_type": "シングル",
       "detail_url": "https://menkyolive.net/detail_14945.php",
       "first_seen": "2026-03-05",
-      "last_seen": "2026-03-06",
+      "last_seen": "2026-03-07",
       "plan_id": "25d29d1a7b7621bd"
+    },
+    "af0af78ae7901874": {
+      "source": "dream_licence",
+      "school_name": "東園自動車教習所(普通車AT・MTの料金表)",
+      "location": "",
+      "start_date": "2026-07-28",
+      "duration_days": 14,
+      "price_min": 375000,
+      "room_type": "",
+      "detail_url": "https://dream-licence.jp/school/azumaen/futsusha/",
+      "first_seen": "2026-03-07",
+      "last_seen": "2026-03-07",
+      "plan_id": "af0af78ae7901874"
+    },
+    "0ee92621a65f71c3": {
+      "source": "dream_licence",
+      "school_name": "東園自動車教習所(普通車AT・MTの料金表)",
+      "location": "",
+      "start_date": "2026-07-30",
+      "duration_days": 14,
+      "price_min": 419000,
+      "room_type": "",
+      "detail_url": "https://dream-licence.jp/school/azumaen/futsusha/",
+      "first_seen": "2026-03-07",
+      "last_seen": "2026-03-07",
+      "plan_id": "0ee92621a65f71c3"
     },
     "a1723651531a855b": {
       "source": "dream_licence",
@@ -37,7 +76,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/hainan/futsusha/",
       "first_seen": "2026-03-06",
-      "last_seen": "2026-03-06",
+      "last_seen": "2026-03-07",
       "plan_id": "a1723651531a855b"
     },
     "ac267415a680dc6d": {
@@ -50,8 +89,60 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/hainan/futsusha/",
       "first_seen": "2026-03-06",
-      "last_seen": "2026-03-06",
+      "last_seen": "2026-03-07",
       "plan_id": "ac267415a680dc6d"
+    },
+    "ef85dfca89f63c26": {
+      "source": "dream_licence",
+      "school_name": "はりま自動車教習所(普通車AT・MTの料金表)",
+      "location": "",
+      "start_date": "2026-07-27",
+      "duration_days": 14,
+      "price_min": 352110,
+      "room_type": "",
+      "detail_url": "https://dream-licence.jp/school/harima/futsusha/",
+      "first_seen": "2026-03-07",
+      "last_seen": "2026-03-07",
+      "plan_id": "ef85dfca89f63c26"
+    },
+    "4117e966094f909f": {
+      "source": "dream_licence",
+      "school_name": "はりま自動車教習所(普通車AT・MTの料金表)",
+      "location": "",
+      "start_date": "2026-07-30",
+      "duration_days": 14,
+      "price_min": 352110,
+      "room_type": "",
+      "detail_url": "https://dream-licence.jp/school/harima/futsusha/",
+      "first_seen": "2026-03-07",
+      "last_seen": "2026-03-07",
+      "plan_id": "4117e966094f909f"
+    },
+    "a30f91f9fa46abce": {
+      "source": "dream_licence",
+      "school_name": "一関ファーストドライビングスクール(普通車AT・MTの料金表)",
+      "location": "",
+      "start_date": "2026-07-28",
+      "duration_days": 16,
+      "price_min": 368500,
+      "room_type": "",
+      "detail_url": "https://dream-licence.jp/school/ichinosekidaiichi/futsusha/",
+      "first_seen": "2026-03-07",
+      "last_seen": "2026-03-07",
+      "plan_id": "a30f91f9fa46abce"
+    },
+    "61df272cd65b8666": {
+      "source": "dream_licence",
+      "school_name": "一関ファーストドライビングスクール(普通車AT・MTの料金表)",
+      "location": "",
+      "start_date": "2026-07-30",
+      "duration_days": 16,
+      "price_min": 368500,
+      "room_type": "",
+      "detail_url": "https://dream-licence.jp/school/ichinosekidaiichi/futsusha/",
+      "first_seen": "2026-03-07",
+      "last_seen": "2026-03-07",
+      "plan_id": "61df272cd65b8666"
     },
     "10fc821cbe0ef3b0": {
       "source": "dream_licence",
@@ -63,7 +154,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kouchi/futsusha/",
       "first_seen": "2026-03-06",
-      "last_seen": "2026-03-06",
+      "last_seen": "2026-03-07",
       "plan_id": "10fc821cbe0ef3b0"
     },
     "eefcfad65911d2ce": {
@@ -76,7 +167,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kouchi/futsusha/",
       "first_seen": "2026-03-06",
-      "last_seen": "2026-03-06",
+      "last_seen": "2026-03-07",
       "plan_id": "eefcfad65911d2ce"
     },
     "d68219ecc2cff49f": {
@@ -89,7 +180,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kouchi/futsusha/",
       "first_seen": "2026-03-06",
-      "last_seen": "2026-03-06",
+      "last_seen": "2026-03-07",
       "plan_id": "d68219ecc2cff49f"
     },
     "7d34cab75ad6c4a2": {
@@ -102,7 +193,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kouchi/futsusha/",
       "first_seen": "2026-03-06",
-      "last_seen": "2026-03-06",
+      "last_seen": "2026-03-07",
       "plan_id": "7d34cab75ad6c4a2"
     },
     "29113483e4df54fd": {
@@ -115,7 +206,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/nishio/futsusha/",
       "first_seen": "2026-03-02",
-      "last_seen": "2026-03-06",
+      "last_seen": "2026-03-07",
       "plan_id": "29113483e4df54fd"
     },
     "6502ee7445326da0": {
@@ -128,7 +219,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/nishio/futsusha/",
       "first_seen": "2026-03-02",
-      "last_seen": "2026-03-06",
+      "last_seen": "2026-03-07",
       "plan_id": "6502ee7445326da0"
     },
     "ce25976bed1d1a18": {
@@ -141,7 +232,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/nishio/futsusha/",
       "first_seen": "2026-03-02",
-      "last_seen": "2026-03-06",
+      "last_seen": "2026-03-07",
       "plan_id": "ce25976bed1d1a18"
     },
     "20d57aa9f4b5626c": {
@@ -154,7 +245,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ueji/futsusha/",
       "first_seen": "2026-03-02",
-      "last_seen": "2026-03-06",
+      "last_seen": "2026-03-07",
       "plan_id": "20d57aa9f4b5626c"
     },
     "ec948310353b9329": {
@@ -167,7 +258,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ueji/futsusha/",
       "first_seen": "2026-03-02",
-      "last_seen": "2026-03-06",
+      "last_seen": "2026-03-07",
       "plan_id": "ec948310353b9329"
     },
     "2887639e80fbae05": {
@@ -180,7 +271,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ueji/futsusha/",
       "first_seen": "2026-03-02",
-      "last_seen": "2026-03-06",
+      "last_seen": "2026-03-07",
       "plan_id": "2887639e80fbae05"
     },
     "5e36e9dc38593bb7": {
@@ -193,7 +284,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ueji/futsusha/",
       "first_seen": "2026-03-02",
-      "last_seen": "2026-03-06",
+      "last_seen": "2026-03-07",
       "plan_id": "5e36e9dc38593bb7"
     },
     "f967bff3dd71e56b": {
@@ -206,8 +297,34 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ueji/futsusha/",
       "first_seen": "2026-03-02",
-      "last_seen": "2026-03-06",
+      "last_seen": "2026-03-07",
       "plan_id": "f967bff3dd71e56b"
+    },
+    "3bf418bcb5167c18": {
+      "source": "dream_licence",
+      "school_name": "わきまち自動車学校(普通車AT・MTの料金表)",
+      "location": "",
+      "start_date": "2026-07-28",
+      "duration_days": 15,
+      "price_min": 316800,
+      "room_type": "",
+      "detail_url": "https://dream-licence.jp/school/wakimachi/futsusha/",
+      "first_seen": "2026-03-07",
+      "last_seen": "2026-03-07",
+      "plan_id": "3bf418bcb5167c18"
+    },
+    "431caa5001b86ba0": {
+      "source": "dream_licence",
+      "school_name": "わきまち自動車学校(普通車AT・MTの料金表)",
+      "location": "",
+      "start_date": "2026-07-30",
+      "duration_days": 15,
+      "price_min": 316800,
+      "room_type": "",
+      "detail_url": "https://dream-licence.jp/school/wakimachi/futsusha/",
+      "first_seen": "2026-03-07",
+      "last_seen": "2026-03-07",
+      "plan_id": "431caa5001b86ba0"
     },
     "6af4c441e911fb87": {
       "source": "mycom",
@@ -219,7 +336,7 @@
       "room_type": "不明",
       "detail_url": "https://gasyukumenkyo.com/school/19630/",
       "first_seen": "2026-03-05",
-      "last_seen": "2026-03-06",
+      "last_seen": "2026-03-07",
       "plan_id": "6af4c441e911fb87"
     },
     "19edb10424689634": {
@@ -232,7 +349,7 @@
       "room_type": "",
       "detail_url": "https://ai-menkyo.jp/area/ehime/uwa/",
       "first_seen": "2026-03-05",
-      "last_seen": "2026-03-06",
+      "last_seen": "2026-03-07",
       "plan_id": "19edb10424689634"
     },
     "d46ae48bc15d8b9d": {
@@ -245,7 +362,7 @@
       "room_type": "",
       "detail_url": "https://ai-menkyo.jp/area/ehime/uwa/",
       "first_seen": "2026-03-05",
-      "last_seen": "2026-03-06",
+      "last_seen": "2026-03-07",
       "plan_id": "d46ae48bc15d8b9d"
     }
   }
