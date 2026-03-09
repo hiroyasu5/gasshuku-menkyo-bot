@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-09T08:36:01+09:00",
+  "last_updated": "2026-03-09T10:44:33+09:00",
   "plans": {
     "b011a21eebad7a09": {
       "source": "menkyo_live",
@@ -10,7 +10,7 @@
       "price_min": null,
       "room_type": "ツイン",
       "detail_url": "https://menkyolive.net/detail_15506.php",
-      "first_seen": "2026-03-08",
+      "first_seen": "2026-03-09",
       "last_seen": "2026-03-09",
       "plan_id": "b011a21eebad7a09"
     },
@@ -23,7 +23,7 @@
       "price_min": null,
       "room_type": "ツイン",
       "detail_url": "https://menkyolive.net/detail_17213.php",
-      "first_seen": "2026-03-08",
+      "first_seen": "2026-03-09",
       "last_seen": "2026-03-09",
       "plan_id": "0548c43fb14bce6a"
     },
@@ -36,7 +36,7 @@
       "price_min": null,
       "room_type": "ツイン",
       "detail_url": "https://menkyolive.net/detail_14451.php",
-      "first_seen": "2026-03-07",
+      "first_seen": "2026-03-09",
       "last_seen": "2026-03-09",
       "plan_id": "916582b1ce2c6d0d"
     },
@@ -49,7 +49,7 @@
       "price_min": null,
       "room_type": "シングル",
       "detail_url": "https://menkyolive.net/detail_17213.php",
-      "first_seen": "2026-03-06",
+      "first_seen": "2026-03-09",
       "last_seen": "2026-03-09",
       "plan_id": "77a20537ff71aa43"
     },
@@ -75,7 +75,7 @@
       "price_min": 375000,
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/azumaen/futsusha/",
-      "first_seen": "2026-03-07",
+      "first_seen": "2026-03-09",
       "last_seen": "2026-03-09",
       "plan_id": "af0af78ae7901874"
     },
@@ -88,7 +88,7 @@
       "price_min": 419000,
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/azumaen/futsusha/",
-      "first_seen": "2026-03-07",
+      "first_seen": "2026-03-09",
       "last_seen": "2026-03-09",
       "plan_id": "0ee92621a65f71c3"
     },
@@ -101,7 +101,7 @@
       "price_min": 368500,
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/hainan/futsusha/",
-      "first_seen": "2026-03-06",
+      "first_seen": "2026-03-05",
       "last_seen": "2026-03-09",
       "plan_id": "a1723651531a855b"
     },
@@ -114,7 +114,7 @@
       "price_min": 368500,
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/hainan/futsusha/",
-      "first_seen": "2026-03-06",
+      "first_seen": "2026-03-05",
       "last_seen": "2026-03-09",
       "plan_id": "ac267415a680dc6d"
     },
@@ -127,7 +127,7 @@
       "price_min": 352110,
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/harima/futsusha/",
-      "first_seen": "2026-03-07",
+      "first_seen": "2026-03-09",
       "last_seen": "2026-03-09",
       "plan_id": "ef85dfca89f63c26"
     },
@@ -140,7 +140,7 @@
       "price_min": 352110,
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/harima/futsusha/",
-      "first_seen": "2026-03-07",
+      "first_seen": "2026-03-09",
       "last_seen": "2026-03-09",
       "plan_id": "4117e966094f909f"
     },
@@ -153,7 +153,7 @@
       "price_min": 368500,
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ichinosekidaiichi/futsusha/",
-      "first_seen": "2026-03-07",
+      "first_seen": "2026-03-09",
       "last_seen": "2026-03-09",
       "plan_id": "a30f91f9fa46abce"
     },
@@ -166,7 +166,7 @@
       "price_min": 368500,
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ichinosekidaiichi/futsusha/",
-      "first_seen": "2026-03-07",
+      "first_seen": "2026-03-09",
       "last_seen": "2026-03-09",
       "plan_id": "61df272cd65b8666"
     },
@@ -179,7 +179,7 @@
       "price_min": 360000,
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kouchi/futsusha/",
-      "first_seen": "2026-03-06",
+      "first_seen": "2026-03-05",
       "last_seen": "2026-03-09",
       "plan_id": "10fc821cbe0ef3b0"
     },
@@ -192,7 +192,7 @@
       "price_min": 360000,
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kouchi/futsusha/",
-      "first_seen": "2026-03-06",
+      "first_seen": "2026-03-05",
       "last_seen": "2026-03-09",
       "plan_id": "eefcfad65911d2ce"
     },
@@ -205,7 +205,7 @@
       "price_min": 360000,
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kouchi/futsusha/",
-      "first_seen": "2026-03-06",
+      "first_seen": "2026-03-05",
       "last_seen": "2026-03-09",
       "plan_id": "d68219ecc2cff49f"
     },
@@ -218,7 +218,7 @@
       "price_min": 360000,
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kouchi/futsusha/",
-      "first_seen": "2026-03-06",
+      "first_seen": "2026-03-05",
       "last_seen": "2026-03-09",
       "plan_id": "7d34cab75ad6c4a2"
     },
@@ -270,7 +270,7 @@
       "price_min": null,
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/taku/futsusha/",
-      "first_seen": "2026-03-08",
+      "first_seen": "2026-03-09",
       "last_seen": "2026-03-09",
       "plan_id": "b0a2f16c414c75a3"
     },
@@ -283,7 +283,7 @@
       "price_min": null,
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/taku/futsusha/",
-      "first_seen": "2026-03-08",
+      "first_seen": "2026-03-09",
       "last_seen": "2026-03-09",
       "plan_id": "23afd238cdbce267"
     },
@@ -361,7 +361,7 @@
       "price_min": 285000,
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/uwa/futsusha/",
-      "first_seen": "2026-03-08",
+      "first_seen": "2026-03-09",
       "last_seen": "2026-03-09",
       "plan_id": "3a84bc910ebcdf1e"
     },
@@ -374,7 +374,7 @@
       "price_min": 285000,
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/uwa/futsusha/",
-      "first_seen": "2026-03-08",
+      "first_seen": "2026-03-09",
       "last_seen": "2026-03-09",
       "plan_id": "e0e164e0b22b668e"
     },
@@ -387,7 +387,7 @@
       "price_min": 316800,
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/wakimachi/futsusha/",
-      "first_seen": "2026-03-07",
+      "first_seen": "2026-03-09",
       "last_seen": "2026-03-09",
       "plan_id": "3bf418bcb5167c18"
     },
@@ -400,7 +400,7 @@
       "price_min": 316800,
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/wakimachi/futsusha/",
-      "first_seen": "2026-03-07",
+      "first_seen": "2026-03-09",
       "last_seen": "2026-03-09",
       "plan_id": "431caa5001b86ba0"
     },
@@ -413,7 +413,7 @@
       "price_min": 381700,
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/yonezawa/futsusha/",
-      "first_seen": "2026-03-08",
+      "first_seen": "2026-03-09",
       "last_seen": "2026-03-09",
       "plan_id": "21a2a52f05e429cb"
     },
@@ -426,7 +426,7 @@
       "price_min": 381700,
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/yonezawa/futsusha/",
-      "first_seen": "2026-03-08",
+      "first_seen": "2026-03-09",
       "last_seen": "2026-03-09",
       "plan_id": "be92a94a0faea293"
     },
@@ -439,7 +439,7 @@
       "price_min": 381700,
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/yonezawa/futsusha/",
-      "first_seen": "2026-03-08",
+      "first_seen": "2026-03-09",
       "last_seen": "2026-03-09",
       "plan_id": "8deee08fd463c872"
     },
@@ -452,7 +452,7 @@
       "price_min": 381700,
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/yonezawa/futsusha/",
-      "first_seen": "2026-03-08",
+      "first_seen": "2026-03-09",
       "last_seen": "2026-03-09",
       "plan_id": "345e1c59533aba0b"
     },

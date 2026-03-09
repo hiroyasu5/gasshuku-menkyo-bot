@@ -4,7 +4,9 @@ from __future__ import annotations
 import logging
 import sys
 
-from .config import DISCORD_WEBHOOK_URL
+from datetime import date
+
+from .config import DISCORD_WEBHOOK_URL, TARGET_END_DATE, TARGET_START_DATE
 from .models import PlanInfo
 from .notifier import notify_diff, notify_error
 from .scrapers.dream_licence import DreamLicenceScraper
@@ -30,6 +32,14 @@ SCRAPERS = [
 ]
 
 
+def _is_in_target_range(plan: PlanInfo, start: date, end: date) -> bool:
+    try:
+        d = date.fromisoformat(plan.start_date)
+        return start <= d <= end
+    except ValueError:
+        return False
+
+
 def run() -> None:
     logger.info("=== 合宿免許Bot 実行開始 ===")
 
@@ -52,7 +62,16 @@ def run() -> None:
             logger.error(msg)
             errors.append(msg)
 
-    logger.info("全サイト合計: %d プラン取得", len(all_plans))
+    logger.info("全サイト合計: %d プラン取得（フィルタ前）", len(all_plans))
+
+    # 日付フィルタ（安全弁: 各スクレーパーでもフィルタ済みだが念のため）
+    target_start = date.fromisoformat(TARGET_START_DATE)
+    target_end = date.fromisoformat(TARGET_END_DATE)
+    all_plans = [
+        p for p in all_plans
+        if _is_in_target_range(p, target_start, target_end)
+    ]
+    logger.info("日付フィルタ後: %d プラン", len(all_plans))
 
     # 差分検出
     old_history = load_history()
