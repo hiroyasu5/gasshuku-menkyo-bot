@@ -187,7 +187,7 @@ def notify_diff(diff: DiffResult) -> None:
 
         # 新着プランを入校日順にソートして表にまとめる
         if diff.new_plans:
-            sorted_new = sorted(diff.new_plans, key=lambda p: p.start_date)
+            sorted_new = sorted(diff.new_plans, key=lambda p: (p.start_date, p.price_min if p.price_min is not None else float("inf")))
             rows = [_plan_to_row(p) for p in sorted_new]
             embeds.extend(_split_table_embeds(
                 "🏫 新着プラン", NEW_HEADERS, rows, COLOR_GREEN,
@@ -195,7 +195,7 @@ def notify_diff(diff: DiffResult) -> None:
 
         # 価格変動を入校日順にソートして表にまとめる
         if diff.price_changes:
-            sorted_changes = sorted(diff.price_changes, key=lambda x: x[0].start_date)
+            sorted_changes = sorted(diff.price_changes, key=lambda x: (x[0].start_date, x[0].price_min if x[0].price_min is not None else float("inf")))
             rows = [_price_change_to_row(p, old) for p, old in sorted_changes]
             embeds.extend(_split_table_embeds(
                 "💰 価格変動", CHANGE_HEADERS, rows, COLOR_ORANGE,
