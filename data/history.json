@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-28T08:45:02+09:00",
+  "last_updated": "2026-03-29T08:43:57+09:00",
   "plans": {
     "a322b53dddddc302": {
       "source": "menkyo_live",
@@ -11,7 +11,7 @@
       "room_type": "シングル",
       "detail_url": "https://menkyolive.net/detail_17009.php",
       "first_seen": "2026-03-28",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "a322b53dddddc302"
     },
     "92db7f74331c80e9": {
@@ -24,7 +24,7 @@
       "room_type": "シングル",
       "detail_url": "https://menkyolive.net/detail_19045.php",
       "first_seen": "2026-03-27",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "92db7f74331c80e9"
     },
     "c1fa3d47b26e67d0": {
@@ -37,7 +37,7 @@
       "room_type": "シングル",
       "detail_url": "https://menkyolive.net/detail_14953.php",
       "first_seen": "2026-03-27",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "c1fa3d47b26e67d0"
     },
     "c9fac1c3e6fb8b19": {
@@ -50,7 +50,7 @@
       "room_type": "シングル",
       "detail_url": "https://menkyolive.net/detail_15414.php",
       "first_seen": "2026-03-27",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "c9fac1c3e6fb8b19"
     },
     "9e697128614130e5": {
@@ -63,7 +63,7 @@
       "room_type": "シングル",
       "detail_url": "https://menkyolive.net/detail_19045.php",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "9e697128614130e5"
     },
     "e6075d4cd6332320": {
@@ -76,7 +76,7 @@
       "room_type": "シングル",
       "detail_url": "https://menkyolive.net/detail_14934.php",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "e6075d4cd6332320"
     },
     "1015ebd4e4ee6eda": {
@@ -89,7 +89,7 @@
       "room_type": "シングル",
       "detail_url": "https://menkyolive.net/detail_14821.php",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "1015ebd4e4ee6eda"
     },
     "be10ce4ce8f8fdb3": {
@@ -102,7 +102,7 @@
       "room_type": "ツイン",
       "detail_url": "https://menkyolive.net/detail_17087.php",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "be10ce4ce8f8fdb3"
     },
     "630cb625515b8258": {
@@ -115,7 +115,7 @@
       "room_type": "ツイン",
       "detail_url": "https://menkyolive.net/detail_17009.php",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "630cb625515b8258"
     },
     "74bf812b36d8821c": {
@@ -128,7 +128,7 @@
       "room_type": "ツイン",
       "detail_url": "https://menkyolive.net/detail_14934.php",
       "first_seen": "2026-03-24",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "74bf812b36d8821c"
     },
     "2fc51b2d443ce401": {
@@ -141,7 +141,7 @@
       "room_type": "ツイン",
       "detail_url": "https://menkyolive.net/detail_18011.php",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "2fc51b2d443ce401"
     },
     "e8467a967be8153e": {
@@ -154,7 +154,7 @@
       "room_type": "シングル",
       "detail_url": "https://menkyolive.net/detail_15427.php",
       "first_seen": "2026-03-21",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "e8467a967be8153e"
     },
     "d5a9ba305627bfbf": {
@@ -167,7 +167,7 @@
       "room_type": "シングル",
       "detail_url": "https://menkyolive.net/detail_14933.php",
       "first_seen": "2026-03-20",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "d5a9ba305627bfbf"
     },
     "5674f8d40da00cb6": {
@@ -180,7 +180,7 @@
       "room_type": "シングル",
       "detail_url": "https://menkyolive.net/detail_14946.php",
       "first_seen": "2026-03-20",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "5674f8d40da00cb6"
     },
     "857e68f8ae504d73": {
@@ -193,7 +193,7 @@
       "room_type": "トリプル",
       "detail_url": "https://menkyolive.net/detail_19019.php",
       "first_seen": "2026-03-20",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "857e68f8ae504d73"
     },
     "194e9bda8968d4f8": {
@@ -206,7 +206,7 @@
       "room_type": "相部屋",
       "detail_url": "https://menkyolive.net/detail_14919.php",
       "first_seen": "2026-03-16",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "194e9bda8968d4f8"
     },
     "114ae049c8b4a3c5": {
@@ -219,7 +219,7 @@
       "room_type": "シングル",
       "detail_url": "https://menkyolive.net/detail_19045.php",
       "first_seen": "2026-03-10",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "114ae049c8b4a3c5"
     },
     "b011a21eebad7a09": {
@@ -232,7 +232,7 @@
       "room_type": "ツイン",
       "detail_url": "https://menkyolive.net/detail_15506.php",
       "first_seen": "2026-03-09",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "b011a21eebad7a09"
     },
     "0548c43fb14bce6a": {
@@ -245,7 +245,7 @@
       "room_type": "ツイン",
       "detail_url": "https://menkyolive.net/detail_17213.php",
       "first_seen": "2026-03-09",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "0548c43fb14bce6a"
     },
     "916582b1ce2c6d0d": {
@@ -258,7 +258,7 @@
       "room_type": "ツイン",
       "detail_url": "https://menkyolive.net/detail_14451.php",
       "first_seen": "2026-03-09",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "916582b1ce2c6d0d"
     },
     "77a20537ff71aa43": {
@@ -271,7 +271,7 @@
       "room_type": "シングル",
       "detail_url": "https://menkyolive.net/detail_17213.php",
       "first_seen": "2026-03-09",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "77a20537ff71aa43"
     },
     "25d29d1a7b7621bd": {
@@ -284,7 +284,7 @@
       "room_type": "シングル",
       "detail_url": "https://menkyolive.net/detail_14945.php",
       "first_seen": "2026-03-05",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "25d29d1a7b7621bd"
     },
     "4a8c3b94df76ad79": {
@@ -297,7 +297,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/amakusa/futsusha/",
       "first_seen": "2026-03-24",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "4a8c3b94df76ad79"
     },
     "af0af78ae7901874": {
@@ -310,7 +310,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/azumaen/futsusha/",
       "first_seen": "2026-03-09",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "af0af78ae7901874"
     },
     "0ee92621a65f71c3": {
@@ -323,7 +323,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/azumaen/futsusha/",
       "first_seen": "2026-03-09",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "0ee92621a65f71c3"
     },
     "d4ae74f0415a6346": {
@@ -336,7 +336,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/fukuyama/futsusha/",
       "first_seen": "2026-03-20",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "d4ae74f0415a6346"
     },
     "a39a837d24be5c72": {
@@ -349,7 +349,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/fukuyama/futsusha/",
       "first_seen": "2026-03-20",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "a39a837d24be5c72"
     },
     "a1723651531a855b": {
@@ -362,7 +362,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/hainan/futsusha/",
       "first_seen": "2026-03-05",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "a1723651531a855b"
     },
     "ac267415a680dc6d": {
@@ -375,7 +375,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/hainan/futsusha/",
       "first_seen": "2026-03-05",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "ac267415a680dc6d"
     },
     "ef85dfca89f63c26": {
@@ -388,7 +388,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/harima/futsusha/",
       "first_seen": "2026-03-09",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "ef85dfca89f63c26"
     },
     "4117e966094f909f": {
@@ -401,7 +401,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/harima/futsusha/",
       "first_seen": "2026-03-09",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "4117e966094f909f"
     },
     "a30f91f9fa46abce": {
@@ -414,7 +414,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ichinosekidaiichi/futsusha/",
       "first_seen": "2026-03-09",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "a30f91f9fa46abce"
     },
     "61df272cd65b8666": {
@@ -427,7 +427,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ichinosekidaiichi/futsusha/",
       "first_seen": "2026-03-09",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "61df272cd65b8666"
     },
     "10fc821cbe0ef3b0": {
@@ -440,7 +440,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kouchi/futsusha/",
       "first_seen": "2026-03-05",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "10fc821cbe0ef3b0"
     },
     "eefcfad65911d2ce": {
@@ -453,7 +453,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kouchi/futsusha/",
       "first_seen": "2026-03-05",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "eefcfad65911d2ce"
     },
     "d68219ecc2cff49f": {
@@ -466,7 +466,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kouchi/futsusha/",
       "first_seen": "2026-03-05",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "d68219ecc2cff49f"
     },
     "7d34cab75ad6c4a2": {
@@ -479,7 +479,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kouchi/futsusha/",
       "first_seen": "2026-03-05",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "7d34cab75ad6c4a2"
     },
     "7d72659118b3e932": {
@@ -492,7 +492,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/mineyama/futsusha/",
       "first_seen": "2026-03-19",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "7d72659118b3e932"
     },
     "6e05bb14320247cf": {
@@ -505,7 +505,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/muikamachi/futsusha/",
       "first_seen": "2026-03-14",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "6e05bb14320247cf"
     },
     "fa87475637a91e26": {
@@ -518,7 +518,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/muikamachi/futsusha/",
       "first_seen": "2026-03-14",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "fa87475637a91e26"
     },
     "ce198a8823a91566": {
@@ -531,7 +531,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/niigata/futsusha/",
       "first_seen": "2026-03-20",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "ce198a8823a91566"
     },
     "997773cac3324363": {
@@ -544,7 +544,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/niigata/futsusha/",
       "first_seen": "2026-03-20",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "997773cac3324363"
     },
     "71463566e84c2793": {
@@ -557,7 +557,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/niigata/futsusha/",
       "first_seen": "2026-03-20",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "71463566e84c2793"
     },
     "7828fcf0ce13343c": {
@@ -570,7 +570,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/niigata/futsusha/",
       "first_seen": "2026-03-20",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "7828fcf0ce13343c"
     },
     "a6d344cd611e45d8": {
@@ -583,7 +583,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/niigatachuo/futsusha/",
       "first_seen": "2026-03-25",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "a6d344cd611e45d8"
     },
     "00d07d3f8b2e7b4c": {
@@ -596,7 +596,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/niigatachuo/futsusha/",
       "first_seen": "2026-03-25",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "00d07d3f8b2e7b4c"
     },
     "bb418a26407efe76": {
@@ -609,7 +609,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/niigatachuo/futsusha/",
       "first_seen": "2026-03-25",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "bb418a26407efe76"
     },
     "73a5ee1ab192c4c9": {
@@ -622,7 +622,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/niigatachuo/futsusha/",
       "first_seen": "2026-03-25",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "73a5ee1ab192c4c9"
     },
     "29113483e4df54fd": {
@@ -635,7 +635,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/nishio/futsusha/",
       "first_seen": "2026-03-02",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "29113483e4df54fd"
     },
     "6502ee7445326da0": {
@@ -648,7 +648,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/nishio/futsusha/",
       "first_seen": "2026-03-02",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "6502ee7445326da0"
     },
     "ce25976bed1d1a18": {
@@ -661,7 +661,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/nishio/futsusha/",
       "first_seen": "2026-03-02",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "ce25976bed1d1a18"
     },
     "f4a5ffaad1b30d7a": {
@@ -674,7 +674,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/obihirodaiichi/futsusha/",
       "first_seen": "2026-03-12",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "f4a5ffaad1b30d7a"
     },
     "0a7c6a80f938e912": {
@@ -687,7 +687,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/semmaya/futsusha/",
       "first_seen": "2026-03-20",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "0a7c6a80f938e912"
     },
     "f4bd942ede981da2": {
@@ -700,7 +700,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/semmaya/futsusha/",
       "first_seen": "2026-03-20",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "f4bd942ede981da2"
     },
     "53b91f264768e142": {
@@ -713,7 +713,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/sohgohkikugawa/futsusha/",
       "first_seen": "2026-03-12",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "53b91f264768e142"
     },
     "8684f7bb057b63ae": {
@@ -726,7 +726,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/sohgohkikugawa/futsusha/",
       "first_seen": "2026-03-12",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "8684f7bb057b63ae"
     },
     "6ec881ac29ec5cf2": {
@@ -739,7 +739,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/takehara/futsusha/",
       "first_seen": "2026-03-11",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "6ec881ac29ec5cf2"
     },
     "210bc639e6e52b3b": {
@@ -752,7 +752,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/takehara/futsusha/",
       "first_seen": "2026-03-11",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "210bc639e6e52b3b"
     },
     "81182cbfcf38bfa6": {
@@ -765,7 +765,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/takehara/futsusha/",
       "first_seen": "2026-03-11",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "81182cbfcf38bfa6"
     },
     "e8ad895c96a476ed": {
@@ -778,7 +778,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/takehara/futsusha/",
       "first_seen": "2026-03-11",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "e8ad895c96a476ed"
     },
     "b0a2f16c414c75a3": {
@@ -791,7 +791,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/taku/futsusha/",
       "first_seen": "2026-03-09",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "b0a2f16c414c75a3"
     },
     "23afd238cdbce267": {
@@ -804,7 +804,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/taku/futsusha/",
       "first_seen": "2026-03-09",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "23afd238cdbce267"
     },
     "20d57aa9f4b5626c": {
@@ -817,7 +817,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ueji/futsusha/",
       "first_seen": "2026-03-02",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "20d57aa9f4b5626c"
     },
     "ec948310353b9329": {
@@ -830,7 +830,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ueji/futsusha/",
       "first_seen": "2026-03-02",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "ec948310353b9329"
     },
     "2887639e80fbae05": {
@@ -843,7 +843,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ueji/futsusha/",
       "first_seen": "2026-03-02",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "2887639e80fbae05"
     },
     "5e36e9dc38593bb7": {
@@ -856,7 +856,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ueji/futsusha/",
       "first_seen": "2026-03-02",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "5e36e9dc38593bb7"
     },
     "f967bff3dd71e56b": {
@@ -869,7 +869,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ueji/futsusha/",
       "first_seen": "2026-03-02",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "f967bff3dd71e56b"
     },
     "3a84bc910ebcdf1e": {
@@ -882,7 +882,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/uwa/futsusha/",
       "first_seen": "2026-03-09",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "3a84bc910ebcdf1e"
     },
     "e0e164e0b22b668e": {
@@ -895,7 +895,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/uwa/futsusha/",
       "first_seen": "2026-03-09",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "e0e164e0b22b668e"
     },
     "3bf418bcb5167c18": {
@@ -908,7 +908,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/wakimachi/futsusha/",
       "first_seen": "2026-03-09",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "3bf418bcb5167c18"
     },
     "431caa5001b86ba0": {
@@ -921,7 +921,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/wakimachi/futsusha/",
       "first_seen": "2026-03-09",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "431caa5001b86ba0"
     },
     "21a2a52f05e429cb": {
@@ -934,7 +934,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/yonezawa/futsusha/",
       "first_seen": "2026-03-09",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "21a2a52f05e429cb"
     },
     "be92a94a0faea293": {
@@ -947,7 +947,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/yonezawa/futsusha/",
       "first_seen": "2026-03-09",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "be92a94a0faea293"
     },
     "8deee08fd463c872": {
@@ -960,7 +960,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/yonezawa/futsusha/",
       "first_seen": "2026-03-09",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "8deee08fd463c872"
     },
     "345e1c59533aba0b": {
@@ -973,7 +973,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/yonezawa/futsusha/",
       "first_seen": "2026-03-09",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "345e1c59533aba0b"
     },
     "0f8e90611be7d2a0": {
@@ -986,7 +986,7 @@
       "room_type": "自炊ツイン",
       "detail_url": "https://drivers-license.jp/school/tsuruga/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "0f8e90611be7d2a0"
     },
     "aea95a3f5f2c64a2": {
@@ -999,7 +999,7 @@
       "room_type": "自炊シングル",
       "detail_url": "https://drivers-license.jp/school/tsuruga/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "aea95a3f5f2c64a2"
     },
     "8556af5b75c74a52": {
@@ -1012,7 +1012,7 @@
       "room_type": "ホテルシングルＣ(食事なし)",
       "detail_url": "https://drivers-license.jp/school/tsuruga/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "8556af5b75c74a52"
     },
     "b63d02834940ed14": {
@@ -1025,7 +1025,7 @@
       "room_type": "ホテルツイン",
       "detail_url": "https://drivers-license.jp/school/tsuruga/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "b63d02834940ed14"
     },
     "1fa0ee6b4c995a6c": {
@@ -1038,7 +1038,7 @@
       "room_type": "ホテルシングルA",
       "detail_url": "https://drivers-license.jp/school/tsuruga/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "1fa0ee6b4c995a6c"
     },
     "676a753fa3b41a63": {
@@ -1051,7 +1051,7 @@
       "room_type": "ホテルシングルＢ",
       "detail_url": "https://drivers-license.jp/school/tsuruga/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "676a753fa3b41a63"
     },
     "a3fe27f8188b8a4f": {
@@ -1064,7 +1064,7 @@
       "room_type": "自炊ツイン（３食なし）",
       "detail_url": "https://drivers-license.jp/school/obama/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "a3fe27f8188b8a4f"
     },
     "f72de0e422b1fb2c": {
@@ -1077,7 +1077,7 @@
       "room_type": "自炊シングル（３食なし）",
       "detail_url": "https://drivers-license.jp/school/obama/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "f72de0e422b1fb2c"
     },
     "3ccf86b78133d81a": {
@@ -1090,7 +1090,7 @@
       "room_type": "ホテルツイン（３食なし）",
       "detail_url": "https://drivers-license.jp/school/obama/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "3ccf86b78133d81a"
     },
     "8cbc570075dc3260": {
@@ -1103,7 +1103,7 @@
       "room_type": "グループユースＡ（4名以上）（朝・夕食のみセット）",
       "detail_url": "https://drivers-license.jp/school/obama/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "8cbc570075dc3260"
     },
     "83c4348d38b87088": {
@@ -1116,7 +1116,7 @@
       "room_type": "グループユースＢ（4名以上）（朝・夕食のみセット）",
       "detail_url": "https://drivers-license.jp/school/obama/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "83c4348d38b87088"
     },
     "86487728d06b4c6d": {
@@ -1129,7 +1129,7 @@
       "room_type": "トリプルＡ・ツインＡ(朝・夕食のみセット）",
       "detail_url": "https://drivers-license.jp/school/obama/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "86487728d06b4c6d"
     },
     "2a40af46e05cf7c2": {
@@ -1142,7 +1142,7 @@
       "room_type": "トリプルＢ・ツインＢ(朝・夕食のみセット）",
       "detail_url": "https://drivers-license.jp/school/obama/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "2a40af46e05cf7c2"
     },
     "fdd93163dd354453": {
@@ -1155,7 +1155,7 @@
       "room_type": "シングルＡ(朝・夕食のみセット）",
       "detail_url": "https://drivers-license.jp/school/obama/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "fdd93163dd354453"
     },
     "6ecd18aa5d287b3a": {
@@ -1168,7 +1168,7 @@
       "room_type": "自炊ツイン（３食なし）",
       "detail_url": "https://drivers-license.jp/school/obama/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "6ecd18aa5d287b3a"
     },
     "361417c0a50e1186": {
@@ -1181,7 +1181,7 @@
       "room_type": "自炊シングル（３食なし）",
       "detail_url": "https://drivers-license.jp/school/obama/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "361417c0a50e1186"
     },
     "83f5b773a0cdd134": {
@@ -1194,7 +1194,7 @@
       "room_type": "ホテルツイン（３食なし）",
       "detail_url": "https://drivers-license.jp/school/obama/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "83f5b773a0cdd134"
     },
     "30e016919ca004cf": {
@@ -1207,7 +1207,7 @@
       "room_type": "グループユースＡ（4名以上）（朝・夕食のみセット）",
       "detail_url": "https://drivers-license.jp/school/obama/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "30e016919ca004cf"
     },
     "1a89299da702ad6f": {
@@ -1220,7 +1220,7 @@
       "room_type": "グループユースＢ（4名以上）（朝・夕食のみセット）",
       "detail_url": "https://drivers-license.jp/school/obama/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "1a89299da702ad6f"
     },
     "962969c89af4a68a": {
@@ -1233,7 +1233,7 @@
       "room_type": "トリプルＡ・ツインＡ(朝・夕食のみセット）",
       "detail_url": "https://drivers-license.jp/school/obama/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "962969c89af4a68a"
     },
     "884efc0098e6cc6f": {
@@ -1246,7 +1246,7 @@
       "room_type": "トリプルＢ・ツインＢ(朝・夕食のみセット）",
       "detail_url": "https://drivers-license.jp/school/obama/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "884efc0098e6cc6f"
     },
     "527eb0e1a7385011": {
@@ -1259,7 +1259,7 @@
       "room_type": "シングルＡ(朝・夕食のみセット）",
       "detail_url": "https://drivers-license.jp/school/obama/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "527eb0e1a7385011"
     },
     "008572eb916c29ae": {
@@ -1272,7 +1272,7 @@
       "room_type": "ツイン・シングル(昼・夕食のみセット）",
       "detail_url": "https://drivers-license.jp/school/komatsu/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "008572eb916c29ae"
     },
     "461c530efd264533": {
@@ -1285,7 +1285,7 @@
       "room_type": "ツイン・シングル(昼・夕食のみセット）",
       "detail_url": "https://drivers-license.jp/school/komatsu/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "461c530efd264533"
     },
     "65d42a4f98b5560d": {
@@ -1298,7 +1298,7 @@
       "room_type": "自炊マンショントリプル(昼食のみセット）",
       "detail_url": "https://drivers-license.jp/school/magio_wakayama/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "65d42a4f98b5560d"
     },
     "2082b723e073e042": {
@@ -1311,7 +1311,7 @@
       "room_type": "自炊マンションツイン（昼食のみセット）",
       "detail_url": "https://drivers-license.jp/school/magio_wakayama/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "2082b723e073e042"
     },
     "dcdb93958396d8a8": {
@@ -1324,7 +1324,7 @@
       "room_type": "ホテルツイン",
       "detail_url": "https://drivers-license.jp/school/magio_wakayama/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "dcdb93958396d8a8"
     },
     "b1a6b34897cef5bd": {
@@ -1337,7 +1337,7 @@
       "room_type": "マンションシングル",
       "detail_url": "https://drivers-license.jp/school/magio_wakayama/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "b1a6b34897cef5bd"
     },
     "e711bc3c56c45e1a": {
@@ -1350,7 +1350,7 @@
       "room_type": "ホテルシングル",
       "detail_url": "https://drivers-license.jp/school/magio_wakayama/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "e711bc3c56c45e1a"
     },
     "56dd002717fed3db": {
@@ -1363,7 +1363,7 @@
       "room_type": "自炊マンショントリプル(昼食のみセット）",
       "detail_url": "https://drivers-license.jp/school/magio_wakayama/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "56dd002717fed3db"
     },
     "b21638f79b2b2030": {
@@ -1376,7 +1376,7 @@
       "room_type": "自炊マンションツイン（昼食のみセット）",
       "detail_url": "https://drivers-license.jp/school/magio_wakayama/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "b21638f79b2b2030"
     },
     "1b29d6e01df67d2e": {
@@ -1389,7 +1389,7 @@
       "room_type": "ホテルツイン",
       "detail_url": "https://drivers-license.jp/school/magio_wakayama/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "1b29d6e01df67d2e"
     },
     "55a786bdeb1ddcaf": {
@@ -1402,7 +1402,7 @@
       "room_type": "マンションシングル",
       "detail_url": "https://drivers-license.jp/school/magio_wakayama/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "55a786bdeb1ddcaf"
     },
     "9c601a7b828d2f91": {
@@ -1415,7 +1415,7 @@
       "room_type": "ホテルシングル",
       "detail_url": "https://drivers-license.jp/school/magio_wakayama/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "9c601a7b828d2f91"
     },
     "2390a09f5215859c": {
@@ -1428,7 +1428,7 @@
       "room_type": "レギュラー",
       "detail_url": "https://drivers-license.jp/school/sanin_chuou/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "2390a09f5215859c"
     },
     "970ef32c2ade86ea": {
@@ -1441,7 +1441,7 @@
       "room_type": "ホテルツイン(女性）ホテルシングル",
       "detail_url": "https://drivers-license.jp/school/sanin_chuou/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "970ef32c2ade86ea"
     },
     "d83bcbfe25b84ebe": {
@@ -1454,7 +1454,7 @@
       "room_type": "レギュラー",
       "detail_url": "https://drivers-license.jp/school/sanin_chuou/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "d83bcbfe25b84ebe"
     },
     "789ff9a04c5740ce": {
@@ -1467,7 +1467,7 @@
       "room_type": "ホテルツイン(女性）ホテルシングル",
       "detail_url": "https://drivers-license.jp/school/sanin_chuou/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "789ff9a04c5740ce"
     },
     "e484616617e23940": {
@@ -1480,7 +1480,7 @@
       "room_type": "ホテルツインA",
       "detail_url": "https://drivers-license.jp/school/tottori_tobu/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "e484616617e23940"
     },
     "72b8f75ad668588a": {
@@ -1493,7 +1493,7 @@
       "room_type": "ホテルシングルA",
       "detail_url": "https://drivers-license.jp/school/tottori_tobu/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "72b8f75ad668588a"
     },
     "0f0cc330290b3366": {
@@ -1506,7 +1506,7 @@
       "room_type": "ホテルツインB（女性）",
       "detail_url": "https://drivers-license.jp/school/tottori_tobu/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "0f0cc330290b3366"
     },
     "278ee32aea54c826": {
@@ -1519,7 +1519,7 @@
       "room_type": "ホテルシングルB",
       "detail_url": "https://drivers-license.jp/school/tottori_tobu/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "278ee32aea54c826"
     },
     "4bb8726db1b56635": {
@@ -1532,7 +1532,7 @@
       "room_type": "ホテルシングルC（女性）",
       "detail_url": "https://drivers-license.jp/school/tottori_tobu/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "4bb8726db1b56635"
     },
     "41bf545d400e98b0": {
@@ -1545,7 +1545,7 @@
       "room_type": "ホテルツインA",
       "detail_url": "https://drivers-license.jp/school/tottori_tobu/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "41bf545d400e98b0"
     },
     "c3f5cd01496514dc": {
@@ -1558,7 +1558,7 @@
       "room_type": "ホテルシングルA",
       "detail_url": "https://drivers-license.jp/school/tottori_tobu/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "c3f5cd01496514dc"
     },
     "68951e124c943021": {
@@ -1571,7 +1571,7 @@
       "room_type": "ホテルツインB（女性）",
       "detail_url": "https://drivers-license.jp/school/tottori_tobu/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "68951e124c943021"
     },
     "f1fae0933b67397a": {
@@ -1584,7 +1584,7 @@
       "room_type": "ホテルシングルB",
       "detail_url": "https://drivers-license.jp/school/tottori_tobu/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "f1fae0933b67397a"
     },
     "02df7e806f836ae5": {
@@ -1597,7 +1597,7 @@
       "room_type": "ホテルシングルC（女性）",
       "detail_url": "https://drivers-license.jp/school/tottori_tobu/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "02df7e806f836ae5"
     },
     "0cbbbb20adb4c4a3": {
@@ -1610,7 +1610,7 @@
       "room_type": "ホテルツインA",
       "detail_url": "https://drivers-license.jp/school/tottori_tobu/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "0cbbbb20adb4c4a3"
     },
     "60549e03a5a8f7c9": {
@@ -1623,7 +1623,7 @@
       "room_type": "ホテルシングルA",
       "detail_url": "https://drivers-license.jp/school/tottori_tobu/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "60549e03a5a8f7c9"
     },
     "7732a934bc908105": {
@@ -1636,7 +1636,7 @@
       "room_type": "ホテルツインB（女性）",
       "detail_url": "https://drivers-license.jp/school/tottori_tobu/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "7732a934bc908105"
     },
     "7698c1de5aadc4b1": {
@@ -1649,7 +1649,7 @@
       "room_type": "ホテルシングルB",
       "detail_url": "https://drivers-license.jp/school/tottori_tobu/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "7698c1de5aadc4b1"
     },
     "e92ee59a476bd0b4": {
@@ -1662,7 +1662,7 @@
       "room_type": "ホテルシングルC（女性）",
       "detail_url": "https://drivers-license.jp/school/tottori_tobu/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "e92ee59a476bd0b4"
     },
     "e02db37ec23f7e0b": {
@@ -1675,7 +1675,7 @@
       "room_type": "ホテルツインA",
       "detail_url": "https://drivers-license.jp/school/tottori_tobu/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "e02db37ec23f7e0b"
     },
     "ad19d836f36dc200": {
@@ -1688,7 +1688,7 @@
       "room_type": "ホテルシングルA",
       "detail_url": "https://drivers-license.jp/school/tottori_tobu/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "ad19d836f36dc200"
     },
     "12e1c8d044c00aa2": {
@@ -1701,7 +1701,7 @@
       "room_type": "ホテルツインB（女性）",
       "detail_url": "https://drivers-license.jp/school/tottori_tobu/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "12e1c8d044c00aa2"
     },
     "6f0a0238b79b3214": {
@@ -1714,7 +1714,7 @@
       "room_type": "ホテルシングルB",
       "detail_url": "https://drivers-license.jp/school/tottori_tobu/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "6f0a0238b79b3214"
     },
     "f6541b1d23ba275e": {
@@ -1727,7 +1727,7 @@
       "room_type": "ホテルシングルC（女性）",
       "detail_url": "https://drivers-license.jp/school/tottori_tobu/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "f6541b1d23ba275e"
     },
     "d6df10a0e9d82464": {
@@ -1740,7 +1740,7 @@
       "room_type": "ホテルツインA",
       "detail_url": "https://drivers-license.jp/school/tottori_tobu/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "d6df10a0e9d82464"
     },
     "34cd55a5b2e8b082": {
@@ -1753,7 +1753,7 @@
       "room_type": "ホテルシングルA",
       "detail_url": "https://drivers-license.jp/school/tottori_tobu/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "34cd55a5b2e8b082"
     },
     "1f5446bc9acc1718": {
@@ -1766,7 +1766,7 @@
       "room_type": "ホテルツインB（女性）",
       "detail_url": "https://drivers-license.jp/school/tottori_tobu/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "1f5446bc9acc1718"
     },
     "55fcf098067dbea0": {
@@ -1779,7 +1779,7 @@
       "room_type": "ホテルシングルB",
       "detail_url": "https://drivers-license.jp/school/tottori_tobu/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "55fcf098067dbea0"
     },
     "8d1876e917ff0045": {
@@ -1792,7 +1792,7 @@
       "room_type": "ホテルシングルC（女性）",
       "detail_url": "https://drivers-license.jp/school/tottori_tobu/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "8d1876e917ff0045"
     },
     "56df8611ecd35623": {
@@ -1805,7 +1805,7 @@
       "room_type": "レギュラー",
       "detail_url": "https://drivers-license.jp/school/binan/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "56df8611ecd35623"
     },
     "536ce52d94c25862": {
@@ -1818,7 +1818,7 @@
       "room_type": "ツイン",
       "detail_url": "https://drivers-license.jp/school/binan/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "536ce52d94c25862"
     },
     "eb19066cc1a42c40": {
@@ -1831,7 +1831,7 @@
       "room_type": "シングル",
       "detail_url": "https://drivers-license.jp/school/binan/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "eb19066cc1a42c40"
     },
     "3cdc70c4cf142ac0": {
@@ -1844,7 +1844,7 @@
       "room_type": "レギュラー",
       "detail_url": "https://drivers-license.jp/school/binan/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "3cdc70c4cf142ac0"
     },
     "e1586b02e583bb5c": {
@@ -1857,7 +1857,7 @@
       "room_type": "ツイン",
       "detail_url": "https://drivers-license.jp/school/binan/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "e1586b02e583bb5c"
     },
     "731aef233f1ad587": {
@@ -1870,7 +1870,7 @@
       "room_type": "シングル",
       "detail_url": "https://drivers-license.jp/school/binan/",
       "first_seen": "2026-03-23",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "731aef233f1ad587"
     },
     "6d83f96ef968e24d": {
@@ -1883,7 +1883,7 @@
       "room_type": "シングル(食事なし）(※1）(※2）",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_emukae/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "6d83f96ef968e24d"
     },
     "96d5f812ee10ce9b": {
@@ -1896,7 +1896,7 @@
       "room_type": "レギュラー",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_emukae/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "96d5f812ee10ce9b"
     },
     "8169b01be31b35d8": {
@@ -1909,7 +1909,7 @@
       "room_type": "ツイン",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_emukae/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "8169b01be31b35d8"
     },
     "d32539ee4843c837": {
@@ -1922,7 +1922,7 @@
       "room_type": "シングル",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_emukae/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "d32539ee4843c837"
     },
     "0424c444dcb4d6f7": {
@@ -1935,7 +1935,7 @@
       "room_type": "シングル(食事なし）(※1）(※2）",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_emukae/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "0424c444dcb4d6f7"
     },
     "62b7f6a3eff8011e": {
@@ -1948,7 +1948,7 @@
       "room_type": "レギュラー",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_emukae/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "62b7f6a3eff8011e"
     },
     "5d05defd1dd8fe25": {
@@ -1961,7 +1961,7 @@
       "room_type": "ツイン",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_emukae/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "5d05defd1dd8fe25"
     },
     "e003eb048d5e4c25": {
@@ -1974,7 +1974,7 @@
       "room_type": "シングル",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_emukae/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "e003eb048d5e4c25"
     },
     "f55a367f8707cea0": {
@@ -1987,7 +1987,7 @@
       "room_type": "レギュラー（※1）",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_ono/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "f55a367f8707cea0"
     },
     "77a10e060b773598": {
@@ -2000,7 +2000,7 @@
       "room_type": "ツイン(女性）",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_ono/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "77a10e060b773598"
     },
     "08fae4ddd1edb30d": {
@@ -2013,7 +2013,7 @@
       "room_type": "シングル（※2）",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_ono/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "08fae4ddd1edb30d"
     },
     "8d5ed7b7f6dc65ed": {
@@ -2026,7 +2026,7 @@
       "room_type": "レギュラー（3食なし）",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_ono/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "8d5ed7b7f6dc65ed"
     },
     "793d0e7ffbfcdad4": {
@@ -2039,7 +2039,7 @@
       "room_type": "レギュラー（昼食のみセット）",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_ono/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "793d0e7ffbfcdad4"
     },
     "6b50d8d7789aeaa2": {
@@ -2052,7 +2052,7 @@
       "room_type": "レギュラー（※1）",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_ono/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "6b50d8d7789aeaa2"
     },
     "5025508cc7b8c5a2": {
@@ -2065,7 +2065,7 @@
       "room_type": "ツイン(女性）",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_ono/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "5025508cc7b8c5a2"
     },
     "80a58af2a69cab31": {
@@ -2078,7 +2078,7 @@
       "room_type": "シングル（※2）",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_ono/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "80a58af2a69cab31"
     },
     "1d4370c075490ec3": {
@@ -2091,7 +2091,7 @@
       "room_type": "レギュラー（3食なし）",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_ono/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "1d4370c075490ec3"
     },
     "da588f0eb225c802": {
@@ -2104,7 +2104,7 @@
       "room_type": "レギュラー（昼食のみセット）",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_ono/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "da588f0eb225c802"
     },
     "cb925adcf044e5ec": {
@@ -2117,7 +2117,7 @@
       "room_type": "トリプル（3食なし）",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_hino/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "cb925adcf044e5ec"
     },
     "0afb0d18883ba3dc": {
@@ -2130,7 +2130,7 @@
       "room_type": "ツイン（3食なし）",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_hino/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "0afb0d18883ba3dc"
     },
     "99a265a85cfa80a0": {
@@ -2143,7 +2143,7 @@
       "room_type": "シングル（3食なし）（※1）",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_hino/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "99a265a85cfa80a0"
     },
     "3a467e055225162c": {
@@ -2156,7 +2156,7 @@
       "room_type": "レギュラートリプル",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_hino/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "3a467e055225162c"
     },
     "a71c9c7ff7c24939": {
@@ -2169,7 +2169,7 @@
       "room_type": "ツイン",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_hino/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "a71c9c7ff7c24939"
     },
     "969f4f4b7f372bb9": {
@@ -2182,7 +2182,7 @@
       "room_type": "シングル",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_hino/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "969f4f4b7f372bb9"
     },
     "bdd94985e438ac69": {
@@ -2195,7 +2195,7 @@
       "room_type": "トリプル（3食なし）",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_hino/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "bdd94985e438ac69"
     },
     "0f087e79b79c93aa": {
@@ -2208,7 +2208,7 @@
       "room_type": "ツイン（3食なし）",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_hino/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "0f087e79b79c93aa"
     },
     "3f63cca86398cfdb": {
@@ -2221,7 +2221,7 @@
       "room_type": "シングル（3食なし）（※1）",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_hino/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "3f63cca86398cfdb"
     },
     "9c30052e59852288": {
@@ -2234,7 +2234,7 @@
       "room_type": "レギュラートリプル",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_hino/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "9c30052e59852288"
     },
     "1049aef6f371af39": {
@@ -2247,7 +2247,7 @@
       "room_type": "ツイン",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_hino/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "1049aef6f371af39"
     },
     "defc6dc7f66c28b4": {
@@ -2260,7 +2260,7 @@
       "room_type": "シングル",
       "detail_url": "https://drivers-license.jp/school/kyoritsu_hino/",
       "first_seen": "2026-03-26",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "defc6dc7f66c28b4"
     },
     "708f68dc6ba6da50": {
@@ -2273,7 +2273,7 @@
       "room_type": "不明",
       "detail_url": "https://gasyukumenkyo.com/school/11049/",
       "first_seen": "2026-03-27",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "708f68dc6ba6da50"
     },
     "6af4c441e911fb87": {
@@ -2286,7 +2286,7 @@
       "room_type": "不明",
       "detail_url": "https://gasyukumenkyo.com/school/19630/",
       "first_seen": "2026-03-05",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "6af4c441e911fb87"
     },
     "19edb10424689634": {
@@ -2299,7 +2299,7 @@
       "room_type": "",
       "detail_url": "https://ai-menkyo.jp/area/ehime/uwa/",
       "first_seen": "2026-03-05",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "19edb10424689634"
     },
     "d46ae48bc15d8b9d": {
@@ -2312,7 +2312,7 @@
       "room_type": "",
       "detail_url": "https://ai-menkyo.jp/area/ehime/uwa/",
       "first_seen": "2026-03-05",
-      "last_seen": "2026-03-28",
+      "last_seen": "2026-03-29",
       "plan_id": "d46ae48bc15d8b9d"
     }
   }
