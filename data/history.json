@@ -1,6 +1,97 @@
 {
-  "last_updated": "2026-06-15T09:23:05+09:00",
+  "last_updated": "2026-06-16T10:49:03+09:00",
   "plans": {
+    "a835262512b2e8ae": {
+      "source": "menkyo_live",
+      "school_name": "和歌山県ドライビングスクールかいなん",
+      "location": "和歌山県",
+      "start_date": "2026-07-28",
+      "duration_days": 28,
+      "price_min": null,
+      "room_type": "トリプル",
+      "detail_url": "https://menkyolive.net/detail_16518.php",
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-06-16",
+      "plan_id": "a835262512b2e8ae"
+    },
+    "55ca1cbf79ed55af": {
+      "source": "menkyo_live",
+      "school_name": "福島県南湖自動車学校",
+      "location": "福島県",
+      "start_date": "2026-07-30",
+      "duration_days": 30,
+      "price_min": null,
+      "room_type": "シングル",
+      "detail_url": "https://menkyolive.net/detail_12541.php",
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-06-16",
+      "plan_id": "55ca1cbf79ed55af"
+    },
+    "27aa75eb2a9ea852": {
+      "source": "menkyo_live",
+      "school_name": "兵庫県大陽猪名川自動車学校",
+      "location": "兵庫県",
+      "start_date": "2026-07-31",
+      "duration_days": null,
+      "price_min": null,
+      "room_type": "シングル",
+      "detail_url": "https://menkyolive.net/detail_16369.php",
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-06-16",
+      "plan_id": "27aa75eb2a9ea852"
+    },
+    "c4462cbced3d7f65": {
+      "source": "menkyo_live",
+      "school_name": "静岡県マジオドライバーズスクール藤枝校",
+      "location": "静岡県",
+      "start_date": "2026-07-30",
+      "duration_days": 30,
+      "price_min": null,
+      "room_type": "シングル",
+      "detail_url": "https://menkyolive.net/detail_14939.php",
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-06-16",
+      "plan_id": "c4462cbced3d7f65"
+    },
+    "af4e61c5df0356a5": {
+      "source": "menkyo_live",
+      "school_name": "山形県山形・県南自動車学校",
+      "location": "山形県",
+      "start_date": "2026-07-28",
+      "duration_days": 28,
+      "price_min": null,
+      "room_type": "シングル",
+      "detail_url": "https://menkyolive.net/detail_12408.php",
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-06-16",
+      "plan_id": "af4e61c5df0356a5"
+    },
+    "89374b8ca968ef23": {
+      "source": "menkyo_live",
+      "school_name": "福島県富久山自動車学校",
+      "location": "福島県",
+      "start_date": "2026-07-31",
+      "duration_days": null,
+      "price_min": null,
+      "room_type": "シングル",
+      "detail_url": "https://menkyolive.net/detail_12533.php",
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-06-16",
+      "plan_id": "89374b8ca968ef23"
+    },
+    "4e81ea4e3a1449a6": {
+      "source": "menkyo_live",
+      "school_name": "新潟県六日町自動車学校",
+      "location": "新潟県",
+      "start_date": "2026-07-30",
+      "duration_days": 30,
+      "price_min": null,
+      "room_type": "相部屋",
+      "detail_url": "https://menkyolive.net/detail_14632.php",
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-06-16",
+      "plan_id": "4e81ea4e3a1449a6"
+    },
     "cbef1de93de3ef4f": {
       "source": "menkyo_live",
       "school_name": "新潟県つばめ中央自動車学校【女性限定】",
@@ -11,7 +102,7 @@
       "room_type": "ツイン",
       "detail_url": "https://menkyolive.net/detail_14614.php",
       "first_seen": "2026-06-15",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "cbef1de93de3ef4f"
     },
     "dc14ac772fa50e2a": {
@@ -24,7 +115,7 @@
       "room_type": "ツイン",
       "detail_url": "https://menkyolive.net/detail_14953.php",
       "first_seen": "2026-06-15",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "dc14ac772fa50e2a"
     },
     "213e1d0a26f3d84a": {
@@ -37,7 +128,7 @@
       "room_type": "シングル",
       "detail_url": "https://menkyolive.net/detail_14214.php",
       "first_seen": "2026-06-15",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "213e1d0a26f3d84a"
     },
     "e7d8ba278818beab": {
@@ -50,7 +141,7 @@
       "room_type": "シングル",
       "detail_url": "https://menkyolive.net/detail_14127.php",
       "first_seen": "2026-06-15",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "e7d8ba278818beab"
     },
     "b43a858c7bbfb6db": {
@@ -63,7 +154,7 @@
       "room_type": "トリプル",
       "detail_url": "https://menkyolive.net/detail_14953.php",
       "first_seen": "2026-06-15",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "b43a858c7bbfb6db"
     },
     "abf5e4ebbcb4ed6b": {
@@ -76,7 +167,7 @@
       "room_type": "シングル",
       "detail_url": "https://menkyolive.net/detail_14810.php",
       "first_seen": "2026-06-15",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "abf5e4ebbcb4ed6b"
     },
     "ebbd40b60b13e829": {
@@ -89,7 +180,7 @@
       "room_type": "ツイン",
       "detail_url": "https://menkyolive.net/detail_17212.php",
       "first_seen": "2026-06-14",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "ebbd40b60b13e829"
     },
     "c3536d1a93fcf199": {
@@ -102,7 +193,7 @@
       "room_type": "シングル",
       "detail_url": "https://menkyolive.net/detail_19328.php",
       "first_seen": "2026-06-14",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "c3536d1a93fcf199"
     },
     "f89bcfd45d18a0c1": {
@@ -115,7 +206,7 @@
       "room_type": "シングル",
       "detail_url": "https://menkyolive.net/detail_14219.php",
       "first_seen": "2026-06-14",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "f89bcfd45d18a0c1"
     },
     "8f49a04d39403d8d": {
@@ -128,7 +219,7 @@
       "room_type": "ツイン",
       "detail_url": "https://menkyolive.net/detail_18306.php",
       "first_seen": "2026-06-14",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "8f49a04d39403d8d"
     },
     "fb8156ea5e3693c9": {
@@ -141,7 +232,7 @@
       "room_type": "ツイン",
       "detail_url": "https://menkyolive.net/detail_18306.php",
       "first_seen": "2026-06-14",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "fb8156ea5e3693c9"
     },
     "227d27973c1b6511": {
@@ -154,7 +245,7 @@
       "room_type": "相部屋",
       "detail_url": "https://menkyolive.net/detail_18113.php",
       "first_seen": "2026-06-14",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "227d27973c1b6511"
     },
     "0107d81e82ed3207": {
@@ -167,7 +258,7 @@
       "room_type": "相部屋",
       "detail_url": "https://menkyolive.net/detail_17009.php",
       "first_seen": "2026-06-14",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "0107d81e82ed3207"
     },
     "17109310e50003c3": {
@@ -180,7 +271,7 @@
       "room_type": "トリプル",
       "detail_url": "https://menkyolive.net/detail_12518.php",
       "first_seen": "2026-06-13",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "17109310e50003c3"
     },
     "a5d2f3e0110ffade": {
@@ -193,7 +284,7 @@
       "room_type": "シングル",
       "detail_url": "https://menkyolive.net/detail_19504.php",
       "first_seen": "2026-06-13",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "a5d2f3e0110ffade"
     },
     "9b1399d245532667": {
@@ -206,7 +297,7 @@
       "room_type": "シングル",
       "detail_url": "https://menkyolive.net/detail_19305.php",
       "first_seen": "2026-06-13",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "9b1399d245532667"
     },
     "d4748b8ebad25aa5": {
@@ -219,7 +310,7 @@
       "room_type": "トリプル",
       "detail_url": "https://menkyolive.net/detail_14020.php",
       "first_seen": "2026-06-13",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "d4748b8ebad25aa5"
     },
     "625ba53807e15bbb": {
@@ -232,7 +323,7 @@
       "room_type": "相部屋",
       "detail_url": "https://menkyolive.net/detail_14020.php",
       "first_seen": "2026-06-13",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "625ba53807e15bbb"
     },
     "3e3b82e6e909f72e": {
@@ -245,7 +336,7 @@
       "room_type": "ツイン",
       "detail_url": "https://menkyolive.net/detail_17212.php",
       "first_seen": "2026-06-13",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "3e3b82e6e909f72e"
     },
     "ec9b5aefaa3e7dca": {
@@ -258,86 +349,8 @@
       "room_type": "シングル",
       "detail_url": "https://menkyolive.net/detail_19721.php",
       "first_seen": "2026-06-12",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "ec9b5aefaa3e7dca"
-    },
-    "fb16adb841d5a31c": {
-      "source": "menkyo_live",
-      "school_name": "鳥取県東雲学園　鳥取県東部自動車学校",
-      "location": "鳥取県",
-      "start_date": "2026-07-27",
-      "duration_days": 27,
-      "price_min": null,
-      "room_type": "ツイン",
-      "detail_url": "https://menkyolive.net/detail_17087.php",
-      "first_seen": "2026-06-12",
-      "last_seen": "2026-06-15",
-      "plan_id": "fb16adb841d5a31c"
-    },
-    "d0b80c41ec6748ce": {
-      "source": "menkyo_live",
-      "school_name": "岡山県高梁自動車学校",
-      "location": "岡山県",
-      "start_date": "2026-07-31",
-      "duration_days": null,
-      "price_min": null,
-      "room_type": "シングル",
-      "detail_url": "https://menkyolive.net/detail_17212.php",
-      "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
-      "plan_id": "d0b80c41ec6748ce"
-    },
-    "a6575ce48afc0313": {
-      "source": "menkyo_live",
-      "school_name": "埼玉県秩父自動車学校",
-      "location": "埼玉県",
-      "start_date": "2026-07-27",
-      "duration_days": 27,
-      "price_min": null,
-      "room_type": "シングル",
-      "detail_url": "https://menkyolive.net/detail_14312.php",
-      "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
-      "plan_id": "a6575ce48afc0313"
-    },
-    "e8e556ecdec26c2d": {
-      "source": "menkyo_live",
-      "school_name": "徳島県徳島かいふ自動車学校",
-      "location": "徳島県",
-      "start_date": "2026-07-31",
-      "duration_days": null,
-      "price_min": null,
-      "room_type": "相部屋",
-      "detail_url": "https://menkyolive.net/detail_18011.php",
-      "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
-      "plan_id": "e8e556ecdec26c2d"
-    },
-    "874a4dcbd306309c": {
-      "source": "menkyo_live",
-      "school_name": "静岡県スルガ自動車学校",
-      "location": "静岡県",
-      "start_date": "2026-07-30",
-      "duration_days": 30,
-      "price_min": null,
-      "room_type": "シングル",
-      "detail_url": "https://menkyolive.net/detail_14951.php",
-      "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
-      "plan_id": "874a4dcbd306309c"
-    },
-    "9ed40e444e668247": {
-      "source": "menkyo_live",
-      "school_name": "福井県大野自動車学校",
-      "location": "福井県",
-      "start_date": "2026-07-31",
-      "duration_days": null,
-      "price_min": null,
-      "room_type": "トリプル",
-      "detail_url": "https://menkyolive.net/detail_15205.php",
-      "first_seen": "2026-06-10",
-      "last_seen": "2026-06-15",
-      "plan_id": "9ed40e444e668247"
     },
     "336f5f975c5a6dc9": {
       "source": "dream_licence",
@@ -349,7 +362,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/akagi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "336f5f975c5a6dc9"
     },
     "bfb2724f018256ca": {
@@ -362,7 +375,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/akagi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "bfb2724f018256ca"
     },
     "4846810a587c0b23": {
@@ -375,7 +388,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/aki/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "4846810a587c0b23"
     },
     "c7d0a4d8ccfaffd7": {
@@ -388,7 +401,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/aki/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "c7d0a4d8ccfaffd7"
     },
     "4a8c3b94df76ad79": {
@@ -401,7 +414,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/amakusa/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "4a8c3b94df76ad79"
     },
     "ec5956146eba8123": {
@@ -414,7 +427,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/aoi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "ec5956146eba8123"
     },
     "898a27adef70e722": {
@@ -427,7 +440,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/aoi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "898a27adef70e722"
     },
     "af0af78ae7901874": {
@@ -440,7 +453,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/azumaen/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "af0af78ae7901874"
     },
     "0ee92621a65f71c3": {
@@ -453,7 +466,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/azumaen/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "0ee92621a65f71c3"
     },
     "e0896cd9287833a2": {
@@ -466,7 +479,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/chichibu/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "e0896cd9287833a2"
     },
     "39b5d8b560de8ece": {
@@ -479,7 +492,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/chichibu/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "39b5d8b560de8ece"
     },
     "f5f79d511b3c7420": {
@@ -492,7 +505,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/etajima/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "f5f79d511b3c7420"
     },
     "e9ffb56889e0cc13": {
@@ -505,7 +518,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/etajima/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "e9ffb56889e0cc13"
     },
     "d4ae74f0415a6346": {
@@ -518,7 +531,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/fukuyama/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "d4ae74f0415a6346"
     },
     "a39a837d24be5c72": {
@@ -531,7 +544,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/fukuyama/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "a39a837d24be5c72"
     },
     "3f5d9a97d3580654": {
@@ -544,7 +557,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/goi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "3f5d9a97d3580654"
     },
     "33117948a313c4c4": {
@@ -557,7 +570,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/goi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "33117948a313c4c4"
     },
     "80a8628f704832ae": {
@@ -570,7 +583,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/gotoo/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "80a8628f704832ae"
     },
     "22aa520f28d29981": {
@@ -583,7 +596,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/gotoo/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "22aa520f28d29981"
     },
     "98815cdcc64d69f9": {
@@ -596,7 +609,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/haiki/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "98815cdcc64d69f9"
     },
     "6cfd84f5f9b54458": {
@@ -609,7 +622,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/haiki/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "6cfd84f5f9b54458"
     },
     "e1129ae41447972a": {
@@ -622,7 +635,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/haiki/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "e1129ae41447972a"
     },
     "a1723651531a855b": {
@@ -635,7 +648,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/hainan/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "a1723651531a855b"
     },
     "ac267415a680dc6d": {
@@ -648,7 +661,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/hainan/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "ac267415a680dc6d"
     },
     "ef85dfca89f63c26": {
@@ -661,7 +674,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/harima/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "ef85dfca89f63c26"
     },
     "4117e966094f909f": {
@@ -674,7 +687,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/harima/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "4117e966094f909f"
     },
     "36fa23a8e10e2e41": {
@@ -687,7 +700,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/hitoyoshi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "36fa23a8e10e2e41"
     },
     "be7428a21f9864e4": {
@@ -700,7 +713,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ibusuki/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "be7428a21f9864e4"
     },
     "a30f91f9fa46abce": {
@@ -713,7 +726,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ichinosekidaiichi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "a30f91f9fa46abce"
     },
     "61df272cd65b8666": {
@@ -726,7 +739,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ichinosekidaiichi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "61df272cd65b8666"
     },
     "ae015082811f8570": {
@@ -739,7 +752,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ikime/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "ae015082811f8570"
     },
     "05a954d9b50e34c9": {
@@ -752,7 +765,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ikime/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "05a954d9b50e34c9"
     },
     "7dca4b8a024597c5": {
@@ -765,7 +778,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ikku/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "7dca4b8a024597c5"
     },
     "5b916f53ccf8abc6": {
@@ -778,7 +791,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ikku/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "5b916f53ccf8abc6"
     },
     "0f9fd0236df1924d": {
@@ -791,7 +804,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ikku/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "0f9fd0236df1924d"
     },
     "5e326ed46cb2abdf": {
@@ -804,7 +817,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ikku/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "5e326ed46cb2abdf"
     },
     "7e4294ed2bd508d7": {
@@ -817,7 +830,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ikku/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "7e4294ed2bd508d7"
     },
     "1a95fc9666bf6e88": {
@@ -830,7 +843,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ikku/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "1a95fc9666bf6e88"
     },
     "bad3e3e00e2bc9cf": {
@@ -843,7 +856,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kagawa/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "bad3e3e00e2bc9cf"
     },
     "c6e6506a906a6618": {
@@ -856,7 +869,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kaifu/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "c6e6506a906a6618"
     },
     "52e27792e2f959fb": {
@@ -869,7 +882,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kaifu/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "52e27792e2f959fb"
     },
     "094038a3818ac8e2": {
@@ -882,7 +895,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kansai/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "094038a3818ac8e2"
     },
     "f4e5bb87772e37a7": {
@@ -895,7 +908,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kansai/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "f4e5bb87772e37a7"
     },
     "dac3e060124cbbc4": {
@@ -908,7 +921,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kimitsu/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "dac3e060124cbbc4"
     },
     "bad229022a989191": {
@@ -921,7 +934,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kimitsu/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "bad229022a989191"
     },
     "2aa286e944635bfb": {
@@ -934,7 +947,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kimitsu/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "2aa286e944635bfb"
     },
     "b72b520d1d065096": {
@@ -947,7 +960,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kimitsu/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "b72b520d1d065096"
     },
     "30c794cc85d5f447": {
@@ -960,7 +973,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kiyotake/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "30c794cc85d5f447"
     },
     "672e96141f022ab8": {
@@ -973,7 +986,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kiyotake/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "672e96141f022ab8"
     },
     "10fc821cbe0ef3b0": {
@@ -986,7 +999,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kouchi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "10fc821cbe0ef3b0"
     },
     "eefcfad65911d2ce": {
@@ -999,7 +1012,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kouchi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "eefcfad65911d2ce"
     },
     "d68219ecc2cff49f": {
@@ -1012,7 +1025,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kouchi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "d68219ecc2cff49f"
     },
     "7d34cab75ad6c4a2": {
@@ -1025,7 +1038,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kouchi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "7d34cab75ad6c4a2"
     },
     "d4d82ce313aa23ce": {
@@ -1038,7 +1051,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kumakogen/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "d4d82ce313aa23ce"
     },
     "a147e587bf05582c": {
@@ -1051,7 +1064,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kumakogen/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "a147e587bf05582c"
     },
     "a6c7233c7eef388b": {
@@ -1064,7 +1077,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kumakogen/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "a6c7233c7eef388b"
     },
     "e15cf2b416c38334": {
@@ -1077,7 +1090,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kurayoshi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "e15cf2b416c38334"
     },
     "162903681e864590": {
@@ -1090,7 +1103,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kurayoshi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "162903681e864590"
     },
     "3c3c1321ac5fb37e": {
@@ -1103,7 +1116,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kurayoshi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "3c3c1321ac5fb37e"
     },
     "48b262930e29bfda": {
@@ -1116,7 +1129,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kushiro/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "48b262930e29bfda"
     },
     "8ce226b95f12903e": {
@@ -1129,7 +1142,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kushiro/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "8ce226b95f12903e"
     },
     "ec9d3b8c161ee757": {
@@ -1142,7 +1155,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/kushiro/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "ec9d3b8c161ee757"
     },
     "55139a0e055866cd": {
@@ -1155,7 +1168,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/maebashiamagawa/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "55139a0e055866cd"
     },
     "94b9e1a772685201": {
@@ -1168,7 +1181,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/maebashiamagawa/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "94b9e1a772685201"
     },
     "6f0a9c22ceb5b4da": {
@@ -1181,7 +1194,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/makichuo/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "6f0a9c22ceb5b4da"
     },
     "e0fbe296408c5cfd": {
@@ -1194,7 +1207,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/makichuo/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "e0fbe296408c5cfd"
     },
     "ee20f7beec3e7190": {
@@ -1207,7 +1220,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/makichuo/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "ee20f7beec3e7190"
     },
     "87c6d99b1c6c05fc": {
@@ -1220,7 +1233,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/makichuo/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "87c6d99b1c6c05fc"
     },
     "d98f5699fb9a8c19": {
@@ -1233,7 +1246,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/makio/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "d98f5699fb9a8c19"
     },
     "bb333dd09af2d58e": {
@@ -1246,7 +1259,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/makio/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "bb333dd09af2d58e"
     },
     "0e4a2dcb69853a75": {
@@ -1259,7 +1272,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/minamifukuoka/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "0e4a2dcb69853a75"
     },
     "1169e73bbeb80e25": {
@@ -1272,7 +1285,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/minamishibukawa/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "1169e73bbeb80e25"
     },
     "4287d744256c7b0d": {
@@ -1285,7 +1298,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/minamishibukawa/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "4287d744256c7b0d"
     },
     "7d72659118b3e932": {
@@ -1298,7 +1311,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/mineyama/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "7d72659118b3e932"
     },
     "1a711394a71ee3ed": {
@@ -1311,7 +1324,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/moji/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "1a711394a71ee3ed"
     },
     "6e05bb14320247cf": {
@@ -1324,7 +1337,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/muikamachi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "6e05bb14320247cf"
     },
     "fa87475637a91e26": {
@@ -1337,7 +1350,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/muikamachi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "fa87475637a91e26"
     },
     "1530ba5bfb52acfd": {
@@ -1350,7 +1363,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/naka/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "1530ba5bfb52acfd"
     },
     "08615d072a2cef64": {
@@ -1363,7 +1376,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/naka/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "08615d072a2cef64"
     },
     "4df7bf9c7e37f481": {
@@ -1376,7 +1389,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/nanko/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "4df7bf9c7e37f481"
     },
     "25b363d0baba192d": {
@@ -1389,7 +1402,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/nanko/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "25b363d0baba192d"
     },
     "98585582d4deeae6": {
@@ -1402,7 +1415,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/nanko/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "98585582d4deeae6"
     },
     "38262ac04661f6cc": {
@@ -1415,7 +1428,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/nasu/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "38262ac04661f6cc"
     },
     "f7ded336f9f3a2e0": {
@@ -1428,7 +1441,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/nasu/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "f7ded336f9f3a2e0"
     },
     "2b90fb2070fdb6d8": {
@@ -1441,7 +1454,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/nasu/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "2b90fb2070fdb6d8"
     },
     "a8ead113520dac04": {
@@ -1454,7 +1467,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/nasukougen/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "a8ead113520dac04"
     },
     "247d510c4b63a054": {
@@ -1467,7 +1480,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/nasukougen/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "247d510c4b63a054"
     },
     "71c84aac3917189f": {
@@ -1480,7 +1493,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/niigata/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "71c84aac3917189f"
     },
     "cee5595cd00bcd12": {
@@ -1493,7 +1506,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/niigata/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "cee5595cd00bcd12"
     },
     "0dac787112ce73a8": {
@@ -1506,7 +1519,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/niigata/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "0dac787112ce73a8"
     },
     "025f5de159f93f81": {
@@ -1519,7 +1532,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/niigata/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "025f5de159f93f81"
     },
     "a6d344cd611e45d8": {
@@ -1532,7 +1545,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/niigatachuo/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "a6d344cd611e45d8"
     },
     "00d07d3f8b2e7b4c": {
@@ -1545,7 +1558,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/niigatachuo/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "00d07d3f8b2e7b4c"
     },
     "bb418a26407efe76": {
@@ -1558,7 +1571,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/niigatachuo/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "bb418a26407efe76"
     },
     "73a5ee1ab192c4c9": {
@@ -1571,7 +1584,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/niigatachuo/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "73a5ee1ab192c4c9"
     },
     "29113483e4df54fd": {
@@ -1584,7 +1597,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/nishio/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "29113483e4df54fd"
     },
     "6502ee7445326da0": {
@@ -1597,7 +1610,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/nishio/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "6502ee7445326da0"
     },
     "ce25976bed1d1a18": {
@@ -1610,7 +1623,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/nishio/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "ce25976bed1d1a18"
     },
     "f4a5ffaad1b30d7a": {
@@ -1623,7 +1636,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/obihirodaiichi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "f4a5ffaad1b30d7a"
     },
     "81a3c07f59f12041": {
@@ -1636,7 +1649,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ohmiya/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "81a3c07f59f12041"
     },
     "6feb643e92357a2f": {
@@ -1649,7 +1662,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ohmiya/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "6feb643e92357a2f"
     },
     "cdce98e862eecd27": {
@@ -1662,7 +1675,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ohmiya/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "cdce98e862eecd27"
     },
     "b7bcf815cf54daf9": {
@@ -1675,7 +1688,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ohmiya/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "b7bcf815cf54daf9"
     },
     "4fa022c3ed8c80c6": {
@@ -1688,7 +1701,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ohwatari/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "4fa022c3ed8c80c6"
     },
     "a6108b83a758a7c5": {
@@ -1701,7 +1714,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ohwatari/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "a6108b83a758a7c5"
     },
     "27b4da810fb6861f": {
@@ -1714,7 +1727,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/okamoto/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "27b4da810fb6861f"
     },
     "80b6874d3e826cb5": {
@@ -1727,7 +1740,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/okamoto/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "80b6874d3e826cb5"
     },
     "c70e5993687ae368": {
@@ -1740,7 +1753,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/okamoto/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "c70e5993687ae368"
     },
     "f77d3aaba2dd8294": {
@@ -1753,7 +1766,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/oomachi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "f77d3aaba2dd8294"
     },
     "bffd5792af1cd905": {
@@ -1766,7 +1779,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/sadowara/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "bffd5792af1cd905"
     },
     "cbd99b43b9aeb43a": {
@@ -1779,7 +1792,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/sadowara/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "cbd99b43b9aeb43a"
     },
     "9c4f66acaa8ec65c": {
@@ -1792,7 +1805,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/sakuranasu/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "9c4f66acaa8ec65c"
     },
     "d78df44aa45ad0af": {
@@ -1805,7 +1818,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/sakuranasu/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "d78df44aa45ad0af"
     },
     "72160950c6a1d11c": {
@@ -1818,7 +1831,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/sakuranasu/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "72160950c6a1d11c"
     },
     "bb90d3c9f9e84b33": {
@@ -1831,7 +1844,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/sanochuo/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "bb90d3c9f9e84b33"
     },
     "0a7c6a80f938e912": {
@@ -1844,7 +1857,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/semmaya/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "0a7c6a80f938e912"
     },
     "f4bd942ede981da2": {
@@ -1857,7 +1870,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/semmaya/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "f4bd942ede981da2"
     },
     "ee5db1e75e04ff9d": {
@@ -1870,7 +1883,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/shimannto/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "ee5db1e75e04ff9d"
     },
     "c9d0e107ec334bd2": {
@@ -1883,7 +1896,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/shimannto/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "c9d0e107ec334bd2"
     },
     "a16e421a59b9da5a": {
@@ -1896,7 +1909,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/sohgoh/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "a16e421a59b9da5a"
     },
     "3e900f76742f2a05": {
@@ -1909,7 +1922,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/sohgoh/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "3e900f76742f2a05"
     },
     "53b91f264768e142": {
@@ -1922,7 +1935,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/sohgohkikugawa/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "53b91f264768e142"
     },
     "8684f7bb057b63ae": {
@@ -1935,7 +1948,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/sohgohkikugawa/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "8684f7bb057b63ae"
     },
     "a43dfca7f6fa1219": {
@@ -1948,7 +1961,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/takahashi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "a43dfca7f6fa1219"
     },
     "8b24b96a5a0bd998": {
@@ -1961,7 +1974,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/takahashi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "8b24b96a5a0bd998"
     },
     "ef98e74974ff72d8": {
@@ -1974,7 +1987,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/takahashi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "ef98e74974ff72d8"
     },
     "6fc66640551d4845": {
@@ -1987,7 +2000,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/takahashi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "6fc66640551d4845"
     },
     "0bb57a327cf732fb": {
@@ -2000,7 +2013,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/takanodai/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "0bb57a327cf732fb"
     },
     "997ebde7f68c8da3": {
@@ -2013,7 +2026,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/takanodai/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "997ebde7f68c8da3"
     },
     "77fe20757cf15591": {
@@ -2026,7 +2039,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/takanodai/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "77fe20757cf15591"
     },
     "50e1af8533d2d7d5": {
@@ -2039,7 +2052,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/takehara/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "50e1af8533d2d7d5"
     },
     "81609b9a1feeffa5": {
@@ -2052,7 +2065,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/takehara/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "81609b9a1feeffa5"
     },
     "467b1143e76879ec": {
@@ -2065,7 +2078,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/takehara/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "467b1143e76879ec"
     },
     "613f358a53534138": {
@@ -2078,7 +2091,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/takehara/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "613f358a53534138"
     },
     "b0a2f16c414c75a3": {
@@ -2091,7 +2104,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/taku/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "b0a2f16c414c75a3"
     },
     "23afd238cdbce267": {
@@ -2104,7 +2117,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/taku/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "23afd238cdbce267"
     },
     "ec9c89c6efea35ff": {
@@ -2117,7 +2130,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/taragi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "ec9c89c6efea35ff"
     },
     "9fb8f68a04b7a3e3": {
@@ -2130,7 +2143,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/taragi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "9fb8f68a04b7a3e3"
     },
     "9860d2d6830b530f": {
@@ -2143,7 +2156,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/tsubamechuo/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "9860d2d6830b530f"
     },
     "a3e4903c30586c6d": {
@@ -2156,7 +2169,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/tsubamechuo/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "a3e4903c30586c6d"
     },
     "e53b59bfcb1e6c92": {
@@ -2169,7 +2182,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/tsubamechuo/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "e53b59bfcb1e6c92"
     },
     "f84a4a3259024524": {
@@ -2182,7 +2195,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/tsubamechuo/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "f84a4a3259024524"
     },
     "85883776e64d810d": {
@@ -2195,7 +2208,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/tsubamechuo/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "85883776e64d810d"
     },
     "32f2d0c4e3b339c2": {
@@ -2208,7 +2221,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/tsuru/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "32f2d0c4e3b339c2"
     },
     "ce68c6ab97651b41": {
@@ -2221,7 +2234,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/tsuru/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "ce68c6ab97651b41"
     },
     "20d57aa9f4b5626c": {
@@ -2234,7 +2247,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ueji/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "20d57aa9f4b5626c"
     },
     "ec948310353b9329": {
@@ -2247,7 +2260,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ueji/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "ec948310353b9329"
     },
     "2887639e80fbae05": {
@@ -2260,7 +2273,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ueji/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "2887639e80fbae05"
     },
     "5e36e9dc38593bb7": {
@@ -2273,7 +2286,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ueji/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "5e36e9dc38593bb7"
     },
     "f967bff3dd71e56b": {
@@ -2286,7 +2299,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/ueji/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "f967bff3dd71e56b"
     },
     "ebcd8c5d8c53d919": {
@@ -2299,7 +2312,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/uenohara/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "ebcd8c5d8c53d919"
     },
     "f03b8f333b290bc9": {
@@ -2312,7 +2325,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/uenohara/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "f03b8f333b290bc9"
     },
     "3a84bc910ebcdf1e": {
@@ -2325,7 +2338,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/uwa/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "3a84bc910ebcdf1e"
     },
     "e0e164e0b22b668e": {
@@ -2338,7 +2351,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/uwa/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "e0e164e0b22b668e"
     },
     "3bf418bcb5167c18": {
@@ -2351,7 +2364,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/wakimachi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "3bf418bcb5167c18"
     },
     "431caa5001b86ba0": {
@@ -2364,7 +2377,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/wakimachi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "431caa5001b86ba0"
     },
     "43f0df42ae03d3a8": {
@@ -2377,7 +2390,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/yanasebashi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "43f0df42ae03d3a8"
     },
     "d996b18241eeb5c2": {
@@ -2390,7 +2403,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/yanasebashi/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "d996b18241eeb5c2"
     },
     "21a2a52f05e429cb": {
@@ -2403,7 +2416,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/yonezawa/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "21a2a52f05e429cb"
     },
     "be92a94a0faea293": {
@@ -2416,7 +2429,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/yonezawa/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "be92a94a0faea293"
     },
     "8deee08fd463c872": {
@@ -2429,7 +2442,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/yonezawa/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "8deee08fd463c872"
     },
     "345e1c59533aba0b": {
@@ -2442,7 +2455,7 @@
       "room_type": "",
       "detail_url": "https://dream-licence.jp/school/yonezawa/futsusha/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "345e1c59533aba0b"
     },
     "708f68dc6ba6da50": {
@@ -2455,7 +2468,7 @@
       "room_type": "不明",
       "detail_url": "https://gasyukumenkyo.com/school/11049/",
       "first_seen": "2026-03-27",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "708f68dc6ba6da50"
     },
     "6af4c441e911fb87": {
@@ -2468,7 +2481,7 @@
       "room_type": "不明",
       "detail_url": "https://gasyukumenkyo.com/school/19630/",
       "first_seen": "2026-03-05",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "6af4c441e911fb87"
     },
     "3f2b39e7598a97f2": {
@@ -2481,7 +2494,7 @@
       "room_type": "",
       "detail_url": "https://ai-menkyo.jp/area/hyogo/001/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "3f2b39e7598a97f2"
     },
     "2ca85781bc4d8eec": {
@@ -2494,7 +2507,7 @@
       "room_type": "",
       "detail_url": "https://ai-menkyo.jp/area/hyogo/001/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "2ca85781bc4d8eec"
     },
     "c8fc6652501f00df": {
@@ -2507,7 +2520,7 @@
       "room_type": "",
       "detail_url": "https://ai-menkyo.jp/area/tottori/001/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "c8fc6652501f00df"
     },
     "746c01622ee895b7": {
@@ -2520,7 +2533,7 @@
       "room_type": "",
       "detail_url": "https://ai-menkyo.jp/area/tottori/001/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "746c01622ee895b7"
     },
     "16e8402503b3218d": {
@@ -2533,7 +2546,7 @@
       "room_type": "",
       "detail_url": "https://ai-menkyo.jp/area/tottori/001/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "16e8402503b3218d"
     },
     "b87514543606fa71": {
@@ -2546,7 +2559,7 @@
       "room_type": "",
       "detail_url": "https://ai-menkyo.jp/area/tottori/001/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "b87514543606fa71"
     },
     "77e592cef3f531a5": {
@@ -2559,7 +2572,7 @@
       "room_type": "",
       "detail_url": "https://ai-menkyo.jp/area/tottori/001/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "77e592cef3f531a5"
     },
     "b89e5c89c71c2dd1": {
@@ -2572,7 +2585,7 @@
       "room_type": "",
       "detail_url": "https://ai-menkyo.jp/area/hiroshima/001/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "b89e5c89c71c2dd1"
     },
     "7936ca6833e90a78": {
@@ -2585,7 +2598,7 @@
       "room_type": "",
       "detail_url": "https://ai-menkyo.jp/area/hiroshima/001/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "7936ca6833e90a78"
     },
     "19edb10424689634": {
@@ -2598,7 +2611,7 @@
       "room_type": "",
       "detail_url": "https://ai-menkyo.jp/area/ehime/uwa/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "19edb10424689634"
     },
     "d46ae48bc15d8b9d": {
@@ -2611,7 +2624,7 @@
       "room_type": "",
       "detail_url": "https://ai-menkyo.jp/area/ehime/uwa/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "d46ae48bc15d8b9d"
     },
     "d5352a499cbbda7c": {
@@ -2624,7 +2637,7 @@
       "room_type": "",
       "detail_url": "https://ai-menkyo.jp/area/kouchi/kochinewdriver/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "d5352a499cbbda7c"
     },
     "871472b4170e6102": {
@@ -2637,7 +2650,7 @@
       "room_type": "",
       "detail_url": "https://ai-menkyo.jp/area/kouchi/kochinewdriver/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "871472b4170e6102"
     },
     "272048b86daf4668": {
@@ -2650,7 +2663,7 @@
       "room_type": "",
       "detail_url": "https://ai-menkyo.jp/area/kouchi/kochinewdriver/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "272048b86daf4668"
     },
     "dbb101129704369e": {
@@ -2663,7 +2676,7 @@
       "room_type": "",
       "detail_url": "https://ai-menkyo.jp/area/kouchi/kochinewdriver/",
       "first_seen": "2026-06-11",
-      "last_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
       "plan_id": "dbb101129704369e"
     }
   }
