@@ -154,3 +154,5 @@ earnings_calendar:
   - {ticker: NBIS,  date: "2026-11-10", note: "Q3決算: customer commitments 更新"}
   - {ticker: CRWV,  date: "2026-11-11", note: "Q3決算: backlog / commitments / power 更新"}
   - {ticker: PJM,   date: "2027-01-15", note: "PJM Load Forecast 年次更新: Dominion zone 2030予測"}
+
+# (workflow起動用コメント: 初回稼働 2026-08-21)
