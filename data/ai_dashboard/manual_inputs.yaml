@@ -1,0 +1,156 @@
+# =============================================================
+# AI Bubble Dashboard - 手動入力データ
+# =============================================================
+# 四半期決算・債券利回りなど自動取得できない指標はこのファイルを編集する。
+# mainにpushすると GitHub Actions が再評価し、Discord通知とダッシュボード
+# (docs/ai-dashboard/index.html) に反映される。
+#
+# 書式ルール:
+#   - quarter は "2026Q2" 形式 (文字列比較で時系列順になるように)
+#   - date    は "2026-06" または "2026-06-15" 形式
+#   - 数値が不明なら null のままでよい
+#   - level_hint: 四半期データが1期分しかなくQoQ比較ができない間、
+#     暫定レベル (green/yellow/orange/red) を手動指定できる。
+#     2期分揃えば自動計算が優先される。
+#
+# 初期値は 2026-08 時点で会話に出た公表値をシードしてある。
+# 出典は各自の決算資料で要確認。
+# =============================================================
+
+# --- ⑪ CRWV債券利回り (AI creditの炭鉱のカナリア) -----------------
+# FINRA TRACE等で 9.625% Senior Notes 2032 の市場利回りを確認したら更新する。
+crwv_bond:
+  yield_pct: 9.625        # 現在の市場利回り(%)。発行直後なのでクーポン=利回りでシード
+  issue_coupon_pct: 9.625 # 発行時クーポン(基準値)
+  as_of: "2026-06-30"
+  note: "2032年債 $1.25B を 9.625% で発行 (2026-06)"
+
+# --- GPU価格の手動フォールバック --------------------------------
+# Silicon Data / CoreWeave のスクレイピングが失敗した場合に使う。
+# スクレイピングが成功している間は自動値が優先される。
+gpu_manual_fallback:
+  as_of: "2026-07-07"
+  sd_h100_rental: 2.67    # H100 Neo-cloud $/GPU-hour
+  sd_h200_rental: 2.95
+  sd_b200_rental: 5.74
+  sd_b300_rental: null
+  cw_b200_od_node: 68.80  # CoreWeave B200 8-GPUノード on-demand $/hr
+  cw_b200_spot_node: 34.87
+
+quarterly:
+  # --- ② CRWV: backlog / commitments / power -------------------
+  crwv:
+    - quarter: "2026Q2"
+      backlog_busd: 104.2          # Revenue backlog ($B)
+      new_commitments_busd: 25     # 四半期中の新規customer commitments ($B)
+      revenue_musd: 2580           # 四半期売上 ($M)
+      active_power_gw: null        # Q1時点 >1GW。Q2開示があれば記入
+      contracted_power_gw: null    # Q1時点 >3.5GW
+      capex_guide_busd: 37         # 2026 CapExガイダンス中央値 ($B, 35-39)
+      canceled: false              # 大型契約解約が出たら true
+      level_hint: green
+      note: "backlog $104.2B / 新規commitments $25B超"
+
+  # --- ③ NBIS: customer commitments ----------------------------
+  nbis:
+    - quarter: "2026Q2"
+      revenue_musd: 582
+      commitments_busd: 40         # 累計customer commitments ($B)
+      canceled: false
+      level_hint: green
+      note: "$1B超のAI cloud契約4件、commitments $40B超。2027 capacity完売見込みと発言"
+
+  # --- ④ APLD: contracted MW / live MW -------------------------
+  apld:
+    - quarter: "2026Q2"
+      contracted_mw: 1400          # 契約済みcritical IT load (MW)
+      live_mw: 175                 # 稼働中 (MW)
+      contracted_revenue_busd: 36  # 15年base契約の契約総額 ($B)
+      canceled: false              # 契約キャンセル・延期が出たら true
+      level_hint: green
+      note: "IG hyperscaler裏付け約70%"
+
+  # --- ⑤ DLR: bookings / 更新賃料 -------------------------------
+  dlr:
+    - quarter: "2026Q1"
+      bookings_annualized_musd: 707   # 新規bookings年換算 ($M)
+      backlog_busd: 1.8               # signed-but-not-commenced ($B)
+      renewal_rent_cash_pct: 5.0      # 更新賃料 cash basis (%)
+      level_hint: green
+      note: "EQIX cabinet利用率は2025年末約77% (補助指標)"
+
+  # --- ⑥ AEP: 契約済みlarge-load GW ------------------------------
+  aep:
+    - quarter: "2026Q2"
+      contracted_load_gw: 69       # 2030年までのincremental contracted load (GW)
+      new_signed_gw: 6             # 当四半期の新規契約 (GW)
+      canceled: false
+      level_hint: green
+      note: "Q2だけで+6GW"
+
+  # --- ⑦⑧ PJM/ERCOT: 需要予測 ----------------------------------
+  # PJM Dominion zone のsummer peak予測 (毎年1月頃の Load Forecast で更新)
+  power_forecast:
+    - year: 2026
+      pjm_dominion_2030_peak_gw: 42   # 2030年予測 (2025年実績は約24GW)
+      ercot_queue_gw: 410             # 参考: large-load interconnection queue
+      note: "ERCOT queueの87%がDC。queueは投機的なので転換率に注目"
+
+  # --- ⑨ Hyperscaler: CapEx / Cloud成長 / FCF -------------------
+  # 5社 (GOOGL/MSFT/AMZN/META/ORCL) をまとめて1エントリで評価する。
+  # capex_trend / cloud_growth_trend: up / flat / down
+  hyperscalers:
+    - quarter: "2026Q2"
+      capex_trend: up
+      cloud_growth_trend: up
+      fcf_deteriorating: true      # GOOGL Q2 FCF -$5.9B
+      capacity_constrained: true   # 「需要がcapacityを上回る」発言の有無
+      note: "GOOGL 2026 CapEx $195-205Bへ引き上げ、Cloud高成長。META 2026 ~7GW / 2027 ~14GW目標。ただしcash burn開始"
+
+# --- ⑫ Refinancing: 新規借入条件 ---------------------------------
+# AIインフラ企業の新しい資金調達が出るたびに追記する。
+# failed: true (発行失敗・条件未達で撤回) が出たら🔴シグナル。
+financing:
+  - date: "2026-03"
+    issuer: CRWV
+    instrument: "GPU-backed facility (IG)"
+    amount_busd: 8.5
+    coupon_pct: 5.9
+    spread_bps: 225
+    failed: false
+  - date: "2026-05"
+    issuer: CRWV
+    instrument: "GPU-backed loan"
+    amount_busd: null
+    coupon_pct: null
+    spread_bps: 450
+    failed: false
+  - date: "2026-06"
+    issuer: CRWV
+    instrument: "Senior Notes 2032"
+    amount_busd: 1.25
+    coupon_pct: 9.625
+    spread_bps: null
+    failed: false
+  - date: "2026-07"
+    issuer: APLD
+    instrument: "SPV Notes 2031 (par発行)"
+    amount_busd: 1.59
+    coupon_pct: 7.0
+    spread_bps: null
+    failed: false
+    note: "以前のPolaris Forge債は9.25% @97 → 条件改善"
+
+# --- 決算リマインダー ---------------------------------------------
+# date の7日前からDiscordにリマインダーが届く。日付は目安なので確定次第修正。
+earnings_calendar:
+  - {ticker: DLR,   date: "2026-10-23", note: "Q3決算: bookings / renewal rent 更新"}
+  - {ticker: GOOGL, date: "2026-10-28", note: "Q3決算: CapEx / Cloud / FCF 更新"}
+  - {ticker: MSFT,  date: "2026-10-28", note: "FY27Q1決算: CapEx / Azure成長 更新"}
+  - {ticker: META,  date: "2026-10-29", note: "Q3決算: CapEx / capacity目標 更新"}
+  - {ticker: AMZN,  date: "2026-10-30", note: "Q3決算: CapEx / AWS成長 更新"}
+  - {ticker: AEP,   date: "2026-11-05", note: "Q3決算: contracted large-load GW 更新"}
+  - {ticker: APLD,  date: "2026-11-06", note: "FY27Q2決算: contracted MW / live MW 更新"}
+  - {ticker: NBIS,  date: "2026-11-10", note: "Q3決算: customer commitments 更新"}
+  - {ticker: CRWV,  date: "2026-11-11", note: "Q3決算: backlog / commitments / power 更新"}
+  - {ticker: PJM,   date: "2027-01-15", note: "PJM Load Forecast 年次更新: Dominion zone 2030予測"}

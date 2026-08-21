@@ -1,0 +1,57 @@
+name: AI Bubble Dashboard
+
+on:
+  schedule:
+    # JST 8:30 = UTC 23:30(前日)。既存スクレイパー(23:00)とずらしてコミット競合を避ける
+    - cron: "30 23 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "data/ai_dashboard/manual_inputs.yaml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ai-dashboard
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run dashboard update
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          AI_DASHBOARD_DISCORD_WEBHOOK_URL: ${{ secrets.AI_DASHBOARD_DISCORD_WEBHOOK_URL }}
+        run: python -m src.ai_dashboard
+
+      - name: Commit data and dashboard
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/ai_dashboard/history.json docs/ai-dashboard/index.html
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "chore: update AI dashboard [$(date -u +%Y-%m-%dT%H:%M:%SZ)]"
+          git pull --rebase origin main
+          git push
