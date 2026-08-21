@@ -9,6 +9,7 @@ on:
     branches: [main]
     paths:
       - "data/ai_dashboard/manual_inputs.yaml"
+      - ".github/workflows/ai_dashboard.yml"
 
 permissions:
   contents: write
@@ -55,3 +56,35 @@ jobs:
           git commit -m "chore: update AI dashboard [$(date -u +%Y-%m-%dT%H:%M:%SZ)]"
           git pull --rebase origin main
           git push
+
+  # docs/ を GitHub Pages に公開する (スマホ等どこからでも閲覧可能にする)
+  deploy-pages:
+    needs: update
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout (updateジョブのコミットを含む最新main)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload docs
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
