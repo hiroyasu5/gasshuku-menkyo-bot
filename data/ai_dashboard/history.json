@@ -1,0 +1,25 @@
+{
+  "composite_level": "yellow",
+  "daily": {
+    "2026-08-22": {
+      "cw_b200_od_node": 68.8,
+      "cw_b200_spot_node": 8.6
+    }
+  },
+  "last_updated": "2026-08-22T02:43:06+09:00",
+  "levels": {
+    "aep_load": "green",
+    "apld_mw": "green",
+    "crwv_backlog": "green",
+    "crwv_bond": "green",
+    "dlr_rent": "green",
+    "financing": "green",
+    "gpu_price": "green",
+    "hy_oas": "unknown",
+    "hyperscalers": "green",
+    "nbis_commitments": "green",
+    "power_forecast": "green",
+    "spot_ratio": "red"
+  },
+  "reminders_sent": {}
+}
