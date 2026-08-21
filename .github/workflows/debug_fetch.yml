@@ -1,0 +1,64 @@
+# 一時的なデバッグ用: 外部データソースの応答をActionsランナーから調査する。
+# 調査が終わったら削除する。
+name: Debug fetch
+
+on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/debug_fetch.yml"]
+
+permissions: {}
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: FRED timing
+        run: |
+          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+          for id in BAMLH0A0HYM2 BAMLH0A2HYB BAMLC0A0CM; do
+            echo "=== $id ==="
+            start=$(date +%s)
+            curl -sS --max-time 120 -A "$UA" "https://fred.stlouisfed.org/graph/fredgraph.csv?id=$id&cosd=2026-08-01" -o "fred_$id.csv" && \
+              { echo "elapsed: $(( $(date +%s) - start ))s"; head -3 "fred_$id.csv"; echo "..."; tail -2 "fred_$id.csv"; } || \
+              echo "FAILED after $(( $(date +%s) - start ))s"
+          done
+
+      - name: CoreWeave B200 context
+        run: |
+          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+          curl -sSL --max-time 60 -A "$UA" "https://www.coreweave.com/pricing" -o cw.html
+          wc -c cw.html
+          python3 - <<'PYEOF'
+          import re
+          html = open("cw.html", encoding="utf-8", errors="replace").read()
+          text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html))
+          print("--- B200 contexts (stripped text) ---")
+          for i, m in enumerate(re.finditer(r"B200", text, re.I)):
+              print(f"[{i}]", text[max(0, m.start()-150): m.end()+450][:650])
+              print()
+              if i >= 7:
+                  break
+          print("--- spot mentions ---")
+          for i, m in enumerate(re.finditer(r"spot", text, re.I)):
+              print(f"[{i}]", text[max(0, m.start()-250): m.end()+150][:450])
+              print()
+              if i >= 7:
+                  break
+          PYEOF
+
+      - name: SiliconData structure
+        run: |
+          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+          curl -sSL --max-time 60 -A "$UA" "https://www.silicondata.com/" -o sd.html
+          wc -c sd.html
+          echo "--- links ---"
+          grep -o 'href="[^"]*"' sd.html | sort -u | head -50
+          echo "--- scripts ---"
+          grep -o 'src="[^"]*"' sd.html | sort -u | head -30
+          echo "--- H100/index mentions ---"
+          grep -io '.\{80\}h100.\{120\}' sd.html | head -10 || echo "(none)"
+          grep -io '.\{60\}index.\{100\}' sd.html | head -10 || echo "(none)"
+          echo "--- api candidates in js ---"
+          grep -o '"[^"]*api[^"]*"' sd.html | sort -u | head -20 || true
