@@ -3115,7 +3115,8 @@
     "2026-08-20": {
       "hy_oas_bps": 275.0,
       "ig_oas_bps": 82.0,
-      "single_b_oas_bps": 294.0
+      "single_b_oas_bps": 294.0,
+      "ust7y_bps": 453.0
     },
     "2026-08-22": {
       "cw_b200_od_node": 68.8,
@@ -3125,7 +3126,7 @@
       "sd_h200_rental": 3.1
     }
   },
-  "last_updated": "2026-08-22T04:15:22+09:00",
+  "last_updated": "2026-08-22T08:50:30+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
