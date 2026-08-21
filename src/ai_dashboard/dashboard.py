@@ -12,6 +12,8 @@ import logging
 from . import storage
 from .config import DASHBOARD_DIR, DASHBOARD_FILE
 from .models import (
+    CONF_NONE,
+    CONF_PROVISIONAL,
     GROUP_LABEL_JA,
     GROUP_ORDER,
     CompositeResult,
@@ -88,15 +90,35 @@ def _esc(s: str) -> str:
 
 def _card(r: IndicatorResult) -> str:
     lv = r.level.value
+    badges = ""
+    if r.stale:
+        badges += '<span class="badge badge-stale">🕐 stale</span>'
+    if r.confidence == CONF_PROVISIONAL:
+        badges += '<span class="badge badge-prov">暫定</span>'
+    elif r.confidence == CONF_NONE and r.level is not Level.UNKNOWN:
+        badges += '<span class="badge badge-prov">未確認</span>'
+    mini_table = ""
+    if r.detail_rows:
+        head = "".join(f"<th>{_esc(c)}</th>" for c in r.detail_rows[0])
+        body = "".join(
+            "<tr>" + "".join(f"<td>{_esc(c)}</td>" for c in row) + "</tr>"
+            for row in r.detail_rows[1:]
+        )
+        mini_table = (
+            f'<div class="minitablewrap"><table class="minitable">'
+            f"<thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>"
+        )
     return f"""
       <div class="card" data-level="{lv}">
         <div class="card-head">
           <span class="chip chip-{lv}"><span class="chip-icon">{LEVEL_EMOJI[r.level]}</span>{LEVEL_LABEL_JA[r.level]}</span>
+          <span class="badges">{badges}</span>
           <span class="asof">{_esc(r.as_of)}</span>
         </div>
         <h3>{_esc(r.name)}</h3>
         <div class="value">{_esc(r.value_text)}</div>
         <p class="detail">{_esc(r.detail)}</p>
+        {mini_table}
         <p class="source">{_esc(r.source)}</p>
       </div>"""
 
@@ -246,8 +268,22 @@ h3 {{ font-size: 0.95rem; margin: 8px 0 4px; }}
   background: var(--surface); border: 1px solid var(--border);
   border-radius: 12px; padding: 14px 16px;
 }}
-.card-head {{ display: flex; justify-content: space-between; align-items: center; }}
-.asof {{ color: var(--muted); font-size: 0.75rem; }}
+.card-head {{ display: flex; align-items: center; gap: 6px; }}
+.asof {{ color: var(--muted); font-size: 0.75rem; margin-left: auto; }}
+.badges {{ display: inline-flex; gap: 4px; }}
+.badge {{
+  font-size: 0.68rem; font-weight: 600; border-radius: 6px; padding: 1px 6px;
+  border: 1px solid var(--border); color: var(--ink-2); background: var(--unknown-bg);
+}}
+.confidence {{ color: var(--ink-2); font-size: 0.82rem; margin: 10px 0 0; }}
+.minitablewrap {{ overflow-x: auto; margin: 8px 0 2px; }}
+.minitable {{ border-collapse: collapse; width: 100%; font-size: 0.74rem; }}
+.minitable th, .minitable td {{
+  padding: 3px 8px; text-align: right; border-bottom: 1px solid var(--grid);
+  font-variant-numeric: tabular-nums;
+}}
+.minitable th:first-child, .minitable td:first-child {{ text-align: left; }}
+.minitable th {{ color: var(--muted); font-weight: 600; }}
 .value {{ font-size: 1.25rem; font-weight: 700; margin: 2px 0; }}
 .detail {{ color: var(--ink-2); font-size: 0.85rem; margin: 4px 0 2px; }}
 .source {{ color: var(--muted); font-size: 0.72rem; margin: 4px 0 0; }}
@@ -289,6 +325,9 @@ footer code {{ background: var(--surface); border: 1px solid var(--border); bord
     <p class="summary"><span class="chip chip-{clv}"><span class="chip-icon">{LEVEL_EMOJI[composite.level]}</span>{LEVEL_LABEL_JA[composite.level]}</span>
     {_esc(composite.summary)}</p>
     <div class="pills">{group_pills}</div>
+    <p class="confidence">Data confidence: <strong>{composite.confidence_pct}%</strong>
+    (実データで確認済み {composite.confirmed_count}/{composite.total_count}指標 ・
+    残りはデータ不足⚪または暫定判定)</p>
   </div>
 
   {"".join(sections)}
@@ -306,7 +345,9 @@ footer code {{ background: var(--surface); border: 1px solid var(--border); bord
 
   <footer>
     <p>判定基準: 🟠警戒以上のグループが 1=ノイズの可能性 / 2=警戒 / 3以上=AIサイクル変調。
-    需要側3グループ以上+信用市場の同時悪化でEXIT検討シグナル。</p>
+    需要側(需要/Compute/稼働率/DC/電力)3グループ以上+信用市場の同時悪化でEXIT検討シグナル。</p>
+    <p>🟢はデータで正常を確認した時のみ。⚪=データ不足、「暫定」=level_hint・フォールバック値・
+    stale(🕐 古いデータ)による判定で、Data confidenceには数えない。</p>
     <p>四半期指標の更新: <code>data/ai_dashboard/manual_inputs.yaml</code> を編集してmainへpush。</p>
   </footer>
 </main>

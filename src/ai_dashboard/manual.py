@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 
 # quarterly配下で扱う系列キー
 QUARTERLY_KEYS = [
-    "crwv", "nbis", "apld", "dlr", "aep", "power_forecast", "hyperscalers",
+    "crwv", "nbis", "apld", "dlr", "aep", "power_forecast", "hyperscalers", "orcl",
 ]
 
 
@@ -63,6 +63,13 @@ def crwv_bond(manual: dict) -> dict:
 def gpu_fallback(manual: dict) -> dict:
     """スクレイピング失敗時に使うGPU価格の手動値"""
     return manual.get("gpu_manual_fallback") or {}
+
+
+def balance_sheet_entries(manual: dict, company: str) -> list[dict]:
+    """balance_sheets.<company> のエントリ一覧を時系列昇順で返す"""
+    entries = (manual.get("balance_sheets") or {}).get(company) or []
+    entries = [e for e in entries if isinstance(e, dict)]
+    return sorted(entries, key=_sort_key)
 
 
 def earnings_calendar(manual: dict) -> list[dict]:

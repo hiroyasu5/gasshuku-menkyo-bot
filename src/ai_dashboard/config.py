@@ -35,7 +35,13 @@ FRED_SERIES = {
     "hy_oas_bps": "BAMLH0A0HYM2",       # ICE BofA US High Yield OAS
     "single_b_oas_bps": "BAMLH0A2HYB",  # ICE BofA Single-B US High Yield OAS
     "ig_oas_bps": "BAMLC0A0CM",         # ICE BofA US Corporate (IG) OAS
+    "ust7y_bps": "DGS7",                # 7年米国債利回り (CRWV 2032のspread計算用)
 }
+
+# 日次データがこの日数より古ければ stale (🕐) 扱い
+DAILY_STALE_DAYS = 7
+# CRWV債券利回りの手動値がこの日数より古ければ stale
+BOND_STALE_DAYS = 60
 
 # 初回実行時にFREDを何日分バックフィルするか
 FRED_BACKFILL_DAYS = 730

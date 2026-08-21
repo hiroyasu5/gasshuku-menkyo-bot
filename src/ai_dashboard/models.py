@@ -49,22 +49,37 @@ def worst_level(levels: list[Level]) -> Level:
     return max(known, key=lambda lv: LEVEL_RANK[lv])
 
 
-# 指標グループ(ユーザーの最重要組み合わせに対応する5分類)
-GROUP_DEMAND = "demand"          # CRWV backlog / NBIS commitments / Hyperscaler
-GROUP_COMPUTE = "compute"        # GPUレンタル価格 / spot比率
-GROUP_DATACENTER = "datacenter"  # APLD契約MW / DLR bookings・賃料
-GROUP_POWER = "power"            # AEP契約GW / PJM需要予測
-GROUP_CREDIT = "credit"          # HY OAS / CRWV債券 / 新規借入条件
+# 指標グループ(バブル崩壊の因果連鎖に対応する6分類)
+GROUP_DEMAND = "demand"            # Hyperscaler / Backlog / RPO (未来の需要)
+GROUP_COMPUTE = "compute"          # GPUレンタル価格 / spot比率
+GROUP_UTILIZATION = "utilization"  # Revenue/Active GW 等の稼働率proxy
+GROUP_DATACENTER = "datacenter"    # APLD契約MW / DLR bookings・賃料
+GROUP_POWER = "power"              # AEP契約GW / PJM需要予測
+GROUP_CREDIT = "credit"            # HY OAS / CRWVスプレッド / 借入条件 / 流動性
 
 GROUP_LABEL_JA = {
-    GROUP_DEMAND: "需要 (Hyperscaler / Backlog)",
+    GROUP_DEMAND: "需要 (Hyperscaler / Backlog / RPO)",
     GROUP_COMPUTE: "Compute価格",
+    GROUP_UTILIZATION: "稼働率 (Utilization Proxy)",
     GROUP_DATACENTER: "データセンター需給",
     GROUP_POWER: "電力需要",
     GROUP_CREDIT: "信用市場",
 }
 
-GROUP_ORDER = [GROUP_DEMAND, GROUP_COMPUTE, GROUP_DATACENTER, GROUP_POWER, GROUP_CREDIT]
+GROUP_ORDER = [
+    GROUP_DEMAND, GROUP_COMPUTE, GROUP_UTILIZATION,
+    GROUP_DATACENTER, GROUP_POWER, GROUP_CREDIT,
+]
+
+# EXIT判定で「需要側」とみなすグループ (credit以外)
+DEMAND_SIDE_GROUPS = [
+    GROUP_DEMAND, GROUP_COMPUTE, GROUP_UTILIZATION, GROUP_DATACENTER, GROUP_POWER,
+]
+
+# データの確からしさ。🟢は「データで正常を確認」した時のみ
+CONF_CONFIRMED = "confirmed"      # 実データで判定した
+CONF_PROVISIONAL = "provisional"  # level_hint / 手動フォールバック / stale
+CONF_NONE = "none"                # データ不足 (level=UNKNOWN)
 
 
 @dataclass
@@ -79,6 +94,9 @@ class IndicatorResult:
     detail: str         # 判定理由・変化の説明
     as_of: str = ""     # データ基準日 (例: "2026Q2", "2026-08-20")
     source: str = ""    # データ源の説明
+    confidence: str = CONF_CONFIRMED  # CONF_* のいずれか
+    stale: bool = False               # データが古い (🕐表示)
+    detail_rows: list[list[str]] | None = None  # カード内に表として出す行 (任意)
 
     def to_dict(self) -> dict:
         return {
@@ -90,6 +108,8 @@ class IndicatorResult:
             "detail": self.detail,
             "as_of": self.as_of,
             "source": self.source,
+            "confidence": self.confidence,
+            "stale": self.stale,
         }
 
 
@@ -102,3 +122,6 @@ class CompositeResult:
     group_levels: dict[str, Level] = field(default_factory=dict)
     exit_signal: bool = False  # 需要側3グループ以上 + credit悪化
     summary: str = ""
+    confidence_pct: int = 0     # confirmed指標の割合 (%)
+    confirmed_count: int = 0
+    total_count: int = 0

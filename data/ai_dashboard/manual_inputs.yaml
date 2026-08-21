@@ -96,23 +96,40 @@ quarterly:
       ercot_queue_gw: 410             # 参考: large-load interconnection queue
       note: "ERCOT queueの87%がDC。queueは投機的なので転換率に注目"
 
-  # --- ⑨ Hyperscaler: CapEx / Cloud成長 / FCF -------------------
-  # 5社 (GOOGL/MSFT/AMZN/META/ORCL) をまとめて1エントリで評価する。
-  # capex_trend / cloud_growth_trend: up / flat / down
+  # --- ⑨ Hyperscaler: 5社を個別に評価 ---------------------------
+  # 各社: cloud_yoy_pct (Cloud売上YoY%), prev_cloud_yoy_pct (前四半期のYoY%、
+  # 加速/減速の判定に使う), capex_guide (up/flat/down), fcf_negative,
+  # capacity_constrained (「需要がcapacityを上回る」発言)
+  # 不明な値はnullでよい。breadth (何社が悪化したか) で判定される。
   hyperscalers:
     - quarter: "2026Q2"
-      capex_trend: up
-      cloud_growth_trend: up
-      fcf_deteriorating: true      # GOOGL Q2 FCF -$5.9B
-      capacity_constrained: true   # 「需要がcapacityを上回る」発言の有無
-      note: "GOOGL 2026 CapEx $195-205Bへ引き上げ、Cloud高成長。META 2026 ~7GW / 2027 ~14GW目標。ただしcash burn開始"
+      companies:
+        MSFT:  {cloud_yoy_pct: null, prev_cloud_yoy_pct: null, capex_guide: null, fcf_negative: null, capacity_constrained: null}
+        AMZN:  {cloud_yoy_pct: null, prev_cloud_yoy_pct: null, capex_guide: null, fcf_negative: null, capacity_constrained: null}
+        GOOGL: {cloud_yoy_pct: 82, prev_cloud_yoy_pct: null, capex_guide: up, fcf_negative: true, capacity_constrained: true}
+        META:  {cloud_yoy_pct: null, prev_cloud_yoy_pct: null, capex_guide: up, fcf_negative: null, capacity_constrained: true}
+        ORCL:  {cloud_yoy_pct: null, prev_cloud_yoy_pct: null, capex_guide: null, fcf_negative: null, capacity_constrained: null}
+      note: "GOOGL 2026 CapEx $195-205Bへ引き上げ・FCF -$5.9B。META 2026 ~7GW / 2027 ~14GW目標。他3社は次回決算で記入"
+
+  # --- ⑦ ORCL RPO (未来の需要) -----------------------------------
+  # Oracleの決算 (Remaining Performance Obligations) から記入する。
+  orcl:
+    - quarter: "2026Q2"
+      rpo_busd: null               # RPO ($B)。決算確認後に記入
+      canceled: false
+      note: "直近決算のRPOを記入するとBacklog/RPO監視が有効になる"
 
 # --- ⑫ Refinancing: 新規借入条件 ---------------------------------
 # AIインフラ企業の新しい資金調達が出るたびに追記する。
 # failed: true (発行失敗・条件未達で撤回) が出たら🔴シグナル。
+#
+# category は比較グループ。「同issuer + 同category」の案件同士のspread/coupon
+# だけを比較する (会社・担保・シニオリティが違う債券のクーポン比較は無意味なため)。
+# 例: crwv_gpu_backed_ig / crwv_gpu_backed_hy / crwv_senior_unsecured / apld_spv_secured
 financing:
   - date: "2026-03"
     issuer: CRWV
+    category: crwv_gpu_backed_ig
     instrument: "GPU-backed facility (IG)"
     amount_busd: 8.5
     coupon_pct: 5.9
@@ -120,6 +137,7 @@ financing:
     failed: false
   - date: "2026-05"
     issuer: CRWV
+    category: crwv_gpu_backed_hy
     instrument: "GPU-backed loan"
     amount_busd: null
     coupon_pct: null
@@ -127,6 +145,7 @@ financing:
     failed: false
   - date: "2026-06"
     issuer: CRWV
+    category: crwv_senior_unsecured
     instrument: "Senior Notes 2032"
     amount_busd: 1.25
     coupon_pct: 9.625
@@ -134,12 +153,43 @@ financing:
     failed: false
   - date: "2026-07"
     issuer: APLD
+    category: apld_spv_secured
     instrument: "SPV Notes 2031 (par発行)"
     amount_busd: 1.59
     coupon_pct: 7.0
     spread_bps: null
     failed: false
-    note: "以前のPolaris Forge債は9.25% @97 → 条件改善"
+    note: "以前のPolaris Forge債(9.25% @97)とはSPV/担保が異なるため直接比較はしない"
+
+# --- ⑤ Debt maturity / Liquidity ---------------------------------
+# 各社の10-Q/10-Kから記入する。自動で
+#   Liquidity Coverage = (cash + undrawn_revolver) / debt_due_24m
+# を計算し、最弱の会社で判定する (≥2x🟢 / ≥1x🟡 / ≥0.7x🟠 / 未満🔴)。
+balance_sheets:
+  crwv:
+    - quarter: "2026Q2"
+      cash_busd: null
+      undrawn_revolver_busd: null
+      debt_due_12m_busd: null
+      debt_due_24m_busd: null
+      debt_due_36m_busd: null
+      total_debt_busd: null
+  apld:
+    - quarter: "2026Q2"
+      cash_busd: null
+      undrawn_revolver_busd: null
+      debt_due_12m_busd: null
+      debt_due_24m_busd: null
+      debt_due_36m_busd: null
+      total_debt_busd: null
+  orcl:
+    - quarter: "2026Q2"
+      cash_busd: null
+      undrawn_revolver_busd: null
+      debt_due_12m_busd: null
+      debt_due_24m_busd: null
+      debt_due_36m_busd: null
+      total_debt_busd: null
 
 # --- 決算リマインダー ---------------------------------------------
 # date の7日前からDiscordにリマインダーが届く。日付は目安なので確定次第修正。

@@ -114,11 +114,18 @@ def test_gpu_price_35pct_drop_red():
     assert signals.eval_gpu_price(h, {}).level is Level.RED
 
 
-def test_gpu_price_falls_back_to_manual():
+def test_gpu_price_falls_back_to_manual_is_unknown():
+    # データ不足時に🟢を出さない (v2): 手動値は表示するが判定は⚪
     manual = {"gpu_manual_fallback": {"sd_b200_rental": 5.74, "as_of": "2026-07-07"}}
     r = signals.eval_gpu_price({"daily": {}}, manual)
-    assert r.level is Level.GREEN
+    assert r.level is Level.UNKNOWN
     assert "5.74" in r.value_text
+
+
+def test_gpu_price_short_history_is_unknown():
+    h = _daily_history("sd_b200_rental", [(5, 5.74), (0, 5.70)])
+    r = signals.eval_gpu_price(h, {})
+    assert r.level is Level.UNKNOWN
 
 
 # --- Spot比率 ---
@@ -137,39 +144,195 @@ def test_spot_ratio_collapse_red():
     assert r.level is Level.RED
 
 
-# --- CRWV債券 ---
+# --- CRWVスプレッド ---
 
-def test_crwv_bond_levels():
-    assert signals.eval_crwv_bond({"crwv_bond": {"yield_pct": 9.6}}).level is Level.GREEN
-    assert signals.eval_crwv_bond({"crwv_bond": {"yield_pct": 12}}).level is Level.YELLOW
-    assert signals.eval_crwv_bond({"crwv_bond": {"yield_pct": 15}}).level is Level.ORANGE
-    assert signals.eval_crwv_bond({"crwv_bond": {"yield_pct": 20}}).level is Level.RED
+def _spread_setup(yield_pct: float, ust_bps: float, hy_bps: float | None = None):
+    h = _daily_history("ust7y_bps", [(0, ust_bps)])
+    if hy_bps is not None:
+        h["daily"][list(h["daily"])[0]]["hy_oas_bps"] = hy_bps
+    manual = {"crwv_bond": {"yield_pct": yield_pct, "as_of": "2026-08-20"}}
+    return h, manual
 
 
-# --- Financing ---
+def test_crwv_spread_levels():
+    # 9.6% - 4.2% = 540bp → 🟢
+    h, manual = _spread_setup(9.6, 420)
+    r = signals.eval_crwv_spread(h, manual)
+    assert r.level is Level.GREEN
+    assert "540" in r.value_text
+    # 12.5% - 4.2% = 830bp → 🟡
+    h, manual = _spread_setup(12.5, 420)
+    assert signals.eval_crwv_spread(h, manual).level is Level.YELLOW
+    # 14.5% - 4.2% = 1030bp → 🟠
+    h, manual = _spread_setup(14.5, 420)
+    assert signals.eval_crwv_spread(h, manual).level is Level.ORANGE
+    # 20% - 4.2% = 1580bp → 🔴
+    h, manual = _spread_setup(20.0, 420)
+    assert signals.eval_crwv_spread(h, manual).level is Level.RED
+
+
+def test_crwv_spread_shows_ai_premium_vs_hy():
+    h, manual = _spread_setup(9.6, 420, hy_bps=300)
+    r = signals.eval_crwv_spread(h, manual)
+    assert "+240bp" in r.detail  # 540 - 300
+
+
+def test_crwv_spread_without_treasury_is_provisional():
+    manual = {"crwv_bond": {"yield_pct": 9.6, "as_of": "2026-08-20"}}
+    r = signals.eval_crwv_spread({"daily": {}}, manual)
+    assert r.confidence == "provisional"
+
+
+# --- Financing (同issuer + 同categoryのみ比較) ---
 
 def test_financing_failed_is_red():
     manual = {"financing": [
-        {"date": "2026-06", "issuer": "CRWV", "coupon_pct": 9.6, "failed": False},
-        {"date": "2026-09", "issuer": "APLD", "failed": True},
+        {"date": "2026-06", "issuer": "CRWV", "category": "a", "coupon_pct": 9.6},
+        {"date": "2026-09", "issuer": "APLD", "category": "b", "failed": True},
     ]}
     assert signals.eval_financing(manual).level is Level.RED
 
 
-def test_financing_coupon_jump_is_orange():
+def test_financing_cross_company_not_compared():
+    # 会社もcategoryも違う → 比較せず「蓄積待ち」の暫定green
     manual = {"financing": [
-        {"date": "2026-06", "issuer": "CRWV", "coupon_pct": 7.0, "failed": False},
-        {"date": "2026-09", "issuer": "CRWV", "coupon_pct": 9.0, "failed": False},
+        {"date": "2026-06", "issuer": "CRWV", "category": "crwv_unsecured", "coupon_pct": 9.625},
+        {"date": "2026-07", "issuer": "APLD", "category": "apld_spv", "coupon_pct": 7.0},
     ]}
-    assert signals.eval_financing(manual).level is Level.ORANGE
+    r = signals.eval_financing(manual)
+    assert r.level is Level.GREEN
+    assert r.confidence == "provisional"
+    assert "蓄積待ち" in r.detail
 
 
-def test_financing_improving_is_green():
+def test_financing_same_category_coupon_jump_is_orange():
     manual = {"financing": [
-        {"date": "2026-06", "issuer": "APLD", "coupon_pct": 9.25, "failed": False},
-        {"date": "2026-07", "issuer": "APLD", "coupon_pct": 7.0, "failed": False},
+        {"date": "2026-06", "issuer": "CRWV", "category": "crwv_unsecured", "coupon_pct": 7.0},
+        {"date": "2026-09", "issuer": "CRWV", "category": "crwv_unsecured", "coupon_pct": 9.0},
     ]}
+    r = signals.eval_financing(manual)
+    assert r.level is Level.ORANGE
+    assert r.confidence == "confirmed"
+
+
+def test_financing_same_category_spread_preferred():
+    manual = {"financing": [
+        {"date": "2026-03", "issuer": "CRWV", "category": "gpu", "spread_bps": 225, "coupon_pct": 5.9},
+        {"date": "2026-09", "issuer": "CRWV", "category": "gpu", "spread_bps": 250, "coupon_pct": 9.0},
+    ]}
+    # spread +25bp → 🟢 (couponの+3.1ptではなくspreadで判定)
     assert signals.eval_financing(manual).level is Level.GREEN
+
+
+# --- Utilization Proxy ---
+
+def _crwv_util(entries):
+    return {"quarterly": {"crwv": entries}}
+
+
+def test_utilization_missing_power_is_unknown():
+    manual = _crwv_util([{"quarter": "2026Q2", "revenue_musd": 2580}])
+    r = signals.eval_crwv_utilization(manual)
+    assert r.level is Level.UNKNOWN
+
+
+def test_utilization_revenue_outpacing_power_is_green():
+    manual = _crwv_util([
+        {"quarter": "2026Q2", "revenue_musd": 2000, "active_power_gw": 1.0},
+        {"quarter": "2026Q3", "revenue_musd": 3100, "active_power_gw": 1.5},
+    ])
+    r = signals.eval_crwv_utilization(manual)
+    assert r.level is Level.GREEN  # +55% vs +50%
+
+
+def test_utilization_power_outpacing_revenue_is_orange():
+    # 売上+30% vs 電力+50% = 差-20pt → 🟠
+    manual = _crwv_util([
+        {"quarter": "2026Q2", "revenue_musd": 2000, "active_power_gw": 1.0},
+        {"quarter": "2026Q3", "revenue_musd": 2600, "active_power_gw": 1.5},
+    ])
+    assert signals.eval_crwv_utilization(manual).level is Level.ORANGE
+
+
+def test_utilization_big_gap_is_red():
+    manual = _crwv_util([
+        {"quarter": "2026Q2", "revenue_musd": 2000, "active_power_gw": 1.0},
+        {"quarter": "2026Q3", "revenue_musd": 2100, "active_power_gw": 1.6},
+    ])
+    assert signals.eval_crwv_utilization(manual).level is Level.RED
+
+
+# --- Liquidity Coverage ---
+
+def _bs(cash, revolver, due24):
+    return {"balance_sheets": {"crwv": [{
+        "quarter": "2026Q2", "cash_busd": cash,
+        "undrawn_revolver_busd": revolver, "debt_due_24m_busd": due24,
+    }]}}
+
+
+def test_liquidity_levels():
+    assert signals.eval_liquidity(_bs(8, 2, 2)).level is Level.GREEN    # 5.0x
+    assert signals.eval_liquidity(_bs(3, 0, 2)).level is Level.YELLOW   # 1.5x
+    assert signals.eval_liquidity(_bs(4, 0, 5)).level is Level.ORANGE   # 0.8x
+    assert signals.eval_liquidity(_bs(5, 0, 10)).level is Level.RED     # 0.5x
+
+
+def test_liquidity_empty_is_unknown():
+    assert signals.eval_liquidity({}).level is Level.UNKNOWN
+    assert signals.eval_liquidity(_bs(None, None, None)).level is Level.UNKNOWN
+
+
+# --- Hyperscaler 5社 breadth ---
+
+def _hyper_companies(companies):
+    return {"quarterly": {"hyperscalers": [{"quarter": "2026Q3", "companies": companies}]}}
+
+
+def test_hyperscaler_breadth_all_good_is_green():
+    manual = _hyper_companies({
+        "MSFT": {"cloud_yoy_pct": 31, "prev_cloud_yoy_pct": 33, "capex_guide": "up", "capacity_constrained": True},
+        "GOOGL": {"cloud_yoy_pct": 40, "prev_cloud_yoy_pct": 38, "capex_guide": "up", "capacity_constrained": True},
+    })
+    r = signals.eval_hyperscalers(manual)
+    assert r.level is Level.GREEN
+    assert r.detail_rows is not None
+
+
+def test_hyperscaler_two_decelerating_is_yellow():
+    manual = _hyper_companies({
+        "MSFT": {"cloud_yoy_pct": 31, "prev_cloud_yoy_pct": 38, "capex_guide": "up"},
+        "AMZN": {"cloud_yoy_pct": 15, "prev_cloud_yoy_pct": 22, "capex_guide": "up"},
+        "GOOGL": {"cloud_yoy_pct": 40, "prev_cloud_yoy_pct": 39, "capex_guide": "up"},
+    })
+    assert signals.eval_hyperscalers(manual).level is Level.YELLOW
+
+
+def test_hyperscaler_guide_down_is_orange():
+    manual = _hyper_companies({
+        "MSFT": {"cloud_yoy_pct": 31, "prev_cloud_yoy_pct": 32, "capex_guide": "down"},
+        "GOOGL": {"cloud_yoy_pct": 40, "prev_cloud_yoy_pct": 39, "capex_guide": "up"},
+    })
+    assert signals.eval_hyperscalers(manual).level is Level.ORANGE
+
+
+def test_hyperscaler_two_guide_down_is_red():
+    manual = _hyper_companies({
+        "MSFT": {"capex_guide": "down"},
+        "AMZN": {"capex_guide": "down"},
+        "GOOGL": {"capex_guide": "up"},
+    })
+    assert signals.eval_hyperscalers(manual).level is Level.RED
+
+
+def test_hyperscaler_legacy_format_is_provisional():
+    manual = {"quarterly": {"hyperscalers": [
+        {"quarter": "2026Q2", "capex_trend": "up", "cloud_growth_trend": "up",
+         "fcf_deteriorating": False}
+    ]}}
+    r = signals.eval_hyperscalers(manual)
+    assert r.level is Level.GREEN
+    assert r.confidence == "provisional"
 
 
 # --- Hyperscaler ---

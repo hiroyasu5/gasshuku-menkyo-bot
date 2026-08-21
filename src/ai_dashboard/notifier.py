@@ -117,7 +117,12 @@ def notify_weekly_summary(
         title=f"{LEVEL_EMOJI[composite.level]} AI Bubble Dashboard 週次サマリー",
         color=LEVEL_COLOR[composite.level],
     )
-    lines = [f"**複合判定: {composite.summary}**", ""]
+    lines = [
+        f"**複合判定: {composite.summary}**",
+        f"Data confidence: {composite.confidence_pct}% "
+        f"({composite.confirmed_count}/{composite.total_count}指標を実データで確認)",
+        "",
+    ]
     for g in GROUP_ORDER:
         lines.append(f"__{GROUP_LABEL_JA[g]}__")
         for r in results:
