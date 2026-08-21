@@ -1,9 +1,8 @@
 name: 合宿免許スクレイピング
 
+# 日次実行は停止中 (AI Bubble Dashboardのみ稼働)。
+# 再開する場合は schedule: を戻す。手動実行は workflow_dispatch で可能。
 on:
-  schedule:
-    # JST 8:00 = UTC 23:00（前日）
-    - cron: "0 23 * * *"
   workflow_dispatch:
 
 permissions:
