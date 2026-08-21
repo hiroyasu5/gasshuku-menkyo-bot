@@ -4,37 +4,44 @@
     "2024-08-22": {
       "hy_oas_bps": 321.0,
       "ig_oas_bps": 97.0,
-      "single_b_oas_bps": 295.0
+      "single_b_oas_bps": 295.0,
+      "ust7y_bps": 377.0
     },
     "2024-08-23": {
       "hy_oas_bps": 319.0,
       "ig_oas_bps": 96.0,
-      "single_b_oas_bps": 292.0
+      "single_b_oas_bps": 292.0,
+      "ust7y_bps": 371.0
     },
     "2024-08-26": {
       "hy_oas_bps": 315.0,
       "ig_oas_bps": 96.0,
-      "single_b_oas_bps": 288.0
+      "single_b_oas_bps": 288.0,
+      "ust7y_bps": 372.0
     },
     "2024-08-27": {
       "hy_oas_bps": 317.0,
       "ig_oas_bps": 96.0,
-      "single_b_oas_bps": 291.0
+      "single_b_oas_bps": 291.0,
+      "ust7y_bps": 373.0
     },
     "2024-08-28": {
       "hy_oas_bps": 319.0,
       "ig_oas_bps": 96.0,
-      "single_b_oas_bps": 292.0
+      "single_b_oas_bps": 292.0,
+      "ust7y_bps": 374.0
     },
     "2024-08-29": {
       "hy_oas_bps": 315.0,
       "ig_oas_bps": 96.0,
-      "single_b_oas_bps": 289.0
+      "single_b_oas_bps": 289.0,
+      "ust7y_bps": 376.0
     },
     "2024-08-30": {
       "hy_oas_bps": 313.0,
       "ig_oas_bps": 95.0,
-      "single_b_oas_bps": 286.0
+      "single_b_oas_bps": 286.0,
+      "ust7y_bps": 380.0
     },
     "2024-08-31": {
       "hy_oas_bps": 317.0,
@@ -49,147 +56,176 @@
     "2024-09-03": {
       "hy_oas_bps": 331.0,
       "ig_oas_bps": 98.0,
-      "single_b_oas_bps": 314.0
+      "single_b_oas_bps": 314.0,
+      "ust7y_bps": 373.0
     },
     "2024-09-04": {
       "hy_oas_bps": 335.0,
       "ig_oas_bps": 99.0,
-      "single_b_oas_bps": 319.0
+      "single_b_oas_bps": 319.0,
+      "ust7y_bps": 365.0
     },
     "2024-09-05": {
       "hy_oas_bps": 329.0,
       "ig_oas_bps": 99.0,
-      "single_b_oas_bps": 312.0
+      "single_b_oas_bps": 312.0,
+      "ust7y_bps": 363.0
     },
     "2024-09-06": {
       "hy_oas_bps": 339.0,
       "ig_oas_bps": 99.0,
-      "single_b_oas_bps": 325.0
+      "single_b_oas_bps": 325.0,
+      "ust7y_bps": 360.0
     },
     "2024-09-09": {
       "hy_oas_bps": 336.0,
       "ig_oas_bps": 99.0,
-      "single_b_oas_bps": 322.0
+      "single_b_oas_bps": 322.0,
+      "ust7y_bps": 358.0
     },
     "2024-09-10": {
       "hy_oas_bps": 346.0,
       "ig_oas_bps": 101.0,
-      "single_b_oas_bps": 335.0
+      "single_b_oas_bps": 335.0,
+      "ust7y_bps": 353.0
     },
     "2024-09-11": {
       "hy_oas_bps": 344.0,
       "ig_oas_bps": 101.0,
-      "single_b_oas_bps": 336.0
+      "single_b_oas_bps": 336.0,
+      "ust7y_bps": 354.0
     },
     "2024-09-12": {
       "hy_oas_bps": 339.0,
       "ig_oas_bps": 99.0,
-      "single_b_oas_bps": 330.0
+      "single_b_oas_bps": 330.0,
+      "ust7y_bps": 357.0
     },
     "2024-09-13": {
       "hy_oas_bps": 337.0,
       "ig_oas_bps": 99.0,
-      "single_b_oas_bps": 328.0
+      "single_b_oas_bps": 328.0,
+      "ust7y_bps": 353.0
     },
     "2024-09-16": {
       "hy_oas_bps": 332.0,
       "ig_oas_bps": 98.0,
-      "single_b_oas_bps": 324.0
+      "single_b_oas_bps": 324.0,
+      "ust7y_bps": 351.0
     },
     "2024-09-17": {
       "hy_oas_bps": 325.0,
       "ig_oas_bps": 97.0,
-      "single_b_oas_bps": 318.0
+      "single_b_oas_bps": 318.0,
+      "ust7y_bps": 353.0
     },
     "2024-09-18": {
       "hy_oas_bps": 321.0,
       "ig_oas_bps": 95.0,
-      "single_b_oas_bps": 314.0
+      "single_b_oas_bps": 314.0,
+      "ust7y_bps": 358.0
     },
     "2024-09-19": {
       "hy_oas_bps": 310.0,
       "ig_oas_bps": 93.0,
-      "single_b_oas_bps": 302.0
+      "single_b_oas_bps": 302.0,
+      "ust7y_bps": 360.0
     },
     "2024-09-20": {
       "hy_oas_bps": 315.0,
       "ig_oas_bps": 93.0,
-      "single_b_oas_bps": 307.0
+      "single_b_oas_bps": 307.0,
+      "ust7y_bps": 359.0
     },
     "2024-09-23": {
       "hy_oas_bps": 315.0,
       "ig_oas_bps": 92.0,
-      "single_b_oas_bps": 306.0
+      "single_b_oas_bps": 306.0,
+      "ust7y_bps": 362.0
     },
     "2024-09-24": {
       "hy_oas_bps": 321.0,
       "ig_oas_bps": 92.0,
-      "single_b_oas_bps": 313.0
+      "single_b_oas_bps": 313.0,
+      "ust7y_bps": 360.0
     },
     "2024-09-25": {
       "hy_oas_bps": 319.0,
       "ig_oas_bps": 92.0,
-      "single_b_oas_bps": 311.0
+      "single_b_oas_bps": 311.0,
+      "ust7y_bps": 365.0
     },
     "2024-09-26": {
       "hy_oas_bps": 314.0,
       "ig_oas_bps": 92.0,
-      "single_b_oas_bps": 305.0
+      "single_b_oas_bps": 305.0,
+      "ust7y_bps": 365.0
     },
     "2024-09-27": {
       "hy_oas_bps": 314.0,
       "ig_oas_bps": 92.0,
-      "single_b_oas_bps": 307.0
+      "single_b_oas_bps": 307.0,
+      "ust7y_bps": 360.0
     },
     "2024-09-30": {
       "hy_oas_bps": 303.0,
       "ig_oas_bps": 92.0,
-      "single_b_oas_bps": 299.0
+      "single_b_oas_bps": 299.0,
+      "ust7y_bps": 367.0
     },
     "2024-10-01": {
       "hy_oas_bps": 307.0,
       "ig_oas_bps": 92.0,
-      "single_b_oas_bps": 304.0
+      "single_b_oas_bps": 304.0,
+      "ust7y_bps": 360.0
     },
     "2024-10-02": {
       "hy_oas_bps": 306.0,
       "ig_oas_bps": 91.0,
-      "single_b_oas_bps": 303.0
+      "single_b_oas_bps": 303.0,
+      "ust7y_bps": 365.0
     },
     "2024-10-03": {
       "hy_oas_bps": 304.0,
       "ig_oas_bps": 90.0,
-      "single_b_oas_bps": 302.0
+      "single_b_oas_bps": 302.0,
+      "ust7y_bps": 371.0
     },
     "2024-10-04": {
       "hy_oas_bps": 289.0,
       "ig_oas_bps": 87.0,
-      "single_b_oas_bps": 286.0
+      "single_b_oas_bps": 286.0,
+      "ust7y_bps": 388.0
     },
     "2024-10-07": {
       "hy_oas_bps": 295.0,
       "ig_oas_bps": 86.0,
-      "single_b_oas_bps": 292.0
+      "single_b_oas_bps": 292.0,
+      "ust7y_bps": 392.0
     },
     "2024-10-08": {
       "hy_oas_bps": 299.0,
       "ig_oas_bps": 87.0,
-      "single_b_oas_bps": 296.0
+      "single_b_oas_bps": 296.0,
+      "ust7y_bps": 394.0
     },
     "2024-10-09": {
       "hy_oas_bps": 294.0,
       "ig_oas_bps": 85.0,
-      "single_b_oas_bps": 292.0
+      "single_b_oas_bps": 292.0,
+      "ust7y_bps": 397.0
     },
     "2024-10-10": {
       "hy_oas_bps": 299.0,
       "ig_oas_bps": 84.0,
-      "single_b_oas_bps": 298.0
+      "single_b_oas_bps": 298.0,
+      "ust7y_bps": 399.0
     },
     "2024-10-11": {
       "hy_oas_bps": 298.0,
       "ig_oas_bps": 84.0,
-      "single_b_oas_bps": 296.0
+      "single_b_oas_bps": 296.0,
+      "ust7y_bps": 397.0
     },
     "2024-10-14": {
       "hy_oas_bps": 297.0,
@@ -199,97 +235,116 @@
     "2024-10-15": {
       "hy_oas_bps": 293.0,
       "ig_oas_bps": 83.0,
-      "single_b_oas_bps": 289.0
+      "single_b_oas_bps": 289.0,
+      "ust7y_bps": 393.0
     },
     "2024-10-16": {
       "hy_oas_bps": 290.0,
       "ig_oas_bps": 83.0,
-      "single_b_oas_bps": 287.0
+      "single_b_oas_bps": 287.0,
+      "ust7y_bps": 392.0
     },
     "2024-10-17": {
       "hy_oas_bps": 289.0,
       "ig_oas_bps": 83.0,
-      "single_b_oas_bps": 284.0
+      "single_b_oas_bps": 284.0,
+      "ust7y_bps": 399.0
     },
     "2024-10-18": {
       "hy_oas_bps": 288.0,
       "ig_oas_bps": 83.0,
-      "single_b_oas_bps": 285.0
+      "single_b_oas_bps": 285.0,
+      "ust7y_bps": 397.0
     },
     "2024-10-21": {
       "hy_oas_bps": 288.0,
       "ig_oas_bps": 85.0,
-      "single_b_oas_bps": 283.0
+      "single_b_oas_bps": 283.0,
+      "ust7y_bps": 407.0
     },
     "2024-10-22": {
       "hy_oas_bps": 292.0,
       "ig_oas_bps": 85.0,
-      "single_b_oas_bps": 287.0
+      "single_b_oas_bps": 287.0,
+      "ust7y_bps": 409.99999999999994
     },
     "2024-10-23": {
       "hy_oas_bps": 295.0,
       "ig_oas_bps": 86.0,
-      "single_b_oas_bps": 290.0
+      "single_b_oas_bps": 290.0,
+      "ust7y_bps": 413.99999999999994
     },
     "2024-10-24": {
       "hy_oas_bps": 293.0,
       "ig_oas_bps": 86.0,
-      "single_b_oas_bps": 288.0
+      "single_b_oas_bps": 288.0,
+      "ust7y_bps": 412.0
     },
     "2024-10-25": {
       "hy_oas_bps": 289.0,
       "ig_oas_bps": 85.0,
-      "single_b_oas_bps": 285.0
+      "single_b_oas_bps": 285.0,
+      "ust7y_bps": 415.00000000000006
     },
     "2024-10-28": {
       "hy_oas_bps": 282.0,
       "ig_oas_bps": 84.0,
-      "single_b_oas_bps": 278.0
+      "single_b_oas_bps": 278.0,
+      "ust7y_bps": 419.00000000000006
     },
     "2024-10-29": {
       "hy_oas_bps": 285.0,
       "ig_oas_bps": 84.0,
-      "single_b_oas_bps": 281.0
+      "single_b_oas_bps": 281.0,
+      "ust7y_bps": 418.0
     },
     "2024-10-30": {
       "hy_oas_bps": 280.0,
       "ig_oas_bps": 84.0,
-      "single_b_oas_bps": 275.0
+      "single_b_oas_bps": 275.0,
+      "ust7y_bps": 420.0
     },
     "2024-10-31": {
       "hy_oas_bps": 288.0,
       "ig_oas_bps": 86.0,
-      "single_b_oas_bps": 286.0
+      "single_b_oas_bps": 286.0,
+      "ust7y_bps": 421.0
     },
     "2024-11-01": {
       "hy_oas_bps": 283.0,
       "ig_oas_bps": 86.0,
-      "single_b_oas_bps": 284.0
+      "single_b_oas_bps": 284.0,
+      "ust7y_bps": 430.0
     },
     "2024-11-04": {
       "hy_oas_bps": 287.0,
       "ig_oas_bps": 86.0,
-      "single_b_oas_bps": 287.0
+      "single_b_oas_bps": 287.0,
+      "ust7y_bps": 424.0
     },
     "2024-11-05": {
       "hy_oas_bps": 286.0,
       "ig_oas_bps": 84.0,
-      "single_b_oas_bps": 284.0
+      "single_b_oas_bps": 284.0,
+      "ust7y_bps": 422.0
     },
     "2024-11-06": {
       "hy_oas_bps": 274.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 270.0
+      "single_b_oas_bps": 270.0,
+      "ust7y_bps": 437.0
     },
     "2024-11-07": {
       "hy_oas_bps": 273.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 269.0
+      "single_b_oas_bps": 269.0,
+      "ust7y_bps": 425.0
     },
     "2024-11-08": {
       "hy_oas_bps": 263.0,
       "ig_oas_bps": 77.0,
-      "single_b_oas_bps": 258.0
+      "single_b_oas_bps": 258.0,
+      "ust7y_bps": 425.0
     },
     "2024-11-11": {
       "hy_oas_bps": 263.0,
@@ -299,62 +354,74 @@
     "2024-11-12": {
       "hy_oas_bps": 261.0,
       "ig_oas_bps": 77.0,
-      "single_b_oas_bps": 254.99999999999997
+      "single_b_oas_bps": 254.99999999999997,
+      "ust7y_bps": 438.0
     },
     "2024-11-13": {
       "hy_oas_bps": 264.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 258.0
+      "single_b_oas_bps": 258.0,
+      "ust7y_bps": 438.0
     },
     "2024-11-14": {
       "hy_oas_bps": 260.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 254.0
+      "single_b_oas_bps": 254.0,
+      "ust7y_bps": 438.0
     },
     "2024-11-15": {
       "hy_oas_bps": 272.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 269.0
+      "single_b_oas_bps": 269.0,
+      "ust7y_bps": 436.00000000000006
     },
     "2024-11-18": {
       "hy_oas_bps": 272.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 267.0
+      "single_b_oas_bps": 267.0,
+      "ust7y_bps": 434.99999999999994
     },
     "2024-11-19": {
       "hy_oas_bps": 269.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 264.0
+      "single_b_oas_bps": 264.0,
+      "ust7y_bps": 432.0
     },
     "2024-11-20": {
       "hy_oas_bps": 267.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 263.0
+      "single_b_oas_bps": 263.0,
+      "ust7y_bps": 434.0
     },
     "2024-11-21": {
       "hy_oas_bps": 261.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 257.0
+      "single_b_oas_bps": 257.0,
+      "ust7y_bps": 436.00000000000006
     },
     "2024-11-22": {
       "hy_oas_bps": 261.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 258.0
+      "single_b_oas_bps": 258.0,
+      "ust7y_bps": 434.99999999999994
     },
     "2024-11-25": {
       "hy_oas_bps": 264.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 259.0
+      "single_b_oas_bps": 259.0,
+      "ust7y_bps": 421.0
     },
     "2024-11-26": {
       "hy_oas_bps": 268.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 264.0
+      "single_b_oas_bps": 264.0,
+      "ust7y_bps": 424.0
     },
     "2024-11-27": {
       "hy_oas_bps": 269.0,
       "ig_oas_bps": 82.0,
-      "single_b_oas_bps": 265.0
+      "single_b_oas_bps": 265.0,
+      "ust7y_bps": 417.0
     },
     "2024-11-28": {
       "hy_oas_bps": 269.0,
@@ -364,7 +431,8 @@
     "2024-11-29": {
       "hy_oas_bps": 272.0,
       "ig_oas_bps": 82.0,
-      "single_b_oas_bps": 269.0
+      "single_b_oas_bps": 269.0,
+      "ust7y_bps": 409.99999999999994
     },
     "2024-11-30": {
       "hy_oas_bps": 274.0,
@@ -374,166 +442,199 @@
     "2024-12-02": {
       "hy_oas_bps": 268.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 265.0
+      "single_b_oas_bps": 265.0,
+      "ust7y_bps": 413.0
     },
     "2024-12-03": {
       "hy_oas_bps": 266.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 264.0
+      "single_b_oas_bps": 264.0,
+      "ust7y_bps": 417.0
     },
     "2024-12-04": {
       "hy_oas_bps": 266.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 263.0
+      "single_b_oas_bps": 263.0,
+      "ust7y_bps": 413.0
     },
     "2024-12-05": {
       "hy_oas_bps": 266.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 263.0
+      "single_b_oas_bps": 263.0,
+      "ust7y_bps": 412.0
     },
     "2024-12-06": {
       "hy_oas_bps": 267.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 264.0
+      "single_b_oas_bps": 264.0,
+      "ust7y_bps": 409.0
     },
     "2024-12-09": {
       "hy_oas_bps": 267.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 265.0
+      "single_b_oas_bps": 265.0,
+      "ust7y_bps": 413.0
     },
     "2024-12-10": {
       "hy_oas_bps": 267.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 266.0
+      "single_b_oas_bps": 266.0,
+      "ust7y_bps": 415.00000000000006
     },
     "2024-12-11": {
       "hy_oas_bps": 264.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 261.0
+      "single_b_oas_bps": 261.0,
+      "ust7y_bps": 420.0
     },
     "2024-12-12": {
       "hy_oas_bps": 266.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 264.0
+      "single_b_oas_bps": 264.0,
+      "ust7y_bps": 425.0
     },
     "2024-12-13": {
       "hy_oas_bps": 268.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 267.0
+      "single_b_oas_bps": 267.0,
+      "ust7y_bps": 433.0
     },
     "2024-12-16": {
       "hy_oas_bps": 269.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 268.0
+      "single_b_oas_bps": 268.0,
+      "ust7y_bps": 432.0
     },
     "2024-12-17": {
       "hy_oas_bps": 275.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 275.0
+      "single_b_oas_bps": 275.0,
+      "ust7y_bps": 433.0
     },
     "2024-12-18": {
       "hy_oas_bps": 273.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 274.0
+      "single_b_oas_bps": 274.0,
+      "ust7y_bps": 445.0
     },
     "2024-12-19": {
       "hy_oas_bps": 291.0,
       "ig_oas_bps": 82.0,
-      "single_b_oas_bps": 292.0
+      "single_b_oas_bps": 292.0,
+      "ust7y_bps": 451.0
     },
     "2024-12-20": {
       "hy_oas_bps": 286.0,
       "ig_oas_bps": 82.0,
-      "single_b_oas_bps": 288.0
+      "single_b_oas_bps": 288.0,
+      "ust7y_bps": 445.0
     },
     "2024-12-23": {
       "hy_oas_bps": 285.0,
       "ig_oas_bps": 82.0,
-      "single_b_oas_bps": 285.0
+      "single_b_oas_bps": 285.0,
+      "ust7y_bps": 451.99999999999994
     },
     "2024-12-24": {
       "hy_oas_bps": 286.0,
-      "single_b_oas_bps": 287.0
+      "single_b_oas_bps": 287.0,
+      "ust7y_bps": 451.99999999999994
     },
     "2024-12-26": {
       "hy_oas_bps": 286.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 287.0
+      "single_b_oas_bps": 287.0,
+      "ust7y_bps": 449.0
     },
     "2024-12-27": {
       "hy_oas_bps": 284.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 285.0
+      "single_b_oas_bps": 285.0,
+      "ust7y_bps": 453.0
     },
     "2024-12-30": {
       "hy_oas_bps": 294.0,
       "ig_oas_bps": 82.0,
-      "single_b_oas_bps": 296.0
+      "single_b_oas_bps": 296.0,
+      "ust7y_bps": 446.0
     },
     "2024-12-31": {
       "hy_oas_bps": 292.0,
       "ig_oas_bps": 82.0,
-      "single_b_oas_bps": 296.0
+      "single_b_oas_bps": 296.0,
+      "ust7y_bps": 448.00000000000006
     },
     "2025-01-02": {
       "hy_oas_bps": 288.0,
       "ig_oas_bps": 83.0,
-      "single_b_oas_bps": 290.0
+      "single_b_oas_bps": 290.0,
+      "ust7y_bps": 447.0
     },
     "2025-01-03": {
       "hy_oas_bps": 281.0,
       "ig_oas_bps": 83.0,
-      "single_b_oas_bps": 282.0
+      "single_b_oas_bps": 282.0,
+      "ust7y_bps": 451.0
     },
     "2025-01-06": {
       "hy_oas_bps": 276.0,
       "ig_oas_bps": 84.0,
-      "single_b_oas_bps": 278.0
+      "single_b_oas_bps": 278.0,
+      "ust7y_bps": 451.99999999999994
     },
     "2025-01-07": {
       "hy_oas_bps": 279.0,
       "ig_oas_bps": 84.0,
-      "single_b_oas_bps": 283.0
+      "single_b_oas_bps": 283.0,
+      "ust7y_bps": 457.0
     },
     "2025-01-08": {
       "hy_oas_bps": 284.0,
       "ig_oas_bps": 83.0,
-      "single_b_oas_bps": 286.0
+      "single_b_oas_bps": 286.0,
+      "ust7y_bps": 455.99999999999994
     },
     "2025-01-09": {
       "hy_oas_bps": 282.0,
       "ig_oas_bps": 83.0,
-      "single_b_oas_bps": 284.0
+      "single_b_oas_bps": 284.0,
+      "ust7y_bps": 457.0
     },
     "2025-01-10": {
       "hy_oas_bps": 281.0,
       "ig_oas_bps": 83.0,
-      "single_b_oas_bps": 286.0
+      "single_b_oas_bps": 286.0,
+      "ust7y_bps": 470.0
     },
     "2025-01-13": {
       "hy_oas_bps": 285.0,
       "ig_oas_bps": 84.0,
-      "single_b_oas_bps": 289.0
+      "single_b_oas_bps": 289.0,
+      "ust7y_bps": 471.0
     },
     "2025-01-14": {
       "hy_oas_bps": 280.0,
       "ig_oas_bps": 84.0,
-      "single_b_oas_bps": 283.0
+      "single_b_oas_bps": 283.0,
+      "ust7y_bps": 470.0
     },
     "2025-01-15": {
       "hy_oas_bps": 272.0,
       "ig_oas_bps": 83.0,
-      "single_b_oas_bps": 274.0
+      "single_b_oas_bps": 274.0,
+      "ust7y_bps": 455.0
     },
     "2025-01-16": {
       "hy_oas_bps": 273.0,
       "ig_oas_bps": 83.0,
-      "single_b_oas_bps": 275.0
+      "single_b_oas_bps": 275.0,
+      "ust7y_bps": 450.0
     },
     "2025-01-17": {
       "hy_oas_bps": 264.0,
       "ig_oas_bps": 82.0,
-      "single_b_oas_bps": 265.0
+      "single_b_oas_bps": 265.0,
+      "ust7y_bps": 451.99999999999994
     },
     "2025-01-20": {
       "hy_oas_bps": 264.0,
@@ -543,97 +644,116 @@
     "2025-01-21": {
       "hy_oas_bps": 261.0,
       "ig_oas_bps": 82.0,
-      "single_b_oas_bps": 262.0
+      "single_b_oas_bps": 262.0,
+      "ust7y_bps": 449.0
     },
     "2025-01-22": {
       "hy_oas_bps": 259.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 260.0
+      "single_b_oas_bps": 260.0,
+      "ust7y_bps": 451.0
     },
     "2025-01-23": {
       "hy_oas_bps": 261.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 262.0
+      "single_b_oas_bps": 262.0,
+      "ust7y_bps": 455.0
     },
     "2025-01-24": {
       "hy_oas_bps": 260.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 261.0
+      "single_b_oas_bps": 261.0,
+      "ust7y_bps": 453.0
     },
     "2025-01-27": {
       "hy_oas_bps": 266.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 267.0
+      "single_b_oas_bps": 267.0,
+      "ust7y_bps": 443.0
     },
     "2025-01-28": {
       "hy_oas_bps": 266.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 266.0
+      "single_b_oas_bps": 266.0,
+      "ust7y_bps": 443.0
     },
     "2025-01-29": {
       "hy_oas_bps": 268.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 267.0
+      "single_b_oas_bps": 267.0,
+      "ust7y_bps": 444.00000000000006
     },
     "2025-01-30": {
       "hy_oas_bps": 267.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 268.0
+      "single_b_oas_bps": 268.0,
+      "ust7y_bps": 441.0
     },
     "2025-01-31": {
       "hy_oas_bps": 268.0,
       "ig_oas_bps": 82.0,
-      "single_b_oas_bps": 271.0
+      "single_b_oas_bps": 271.0,
+      "ust7y_bps": 447.0
     },
     "2025-02-03": {
       "hy_oas_bps": 273.0,
       "ig_oas_bps": 83.0,
-      "single_b_oas_bps": 278.0
+      "single_b_oas_bps": 278.0,
+      "ust7y_bps": 445.0
     },
     "2025-02-04": {
       "hy_oas_bps": 271.0,
       "ig_oas_bps": 82.0,
-      "single_b_oas_bps": 275.0
+      "single_b_oas_bps": 275.0,
+      "ust7y_bps": 442.0
     },
     "2025-02-05": {
       "hy_oas_bps": 269.0,
       "ig_oas_bps": 83.0,
-      "single_b_oas_bps": 271.0
+      "single_b_oas_bps": 271.0,
+      "ust7y_bps": 433.0
     },
     "2025-02-06": {
       "hy_oas_bps": 266.0,
       "ig_oas_bps": 84.0,
-      "single_b_oas_bps": 270.0
+      "single_b_oas_bps": 270.0,
+      "ust7y_bps": 436.00000000000006
     },
     "2025-02-07": {
       "hy_oas_bps": 267.0,
       "ig_oas_bps": 84.0,
-      "single_b_oas_bps": 271.0
+      "single_b_oas_bps": 271.0,
+      "ust7y_bps": 442.0
     },
     "2025-02-10": {
       "hy_oas_bps": 266.0,
       "ig_oas_bps": 84.0,
-      "single_b_oas_bps": 270.0
+      "single_b_oas_bps": 270.0,
+      "ust7y_bps": 442.0
     },
     "2025-02-11": {
       "hy_oas_bps": 266.0,
       "ig_oas_bps": 83.0,
-      "single_b_oas_bps": 268.0
+      "single_b_oas_bps": 268.0,
+      "ust7y_bps": 445.0
     },
     "2025-02-12": {
       "hy_oas_bps": 265.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 267.0
+      "single_b_oas_bps": 267.0,
+      "ust7y_bps": 455.99999999999994
     },
     "2025-02-13": {
       "hy_oas_bps": 265.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 268.0
+      "single_b_oas_bps": 268.0,
+      "ust7y_bps": 446.0
     },
     "2025-02-14": {
       "hy_oas_bps": 262.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 264.0
+      "single_b_oas_bps": 264.0,
+      "ust7y_bps": 441.0
     },
     "2025-02-17": {
       "hy_oas_bps": 262.0,
@@ -643,342 +763,410 @@
     "2025-02-18": {
       "hy_oas_bps": 262.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 260.0
+      "single_b_oas_bps": 260.0,
+      "ust7y_bps": 448.00000000000006
     },
     "2025-02-19": {
       "hy_oas_bps": 268.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 268.0
+      "single_b_oas_bps": 268.0,
+      "ust7y_bps": 446.0
     },
     "2025-02-20": {
       "hy_oas_bps": 266.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 264.0
+      "single_b_oas_bps": 264.0,
+      "ust7y_bps": 443.0
     },
     "2025-02-21": {
       "hy_oas_bps": 278.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 277.0
+      "single_b_oas_bps": 277.0,
+      "ust7y_bps": 434.99999999999994
     },
     "2025-02-24": {
       "hy_oas_bps": 278.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 278.0
+      "single_b_oas_bps": 278.0,
+      "ust7y_bps": 432.0
     },
     "2025-02-25": {
       "hy_oas_bps": 284.0,
       "ig_oas_bps": 84.0,
-      "single_b_oas_bps": 283.0
+      "single_b_oas_bps": 283.0,
+      "ust7y_bps": 421.0
     },
     "2025-02-26": {
       "hy_oas_bps": 281.0,
       "ig_oas_bps": 84.0,
-      "single_b_oas_bps": 279.0
+      "single_b_oas_bps": 279.0,
+      "ust7y_bps": 416.0
     },
     "2025-02-27": {
       "hy_oas_bps": 281.0,
       "ig_oas_bps": 85.0,
-      "single_b_oas_bps": 281.0
+      "single_b_oas_bps": 281.0,
+      "ust7y_bps": 419.00000000000006
     },
     "2025-02-28": {
       "hy_oas_bps": 287.0,
       "ig_oas_bps": 88.0,
-      "single_b_oas_bps": 288.0
+      "single_b_oas_bps": 288.0,
+      "ust7y_bps": 413.99999999999994
     },
     "2025-03-03": {
       "hy_oas_bps": 294.0,
       "ig_oas_bps": 89.0,
-      "single_b_oas_bps": 296.0
+      "single_b_oas_bps": 296.0,
+      "ust7y_bps": 405.99999999999994
     },
     "2025-03-04": {
       "hy_oas_bps": 299.0,
       "ig_oas_bps": 89.0,
-      "single_b_oas_bps": 302.0
+      "single_b_oas_bps": 302.0,
+      "ust7y_bps": 411.00000000000006
     },
     "2025-03-05": {
       "hy_oas_bps": 288.0,
       "ig_oas_bps": 87.0,
-      "single_b_oas_bps": 289.0
+      "single_b_oas_bps": 289.0,
+      "ust7y_bps": 418.0
     },
     "2025-03-06": {
       "hy_oas_bps": 299.0,
       "ig_oas_bps": 88.0,
-      "single_b_oas_bps": 300.0
+      "single_b_oas_bps": 300.0,
+      "ust7y_bps": 418.0
     },
     "2025-03-07": {
       "hy_oas_bps": 297.0,
       "ig_oas_bps": 89.0,
-      "single_b_oas_bps": 300.0
+      "single_b_oas_bps": 300.0,
+      "ust7y_bps": 421.0
     },
     "2025-03-10": {
       "hy_oas_bps": 316.0,
       "ig_oas_bps": 91.0,
-      "single_b_oas_bps": 318.0
+      "single_b_oas_bps": 318.0,
+      "ust7y_bps": 409.99999999999994
     },
     "2025-03-11": {
       "hy_oas_bps": 322.0,
       "ig_oas_bps": 94.0,
-      "single_b_oas_bps": 327.0
+      "single_b_oas_bps": 327.0,
+      "ust7y_bps": 416.0
     },
     "2025-03-12": {
       "hy_oas_bps": 320.0,
       "ig_oas_bps": 96.0,
-      "single_b_oas_bps": 326.0
+      "single_b_oas_bps": 326.0,
+      "ust7y_bps": 420.0
     },
     "2025-03-13": {
       "hy_oas_bps": 340.0,
       "ig_oas_bps": 97.0,
-      "single_b_oas_bps": 350.0
+      "single_b_oas_bps": 350.0,
+      "ust7y_bps": 415.00000000000006
     },
     "2025-03-14": {
       "hy_oas_bps": 325.0,
       "ig_oas_bps": 94.0,
-      "single_b_oas_bps": 333.0
+      "single_b_oas_bps": 333.0,
+      "ust7y_bps": 420.0
     },
     "2025-03-17": {
       "hy_oas_bps": 318.0,
       "ig_oas_bps": 93.0,
-      "single_b_oas_bps": 326.0
+      "single_b_oas_bps": 326.0,
+      "ust7y_bps": 421.0
     },
     "2025-03-18": {
       "hy_oas_bps": 323.0,
       "ig_oas_bps": 93.0,
-      "single_b_oas_bps": 330.0
+      "single_b_oas_bps": 330.0,
+      "ust7y_bps": 418.0
     },
     "2025-03-19": {
       "hy_oas_bps": 319.0,
       "ig_oas_bps": 91.0,
-      "single_b_oas_bps": 327.0
+      "single_b_oas_bps": 327.0,
+      "ust7y_bps": 413.99999999999994
     },
     "2025-03-20": {
       "hy_oas_bps": 317.0,
       "ig_oas_bps": 91.0,
-      "single_b_oas_bps": 323.0
+      "single_b_oas_bps": 323.0,
+      "ust7y_bps": 412.0
     },
     "2025-03-21": {
       "hy_oas_bps": 321.0,
       "ig_oas_bps": 92.0,
-      "single_b_oas_bps": 328.0
+      "single_b_oas_bps": 328.0,
+      "ust7y_bps": 412.0
     },
     "2025-03-24": {
       "hy_oas_bps": 305.0,
       "ig_oas_bps": 90.0,
-      "single_b_oas_bps": 310.0
+      "single_b_oas_bps": 310.0,
+      "ust7y_bps": 422.0
     },
     "2025-03-25": {
       "hy_oas_bps": 309.0,
       "ig_oas_bps": 90.0,
-      "single_b_oas_bps": 314.0
+      "single_b_oas_bps": 314.0,
+      "ust7y_bps": 419.00000000000006
     },
     "2025-03-26": {
       "hy_oas_bps": 319.0,
       "ig_oas_bps": 91.0,
-      "single_b_oas_bps": 326.0
+      "single_b_oas_bps": 326.0,
+      "ust7y_bps": 422.0
     },
     "2025-03-27": {
       "hy_oas_bps": 327.0,
       "ig_oas_bps": 91.0,
-      "single_b_oas_bps": 335.0
+      "single_b_oas_bps": 335.0,
+      "ust7y_bps": 423.00000000000006
     },
     "2025-03-28": {
       "hy_oas_bps": 347.0,
       "ig_oas_bps": 94.0,
-      "single_b_oas_bps": 360.0
+      "single_b_oas_bps": 360.0,
+      "ust7y_bps": 411.00000000000006
     },
     "2025-03-31": {
       "hy_oas_bps": 355.0,
       "ig_oas_bps": 97.0,
-      "single_b_oas_bps": 368.0
+      "single_b_oas_bps": 368.0,
+      "ust7y_bps": 409.0
     },
     "2025-04-01": {
       "hy_oas_bps": 350.0,
       "ig_oas_bps": 98.0,
-      "single_b_oas_bps": 362.0
+      "single_b_oas_bps": 362.0,
+      "ust7y_bps": 403.0
     },
     "2025-04-02": {
       "hy_oas_bps": 342.0,
       "ig_oas_bps": 96.0,
-      "single_b_oas_bps": 353.0
+      "single_b_oas_bps": 353.0,
+      "ust7y_bps": 407.0
     },
     "2025-04-03": {
       "hy_oas_bps": 401.0,
       "ig_oas_bps": 106.0,
-      "single_b_oas_bps": 421.0
+      "single_b_oas_bps": 421.0,
+      "ust7y_bps": 388.0
     },
     "2025-04-04": {
       "hy_oas_bps": 445.0,
       "ig_oas_bps": 113.99999999999999,
-      "single_b_oas_bps": 469.00000000000006
+      "single_b_oas_bps": 469.00000000000006,
+      "ust7y_bps": 384.0
     },
     "2025-04-07": {
       "hy_oas_bps": 461.00000000000006,
       "ig_oas_bps": 120.0,
-      "single_b_oas_bps": 486.00000000000006
+      "single_b_oas_bps": 486.00000000000006,
+      "ust7y_bps": 397.0
     },
     "2025-04-08": {
       "hy_oas_bps": 457.0,
       "ig_oas_bps": 118.0,
-      "single_b_oas_bps": 483.0
+      "single_b_oas_bps": 483.0,
+      "ust7y_bps": 405.0
     },
     "2025-04-09": {
       "hy_oas_bps": 437.0,
       "ig_oas_bps": 121.0,
-      "single_b_oas_bps": 457.0
+      "single_b_oas_bps": 457.0,
+      "ust7y_bps": 420.0
     },
     "2025-04-10": {
       "hy_oas_bps": 442.0,
       "ig_oas_bps": 118.0,
-      "single_b_oas_bps": 463.99999999999994
+      "single_b_oas_bps": 463.99999999999994,
+      "ust7y_bps": 421.0
     },
     "2025-04-11": {
       "hy_oas_bps": 426.0,
       "ig_oas_bps": 118.0,
-      "single_b_oas_bps": 446.0
+      "single_b_oas_bps": 446.0,
+      "ust7y_bps": 432.0
     },
     "2025-04-14": {
       "hy_oas_bps": 413.99999999999994,
       "ig_oas_bps": 114.99999999999999,
-      "single_b_oas_bps": 430.99999999999994
+      "single_b_oas_bps": 430.99999999999994,
+      "ust7y_bps": 420.0
     },
     "2025-04-15": {
       "hy_oas_bps": 409.0,
       "ig_oas_bps": 113.99999999999999,
-      "single_b_oas_bps": 425.0
+      "single_b_oas_bps": 425.0,
+      "ust7y_bps": 415.00000000000006
     },
     "2025-04-16": {
       "hy_oas_bps": 416.0,
       "ig_oas_bps": 112.99999999999999,
-      "single_b_oas_bps": 433.0
+      "single_b_oas_bps": 433.0,
+      "ust7y_bps": 408.0
     },
     "2025-04-17": {
       "hy_oas_bps": 401.99999999999994,
       "ig_oas_bps": 111.00000000000001,
-      "single_b_oas_bps": 417.0
+      "single_b_oas_bps": 417.0,
+      "ust7y_bps": 413.0
     },
     "2025-04-21": {
       "hy_oas_bps": 416.0,
       "ig_oas_bps": 112.00000000000001,
-      "single_b_oas_bps": 434.0
+      "single_b_oas_bps": 434.0,
+      "ust7y_bps": 419.00000000000006
     },
     "2025-04-22": {
       "hy_oas_bps": 399.0,
       "ig_oas_bps": 111.00000000000001,
-      "single_b_oas_bps": 416.0
+      "single_b_oas_bps": 416.0,
+      "ust7y_bps": 419.00000000000006
     },
     "2025-04-23": {
       "hy_oas_bps": 375.0,
       "ig_oas_bps": 108.0,
-      "single_b_oas_bps": 388.0
+      "single_b_oas_bps": 388.0,
+      "ust7y_bps": 420.0
     },
     "2025-04-24": {
       "hy_oas_bps": 373.0,
       "ig_oas_bps": 106.0,
-      "single_b_oas_bps": 385.0
+      "single_b_oas_bps": 385.0,
+      "ust7y_bps": 411.00000000000006
     },
     "2025-04-25": {
       "hy_oas_bps": 367.0,
       "ig_oas_bps": 104.0,
-      "single_b_oas_bps": 378.0
+      "single_b_oas_bps": 378.0,
+      "ust7y_bps": 405.99999999999994
     },
     "2025-04-28": {
       "hy_oas_bps": 373.0,
       "ig_oas_bps": 104.0,
-      "single_b_oas_bps": 382.0
+      "single_b_oas_bps": 382.0,
+      "ust7y_bps": 401.0
     },
     "2025-04-29": {
       "hy_oas_bps": 374.0,
       "ig_oas_bps": 106.0,
-      "single_b_oas_bps": 385.0
+      "single_b_oas_bps": 385.0,
+      "ust7y_bps": 396.0
     },
     "2025-04-30": {
       "hy_oas_bps": 394.0,
       "ig_oas_bps": 109.00000000000001,
-      "single_b_oas_bps": 411.00000000000006
+      "single_b_oas_bps": 411.00000000000006,
+      "ust7y_bps": 393.0
     },
     "2025-05-01": {
       "hy_oas_bps": 378.0,
       "ig_oas_bps": 109.00000000000001,
-      "single_b_oas_bps": 395.0
+      "single_b_oas_bps": 395.0,
+      "ust7y_bps": 401.99999999999994
     },
     "2025-05-02": {
       "hy_oas_bps": 360.0,
       "ig_oas_bps": 106.0,
-      "single_b_oas_bps": 377.0
+      "single_b_oas_bps": 377.0,
+      "ust7y_bps": 411.00000000000006
     },
     "2025-05-05": {
       "hy_oas_bps": 360.0,
       "ig_oas_bps": 105.0,
-      "single_b_oas_bps": 377.0
+      "single_b_oas_bps": 377.0,
+      "ust7y_bps": 413.99999999999994
     },
     "2025-05-06": {
       "hy_oas_bps": 366.0,
       "ig_oas_bps": 105.0,
-      "single_b_oas_bps": 381.0
+      "single_b_oas_bps": 381.0,
+      "ust7y_bps": 409.99999999999994
     },
     "2025-05-07": {
       "hy_oas_bps": 367.0,
       "ig_oas_bps": 105.0,
-      "single_b_oas_bps": 383.0
+      "single_b_oas_bps": 383.0,
+      "ust7y_bps": 405.99999999999994
     },
     "2025-05-08": {
       "hy_oas_bps": 351.0,
       "ig_oas_bps": 102.0,
-      "single_b_oas_bps": 370.0
+      "single_b_oas_bps": 370.0,
+      "ust7y_bps": 418.0
     },
     "2025-05-09": {
       "hy_oas_bps": 353.0,
       "ig_oas_bps": 102.0,
-      "single_b_oas_bps": 371.0
+      "single_b_oas_bps": 371.0,
+      "ust7y_bps": 418.0
     },
     "2025-05-12": {
       "hy_oas_bps": 315.0,
       "ig_oas_bps": 97.0,
-      "single_b_oas_bps": 329.0
+      "single_b_oas_bps": 329.0,
+      "ust7y_bps": 426.99999999999994
     },
     "2025-05-13": {
       "hy_oas_bps": 309.0,
       "ig_oas_bps": 94.0,
-      "single_b_oas_bps": 322.0
+      "single_b_oas_bps": 322.0,
+      "ust7y_bps": 430.0
     },
     "2025-05-14": {
       "hy_oas_bps": 310.0,
       "ig_oas_bps": 93.0,
-      "single_b_oas_bps": 323.0
+      "single_b_oas_bps": 323.0,
+      "ust7y_bps": 434.99999999999994
     },
     "2025-05-15": {
       "hy_oas_bps": 320.0,
       "ig_oas_bps": 94.0,
-      "single_b_oas_bps": 333.0
+      "single_b_oas_bps": 333.0,
+      "ust7y_bps": 425.0
     },
     "2025-05-16": {
       "hy_oas_bps": 316.0,
       "ig_oas_bps": 93.0,
-      "single_b_oas_bps": 330.0
+      "single_b_oas_bps": 330.0,
+      "ust7y_bps": 424.0
     },
     "2025-05-19": {
       "hy_oas_bps": 321.0,
       "ig_oas_bps": 92.0,
-      "single_b_oas_bps": 336.0
+      "single_b_oas_bps": 336.0,
+      "ust7y_bps": 426.0
     },
     "2025-05-20": {
       "hy_oas_bps": 320.0,
       "ig_oas_bps": 90.0,
-      "single_b_oas_bps": 334.0
+      "single_b_oas_bps": 334.0,
+      "ust7y_bps": 426.99999999999994
     },
     "2025-05-21": {
       "hy_oas_bps": 325.0,
       "ig_oas_bps": 91.0,
-      "single_b_oas_bps": 341.0
+      "single_b_oas_bps": 341.0,
+      "ust7y_bps": 437.0
     },
     "2025-05-22": {
       "hy_oas_bps": 332.0,
       "ig_oas_bps": 92.0,
-      "single_b_oas_bps": 347.0
+      "single_b_oas_bps": 347.0,
+      "ust7y_bps": 432.0
     },
     "2025-05-23": {
       "hy_oas_bps": 340.0,
       "ig_oas_bps": 93.0,
-      "single_b_oas_bps": 357.0
+      "single_b_oas_bps": 357.0,
+      "ust7y_bps": 429.0
     },
     "2025-05-26": {
       "hy_oas_bps": 340.0,
@@ -988,22 +1176,26 @@
     "2025-05-27": {
       "hy_oas_bps": 324.0,
       "ig_oas_bps": 91.0,
-      "single_b_oas_bps": 339.0
+      "single_b_oas_bps": 339.0,
+      "ust7y_bps": 422.0
     },
     "2025-05-28": {
       "hy_oas_bps": 323.0,
       "ig_oas_bps": 90.0,
-      "single_b_oas_bps": 342.0
+      "single_b_oas_bps": 342.0,
+      "ust7y_bps": 426.99999999999994
     },
     "2025-05-29": {
       "hy_oas_bps": 322.0,
       "ig_oas_bps": 90.0,
-      "single_b_oas_bps": 339.0
+      "single_b_oas_bps": 339.0,
+      "ust7y_bps": 420.0
     },
     "2025-05-30": {
       "hy_oas_bps": 331.0,
       "ig_oas_bps": 91.0,
-      "single_b_oas_bps": 349.0
+      "single_b_oas_bps": 349.0,
+      "ust7y_bps": 418.0
     },
     "2025-05-31": {
       "hy_oas_bps": 332.0,
@@ -1013,67 +1205,80 @@
     "2025-06-02": {
       "hy_oas_bps": 327.0,
       "ig_oas_bps": 91.0,
-      "single_b_oas_bps": 340.0
+      "single_b_oas_bps": 340.0,
+      "ust7y_bps": 422.0
     },
     "2025-06-03": {
       "hy_oas_bps": 319.0,
       "ig_oas_bps": 89.0,
-      "single_b_oas_bps": 333.0
+      "single_b_oas_bps": 333.0,
+      "ust7y_bps": 423.00000000000006
     },
     "2025-06-04": {
       "hy_oas_bps": 323.0,
       "ig_oas_bps": 89.0,
-      "single_b_oas_bps": 337.0
+      "single_b_oas_bps": 337.0,
+      "ust7y_bps": 413.99999999999994
     },
     "2025-06-05": {
       "hy_oas_bps": 318.0,
       "ig_oas_bps": 89.0,
-      "single_b_oas_bps": 331.0
+      "single_b_oas_bps": 331.0,
+      "ust7y_bps": 418.0
     },
     "2025-06-06": {
       "hy_oas_bps": 309.0,
       "ig_oas_bps": 87.0,
-      "single_b_oas_bps": 320.0
+      "single_b_oas_bps": 320.0,
+      "ust7y_bps": 430.99999999999994
     },
     "2025-06-09": {
       "hy_oas_bps": 312.0,
       "ig_oas_bps": 87.0,
-      "single_b_oas_bps": 324.0
+      "single_b_oas_bps": 324.0,
+      "ust7y_bps": 428.0
     },
     "2025-06-10": {
       "hy_oas_bps": 312.0,
       "ig_oas_bps": 87.0,
-      "single_b_oas_bps": 324.0
+      "single_b_oas_bps": 324.0,
+      "ust7y_bps": 426.99999999999994
     },
     "2025-06-11": {
       "hy_oas_bps": 312.0,
       "ig_oas_bps": 87.0,
-      "single_b_oas_bps": 324.0
+      "single_b_oas_bps": 324.0,
+      "ust7y_bps": 421.0
     },
     "2025-06-12": {
       "hy_oas_bps": 317.0,
       "ig_oas_bps": 88.0,
-      "single_b_oas_bps": 329.0
+      "single_b_oas_bps": 329.0,
+      "ust7y_bps": 415.00000000000006
     },
     "2025-06-13": {
       "hy_oas_bps": 318.0,
       "ig_oas_bps": 88.0,
-      "single_b_oas_bps": 329.0
+      "single_b_oas_bps": 329.0,
+      "ust7y_bps": 420.0
     },
     "2025-06-16": {
       "hy_oas_bps": 310.0,
       "ig_oas_bps": 87.0,
-      "single_b_oas_bps": 321.0
+      "single_b_oas_bps": 321.0,
+      "ust7y_bps": 423.00000000000006
     },
     "2025-06-17": {
       "hy_oas_bps": 317.0,
       "ig_oas_bps": 88.0,
-      "single_b_oas_bps": 328.0
+      "single_b_oas_bps": 328.0,
+      "ust7y_bps": 417.0
     },
     "2025-06-18": {
       "hy_oas_bps": 316.0,
       "ig_oas_bps": 88.0,
-      "single_b_oas_bps": 325.0
+      "single_b_oas_bps": 325.0,
+      "ust7y_bps": 417.0
     },
     "2025-06-19": {
       "hy_oas_bps": 316.0,
@@ -1083,52 +1288,62 @@
     "2025-06-20": {
       "hy_oas_bps": 313.0,
       "ig_oas_bps": 88.0,
-      "single_b_oas_bps": 321.0
+      "single_b_oas_bps": 321.0,
+      "ust7y_bps": 416.0
     },
     "2025-06-23": {
       "hy_oas_bps": 312.0,
       "ig_oas_bps": 89.0,
-      "single_b_oas_bps": 320.0
+      "single_b_oas_bps": 320.0,
+      "ust7y_bps": 409.99999999999994
     },
     "2025-06-24": {
       "hy_oas_bps": 306.0,
       "ig_oas_bps": 88.0,
-      "single_b_oas_bps": 314.0
+      "single_b_oas_bps": 314.0,
+      "ust7y_bps": 405.99999999999994
     },
     "2025-06-25": {
       "hy_oas_bps": 304.0,
       "ig_oas_bps": 88.0,
-      "single_b_oas_bps": 311.0
+      "single_b_oas_bps": 311.0,
+      "ust7y_bps": 405.0
     },
     "2025-06-26": {
       "hy_oas_bps": 304.0,
       "ig_oas_bps": 89.0,
-      "single_b_oas_bps": 310.0
+      "single_b_oas_bps": 310.0,
+      "ust7y_bps": 400.0
     },
     "2025-06-27": {
       "hy_oas_bps": 302.0,
       "ig_oas_bps": 88.0,
-      "single_b_oas_bps": 311.0
+      "single_b_oas_bps": 311.0,
+      "ust7y_bps": 403.0
     },
     "2025-06-30": {
       "hy_oas_bps": 296.0,
       "ig_oas_bps": 86.0,
-      "single_b_oas_bps": 305.0
+      "single_b_oas_bps": 305.0,
+      "ust7y_bps": 398.0
     },
     "2025-07-01": {
       "hy_oas_bps": 291.0,
       "ig_oas_bps": 84.0,
-      "single_b_oas_bps": 300.0
+      "single_b_oas_bps": 300.0,
+      "ust7y_bps": 403.0
     },
     "2025-07-02": {
       "hy_oas_bps": 288.0,
       "ig_oas_bps": 83.0,
-      "single_b_oas_bps": 295.0
+      "single_b_oas_bps": 295.0,
+      "ust7y_bps": 405.99999999999994
     },
     "2025-07-03": {
       "hy_oas_bps": 280.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 285.0
+      "single_b_oas_bps": 285.0,
+      "ust7y_bps": 412.0
     },
     "2025-07-04": {
       "hy_oas_bps": 280.0,
@@ -1138,202 +1353,242 @@
     "2025-07-07": {
       "hy_oas_bps": 286.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 292.0
+      "single_b_oas_bps": 292.0,
+      "ust7y_bps": 416.0
     },
     "2025-07-08": {
       "hy_oas_bps": 292.0,
       "ig_oas_bps": 82.0,
-      "single_b_oas_bps": 299.0
+      "single_b_oas_bps": 299.0,
+      "ust7y_bps": 418.0
     },
     "2025-07-09": {
       "hy_oas_bps": 294.0,
       "ig_oas_bps": 83.0,
-      "single_b_oas_bps": 300.0
+      "single_b_oas_bps": 300.0,
+      "ust7y_bps": 411.00000000000006
     },
     "2025-07-10": {
       "hy_oas_bps": 292.0,
       "ig_oas_bps": 83.0,
-      "single_b_oas_bps": 298.0
+      "single_b_oas_bps": 298.0,
+      "ust7y_bps": 412.0
     },
     "2025-07-11": {
       "hy_oas_bps": 297.0,
       "ig_oas_bps": 83.0,
-      "single_b_oas_bps": 304.0
+      "single_b_oas_bps": 304.0,
+      "ust7y_bps": 419.00000000000006
     },
     "2025-07-14": {
       "hy_oas_bps": 295.0,
       "ig_oas_bps": 82.0,
-      "single_b_oas_bps": 303.0
+      "single_b_oas_bps": 303.0,
+      "ust7y_bps": 419.00000000000006
     },
     "2025-07-15": {
       "hy_oas_bps": 295.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 304.0
+      "single_b_oas_bps": 304.0,
+      "ust7y_bps": 426.0
     },
     "2025-07-16": {
       "hy_oas_bps": 300.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 310.0
+      "single_b_oas_bps": 310.0,
+      "ust7y_bps": 421.0
     },
     "2025-07-17": {
       "hy_oas_bps": 291.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 299.0
+      "single_b_oas_bps": 299.0,
+      "ust7y_bps": 422.0
     },
     "2025-07-18": {
       "hy_oas_bps": 293.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 300.0
+      "single_b_oas_bps": 300.0,
+      "ust7y_bps": 418.0
     },
     "2025-07-21": {
       "hy_oas_bps": 289.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 296.0
+      "single_b_oas_bps": 296.0,
+      "ust7y_bps": 413.0
     },
     "2025-07-22": {
       "hy_oas_bps": 290.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 297.0
+      "single_b_oas_bps": 297.0,
+      "ust7y_bps": 409.0
     },
     "2025-07-23": {
       "hy_oas_bps": 283.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 289.0
+      "single_b_oas_bps": 289.0,
+      "ust7y_bps": 415.00000000000006
     },
     "2025-07-24": {
       "hy_oas_bps": 282.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 291.0
+      "single_b_oas_bps": 291.0,
+      "ust7y_bps": 418.0
     },
     "2025-07-25": {
       "hy_oas_bps": 284.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 292.0
+      "single_b_oas_bps": 292.0,
+      "ust7y_bps": 415.00000000000006
     },
     "2025-07-28": {
       "hy_oas_bps": 282.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 290.0
+      "single_b_oas_bps": 290.0,
+      "ust7y_bps": 418.0
     },
     "2025-07-29": {
       "hy_oas_bps": 286.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 295.0
+      "single_b_oas_bps": 295.0,
+      "ust7y_bps": 409.99999999999994
     },
     "2025-07-30": {
       "hy_oas_bps": 289.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 298.0
+      "single_b_oas_bps": 298.0,
+      "ust7y_bps": 415.00000000000006
     },
     "2025-07-31": {
       "hy_oas_bps": 286.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 298.0
+      "single_b_oas_bps": 298.0,
+      "ust7y_bps": 413.99999999999994
     },
     "2025-08-01": {
       "hy_oas_bps": 313.0,
       "ig_oas_bps": 82.0,
-      "single_b_oas_bps": 327.0
+      "single_b_oas_bps": 327.0,
+      "ust7y_bps": 397.0
     },
     "2025-08-04": {
       "hy_oas_bps": 302.0,
       "ig_oas_bps": 82.0,
-      "single_b_oas_bps": 315.0
+      "single_b_oas_bps": 315.0,
+      "ust7y_bps": 395.0
     },
     "2025-08-05": {
       "hy_oas_bps": 298.0,
       "ig_oas_bps": 82.0,
-      "single_b_oas_bps": 313.0
+      "single_b_oas_bps": 313.0,
+      "ust7y_bps": 397.0
     },
     "2025-08-06": {
       "hy_oas_bps": 298.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 310.0
+      "single_b_oas_bps": 310.0,
+      "ust7y_bps": 397.0
     },
     "2025-08-07": {
       "hy_oas_bps": 295.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 308.0
+      "single_b_oas_bps": 308.0,
+      "ust7y_bps": 399.0
     },
     "2025-08-08": {
       "hy_oas_bps": 294.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 308.0
+      "single_b_oas_bps": 308.0,
+      "ust7y_bps": 403.0
     },
     "2025-08-11": {
       "hy_oas_bps": 294.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 309.0
+      "single_b_oas_bps": 309.0,
+      "ust7y_bps": 403.0
     },
     "2025-08-12": {
       "hy_oas_bps": 293.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 309.0
+      "single_b_oas_bps": 309.0,
+      "ust7y_bps": 403.0
     },
     "2025-08-13": {
       "hy_oas_bps": 290.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 306.0
+      "single_b_oas_bps": 306.0,
+      "ust7y_bps": 398.0
     },
     "2025-08-14": {
       "hy_oas_bps": 289.0,
       "ig_oas_bps": 77.0,
-      "single_b_oas_bps": 307.0
+      "single_b_oas_bps": 307.0,
+      "ust7y_bps": 403.0
     },
     "2025-08-15": {
       "hy_oas_bps": 288.0,
       "ig_oas_bps": 75.0,
-      "single_b_oas_bps": 305.0
+      "single_b_oas_bps": 305.0,
+      "ust7y_bps": 407.0
     },
     "2025-08-18": {
       "hy_oas_bps": 288.0,
       "ig_oas_bps": 75.0,
-      "single_b_oas_bps": 304.0
+      "single_b_oas_bps": 304.0,
+      "ust7y_bps": 407.0
     },
     "2025-08-19": {
       "hy_oas_bps": 290.0,
       "ig_oas_bps": 76.0,
-      "single_b_oas_bps": 306.0
+      "single_b_oas_bps": 306.0,
+      "ust7y_bps": 404.0
     },
     "2025-08-20": {
       "hy_oas_bps": 294.0,
       "ig_oas_bps": 77.0,
-      "single_b_oas_bps": 310.0
+      "single_b_oas_bps": 310.0,
+      "ust7y_bps": 401.99999999999994
     },
     "2025-08-21": {
       "hy_oas_bps": 295.0,
       "ig_oas_bps": 77.0,
-      "single_b_oas_bps": 312.0
+      "single_b_oas_bps": 312.0,
+      "ust7y_bps": 407.0
     },
     "2025-08-22": {
       "hy_oas_bps": 288.0,
       "ig_oas_bps": 77.0,
-      "single_b_oas_bps": 304.0
+      "single_b_oas_bps": 304.0,
+      "ust7y_bps": 398.0
     },
     "2025-08-25": {
       "hy_oas_bps": 280.0,
       "ig_oas_bps": 76.0,
-      "single_b_oas_bps": 293.0
+      "single_b_oas_bps": 293.0,
+      "ust7y_bps": 401.0
     },
     "2025-08-26": {
       "hy_oas_bps": 278.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 289.0
+      "single_b_oas_bps": 289.0,
+      "ust7y_bps": 398.0
     },
     "2025-08-27": {
       "hy_oas_bps": 278.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 286.0
+      "single_b_oas_bps": 286.0,
+      "ust7y_bps": 395.0
     },
     "2025-08-28": {
       "hy_oas_bps": 275.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 281.0
+      "single_b_oas_bps": 281.0,
+      "ust7y_bps": 392.0
     },
     "2025-08-29": {
       "hy_oas_bps": 282.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 291.0
+      "single_b_oas_bps": 291.0,
+      "ust7y_bps": 392.0
     },
     "2025-08-31": {
       "hy_oas_bps": 284.0,
@@ -1348,147 +1603,176 @@
     "2025-09-02": {
       "hy_oas_bps": 292.0,
       "ig_oas_bps": 82.0,
-      "single_b_oas_bps": 307.0
+      "single_b_oas_bps": 307.0,
+      "ust7y_bps": 398.0
     },
     "2025-09-03": {
       "hy_oas_bps": 288.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 302.0
+      "single_b_oas_bps": 302.0,
+      "ust7y_bps": 392.0
     },
     "2025-09-04": {
       "hy_oas_bps": 284.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 298.0
+      "single_b_oas_bps": 298.0,
+      "ust7y_bps": 387.0
     },
     "2025-09-05": {
       "hy_oas_bps": 283.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 295.0
+      "single_b_oas_bps": 295.0,
+      "ust7y_bps": 380.0
     },
     "2025-09-08": {
       "hy_oas_bps": 284.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 297.0
+      "single_b_oas_bps": 297.0,
+      "ust7y_bps": 377.0
     },
     "2025-09-09": {
       "hy_oas_bps": 287.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 301.0
+      "single_b_oas_bps": 301.0,
+      "ust7y_bps": 381.0
     },
     "2025-09-10": {
       "hy_oas_bps": 284.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 298.0
+      "single_b_oas_bps": 298.0,
+      "ust7y_bps": 378.0
     },
     "2025-09-11": {
       "hy_oas_bps": 278.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 291.0
+      "single_b_oas_bps": 291.0,
+      "ust7y_bps": 376.0
     },
     "2025-09-12": {
       "hy_oas_bps": 279.0,
       "ig_oas_bps": 77.0,
-      "single_b_oas_bps": 293.0
+      "single_b_oas_bps": 293.0,
+      "ust7y_bps": 381.0
     },
     "2025-09-15": {
       "hy_oas_bps": 275.0,
       "ig_oas_bps": 75.0,
-      "single_b_oas_bps": 285.0
+      "single_b_oas_bps": 285.0,
+      "ust7y_bps": 379.0
     },
     "2025-09-16": {
       "hy_oas_bps": 279.0,
       "ig_oas_bps": 76.0,
-      "single_b_oas_bps": 290.0
+      "single_b_oas_bps": 290.0,
+      "ust7y_bps": 378.0
     },
     "2025-09-17": {
       "hy_oas_bps": 279.0,
       "ig_oas_bps": 76.0,
-      "single_b_oas_bps": 288.0
+      "single_b_oas_bps": 288.0,
+      "ust7y_bps": 381.0
     },
     "2025-09-18": {
       "hy_oas_bps": 271.0,
       "ig_oas_bps": 75.0,
-      "single_b_oas_bps": 282.0
+      "single_b_oas_bps": 282.0,
+      "ust7y_bps": 386.0
     },
     "2025-09-19": {
       "hy_oas_bps": 272.0,
       "ig_oas_bps": 74.0,
-      "single_b_oas_bps": 282.0
+      "single_b_oas_bps": 282.0,
+      "ust7y_bps": 388.0
     },
     "2025-09-22": {
       "hy_oas_bps": 269.0,
       "ig_oas_bps": 74.0,
-      "single_b_oas_bps": 278.0
+      "single_b_oas_bps": 278.0,
+      "ust7y_bps": 390.0
     },
     "2025-09-23": {
       "hy_oas_bps": 271.0,
       "ig_oas_bps": 75.0,
-      "single_b_oas_bps": 279.0
+      "single_b_oas_bps": 279.0,
+      "ust7y_bps": 387.0
     },
     "2025-09-24": {
       "hy_oas_bps": 270.0,
       "ig_oas_bps": 75.0,
-      "single_b_oas_bps": 276.0
+      "single_b_oas_bps": 276.0,
+      "ust7y_bps": 391.0
     },
     "2025-09-25": {
       "hy_oas_bps": 276.0,
       "ig_oas_bps": 76.0,
-      "single_b_oas_bps": 286.0
+      "single_b_oas_bps": 286.0,
+      "ust7y_bps": 394.0
     },
     "2025-09-26": {
       "hy_oas_bps": 275.0,
       "ig_oas_bps": 75.0,
-      "single_b_oas_bps": 284.0
+      "single_b_oas_bps": 284.0,
+      "ust7y_bps": 396.0
     },
     "2025-09-29": {
       "hy_oas_bps": 274.0,
       "ig_oas_bps": 75.0,
-      "single_b_oas_bps": 282.0
+      "single_b_oas_bps": 282.0,
+      "ust7y_bps": 392.0
     },
     "2025-09-30": {
       "hy_oas_bps": 280.0,
       "ig_oas_bps": 76.0,
-      "single_b_oas_bps": 283.0
+      "single_b_oas_bps": 283.0,
+      "ust7y_bps": 393.0
     },
     "2025-10-01": {
       "hy_oas_bps": 281.0,
       "ig_oas_bps": 76.0,
-      "single_b_oas_bps": 282.0
+      "single_b_oas_bps": 282.0,
+      "ust7y_bps": 388.0
     },
     "2025-10-02": {
       "hy_oas_bps": 281.0,
       "ig_oas_bps": 75.0,
-      "single_b_oas_bps": 283.0
+      "single_b_oas_bps": 283.0,
+      "ust7y_bps": 386.0
     },
     "2025-10-03": {
       "hy_oas_bps": 280.0,
       "ig_oas_bps": 75.0,
-      "single_b_oas_bps": 284.0
+      "single_b_oas_bps": 284.0,
+      "ust7y_bps": 390.0
     },
     "2025-10-06": {
       "hy_oas_bps": 276.0,
       "ig_oas_bps": 74.0,
-      "single_b_oas_bps": 280.0
+      "single_b_oas_bps": 280.0,
+      "ust7y_bps": 395.0
     },
     "2025-10-07": {
       "hy_oas_bps": 282.0,
       "ig_oas_bps": 75.0,
-      "single_b_oas_bps": 287.0
+      "single_b_oas_bps": 287.0,
+      "ust7y_bps": 390.0
     },
     "2025-10-08": {
       "hy_oas_bps": 284.0,
       "ig_oas_bps": 75.0,
-      "single_b_oas_bps": 289.0
+      "single_b_oas_bps": 289.0,
+      "ust7y_bps": 391.0
     },
     "2025-10-09": {
       "hy_oas_bps": 295.0,
       "ig_oas_bps": 77.0,
-      "single_b_oas_bps": 302.0
+      "single_b_oas_bps": 302.0,
+      "ust7y_bps": 392.0
     },
     "2025-10-10": {
       "hy_oas_bps": 318.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 328.0
+      "single_b_oas_bps": 328.0,
+      "ust7y_bps": 383.0
     },
     "2025-10-13": {
       "hy_oas_bps": 318.0,
@@ -1498,102 +1782,122 @@
     "2025-10-14": {
       "hy_oas_bps": 311.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 320.0
+      "single_b_oas_bps": 320.0,
+      "ust7y_bps": 379.0
     },
     "2025-10-15": {
       "hy_oas_bps": 295.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 302.0
+      "single_b_oas_bps": 302.0,
+      "ust7y_bps": 382.0
     },
     "2025-10-16": {
       "hy_oas_bps": 304.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 311.0
+      "single_b_oas_bps": 311.0,
+      "ust7y_bps": 374.0
     },
     "2025-10-17": {
       "hy_oas_bps": 304.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 312.0
+      "single_b_oas_bps": 312.0,
+      "ust7y_bps": 378.0
     },
     "2025-10-20": {
       "hy_oas_bps": 299.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 307.0
+      "single_b_oas_bps": 307.0,
+      "ust7y_bps": 377.0
     },
     "2025-10-21": {
       "hy_oas_bps": 297.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 306.0
+      "single_b_oas_bps": 306.0,
+      "ust7y_bps": 374.0
     },
     "2025-10-22": {
       "hy_oas_bps": 301.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 310.0
+      "single_b_oas_bps": 310.0,
+      "ust7y_bps": 374.0
     },
     "2025-10-23": {
       "hy_oas_bps": 296.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 306.0
+      "single_b_oas_bps": 306.0,
+      "ust7y_bps": 379.0
     },
     "2025-10-24": {
       "hy_oas_bps": 288.0,
       "ig_oas_bps": 77.0,
-      "single_b_oas_bps": 296.0
+      "single_b_oas_bps": 296.0,
+      "ust7y_bps": 379.0
     },
     "2025-10-27": {
       "hy_oas_bps": 280.0,
       "ig_oas_bps": 76.0,
-      "single_b_oas_bps": 289.0
+      "single_b_oas_bps": 289.0,
+      "ust7y_bps": 379.0
     },
     "2025-10-28": {
       "hy_oas_bps": 282.0,
       "ig_oas_bps": 76.0,
-      "single_b_oas_bps": 291.0
+      "single_b_oas_bps": 291.0,
+      "ust7y_bps": 377.0
     },
     "2025-10-29": {
       "hy_oas_bps": 276.0,
       "ig_oas_bps": 75.0,
-      "single_b_oas_bps": 284.0
+      "single_b_oas_bps": 284.0,
+      "ust7y_bps": 387.0
     },
     "2025-10-30": {
       "hy_oas_bps": 285.0,
       "ig_oas_bps": 77.0,
-      "single_b_oas_bps": 293.0
+      "single_b_oas_bps": 293.0,
+      "ust7y_bps": 390.0
     },
     "2025-10-31": {
       "hy_oas_bps": 294.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 307.0
+      "single_b_oas_bps": 307.0,
+      "ust7y_bps": 389.0
     },
     "2025-11-03": {
       "hy_oas_bps": 304.0,
       "ig_oas_bps": 83.0,
-      "single_b_oas_bps": 316.0
+      "single_b_oas_bps": 316.0,
+      "ust7y_bps": 390.0
     },
     "2025-11-04": {
       "hy_oas_bps": 313.0,
       "ig_oas_bps": 83.0,
-      "single_b_oas_bps": 326.0
+      "single_b_oas_bps": 326.0,
+      "ust7y_bps": 388.0
     },
     "2025-11-05": {
       "hy_oas_bps": 305.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 319.0
+      "single_b_oas_bps": 319.0,
+      "ust7y_bps": 395.0
     },
     "2025-11-06": {
       "hy_oas_bps": 313.0,
       "ig_oas_bps": 82.0,
-      "single_b_oas_bps": 328.0
+      "single_b_oas_bps": 328.0,
+      "ust7y_bps": 387.0
     },
     "2025-11-07": {
       "hy_oas_bps": 315.0,
       "ig_oas_bps": 84.0,
-      "single_b_oas_bps": 332.0
+      "single_b_oas_bps": 332.0,
+      "ust7y_bps": 387.0
     },
     "2025-11-10": {
       "hy_oas_bps": 302.0,
       "ig_oas_bps": 82.0,
-      "single_b_oas_bps": 316.0
+      "single_b_oas_bps": 316.0,
+      "ust7y_bps": 390.0
     },
     "2025-11-11": {
       "hy_oas_bps": 302.0,
@@ -1603,57 +1907,68 @@
     "2025-11-12": {
       "hy_oas_bps": 302.0,
       "ig_oas_bps": 83.0,
-      "single_b_oas_bps": 315.0
+      "single_b_oas_bps": 315.0,
+      "ust7y_bps": 386.0
     },
     "2025-11-13": {
       "hy_oas_bps": 309.0,
       "ig_oas_bps": 84.0,
-      "single_b_oas_bps": 323.0
+      "single_b_oas_bps": 323.0,
+      "ust7y_bps": 389.0
     },
     "2025-11-14": {
       "hy_oas_bps": 307.0,
       "ig_oas_bps": 83.0,
-      "single_b_oas_bps": 325.0
+      "single_b_oas_bps": 325.0,
+      "ust7y_bps": 392.0
     },
     "2025-11-17": {
       "hy_oas_bps": 313.0,
       "ig_oas_bps": 84.0,
-      "single_b_oas_bps": 332.0
+      "single_b_oas_bps": 332.0,
+      "ust7y_bps": 390.0
     },
     "2025-11-18": {
       "hy_oas_bps": 320.0,
       "ig_oas_bps": 85.0,
-      "single_b_oas_bps": 340.0
+      "single_b_oas_bps": 340.0,
+      "ust7y_bps": 389.0
     },
     "2025-11-19": {
       "hy_oas_bps": 317.0,
       "ig_oas_bps": 84.0,
-      "single_b_oas_bps": 336.0
+      "single_b_oas_bps": 336.0,
+      "ust7y_bps": 390.0
     },
     "2025-11-20": {
       "hy_oas_bps": 317.0,
       "ig_oas_bps": 85.0,
-      "single_b_oas_bps": 334.0
+      "single_b_oas_bps": 334.0,
+      "ust7y_bps": 387.0
     },
     "2025-11-21": {
       "hy_oas_bps": 319.0,
       "ig_oas_bps": 86.0,
-      "single_b_oas_bps": 337.0
+      "single_b_oas_bps": 337.0,
+      "ust7y_bps": 382.0
     },
     "2025-11-24": {
       "hy_oas_bps": 315.0,
       "ig_oas_bps": 85.0,
-      "single_b_oas_bps": 330.0
+      "single_b_oas_bps": 330.0,
+      "ust7y_bps": 380.0
     },
     "2025-11-25": {
       "hy_oas_bps": 310.0,
       "ig_oas_bps": 84.0,
-      "single_b_oas_bps": 325.0
+      "single_b_oas_bps": 325.0,
+      "ust7y_bps": 377.0
     },
     "2025-11-26": {
       "hy_oas_bps": 300.0,
       "ig_oas_bps": 82.0,
-      "single_b_oas_bps": 312.0
+      "single_b_oas_bps": 312.0,
+      "ust7y_bps": 375.0
     },
     "2025-11-27": {
       "hy_oas_bps": 300.0,
@@ -1663,7 +1978,8 @@
     "2025-11-28": {
       "hy_oas_bps": 295.0,
       "ig_oas_bps": 82.0,
-      "single_b_oas_bps": 306.0
+      "single_b_oas_bps": 306.0,
+      "ust7y_bps": 378.0
     },
     "2025-11-30": {
       "hy_oas_bps": 292.0,
@@ -1673,167 +1989,200 @@
     "2025-12-01": {
       "hy_oas_bps": 294.0,
       "ig_oas_bps": 82.0,
-      "single_b_oas_bps": 307.0
+      "single_b_oas_bps": 307.0,
+      "ust7y_bps": 386.0
     },
     "2025-12-02": {
       "hy_oas_bps": 292.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 305.0
+      "single_b_oas_bps": 305.0,
+      "ust7y_bps": 385.0
     },
     "2025-12-03": {
       "hy_oas_bps": 289.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 301.0
+      "single_b_oas_bps": 301.0,
+      "ust7y_bps": 382.0
     },
     "2025-12-04": {
       "hy_oas_bps": 288.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 298.0
+      "single_b_oas_bps": 298.0,
+      "ust7y_bps": 387.0
     },
     "2025-12-05": {
       "hy_oas_bps": 285.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 295.0
+      "single_b_oas_bps": 295.0,
+      "ust7y_bps": 390.0
     },
     "2025-12-08": {
       "hy_oas_bps": 289.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 300.0
+      "single_b_oas_bps": 300.0,
+      "ust7y_bps": 394.0
     },
     "2025-12-09": {
       "hy_oas_bps": 289.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 300.0
+      "single_b_oas_bps": 300.0,
+      "ust7y_bps": 396.0
     },
     "2025-12-10": {
       "hy_oas_bps": 291.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 300.0
+      "single_b_oas_bps": 300.0,
+      "ust7y_bps": 392.0
     },
     "2025-12-11": {
       "hy_oas_bps": 288.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 297.0
+      "single_b_oas_bps": 297.0,
+      "ust7y_bps": 391.0
     },
     "2025-12-12": {
       "hy_oas_bps": 291.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 302.0
+      "single_b_oas_bps": 302.0,
+      "ust7y_bps": 395.0
     },
     "2025-12-15": {
       "hy_oas_bps": 291.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 304.0
+      "single_b_oas_bps": 304.0,
+      "ust7y_bps": 394.0
     },
     "2025-12-16": {
       "hy_oas_bps": 298.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 311.0
+      "single_b_oas_bps": 311.0,
+      "ust7y_bps": 390.0
     },
     "2025-12-17": {
       "hy_oas_bps": 299.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 311.0
+      "single_b_oas_bps": 311.0,
+      "ust7y_bps": 391.0
     },
     "2025-12-18": {
       "hy_oas_bps": 295.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 307.0
+      "single_b_oas_bps": 307.0,
+      "ust7y_bps": 387.0
     },
     "2025-12-19": {
       "hy_oas_bps": 290.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 302.0
+      "single_b_oas_bps": 302.0,
+      "ust7y_bps": 391.0
     },
     "2025-12-22": {
       "hy_oas_bps": 288.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 302.0
+      "single_b_oas_bps": 302.0,
+      "ust7y_bps": 393.0
     },
     "2025-12-23": {
       "hy_oas_bps": 283.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 294.0
+      "single_b_oas_bps": 294.0,
+      "ust7y_bps": 394.0
     },
     "2025-12-24": {
       "hy_oas_bps": 284.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 296.0
+      "single_b_oas_bps": 296.0,
+      "ust7y_bps": 391.0
     },
     "2025-12-26": {
       "hy_oas_bps": 286.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 297.0
+      "single_b_oas_bps": 297.0,
+      "ust7y_bps": 389.0
     },
     "2025-12-29": {
       "hy_oas_bps": 287.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 300.0
+      "single_b_oas_bps": 300.0,
+      "ust7y_bps": 388.0
     },
     "2025-12-30": {
       "hy_oas_bps": 284.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 298.0
+      "single_b_oas_bps": 298.0,
+      "ust7y_bps": 389.0
     },
     "2025-12-31": {
       "hy_oas_bps": 281.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 301.0
+      "single_b_oas_bps": 301.0,
+      "ust7y_bps": 394.0
     },
     "2026-01-02": {
       "hy_oas_bps": 283.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 302.0
+      "single_b_oas_bps": 302.0,
+      "ust7y_bps": 395.0
     },
     "2026-01-05": {
       "hy_oas_bps": 281.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 301.0
+      "single_b_oas_bps": 301.0,
+      "ust7y_bps": 392.0
     },
     "2026-01-06": {
       "hy_oas_bps": 279.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 298.0
+      "single_b_oas_bps": 298.0,
+      "ust7y_bps": 393.0
     },
     "2026-01-07": {
       "hy_oas_bps": 279.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 297.0
+      "single_b_oas_bps": 297.0,
+      "ust7y_bps": 391.0
     },
     "2026-01-08": {
       "hy_oas_bps": 276.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 295.0
+      "single_b_oas_bps": 295.0,
+      "ust7y_bps": 395.0
     },
     "2026-01-09": {
       "hy_oas_bps": 274.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 293.0
+      "single_b_oas_bps": 293.0,
+      "ust7y_bps": 395.0
     },
     "2026-01-12": {
       "hy_oas_bps": 274.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 292.0
+      "single_b_oas_bps": 292.0,
+      "ust7y_bps": 397.0
     },
     "2026-01-13": {
       "hy_oas_bps": 275.0,
       "ig_oas_bps": 77.0,
-      "single_b_oas_bps": 293.0
+      "single_b_oas_bps": 293.0,
+      "ust7y_bps": 395.0
     },
     "2026-01-14": {
       "hy_oas_bps": 276.0,
       "ig_oas_bps": 77.0,
-      "single_b_oas_bps": 296.0
+      "single_b_oas_bps": 296.0,
+      "ust7y_bps": 392.0
     },
     "2026-01-15": {
       "hy_oas_bps": 271.0,
       "ig_oas_bps": 76.0,
-      "single_b_oas_bps": 290.0
+      "single_b_oas_bps": 290.0,
+      "ust7y_bps": 396.0
     },
     "2026-01-16": {
       "hy_oas_bps": 265.0,
       "ig_oas_bps": 75.0,
-      "single_b_oas_bps": 281.0
+      "single_b_oas_bps": 281.0,
+      "ust7y_bps": 401.99999999999994
     },
     "2026-01-19": {
       "hy_oas_bps": 265.0,
@@ -1843,47 +2192,56 @@
     "2026-01-20": {
       "hy_oas_bps": 273.0,
       "ig_oas_bps": 75.0,
-      "single_b_oas_bps": 290.0
+      "single_b_oas_bps": 290.0,
+      "ust7y_bps": 408.0
     },
     "2026-01-21": {
       "hy_oas_bps": 269.0,
       "ig_oas_bps": 74.0,
-      "single_b_oas_bps": 285.0
+      "single_b_oas_bps": 285.0,
+      "ust7y_bps": 404.0
     },
     "2026-01-22": {
       "hy_oas_bps": 264.0,
       "ig_oas_bps": 73.0,
-      "single_b_oas_bps": 281.0
+      "single_b_oas_bps": 281.0,
+      "ust7y_bps": 405.0
     },
     "2026-01-23": {
       "hy_oas_bps": 268.0,
       "ig_oas_bps": 73.0,
-      "single_b_oas_bps": 285.0
+      "single_b_oas_bps": 285.0,
+      "ust7y_bps": 403.0
     },
     "2026-01-26": {
       "hy_oas_bps": 269.0,
       "ig_oas_bps": 74.0,
-      "single_b_oas_bps": 286.0
+      "single_b_oas_bps": 286.0,
+      "ust7y_bps": 401.99999999999994
     },
     "2026-01-27": {
       "hy_oas_bps": 271.0,
       "ig_oas_bps": 73.0,
-      "single_b_oas_bps": 291.0
+      "single_b_oas_bps": 291.0,
+      "ust7y_bps": 403.0
     },
     "2026-01-28": {
       "hy_oas_bps": 272.0,
       "ig_oas_bps": 73.0,
-      "single_b_oas_bps": 294.0
+      "single_b_oas_bps": 294.0,
+      "ust7y_bps": 405.0
     },
     "2026-01-29": {
       "hy_oas_bps": 277.0,
       "ig_oas_bps": 74.0,
-      "single_b_oas_bps": 299.0
+      "single_b_oas_bps": 299.0,
+      "ust7y_bps": 401.0
     },
     "2026-01-30": {
       "hy_oas_bps": 280.0,
       "ig_oas_bps": 74.0,
-      "single_b_oas_bps": 306.0
+      "single_b_oas_bps": 306.0,
+      "ust7y_bps": 401.0
     },
     "2026-01-31": {
       "hy_oas_bps": 288.0,
@@ -1893,52 +2251,62 @@
     "2026-02-02": {
       "hy_oas_bps": 281.0,
       "ig_oas_bps": 74.0,
-      "single_b_oas_bps": 306.0
+      "single_b_oas_bps": 306.0,
+      "ust7y_bps": 405.0
     },
     "2026-02-03": {
       "hy_oas_bps": 285.0,
       "ig_oas_bps": 74.0,
-      "single_b_oas_bps": 309.0
+      "single_b_oas_bps": 309.0,
+      "ust7y_bps": 404.0
     },
     "2026-02-04": {
       "hy_oas_bps": 286.0,
       "ig_oas_bps": 75.0,
-      "single_b_oas_bps": 311.0
+      "single_b_oas_bps": 311.0,
+      "ust7y_bps": 405.0
     },
     "2026-02-05": {
       "hy_oas_bps": 297.0,
       "ig_oas_bps": 76.0,
-      "single_b_oas_bps": 323.0
+      "single_b_oas_bps": 323.0,
+      "ust7y_bps": 397.0
     },
     "2026-02-06": {
       "hy_oas_bps": 287.0,
       "ig_oas_bps": 76.0,
-      "single_b_oas_bps": 312.0
+      "single_b_oas_bps": 312.0,
+      "ust7y_bps": 398.0
     },
     "2026-02-09": {
       "hy_oas_bps": 284.0,
       "ig_oas_bps": 76.0,
-      "single_b_oas_bps": 310.0
+      "single_b_oas_bps": 310.0,
+      "ust7y_bps": 397.0
     },
     "2026-02-10": {
       "hy_oas_bps": 286.0,
       "ig_oas_bps": 77.0,
-      "single_b_oas_bps": 313.0
+      "single_b_oas_bps": 313.0,
+      "ust7y_bps": 392.0
     },
     "2026-02-11": {
       "hy_oas_bps": 284.0,
       "ig_oas_bps": 77.0,
-      "single_b_oas_bps": 309.0
+      "single_b_oas_bps": 309.0,
+      "ust7y_bps": 396.0
     },
     "2026-02-12": {
       "hy_oas_bps": 292.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 319.0
+      "single_b_oas_bps": 319.0,
+      "ust7y_bps": 387.0
     },
     "2026-02-13": {
       "hy_oas_bps": 295.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 323.0
+      "single_b_oas_bps": 323.0,
+      "ust7y_bps": 381.0
     },
     "2026-02-16": {
       "hy_oas_bps": 294.0,
@@ -1948,47 +2316,56 @@
     "2026-02-17": {
       "hy_oas_bps": 294.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 322.0
+      "single_b_oas_bps": 322.0,
+      "ust7y_bps": 382.0
     },
     "2026-02-18": {
       "hy_oas_bps": 286.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 312.0
+      "single_b_oas_bps": 312.0,
+      "ust7y_bps": 386.0
     },
     "2026-02-19": {
       "hy_oas_bps": 288.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 314.0
+      "single_b_oas_bps": 314.0,
+      "ust7y_bps": 385.0
     },
     "2026-02-20": {
       "hy_oas_bps": 286.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 312.0
+      "single_b_oas_bps": 312.0,
+      "ust7y_bps": 385.0
     },
     "2026-02-23": {
       "hy_oas_bps": 295.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 323.0
+      "single_b_oas_bps": 323.0,
+      "ust7y_bps": 379.0
     },
     "2026-02-24": {
       "hy_oas_bps": 297.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 323.0
+      "single_b_oas_bps": 323.0,
+      "ust7y_bps": 381.0
     },
     "2026-02-25": {
       "hy_oas_bps": 294.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 320.0
+      "single_b_oas_bps": 320.0,
+      "ust7y_bps": 382.0
     },
     "2026-02-26": {
       "hy_oas_bps": 298.0,
       "ig_oas_bps": 82.0,
-      "single_b_oas_bps": 323.0
+      "single_b_oas_bps": 323.0,
+      "ust7y_bps": 378.0
     },
     "2026-02-27": {
       "hy_oas_bps": 310.0,
       "ig_oas_bps": 85.0,
-      "single_b_oas_bps": 338.0
+      "single_b_oas_bps": 338.0,
+      "ust7y_bps": 372.0
     },
     "2026-02-28": {
       "hy_oas_bps": 312.0,
@@ -1998,302 +2375,362 @@
     "2026-03-02": {
       "hy_oas_bps": 303.0,
       "ig_oas_bps": 85.0,
-      "single_b_oas_bps": 336.0
+      "single_b_oas_bps": 336.0,
+      "ust7y_bps": 382.0
     },
     "2026-03-03": {
       "hy_oas_bps": 308.0,
       "ig_oas_bps": 84.0,
-      "single_b_oas_bps": 344.0
+      "single_b_oas_bps": 344.0,
+      "ust7y_bps": 383.0
     },
     "2026-03-04": {
       "hy_oas_bps": 297.0,
       "ig_oas_bps": 82.0,
-      "single_b_oas_bps": 327.0
+      "single_b_oas_bps": 327.0,
+      "ust7y_bps": 387.0
     },
     "2026-03-05": {
       "hy_oas_bps": 300.0,
       "ig_oas_bps": 82.0,
-      "single_b_oas_bps": 331.0
+      "single_b_oas_bps": 331.0,
+      "ust7y_bps": 392.0
     },
     "2026-03-06": {
       "hy_oas_bps": 313.0,
       "ig_oas_bps": 84.0,
-      "single_b_oas_bps": 345.0
+      "single_b_oas_bps": 345.0,
+      "ust7y_bps": 393.0
     },
     "2026-03-09": {
       "hy_oas_bps": 319.0,
       "ig_oas_bps": 85.0,
-      "single_b_oas_bps": 352.0
+      "single_b_oas_bps": 352.0,
+      "ust7y_bps": 390.0
     },
     "2026-03-10": {
       "hy_oas_bps": 306.0,
       "ig_oas_bps": 84.0,
-      "single_b_oas_bps": 337.0
+      "single_b_oas_bps": 337.0,
+      "ust7y_bps": 393.0
     },
     "2026-03-11": {
       "hy_oas_bps": 309.0,
       "ig_oas_bps": 88.0,
-      "single_b_oas_bps": 339.0
+      "single_b_oas_bps": 339.0,
+      "ust7y_bps": 398.0
     },
     "2026-03-12": {
       "hy_oas_bps": 317.0,
       "ig_oas_bps": 91.0,
-      "single_b_oas_bps": 349.0
+      "single_b_oas_bps": 349.0,
+      "ust7y_bps": 405.99999999999994
     },
     "2026-03-13": {
       "hy_oas_bps": 328.0,
       "ig_oas_bps": 93.0,
-      "single_b_oas_bps": 360.0
+      "single_b_oas_bps": 360.0,
+      "ust7y_bps": 407.0
     },
     "2026-03-16": {
       "hy_oas_bps": 327.0,
       "ig_oas_bps": 94.0,
-      "single_b_oas_bps": 358.0
+      "single_b_oas_bps": 358.0,
+      "ust7y_bps": 400.0
     },
     "2026-03-17": {
       "hy_oas_bps": 322.0,
       "ig_oas_bps": 92.0,
-      "single_b_oas_bps": 352.0
+      "single_b_oas_bps": 352.0,
+      "ust7y_bps": 398.0
     },
     "2026-03-18": {
       "hy_oas_bps": 320.0,
       "ig_oas_bps": 91.0,
-      "single_b_oas_bps": 351.0
+      "single_b_oas_bps": 351.0,
+      "ust7y_bps": 405.0
     },
     "2026-03-19": {
       "hy_oas_bps": 327.0,
       "ig_oas_bps": 90.0,
-      "single_b_oas_bps": 361.0
+      "single_b_oas_bps": 361.0,
+      "ust7y_bps": 405.99999999999994
     },
     "2026-03-20": {
       "hy_oas_bps": 324.0,
       "ig_oas_bps": 88.0,
-      "single_b_oas_bps": 357.0
+      "single_b_oas_bps": 357.0,
+      "ust7y_bps": 420.0
     },
     "2026-03-23": {
       "hy_oas_bps": 319.0,
       "ig_oas_bps": 88.0,
-      "single_b_oas_bps": 350.0
+      "single_b_oas_bps": 350.0,
+      "ust7y_bps": 415.00000000000006
     },
     "2026-03-24": {
       "hy_oas_bps": 319.0,
       "ig_oas_bps": 87.0,
-      "single_b_oas_bps": 350.0
+      "single_b_oas_bps": 350.0,
+      "ust7y_bps": 421.0
     },
     "2026-03-25": {
       "hy_oas_bps": 317.0,
       "ig_oas_bps": 87.0,
-      "single_b_oas_bps": 346.0
+      "single_b_oas_bps": 346.0,
+      "ust7y_bps": 415.00000000000006
     },
     "2026-03-26": {
       "hy_oas_bps": 321.0,
       "ig_oas_bps": 88.0,
-      "single_b_oas_bps": 351.0
+      "single_b_oas_bps": 351.0,
+      "ust7y_bps": 425.0
     },
     "2026-03-27": {
       "hy_oas_bps": 342.0,
       "ig_oas_bps": 91.0,
-      "single_b_oas_bps": 373.0
+      "single_b_oas_bps": 373.0,
+      "ust7y_bps": 425.0
     },
     "2026-03-30": {
       "hy_oas_bps": 346.0,
       "ig_oas_bps": 93.0,
-      "single_b_oas_bps": 377.0
+      "single_b_oas_bps": 377.0,
+      "ust7y_bps": 416.0
     },
     "2026-03-31": {
       "hy_oas_bps": 328.0,
       "ig_oas_bps": 90.0,
-      "single_b_oas_bps": 361.0
+      "single_b_oas_bps": 361.0,
+      "ust7y_bps": 411.00000000000006
     },
     "2026-04-01": {
       "hy_oas_bps": 316.0,
       "ig_oas_bps": 87.0,
-      "single_b_oas_bps": 346.0
+      "single_b_oas_bps": 346.0,
+      "ust7y_bps": 415.00000000000006
     },
     "2026-04-02": {
       "hy_oas_bps": 317.0,
       "ig_oas_bps": 86.0,
-      "single_b_oas_bps": 347.0
+      "single_b_oas_bps": 347.0,
+      "ust7y_bps": 412.0
     },
     "2026-04-03": {
       "hy_oas_bps": 313.0,
       "ig_oas_bps": 86.0,
-      "single_b_oas_bps": 342.0
+      "single_b_oas_bps": 342.0,
+      "ust7y_bps": 417.0
     },
     "2026-04-06": {
       "hy_oas_bps": 305.0,
       "ig_oas_bps": 85.0,
-      "single_b_oas_bps": 334.0
+      "single_b_oas_bps": 334.0,
+      "ust7y_bps": 416.0
     },
     "2026-04-07": {
       "hy_oas_bps": 312.0,
       "ig_oas_bps": 86.0,
-      "single_b_oas_bps": 341.0
+      "single_b_oas_bps": 341.0,
+      "ust7y_bps": 413.0
     },
     "2026-04-08": {
       "hy_oas_bps": 294.0,
       "ig_oas_bps": 83.0,
-      "single_b_oas_bps": 320.0
+      "single_b_oas_bps": 320.0,
+      "ust7y_bps": 409.99999999999994
     },
     "2026-04-09": {
       "hy_oas_bps": 290.0,
       "ig_oas_bps": 83.0,
-      "single_b_oas_bps": 316.0
+      "single_b_oas_bps": 316.0,
+      "ust7y_bps": 409.99999999999994
     },
     "2026-04-10": {
       "hy_oas_bps": 294.0,
       "ig_oas_bps": 82.0,
-      "single_b_oas_bps": 320.0
+      "single_b_oas_bps": 320.0,
+      "ust7y_bps": 412.0
     },
     "2026-04-13": {
       "hy_oas_bps": 295.0,
       "ig_oas_bps": 82.0,
-      "single_b_oas_bps": 319.0
+      "single_b_oas_bps": 319.0,
+      "ust7y_bps": 409.99999999999994
     },
     "2026-04-14": {
       "hy_oas_bps": 284.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 306.0
+      "single_b_oas_bps": 306.0,
+      "ust7y_bps": 405.99999999999994
     },
     "2026-04-15": {
       "hy_oas_bps": 285.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 307.0
+      "single_b_oas_bps": 307.0,
+      "ust7y_bps": 408.0
     },
     "2026-04-16": {
       "hy_oas_bps": 286.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 308.0
+      "single_b_oas_bps": 308.0,
+      "ust7y_bps": 409.99999999999994
     },
     "2026-04-17": {
       "hy_oas_bps": 283.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 303.0
+      "single_b_oas_bps": 303.0,
+      "ust7y_bps": 404.0
     },
     "2026-04-20": {
       "hy_oas_bps": 287.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 307.0
+      "single_b_oas_bps": 307.0,
+      "ust7y_bps": 404.0
     },
     "2026-04-21": {
       "hy_oas_bps": 285.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 307.0
+      "single_b_oas_bps": 307.0,
+      "ust7y_bps": 409.0
     },
     "2026-04-22": {
       "hy_oas_bps": 284.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 305.0
+      "single_b_oas_bps": 305.0,
+      "ust7y_bps": 409.99999999999994
     },
     "2026-04-23": {
       "hy_oas_bps": 286.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 309.0
+      "single_b_oas_bps": 309.0,
+      "ust7y_bps": 413.0
     },
     "2026-04-24": {
       "hy_oas_bps": 286.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 309.0
+      "single_b_oas_bps": 309.0,
+      "ust7y_bps": 409.99999999999994
     },
     "2026-04-27": {
       "hy_oas_bps": 284.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 305.0
+      "single_b_oas_bps": 305.0,
+      "ust7y_bps": 413.99999999999994
     },
     "2026-04-28": {
       "hy_oas_bps": 285.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 306.0
+      "single_b_oas_bps": 306.0,
+      "ust7y_bps": 416.0
     },
     "2026-04-29": {
       "hy_oas_bps": 282.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 305.0
+      "single_b_oas_bps": 305.0,
+      "ust7y_bps": 423.00000000000006
     },
     "2026-04-30": {
       "hy_oas_bps": 283.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 311.0
+      "single_b_oas_bps": 311.0,
+      "ust7y_bps": 420.0
     },
     "2026-05-01": {
       "hy_oas_bps": 277.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 305.0
+      "single_b_oas_bps": 305.0,
+      "ust7y_bps": 420.0
     },
     "2026-05-04": {
       "hy_oas_bps": 278.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 305.0
+      "single_b_oas_bps": 305.0,
+      "ust7y_bps": 426.0
     },
     "2026-05-05": {
       "hy_oas_bps": 277.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 304.0
+      "single_b_oas_bps": 304.0,
+      "ust7y_bps": 425.0
     },
     "2026-05-06": {
       "hy_oas_bps": 275.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 301.0
+      "single_b_oas_bps": 301.0,
+      "ust7y_bps": 417.0
     },
     "2026-05-07": {
       "hy_oas_bps": 279.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 305.0
+      "single_b_oas_bps": 305.0,
+      "ust7y_bps": 422.0
     },
     "2026-05-08": {
       "hy_oas_bps": 281.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 307.0
+      "single_b_oas_bps": 307.0,
+      "ust7y_bps": 419.00000000000006
     },
     "2026-05-11": {
       "hy_oas_bps": 279.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 304.0
+      "single_b_oas_bps": 304.0,
+      "ust7y_bps": 424.0
     },
     "2026-05-12": {
       "hy_oas_bps": 282.0,
       "ig_oas_bps": 77.0,
-      "single_b_oas_bps": 309.0
+      "single_b_oas_bps": 309.0,
+      "ust7y_bps": 429.0
     },
     "2026-05-13": {
       "hy_oas_bps": 282.0,
       "ig_oas_bps": 76.0,
-      "single_b_oas_bps": 310.0
+      "single_b_oas_bps": 310.0,
+      "ust7y_bps": 428.0
     },
     "2026-05-14": {
       "hy_oas_bps": 276.0,
       "ig_oas_bps": 76.0,
-      "single_b_oas_bps": 304.0
+      "single_b_oas_bps": 304.0,
+      "ust7y_bps": 429.0
     },
     "2026-05-15": {
       "hy_oas_bps": 280.0,
       "ig_oas_bps": 75.0,
-      "single_b_oas_bps": 308.0
+      "single_b_oas_bps": 308.0,
+      "ust7y_bps": 443.0
     },
     "2026-05-18": {
       "hy_oas_bps": 283.0,
       "ig_oas_bps": 75.0,
-      "single_b_oas_bps": 311.0
+      "single_b_oas_bps": 311.0,
+      "ust7y_bps": 443.0
     },
     "2026-05-19": {
       "hy_oas_bps": 286.0,
       "ig_oas_bps": 76.0,
-      "single_b_oas_bps": 316.0
+      "single_b_oas_bps": 316.0,
+      "ust7y_bps": 450.0
     },
     "2026-05-20": {
       "hy_oas_bps": 280.0,
       "ig_oas_bps": 75.0,
-      "single_b_oas_bps": 308.0
+      "single_b_oas_bps": 308.0,
+      "ust7y_bps": 438.99999999999994
     },
     "2026-05-21": {
       "hy_oas_bps": 278.0,
       "ig_oas_bps": 75.0,
-      "single_b_oas_bps": 305.0
+      "single_b_oas_bps": 305.0,
+      "ust7y_bps": 441.0
     },
     "2026-05-22": {
       "hy_oas_bps": 274.0,
       "ig_oas_bps": 74.0,
-      "single_b_oas_bps": 301.0
+      "single_b_oas_bps": 301.0,
+      "ust7y_bps": 441.0
     },
     "2026-05-25": {
       "hy_oas_bps": 274.0,
@@ -2303,22 +2740,26 @@
     "2026-05-26": {
       "hy_oas_bps": 272.0,
       "ig_oas_bps": 74.0,
-      "single_b_oas_bps": 298.0
+      "single_b_oas_bps": 298.0,
+      "ust7y_bps": 433.0
     },
     "2026-05-27": {
       "hy_oas_bps": 271.0,
       "ig_oas_bps": 74.0,
-      "single_b_oas_bps": 295.0
+      "single_b_oas_bps": 295.0,
+      "ust7y_bps": 432.0
     },
     "2026-05-28": {
       "hy_oas_bps": 272.0,
       "ig_oas_bps": 73.0,
-      "single_b_oas_bps": 296.0
+      "single_b_oas_bps": 296.0,
+      "ust7y_bps": 429.0
     },
     "2026-05-29": {
       "hy_oas_bps": 272.0,
       "ig_oas_bps": 73.0,
-      "single_b_oas_bps": 297.0
+      "single_b_oas_bps": 297.0,
+      "ust7y_bps": 426.99999999999994
     },
     "2026-05-31": {
       "hy_oas_bps": 274.0,
@@ -2328,72 +2769,86 @@
     "2026-06-01": {
       "hy_oas_bps": 272.0,
       "ig_oas_bps": 73.0,
-      "single_b_oas_bps": 295.0
+      "single_b_oas_bps": 295.0,
+      "ust7y_bps": 432.0
     },
     "2026-06-02": {
       "hy_oas_bps": 271.0,
       "ig_oas_bps": 74.0,
-      "single_b_oas_bps": 292.0
+      "single_b_oas_bps": 292.0,
+      "ust7y_bps": 430.99999999999994
     },
     "2026-06-03": {
       "hy_oas_bps": 275.0,
       "ig_oas_bps": 74.0,
-      "single_b_oas_bps": 299.0
+      "single_b_oas_bps": 299.0,
+      "ust7y_bps": 434.0
     },
     "2026-06-04": {
       "hy_oas_bps": 274.0,
       "ig_oas_bps": 74.0,
-      "single_b_oas_bps": 298.0
+      "single_b_oas_bps": 298.0,
+      "ust7y_bps": 432.0
     },
     "2026-06-05": {
       "hy_oas_bps": 276.0,
       "ig_oas_bps": 74.0,
-      "single_b_oas_bps": 301.0
+      "single_b_oas_bps": 301.0,
+      "ust7y_bps": 441.0
     },
     "2026-06-08": {
       "hy_oas_bps": 275.0,
       "ig_oas_bps": 75.0,
-      "single_b_oas_bps": 299.0
+      "single_b_oas_bps": 299.0,
+      "ust7y_bps": 442.0
     },
     "2026-06-09": {
       "hy_oas_bps": 278.0,
       "ig_oas_bps": 75.0,
-      "single_b_oas_bps": 302.0
+      "single_b_oas_bps": 302.0,
+      "ust7y_bps": 438.99999999999994
     },
     "2026-06-10": {
       "hy_oas_bps": 280.0,
       "ig_oas_bps": 75.0,
-      "single_b_oas_bps": 303.0
+      "single_b_oas_bps": 303.0,
+      "ust7y_bps": 440.00000000000006
     },
     "2026-06-11": {
       "hy_oas_bps": 278.0,
       "ig_oas_bps": 75.0,
-      "single_b_oas_bps": 299.0
+      "single_b_oas_bps": 299.0,
+      "ust7y_bps": 430.99999999999994
     },
     "2026-06-12": {
       "hy_oas_bps": 271.0,
       "ig_oas_bps": 74.0,
-      "single_b_oas_bps": 291.0
+      "single_b_oas_bps": 291.0,
+      "ust7y_bps": 434.0
     },
     "2026-06-15": {
       "hy_oas_bps": 266.0,
       "ig_oas_bps": 73.0,
-      "single_b_oas_bps": 284.0
+      "single_b_oas_bps": 284.0,
+      "ust7y_bps": 432.0
     },
     "2026-06-16": {
       "hy_oas_bps": 271.0,
       "ig_oas_bps": 75.0,
-      "single_b_oas_bps": 289.0
+      "single_b_oas_bps": 289.0,
+      "ust7y_bps": 428.0
     },
     "2026-06-17": {
       "hy_oas_bps": 263.0,
       "ig_oas_bps": 74.0,
-      "single_b_oas_bps": 282.0
+      "single_b_oas_bps": 282.0,
+      "ust7y_bps": 437.0
     },
     "2026-06-18": {
       "hy_oas_bps": 266.0,
       "ig_oas_bps": 74.0,
-      "single_b_oas_bps": 283.0
+      "single_b_oas_bps": 283.0,
+      "ust7y_bps": 434.0
     },
     "2026-06-19": {
       "hy_oas_bps": 266.0,
@@ -2403,47 +2858,56 @@
     "2026-06-22": {
       "hy_oas_bps": 265.0,
       "ig_oas_bps": 74.0,
-      "single_b_oas_bps": 283.0
+      "single_b_oas_bps": 283.0,
+      "ust7y_bps": 438.99999999999994
     },
     "2026-06-23": {
       "hy_oas_bps": 271.0,
       "ig_oas_bps": 74.0,
-      "single_b_oas_bps": 289.0
+      "single_b_oas_bps": 289.0,
+      "ust7y_bps": 438.0
     },
     "2026-06-24": {
       "hy_oas_bps": 276.0,
       "ig_oas_bps": 75.0,
-      "single_b_oas_bps": 295.0
+      "single_b_oas_bps": 295.0,
+      "ust7y_bps": 428.0
     },
     "2026-06-25": {
       "hy_oas_bps": 278.0,
       "ig_oas_bps": 76.0,
-      "single_b_oas_bps": 297.0
+      "single_b_oas_bps": 297.0,
+      "ust7y_bps": 426.0
     },
     "2026-06-26": {
       "hy_oas_bps": 283.0,
       "ig_oas_bps": 77.0,
-      "single_b_oas_bps": 304.0
+      "single_b_oas_bps": 304.0,
+      "ust7y_bps": 423.00000000000006
     },
     "2026-06-29": {
       "hy_oas_bps": 280.0,
       "ig_oas_bps": 76.0,
-      "single_b_oas_bps": 300.0
+      "single_b_oas_bps": 300.0,
+      "ust7y_bps": 424.0
     },
     "2026-06-30": {
       "hy_oas_bps": 275.0,
       "ig_oas_bps": 76.0,
-      "single_b_oas_bps": 299.0
+      "single_b_oas_bps": 299.0,
+      "ust7y_bps": 430.0
     },
     "2026-07-01": {
       "hy_oas_bps": 274.0,
       "ig_oas_bps": 76.0,
-      "single_b_oas_bps": 297.0
+      "single_b_oas_bps": 297.0,
+      "ust7y_bps": 434.99999999999994
     },
     "2026-07-02": {
       "hy_oas_bps": 275.0,
       "ig_oas_bps": 75.0,
-      "single_b_oas_bps": 296.0
+      "single_b_oas_bps": 296.0,
+      "ust7y_bps": 434.99999999999994
     },
     "2026-07-03": {
       "hy_oas_bps": 274.0,
@@ -2453,167 +2917,200 @@
     "2026-07-06": {
       "hy_oas_bps": 272.0,
       "ig_oas_bps": 75.0,
-      "single_b_oas_bps": 292.0
+      "single_b_oas_bps": 292.0,
+      "ust7y_bps": 433.0
     },
     "2026-07-07": {
       "hy_oas_bps": 267.0,
       "ig_oas_bps": 76.0,
-      "single_b_oas_bps": 287.0
+      "single_b_oas_bps": 287.0,
+      "ust7y_bps": 440.00000000000006
     },
     "2026-07-08": {
       "hy_oas_bps": 270.0,
       "ig_oas_bps": 76.0,
-      "single_b_oas_bps": 290.0
+      "single_b_oas_bps": 290.0,
+      "ust7y_bps": 443.0
     },
     "2026-07-09": {
       "hy_oas_bps": 270.0,
       "ig_oas_bps": 76.0,
-      "single_b_oas_bps": 289.0
+      "single_b_oas_bps": 289.0,
+      "ust7y_bps": 440.00000000000006
     },
     "2026-07-10": {
       "hy_oas_bps": 269.0,
       "ig_oas_bps": 77.0,
-      "single_b_oas_bps": 287.0
+      "single_b_oas_bps": 287.0,
+      "ust7y_bps": 442.0
     },
     "2026-07-13": {
       "hy_oas_bps": 269.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 287.0
+      "single_b_oas_bps": 287.0,
+      "ust7y_bps": 448.00000000000006
     },
     "2026-07-14": {
       "hy_oas_bps": 272.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 292.0
+      "single_b_oas_bps": 292.0,
+      "ust7y_bps": 444.00000000000006
     },
     "2026-07-15": {
       "hy_oas_bps": 271.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 290.0
+      "single_b_oas_bps": 290.0,
+      "ust7y_bps": 438.99999999999994
     },
     "2026-07-16": {
       "hy_oas_bps": 271.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 290.0
+      "single_b_oas_bps": 290.0,
+      "ust7y_bps": 441.0
     },
     "2026-07-17": {
       "hy_oas_bps": 273.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 291.0
+      "single_b_oas_bps": 291.0,
+      "ust7y_bps": 440.00000000000006
     },
     "2026-07-20": {
       "hy_oas_bps": 269.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 286.0
+      "single_b_oas_bps": 286.0,
+      "ust7y_bps": 445.0
     },
     "2026-07-21": {
       "hy_oas_bps": 269.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 286.0
+      "single_b_oas_bps": 286.0,
+      "ust7y_bps": 450.0
     },
     "2026-07-22": {
       "hy_oas_bps": 268.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 285.0
+      "single_b_oas_bps": 285.0,
+      "ust7y_bps": 453.0
     },
     "2026-07-23": {
       "hy_oas_bps": 277.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 294.0
+      "single_b_oas_bps": 294.0,
+      "ust7y_bps": 458.0
     },
     "2026-07-24": {
       "hy_oas_bps": 279.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 296.0
+      "single_b_oas_bps": 296.0,
+      "ust7y_bps": 455.0
     },
     "2026-07-27": {
       "hy_oas_bps": 281.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 297.0
+      "single_b_oas_bps": 297.0,
+      "ust7y_bps": 451.99999999999994
     },
     "2026-07-28": {
       "hy_oas_bps": 284.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 298.0
+      "single_b_oas_bps": 298.0,
+      "ust7y_bps": 447.0
     },
     "2026-07-29": {
       "hy_oas_bps": 287.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 303.0
+      "single_b_oas_bps": 303.0,
+      "ust7y_bps": 451.0
     },
     "2026-07-30": {
       "hy_oas_bps": 284.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 299.0
+      "single_b_oas_bps": 299.0,
+      "ust7y_bps": 451.99999999999994
     },
     "2026-07-31": {
       "hy_oas_bps": 285.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 304.0
+      "single_b_oas_bps": 304.0,
+      "ust7y_bps": 459.0
     },
     "2026-08-03": {
       "hy_oas_bps": 278.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 295.0
+      "single_b_oas_bps": 295.0,
+      "ust7y_bps": 454.0
     },
     "2026-08-04": {
       "hy_oas_bps": 273.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 288.0
+      "single_b_oas_bps": 288.0,
+      "ust7y_bps": 447.0
     },
     "2026-08-05": {
       "hy_oas_bps": 275.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 290.0
+      "single_b_oas_bps": 290.0,
+      "ust7y_bps": 447.0
     },
     "2026-08-06": {
       "hy_oas_bps": 271.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 287.0
+      "single_b_oas_bps": 287.0,
+      "ust7y_bps": 453.0
     },
     "2026-08-07": {
       "hy_oas_bps": 270.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 288.0
+      "single_b_oas_bps": 288.0,
+      "ust7y_bps": 449.0
     },
     "2026-08-10": {
       "hy_oas_bps": 270.0,
       "ig_oas_bps": 78.0,
-      "single_b_oas_bps": 288.0
+      "single_b_oas_bps": 288.0,
+      "ust7y_bps": 455.99999999999994
     },
     "2026-08-11": {
       "hy_oas_bps": 272.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 290.0
+      "single_b_oas_bps": 290.0,
+      "ust7y_bps": 454.0
     },
     "2026-08-12": {
       "hy_oas_bps": 271.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 288.0
+      "single_b_oas_bps": 288.0,
+      "ust7y_bps": 451.99999999999994
     },
     "2026-08-13": {
       "hy_oas_bps": 271.0,
       "ig_oas_bps": 79.0,
-      "single_b_oas_bps": 288.0
+      "single_b_oas_bps": 288.0,
+      "ust7y_bps": 447.0
     },
     "2026-08-14": {
       "hy_oas_bps": 267.0,
       "ig_oas_bps": 80.0,
-      "single_b_oas_bps": 285.0
+      "single_b_oas_bps": 285.0,
+      "ust7y_bps": 451.0
     },
     "2026-08-17": {
       "hy_oas_bps": 270.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 288.0
+      "single_b_oas_bps": 288.0,
+      "ust7y_bps": 454.0
     },
     "2026-08-18": {
       "hy_oas_bps": 275.0,
       "ig_oas_bps": 82.0,
-      "single_b_oas_bps": 294.0
+      "single_b_oas_bps": 294.0,
+      "ust7y_bps": 453.0
     },
     "2026-08-19": {
       "hy_oas_bps": 273.0,
       "ig_oas_bps": 81.0,
-      "single_b_oas_bps": 291.0
+      "single_b_oas_bps": 291.0,
+      "ust7y_bps": 448.00000000000006
     },
     "2026-08-20": {
       "hy_oas_bps": 275.0,
@@ -2628,19 +3125,22 @@
       "sd_h200_rental": 3.1
     }
   },
-  "last_updated": "2026-08-22T03:02:32+09:00",
+  "last_updated": "2026-08-22T04:15:22+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
     "crwv_backlog": "green",
-    "crwv_bond": "green",
+    "crwv_spread": "green",
+    "crwv_utilization": "unknown",
     "dlr_rent": "green",
     "financing": "green",
-    "gpu_price": "green",
+    "gpu_price": "unknown",
     "hy_oas": "green",
     "hyperscalers": "green",
+    "liquidity": "unknown",
     "nbis_commitments": "green",
-    "power_forecast": "green",
+    "orcl_rpo": "unknown",
+    "power_forecast": "unknown",
     "spot_ratio": "green"
   },
   "reminders_sent": {}

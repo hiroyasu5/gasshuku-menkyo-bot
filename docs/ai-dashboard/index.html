@@ -73,8 +73,22 @@ h3 { font-size: 0.95rem; margin: 8px 0 4px; }
   background: var(--surface); border: 1px solid var(--border);
   border-radius: 12px; padding: 14px 16px;
 }
-.card-head { display: flex; justify-content: space-between; align-items: center; }
-.asof { color: var(--muted); font-size: 0.75rem; }
+.card-head { display: flex; align-items: center; gap: 6px; }
+.asof { color: var(--muted); font-size: 0.75rem; margin-left: auto; }
+.badges { display: inline-flex; gap: 4px; }
+.badge {
+  font-size: 0.68rem; font-weight: 600; border-radius: 6px; padding: 1px 6px;
+  border: 1px solid var(--border); color: var(--ink-2); background: var(--unknown-bg);
+}
+.confidence { color: var(--ink-2); font-size: 0.82rem; margin: 10px 0 0; }
+.minitablewrap { overflow-x: auto; margin: 8px 0 2px; }
+.minitable { border-collapse: collapse; width: 100%; font-size: 0.74rem; }
+.minitable th, .minitable td {
+  padding: 3px 8px; text-align: right; border-bottom: 1px solid var(--grid);
+  font-variant-numeric: tabular-nums;
+}
+.minitable th:first-child, .minitable td:first-child { text-align: left; }
+.minitable th { color: var(--muted); font-weight: 600; }
 .value { font-size: 1.25rem; font-weight: 700; margin: 2px 0; }
 .detail { color: var(--ink-2); font-size: 0.85rem; margin: 4px 0 2px; }
 .source { color: var(--muted); font-size: 0.72rem; margin: 4px 0 0; }
@@ -110,134 +124,197 @@ footer code { background: var(--surface); border: 1px solid var(--border); borde
 <body>
 <main>
   <h1>AI Bubble Escape Dashboard</h1>
-  <p class="updated">最終更新: 2026-08-22T03:02:32+09:00 (JST) ・ 日次自動更新 + 四半期手動入力</p>
+  <p class="updated">最終更新: 2026-08-22T04:15:22+09:00 (JST) ・ 日次自動更新 + 四半期手動入力</p>
   
   <div class="banner">
     <p class="summary"><span class="chip chip-green"><span class="chip-icon">🟢</span>正常</span>
-    全グループ正常</p>
-    <div class="pills"><span class="chip chip-green"><span class="chip-icon">🟢</span>需要 (Hyperscaler / Backlog)</span><span class="chip chip-green"><span class="chip-icon">🟢</span>Compute価格</span><span class="chip chip-green"><span class="chip-icon">🟢</span>データセンター需給</span><span class="chip chip-green"><span class="chip-icon">🟢</span>電力需要</span><span class="chip chip-green"><span class="chip-icon">🟢</span>信用市場</span></div>
+    悪化グループなし (データ不足⚪ 1グループ)</p>
+    <div class="pills"><span class="chip chip-green"><span class="chip-icon">🟢</span>需要 (Hyperscaler / Backlog / RPO)</span><span class="chip chip-green"><span class="chip-icon">🟢</span>Compute価格</span><span class="chip chip-unknown"><span class="chip-icon">⚪</span>稼働率 (Utilization Proxy)</span><span class="chip chip-green"><span class="chip-icon">🟢</span>データセンター需給</span><span class="chip chip-green"><span class="chip-icon">🟢</span>電力需要</span><span class="chip chip-green"><span class="chip-icon">🟢</span>信用市場</span></div>
+    <p class="confidence">Data confidence: <strong>33%</strong>
+    (実データで確認済み 5/15指標 ・
+    残りはデータ不足⚪または暫定判定)</p>
   </div>
 
-  <section><h2>需要 (Hyperscaler / Backlog)</h2><div class="grid">
+  <section><h2>需要 (Hyperscaler / Backlog / RPO)</h2><div class="grid">
       <div class="card" data-level="green">
         <div class="card-head">
           <span class="chip chip-green"><span class="chip-icon">🟢</span>正常</span>
+          <span class="badges"></span>
           <span class="asof">2026Q2</span>
         </div>
-        <h3>Hyperscaler CapEx/Cloud</h3>
-        <div class="value">CapEx:up / Cloud:up</div>
-        <p class="detail">CapEx↑ + Cloud成長↑ (需要が投資を正当化)。ただしFCF悪化 (cash burn) は進行中 - GOOGL 2026 CapEx $195-205Bへ引き上げ、Cloud高成長。META 2026 ~7GW / 2027 ~14GW目標。ただしcash burn開始</p>
-        <p class="source">GOOGL/MSFT/AMZN/META/ORCL決算 (手動)</p>
+        <h3>Hyperscaler 5社 (breadth)</h3>
+        <div class="value">CapEx下方修正 0/5 ・ 減速 0/5 ・ capacity constrained 2/5</div>
+        <p class="detail">CapEx維持・Cloud成長継続 - GOOGL 2026 CapEx $195-205Bへ引き上げ・FCF -$5.9B。META 2026 ~7GW / 2027 ~14GW目標。他3社は次回決算で記入</p>
+        <div class="minitablewrap"><table class="minitable"><thead><tr><th>社</th><th>Cloud YoY</th><th>加速度</th><th>CapEx guide</th><th>制約発言</th></tr></thead><tbody><tr><td>MSFT</td><td>—</td><td>—</td><td>—</td><td>-</td></tr><tr><td>AMZN</td><td>—</td><td>—</td><td>—</td><td>-</td></tr><tr><td>GOOGL</td><td>+82%</td><td>—</td><td>↑</td><td>Yes</td></tr><tr><td>META</td><td>—</td><td>—</td><td>↑</td><td>Yes</td></tr><tr><td>ORCL</td><td>—</td><td>—</td><td>—</td><td>-</td></tr></tbody></table></div>
+        <p class="source">MSFT/AMZN/GOOGL/META/ORCL決算 (手動)</p>
       </div>
       <div class="card" data-level="green">
         <div class="card-head">
           <span class="chip chip-green"><span class="chip-icon">🟢</span>正常</span>
+          <span class="badges"><span class="badge badge-prov">暫定</span></span>
           <span class="asof">2026Q2</span>
         </div>
-        <h3>CRWV Revenue Backlog</h3>
-        <div class="value">$104.2B</div>
-        <p class="detail">前四半期データ待ち (level_hint使用)</p>
+        <h3>CRWV Backlog / Commitments</h3>
+        <div class="value">Backlog $104.2B / 新規 $25B+ / 売上 $2.58B/q</div>
+        <p class="detail">Backlog: 前四半期データ待ち (level_hintによる暫定) / 新規commitments: 前四半期データ待ち (level_hintによる暫定)</p>
+        
         <p class="source">CRWV決算 (手動)</p>
       </div>
       <div class="card" data-level="green">
         <div class="card-head">
           <span class="chip chip-green"><span class="chip-icon">🟢</span>正常</span>
+          <span class="badges"><span class="badge badge-prov">暫定</span></span>
           <span class="asof">2026Q2</span>
         </div>
         <h3>NBIS Customer Commitments</h3>
         <div class="value">$40B+</div>
-        <p class="detail">前四半期データ待ち (level_hint使用)</p>
+        <p class="detail">前四半期データ待ち (level_hintによる暫定)</p>
+        
         <p class="source">NBIS決算 (手動)</p>
-      </div></div></section><section><h2>Compute価格</h2><div class="grid">
-      <div class="card" data-level="green">
+      </div>
+      <div class="card" data-level="unknown">
         <div class="card-head">
-          <span class="chip chip-green"><span class="chip-icon">🟢</span>正常</span>
+          <span class="chip chip-unknown"><span class="chip-icon">⚪</span>データ不足</span>
+          <span class="badges"></span>
+          <span class="asof">2026Q2</span>
+        </div>
+        <h3>ORCL RPO</h3>
+        <div class="value">-</div>
+        <p class="detail">数値未入力</p>
+        
+        <p class="source">ORCL決算 (手動)</p>
+      </div></div></section><section><h2>Compute価格</h2><div class="grid">
+      <div class="card" data-level="unknown">
+        <div class="card-head">
+          <span class="chip chip-unknown"><span class="chip-icon">⚪</span>データ不足</span>
+          <span class="badges"></span>
           <span class="asof">2026-08-22</span>
         </div>
         <h3>GPUレンタル価格 (B200)</h3>
         <div class="value">$5.45/GPU-h</div>
-        <p class="detail">時系列蓄積中 (0日分)。3か月変化は90日蓄積後に判定</p>
+        <p class="detail">時系列蓄積中 (0日分)。3か月変化の判定には最低30日必要</p>
+        
         <p class="source">Silicon Data (自動)</p>
       </div>
       <div class="card" data-level="green">
         <div class="card-head">
           <span class="chip chip-green"><span class="chip-icon">🟢</span>正常</span>
+          <span class="badges"></span>
           <span class="asof">2026-08-22</span>
         </div>
         <h3>Spot/On-demand比率 (CW B200)</h3>
         <div class="value">0.50 (spot $34.11 / OD $68.80)</div>
         <p class="detail">需要は堅調</p>
+        
         <p class="source">CoreWeave料金ページ (自動)</p>
+      </div></div></section><section><h2>稼働率 (Utilization Proxy)</h2><div class="grid">
+      <div class="card" data-level="unknown">
+        <div class="card-head">
+          <span class="chip chip-unknown"><span class="chip-icon">⚪</span>データ不足</span>
+          <span class="badges"></span>
+          <span class="asof">2026Q2</span>
+        </div>
+        <h3>CRWV Utilization Proxy</h3>
+        <div class="value">-</div>
+        <p class="detail">active_power_gw が未入力。決算開示があれば manual_inputs.yaml に記入</p>
+        
+        <p class="source">CRWV決算 (手動)</p>
       </div></div></section><section><h2>データセンター需給</h2><div class="grid">
       <div class="card" data-level="green">
         <div class="card-head">
           <span class="chip chip-green"><span class="chip-icon">🟢</span>正常</span>
+          <span class="badges"><span class="badge badge-prov">暫定</span></span>
           <span class="asof">2026Q2</span>
         </div>
         <h3>APLD Contracted/Live MW</h3>
         <div class="value">1,400MW契約 / 175MW稼働</div>
-        <p class="detail">前四半期データ待ち (level_hint使用)</p>
+        <p class="detail">前四半期データ待ち (level_hintによる暫定)</p>
+        
         <p class="source">APLD決算 (手動)</p>
       </div>
       <div class="card" data-level="green">
         <div class="card-head">
           <span class="chip chip-green"><span class="chip-icon">🟢</span>正常</span>
+          <span class="badges"></span>
           <span class="asof">2026Q1</span>
         </div>
         <h3>DLR Bookings/更新賃料</h3>
         <div class="value">$707M bookings / 賃料+5%</div>
         <p class="detail">更新賃料 +5.0% (供給不足〜均衡)</p>
+        
         <p class="source">DLR決算 (手動)</p>
       </div></div></section><section><h2>電力需要</h2><div class="grid">
       <div class="card" data-level="green">
         <div class="card-head">
           <span class="chip chip-green"><span class="chip-icon">🟢</span>正常</span>
+          <span class="badges"><span class="badge badge-prov">暫定</span></span>
           <span class="asof">2026Q2</span>
         </div>
         <h3>AEP Contracted Large-Load</h3>
         <div class="value">69GW (2030年まで)</div>
-        <p class="detail">前四半期データ待ち (level_hint使用)</p>
+        <p class="detail">前四半期データ待ち (level_hintによる暫定)</p>
+        
         <p class="source">AEP決算 (手動)</p>
       </div>
-      <div class="card" data-level="green">
+      <div class="card" data-level="unknown">
         <div class="card-head">
-          <span class="chip chip-green"><span class="chip-icon">🟢</span>正常</span>
+          <span class="chip chip-unknown"><span class="chip-icon">⚪</span>データ不足</span>
+          <span class="badges"></span>
           <span class="asof">2026</span>
         </div>
         <h3>PJM需要予測 (Dominion)</h3>
         <div class="value">2030予測 42GW</div>
-        <p class="detail">年次改定待ち (前年比較は次回forecastで判定)</p>
+        <p class="detail">前年forecastとの比較待ち (年次改定は毎年1月頃)</p>
+        
         <p class="source">PJM Load Forecast (手動)</p>
       </div></div></section><section><h2>信用市場</h2><div class="grid">
       <div class="card" data-level="green">
         <div class="card-head">
           <span class="chip chip-green"><span class="chip-icon">🟢</span>正常</span>
+          <span class="badges"></span>
           <span class="asof">2026-08-20</span>
         </div>
         <h3>HY OAS</h3>
         <div class="value">275bp</div>
         <p class="detail">3か月変化 +1bp - 安定 / Single-B 294bp ・ IG 82bp</p>
+        
         <p class="source">FRED BAMLH0A0HYM2 (自動)</p>
       </div>
       <div class="card" data-level="green">
         <div class="card-head">
           <span class="chip chip-green"><span class="chip-icon">🟢</span>正常</span>
+          <span class="badges"></span>
           <span class="asof">2026-06-30</span>
         </div>
-        <h3>CRWV債券利回り (2032)</h3>
-        <div class="value">9.62%</div>
-        <p class="detail">AI credit安定 (発行時9.625%比で正常圏)</p>
-        <p class="source">FINRA TRACE等 (手動)</p>
+        <h3>CRWVスプレッド (2032)</h3>
+        <div class="value">514bp</div>
+        <p class="detail">yield 9.62% − UST7y 4.48% - AI credit安定 (発行時 ≈540bp 圏) / vs HY OAS +240bp (AI固有プレミアム)</p>
+        
+        <p class="source">FINRA TRACE等 (手動) + FRED DGS7 (自動)</p>
       </div>
       <div class="card" data-level="green">
         <div class="card-head">
           <span class="chip chip-green"><span class="chip-icon">🟢</span>正常</span>
+          <span class="badges"><span class="badge badge-prov">暫定</span></span>
           <span class="asof">2026-07</span>
         </div>
         <h3>AI企業の新規借入条件</h3>
         <div class="value">APLD SPV Notes 2031 (par発行) @7.00%</div>
-        <p class="detail">調達条件は安定〜改善 (前回比 -2.62pt)</p>
+        <p class="detail">市場は開いている (直近調達が成立)。同issuer・同条件の比較対象は蓄積待ち</p>
+        
         <p class="source">起債・借入発表 (手動)</p>
+      </div>
+      <div class="card" data-level="unknown">
+        <div class="card-head">
+          <span class="chip chip-unknown"><span class="chip-icon">⚪</span>データ不足</span>
+          <span class="badges"></span>
+          <span class="asof"></span>
+        </div>
+        <h3>Liquidity Coverage (24m)</h3>
+        <div class="value">-</div>
+        <p class="detail">数値未入力 (cash / debt_due_24m が必要)</p>
+        <div class="minitablewrap"><table class="minitable"><thead><tr><th>社</th><th>流動性</th><th>24m満期</th><th>Coverage</th></tr></thead><tbody><tr><td>CRWV</td><td>—</td><td>—</td><td>未入力</td></tr><tr><td>APLD</td><td>—</td><td>—</td><td>未入力</td></tr><tr><td>ORCL</td><td>—</td><td>—</td><td>未入力</td></tr></tbody></table></div>
+        <p class="source">各社決算 (手動)</p>
       </div></div></section>
 
   <h2>時系列チャート</h2>
@@ -253,7 +330,9 @@ footer code { background: var(--surface); border: 1px solid var(--border); borde
 
   <footer>
     <p>判定基準: 🟠警戒以上のグループが 1=ノイズの可能性 / 2=警戒 / 3以上=AIサイクル変調。
-    需要側3グループ以上+信用市場の同時悪化でEXIT検討シグナル。</p>
+    需要側(需要/Compute/稼働率/DC/電力)3グループ以上+信用市場の同時悪化でEXIT検討シグナル。</p>
+    <p>🟢はデータで正常を確認した時のみ。⚪=データ不足、「暫定」=level_hint・フォールバック値・
+    stale(🕐 古いデータ)による判定で、Data confidenceには数えない。</p>
     <p>四半期指標の更新: <code>data/ai_dashboard/manual_inputs.yaml</code> を編集してmainへpush。</p>
   </footer>
 </main>
