@@ -1,14 +1,12 @@
-"""Silicon Data の GPUレンタル価格指数を取得する (実験的)。
+"""Silicon Data の GPUレンタル価格指数を取得する。
 
-公式APIは有償のため、公開ページに掲載されている指数値をベストエフォートで
-拾う。サイト構造は不明・変更されうるので、以下の戦略を順に試す:
+各GPUの指数ページ (/products/silicon-index/<gpu>) のFAQに
 
-1. 候補URLを順にフェッチ
-2. ページ内の JSON (__NEXT_DATA__ 等) と可視テキストの両方を対象に、
-   "H100" / "H200" / "B200" / "B300" の近傍にある $X.XX パターンを探す
+  "The current B200 rental price is $5.45 per GPU-hour, based on the
+   Silicon Data B200 Rental Price Index (ticker SDB200RT)."
 
-1つも取れなければ SiliconDataError を送出し、呼び出し側は
-manual_inputs.yaml のフォールバック値を使う。
+という定型文がサーバーサイドレンダリングで含まれる (2026-08 実ページで確認)。
+この文から現在値を抜く。取れたGPUだけ返し、全滅なら SiliconDataError。
 """
 from __future__ import annotations
 
@@ -21,51 +19,40 @@ from ..config import HTTP_TIMEOUT, USER_AGENT
 
 logger = logging.getLogger(__name__)
 
-CANDIDATE_URLS = [
-    "https://silicondata.com/",
-    "https://www.silicondata.com/",
-    "https://silicondata.com/indices",
-    "https://www.silicondata.com/indices",
-    "https://silicondata.com/gpu-rental-index",
-]
+BASE = "https://www.silicondata.com/products/silicon-index"
 
-# metric名 -> ページ内で探すGPU名パターン
-GPU_PATTERNS = {
-    "sd_b300_rental": r"(?:GB300|B300)",
-    "sd_b200_rental": r"(?:GB200|B200)",
-    "sd_h200_rental": r"H200",
-    "sd_h100_rental": r"H100",
+# metric名 -> (ページslug, FAQ内のGPU表記)
+INDEX_PAGES = {
+    "sd_b200_rental": ("b200", "B200"),
+    "sd_h200_rental": ("h200", "H200"),
+    "sd_h100_rental": ("h100", "H100"),
 }
-
-# GPU名の近傍 (前後200文字) に現れる $x.xx を価格候補とみなす
-PRICE_NEAR = r"\$\s*([0-9]{1,2}(?:\.[0-9]{1,3})?)"
 
 
 class SiliconDataError(Exception):
     pass
 
 
-def _extract_prices(text: str) -> dict[str, float]:
-    found: dict[str, float] = {}
-    for metric, gpu_pat in GPU_PATTERNS.items():
-        prices: list[float] = []
-        for m in re.finditer(gpu_pat, text, re.IGNORECASE):
-            window = text[m.end(): m.end() + 200] + " " + text[max(0, m.start() - 200): m.start()]
-            for pm in re.finditer(PRICE_NEAR, window):
-                v = float(pm.group(1))
-                # GPU-hour単価として妥当な範囲のみ (誤検出の排除)
-                if 0.2 <= v <= 30:
-                    prices.append(v)
-        if prices:
-            # 同一GPUで複数出た場合は最小値 (Neo-cloud側の指数を優先する意図)
-            found[metric] = min(prices)
-    return found
+def _faq_price(html: str, gpu_label: str) -> float | None:
+    text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html))
+    m = re.search(
+        rf"current\s+{re.escape(gpu_label)}\s+rental\s+price\s+is\s*"
+        rf"\$\s*([0-9]+(?:\.[0-9]+)?)\s*per\s*GPU-hour",
+        text,
+        re.IGNORECASE,
+    )
+    if not m:
+        return None
+    v = float(m.group(1))
+    return v if 0.1 <= v <= 100 else None
 
 
 def fetch_gpu_rental_index() -> dict[str, float]:
-    """{"sd_b200_rental": 5.74, ...} を返す。全滅なら例外"""
+    """{"sd_b200_rental": 5.45, ...} を返す (取得できたGPUのみ)。全滅なら例外"""
+    found: dict[str, float] = {}
     last_error: Exception | None = None
-    for url in CANDIDATE_URLS:
+    for metric, (slug, label) in INDEX_PAGES.items():
+        url = f"{BASE}/{slug}"
         try:
             resp = httpx.get(
                 url,
@@ -79,17 +66,15 @@ def fetch_gpu_rental_index() -> dict[str, float]:
             logger.info("[SiliconData] %s へのアクセス失敗: %s", url, e)
             continue
 
-        html = resp.text
-        # 可視テキスト + script内JSONの両方を対象にするため、タグだけ除去した版と生HTML版の両方を見る
-        stripped = re.sub(r"<[^>]+>", " ", html)
-        found = _extract_prices(stripped)
-        if not found:
-            found = _extract_prices(html)
-        if found:
-            logger.info("[SiliconData] %s から取得: %s", url, found)
-            return found
-        logger.info("[SiliconData] %s に価格パターンが見つかりません", url)
+        price = _faq_price(resp.text, label)
+        if price is not None:
+            found[metric] = price
+        else:
+            logger.info("[SiliconData] %s にFAQ価格文が見つかりません (構造変更?)", url)
 
-    raise SiliconDataError(
-        f"Silicon Dataから価格を取得できませんでした (最後のエラー: {last_error})"
-    )
+    if not found:
+        raise SiliconDataError(
+            f"Silicon Dataから価格を取得できませんでした (最後のエラー: {last_error})"
+        )
+    logger.info("[SiliconData] 取得: %s", found)
+    return found

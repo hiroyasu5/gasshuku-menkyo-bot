@@ -1,8 +1,13 @@
-"""CoreWeave 料金ページから B200 の on-demand / spot 掲載価格を取得する (実験的)。
+"""CoreWeave 料金ページから B200 の on-demand / spot 掲載価格を取得する。
 
-掲載価格は 8-GPUノード単位 (例: on-demand $68.80/h, spot $34.87/h)。
-ページはJSレンダリングの可能性があるため、生HTML内のJSON
-(__NEXT_DATA__ 等) も含めて "B200" 近傍の $ 金額を探す。
+料金表はタグ除去後に以下の形の連続テキストになる (2026-08 実ページで確認):
+
+  NVIDIA HGX B200 On-Demand Price: $68.80 / Hour Spot Price: $34.11 / Hour
+  Inference Single CPU Price: $8.60 / Hour ...
+
+この "On-Demand Price / Spot Price" のペアを正確に抜く。
+複数リージョンの表があるため最初のマッチ (NORTH AMERICA) を使う。
+"Inference Single GPU Price" を spot と誤検出しないこと (過去に発生)。
 
 spot / on-demand 比率は需給シグナルとして使う:
 比率が高い = 需要が強い、急低下 = GPU余剰の可能性。
@@ -23,29 +28,33 @@ PRICING_URLS = [
     "https://coreweave.com/pricing",
 ]
 
-# ノード時間単価として妥当な範囲 ($/hr, 8-GPUノード)
-PRICE_PAT = r"\$\s*([0-9]{1,3}(?:\.[0-9]{1,3})?)"
+B200_ROW_PAT = re.compile(
+    r"NVIDIA\s+HGX\s+B200\s+"
+    r"On-Demand\s+Price:\s*\$\s*([0-9][0-9.,]*)\s*/\s*Hour\s+"
+    r"Spot\s+Price:\s*\$\s*([0-9][0-9.,]*)\s*/\s*Hour",
+    re.IGNORECASE,
+)
 
 
 class CoreWeaveError(Exception):
     pass
 
 
-def _prices_near(text: str, anchor_pat: str, window: int = 400) -> list[tuple[float, str]]:
-    """anchor近傍の (価格, 周辺テキスト小文字) リスト"""
-    out: list[tuple[float, str]] = []
-    for m in re.finditer(anchor_pat, text, re.IGNORECASE):
-        ctx = text[max(0, m.start() - window): m.end() + window]
-        for pm in re.finditer(PRICE_PAT, ctx):
-            v = float(pm.group(1))
-            if 5 <= v <= 300:
-                local = ctx[max(0, pm.start() - 80): pm.end() + 80].lower()
-                out.append((v, local))
-    return out
+def _parse(html: str) -> dict[str, float] | None:
+    text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html))
+    m = B200_ROW_PAT.search(text)
+    if not m:
+        return None
+    od = float(m.group(1).replace(",", ""))
+    spot = float(m.group(2).replace(",", ""))
+    # 8-GPUノード時間単価として妥当性チェック
+    if not (5 <= od <= 500 and 1 <= spot <= 500):
+        return None
+    return {"cw_b200_od_node": od, "cw_b200_spot_node": spot}
 
 
 def fetch_b200_pricing() -> dict[str, float]:
-    """{"cw_b200_od_node": 68.80, "cw_b200_spot_node": 34.87} を返す (取れた分のみ)"""
+    """{"cw_b200_od_node": 68.80, "cw_b200_spot_node": 34.11} を返す"""
     last_error: Exception | None = None
     for url in PRICING_URLS:
         try:
@@ -61,30 +70,11 @@ def fetch_b200_pricing() -> dict[str, float]:
             logger.info("[CoreWeave] %s へのアクセス失敗: %s", url, e)
             continue
 
-        html = resp.text
-        stripped = re.sub(r"<[^>]+>", " ", html)
-
-        found: dict[str, float] = {}
-        for text in (stripped, html):
-            candidates = _prices_near(text, r"(?:HGX\s*)?B200")
-            if not candidates:
-                continue
-            spot = [v for v, ctx in candidates if "spot" in ctx]
-            ondemand = [
-                v for v, ctx in candidates
-                if "spot" not in ctx
-            ]
-            if ondemand:
-                found["cw_b200_od_node"] = max(ondemand)
-            if spot:
-                found["cw_b200_spot_node"] = min(spot)
-            if found:
-                break
-
+        found = _parse(resp.text)
         if found:
             logger.info("[CoreWeave] %s から取得: %s", url, found)
             return found
-        logger.info("[CoreWeave] %s にB200価格が見つかりません", url)
+        logger.info("[CoreWeave] %s にB200価格行が見つかりません (ページ構造変更?)", url)
 
     raise CoreWeaveError(
         f"CoreWeave料金ページからB200価格を取得できませんでした (最後のエラー: {last_error})"

@@ -42,6 +42,7 @@ jobs:
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           AI_DASHBOARD_DISCORD_WEBHOOK_URL: ${{ secrets.AI_DASHBOARD_DISCORD_WEBHOOK_URL }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: python -m src.ai_dashboard
 
       - name: Commit data and dashboard
@@ -57,34 +58,6 @@ jobs:
           git pull --rebase origin main
           git push
 
-  # docs/ を GitHub Pages に公開する (スマホ等どこからでも閲覧可能にする)
-  deploy-pages:
-    needs: update
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Checkout (updateジョブのコミットを含む最新main)
-        uses: actions/checkout@v4
-        with:
-          ref: main
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
-
-      - name: Upload docs
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+# GitHub Pagesは「Deploy from a branch (main / /docs)」方式を使う。
+# リポジトリ Settings → Pages で1回設定すれば、上のcommit後に
+# GitHubが自動でデプロイする (このワークフローに追加ジョブは不要)。
