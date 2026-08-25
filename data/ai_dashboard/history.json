@@ -3157,15 +3157,19 @@
       "sd_h200_rental": 3.1
     },
     "2026-08-26": {
+      "breadth_200_pct": 66.7,
+      "breadth_50_pct": 50.0,
+      "breadth_coverage": 100.0,
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
+      "px_ret90_med": -10.5,
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
       "sd_h200_rental": 3.1
     }
   },
   "estimates": {},
-  "last_updated": "2026-08-26T05:33:29+09:00",
+  "last_updated": "2026-08-26T05:38:51+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
@@ -3178,7 +3182,7 @@
     "hy_oas": "green",
     "hyperscalers": "green",
     "liquidity": "unknown",
-    "market_breadth": "unknown",
+    "market_breadth": "green",
     "multiple_expansion": "unknown",
     "nbis_commitments": "green",
     "orcl_rpo": "unknown",
