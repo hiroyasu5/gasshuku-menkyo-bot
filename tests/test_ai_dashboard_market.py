@@ -221,3 +221,16 @@ def test_dlr_single_quarter_dip_not_escalated():
     ]
     r = signals.eval_dlr(_dlr_manual(entries))
     assert r.level is Level.GREEN
+
+
+# --- 説明文の網羅性 ---
+
+def test_every_indicator_has_explanation():
+    from src.ai_dashboard.explanations import INDICATOR_EXPLANATIONS
+    results, _ = signals.evaluate_all(
+        {"daily": {}, "estimates": {}, "levels": {}, "reminders_sent": {}}, {}
+    )
+    for r in results:
+        exp = INDICATOR_EXPLANATIONS.get(r.key)
+        assert exp, f"説明がない指標: {r.key}"
+        assert exp["why"] and exp["how"] and exp["terms"]

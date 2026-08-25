@@ -1,0 +1,45 @@
+# 一時的なデバッグ用: 株価データソースをActionsランナーから調査する (第3弾)。
+# 調査が終わったら削除する。
+name: Debug fetch
+
+on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/debug_fetch.yml"]
+
+permissions: {}
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Stooq raw response
+        run: |
+          echo "=== stooq nvda.us (range params) ==="
+          curl -sS --max-time 30 -A "curl/8.5.0" "https://stooq.com/q/d/l/?s=nvda.us&d1=20250601&d2=20260825&i=d" | head -8
+          echo "=== stooq nvda.us (no range) ==="
+          curl -sS --max-time 30 "https://stooq.com/q/d/l/?s=nvda.us&i=d" | head -5
+          echo "=== stooq with browser UA ==="
+          curl -sS --max-time 30 -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36" "https://stooq.com/q/d/l/?s=nvda.us&i=d" | head -5
+
+      - name: Yahoo chart API
+        run: |
+          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36"
+          for t in NVDA CRWV; do
+            echo "=== yahoo $t ==="
+            curl -sS --max-time 30 -A "$UA" "https://query1.finance.yahoo.com/v8/finance/chart/$t?range=1y&interval=1d" -o y.json || { echo FETCH_FAILED; continue; }
+            python3 - <<'PYEOF'
+          import json
+          d = json.load(open("y.json"))
+          r = d.get("chart", {}).get("result")
+          if not r:
+              print("NO RESULT:", str(d)[:300])
+          else:
+              res = r[0]
+              ts = res.get("timestamp", [])
+              closes = (res.get("indicators", {}).get("quote", [{}])[0].get("close") or [])
+              print("timestamps:", len(ts), "closes:", len([c for c in closes if c is not None]))
+              print("last close:", closes[-1] if closes else None)
+          PYEOF
+          done

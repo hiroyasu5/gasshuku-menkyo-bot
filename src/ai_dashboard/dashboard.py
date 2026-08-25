@@ -11,6 +11,7 @@ import logging
 
 from . import storage
 from .config import DASHBOARD_DIR, DASHBOARD_FILE
+from .explanations import INDICATOR_EXPLANATIONS, OVERVIEW_EXPLANATION
 from .models import (
     CONF_NONE,
     CONF_PROVISIONAL,
@@ -118,6 +119,22 @@ def _card(r: IndicatorResult) -> str:
             f'<div class="minitablewrap"><table class="minitable">'
             f"<thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>"
         )
+    explain_html = ""
+    exp = INDICATOR_EXPLANATIONS.get(r.key)
+    if exp:
+        terms = "".join(
+            f"<dt>{_esc(term)}</dt><dd>{_esc(desc)}</dd>"
+            for term, desc in exp.get("terms", [])
+        )
+        explain_html = f"""
+        <details class="explain">
+          <summary>❔ この指標の意図と用語</summary>
+          <div class="explain-body">
+            <p><strong>なぜ見るか:</strong> {_esc(exp["why"])}</p>
+            <dl>{terms}</dl>
+            <p><strong>見方:</strong> {_esc(exp["how"])}</p>
+          </div>
+        </details>"""
     return f"""
       <div class="card" data-level="{lv}">
         <div class="card-head">
@@ -129,6 +146,7 @@ def _card(r: IndicatorResult) -> str:
         <div class="value">{_esc(r.value_text)}</div>
         <p class="detail">{_esc(r.detail)}</p>
         {mini_table}
+        {explain_html}
         <p class="source">{_esc(r.source)}</p>
       </div>"""
 
@@ -205,6 +223,15 @@ def _render(
     <div class="state-grid">{state_rows}</div>
     <p class="muted state-note">{_esc(composite.market_summary)} ・
     MarketはEXIT判定に含めない先行警報 (クロスシグナル用)</p>
+    <details class="explain">
+      <summary>❔ 複合判定・Stage・confidenceの意味</summary>
+      <div class="explain-body">
+        <p><strong>複合判定:</strong> {_esc(OVERVIEW_EXPLANATION["composite"])}</p>
+        <p><strong>Market警報:</strong> {_esc(OVERVIEW_EXPLANATION["market"])}</p>
+        <p><strong>Stage:</strong> {_esc(OVERVIEW_EXPLANATION["stage"])}</p>
+        <p><strong>Data confidence:</strong> {_esc(OVERVIEW_EXPLANATION["confidence"])}</p>
+      </div>
+    </details>
   </div>"""
 
     charts_html = ""
@@ -331,6 +358,23 @@ h3 {{ font-size: 0.95rem; margin: 8px 0 4px; }}
 @media (min-width: 760px) {{ .state-grid {{ grid-template-columns: 1fr 1fr; }} }}
 .state-row {{ display: flex; align-items: center; gap: 10px; font-size: 0.9rem; }}
 .state-note {{ font-size: 0.75rem; margin: 10px 0 0; }}
+details.explain {{ margin: 8px 0 2px; }}
+details.explain summary {{
+  cursor: pointer; color: var(--muted); font-size: 0.76rem; font-weight: 600;
+  list-style: none; -webkit-tap-highlight-color: transparent;
+}}
+details.explain summary::-webkit-details-marker {{ display: none; }}
+details.explain[open] summary {{ color: var(--ink-2); }}
+.explain-body {{
+  margin-top: 8px; padding: 10px 12px; border-radius: 8px;
+  background: var(--page); border: 1px solid var(--border);
+  font-size: 0.78rem; color: var(--ink-2); line-height: 1.6;
+}}
+.explain-body p {{ margin: 0 0 8px; }}
+.explain-body p:last-child {{ margin-bottom: 0; }}
+.explain-body dl {{ margin: 0 0 8px; }}
+.explain-body dt {{ font-weight: 700; color: var(--ink); margin-top: 6px; }}
+.explain-body dd {{ margin: 1px 0 0 0; }}
 .minitablewrap {{ overflow-x: auto; margin: 8px 0 2px; }}
 .minitable {{ border-collapse: collapse; width: 100%; font-size: 0.74rem; }}
 .minitable th, .minitable td {{
