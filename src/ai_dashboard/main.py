@@ -19,7 +19,7 @@ from . import market, notifier, reminders, signals, storage
 from .basket import AI_BASKET_V1, TIER1_ESTIMATES
 from .config import FRED_BACKFILL_DAYS, FRED_SERIES, WEEKLY_SUMMARY_WEEKDAY
 from .dashboard import generate_dashboard
-from .fetchers import alphavantage, coreweave, fred, silicon_data, stooq
+from .fetchers import alphavantage, coreweave, fred, silicon_data, yahoo
 from .models import Level
 
 logging.basicConfig(
@@ -73,14 +73,14 @@ def _fetch_market(history: dict, errors: list[str]) -> None:
 
     prices: dict = {}
     try:
-        prices = stooq.fetch_basket_prices(AI_BASKET_V1)
+        prices = yahoo.fetch_basket_prices(list(AI_BASKET_V1))
         if len(prices) < len(AI_BASKET_V1) * 0.5:
             errors.append(
-                f"Stooq株価: {len(prices)}/{len(AI_BASKET_V1)}銘柄しか取得できず"
+                f"Yahoo株価: {len(prices)}/{len(AI_BASKET_V1)}銘柄しか取得できず"
             )
     except Exception as e:
-        logger.error("[Stooq] basket取得失敗: %s", e)
-        errors.append(f"Stooq株価basket: {e}")
+        logger.error("[Yahoo] basket取得失敗: %s", e)
+        errors.append(f"Yahoo株価basket: {e}")
 
     try:
         estimates = alphavantage.fetch_estimates(TIER1_ESTIMATES)

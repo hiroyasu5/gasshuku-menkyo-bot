@@ -7,37 +7,37 @@ from __future__ import annotations
 
 BASKET_VERSION = "v1"
 
-# ticker -> (stooqシンボル, セクター)
-AI_BASKET_V1: dict[str, tuple[str, str]] = {
+# ticker -> セクター
+AI_BASKET_V1: dict[str, str] = {
     # Hyperscaler
-    "MSFT": ("msft.us", "hyperscaler"),
-    "AMZN": ("amzn.us", "hyperscaler"),
-    "GOOGL": ("googl.us", "hyperscaler"),
-    "META": ("meta.us", "hyperscaler"),
-    "ORCL": ("orcl.us", "hyperscaler"),
+    "MSFT": "hyperscaler",
+    "AMZN": "hyperscaler",
+    "GOOGL": "hyperscaler",
+    "META": "hyperscaler",
+    "ORCL": "hyperscaler",
     # Semiconductor
-    "NVDA": ("nvda.us", "semi"),
-    "AMD": ("amd.us", "semi"),
-    "AVGO": ("avgo.us", "semi"),
-    "MU": ("mu.us", "semi"),
-    "MRVL": ("mrvl.us", "semi"),
-    "ARM": ("arm.us", "semi"),
+    "NVDA": "semi",
+    "AMD": "semi",
+    "AVGO": "semi",
+    "MU": "semi",
+    "MRVL": "semi",
+    "ARM": "semi",
     # Network / Server
-    "ANET": ("anet.us", "network"),
-    "VRT": ("vrt.us", "network"),
-    "DELL": ("dell.us", "network"),
-    "HPE": ("hpe.us", "network"),
-    "SMCI": ("smci.us", "network"),
+    "ANET": "network",
+    "VRT": "network",
+    "DELL": "network",
+    "HPE": "network",
+    "SMCI": "network",
     # NeoCloud / DC
-    "CRWV": ("crwv.us", "neocloud"),
-    "NBIS": ("nbis.us", "neocloud"),
-    "APLD": ("apld.us", "neocloud"),
-    "DLR": ("dlr.us", "neocloud"),
-    "EQIX": ("eqix.us", "neocloud"),
+    "CRWV": "neocloud",
+    "NBIS": "neocloud",
+    "APLD": "neocloud",
+    "DLR": "neocloud",
+    "EQIX": "neocloud",
     # Power
-    "CEG": ("ceg.us", "power"),
-    "VST": ("vst.us", "power"),
-    "NRG": ("nrg.us", "power"),
+    "CEG": "power",
+    "VST": "power",
+    "NRG": "power",
 }
 
 # ⑩⑪でEPS consensusを追うTier1 (Alpha Vantage 無料枠25req/日に収める)
