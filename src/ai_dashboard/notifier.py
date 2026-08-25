@@ -119,6 +119,8 @@ def notify_weekly_summary(
     )
     lines = [
         f"**複合判定: {composite.summary}**",
+        f"**{composite.stage_label}**",
+        composite.market_summary,
         f"Data confidence: {composite.confidence_pct}% "
         f"({composite.confirmed_count}/{composite.total_count}指標を実データで確認)",
         "",

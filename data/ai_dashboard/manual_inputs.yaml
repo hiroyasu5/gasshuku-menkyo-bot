@@ -70,12 +70,15 @@ quarterly:
       level_hint: green
       note: "IG hyperscaler裏付け約70%"
 
-  # --- ⑤ DLR: bookings / 更新賃料 -------------------------------
+  # --- ⑤⑧ DLR DC Demand -----------------------------------------
+  # 四半期bookingsは大型契約でブレるため、4四半期分貯まるとLTM (直近4四半期
+  # 合計) で自動判定される。LTM↓+backlog↓+賃料マイナスの同時発生で🟠。
   dlr:
     - quarter: "2026Q1"
       bookings_annualized_musd: 707   # 新規bookings年換算 ($M)
       backlog_busd: 1.8               # signed-but-not-commenced ($B)
       renewal_rent_cash_pct: 5.0      # 更新賃料 cash basis (%)
+      mw_leased: null                 # リースMW (開示があれば)
       level_hint: green
       note: "EQIX cabinet利用率は2025年末約77% (補助指標)"
 

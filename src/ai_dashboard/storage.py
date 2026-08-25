@@ -11,6 +11,7 @@ JST = timezone(timedelta(hours=9))
 EMPTY_HISTORY = {
     "last_updated": "",
     "daily": {},           # {"YYYY-MM-DD": {"hy_oas_bps": 294.0, ...}}
+    "estimates": {},       # {"YYYY-MM-DD": {"NVDA": 4.32, ...}} FY1 EPS consensus
     "levels": {},          # 前回実行時の各指標レベル {"crwv_backlog": "green", ...}
     "composite_level": "",
     "reminders_sent": {},  # {"CRWV-2026-11-10": "2026-11-04"}
@@ -91,3 +92,6 @@ def _trim_daily(history: dict) -> None:
         "%Y-%m-%d"
     )
     history["daily"] = {d: v for d, v in history["daily"].items() if d >= cutoff}
+    history["estimates"] = {
+        d: v for d, v in history.get("estimates", {}).items() if d >= cutoff
+    }

@@ -15,10 +15,11 @@ import sys
 from datetime import datetime, timedelta, timezone
 
 from . import manual as manual_mod
-from . import notifier, reminders, signals, storage
+from . import market, notifier, reminders, signals, storage
+from .basket import AI_BASKET_V1, TIER1_ESTIMATES
 from .config import FRED_BACKFILL_DAYS, FRED_SERIES, WEEKLY_SUMMARY_WEEKDAY
 from .dashboard import generate_dashboard
-from .fetchers import coreweave, fred, silicon_data
+from .fetchers import alphavantage, coreweave, fred, silicon_data, stooq
 from .models import Level
 
 logging.basicConfig(
@@ -65,6 +66,44 @@ def _fetch_gpu_prices(history: dict, errors: list[str]) -> None:
         errors.append(f"CoreWeave B200価格: {e}")
 
 
+def _fetch_market(history: dict, errors: list[str]) -> None:
+    """⑨⑩⑪ Market Early Warning 用のデータ取得とメトリクス保存"""
+    today_str = storage.today_jst()
+    today = datetime.now(JST).date()
+
+    prices: dict = {}
+    try:
+        prices = stooq.fetch_basket_prices(AI_BASKET_V1)
+        if len(prices) < len(AI_BASKET_V1) * 0.5:
+            errors.append(
+                f"Stooq株価: {len(prices)}/{len(AI_BASKET_V1)}銘柄しか取得できず"
+            )
+    except Exception as e:
+        logger.error("[Stooq] basket取得失敗: %s", e)
+        errors.append(f"Stooq株価basket: {e}")
+
+    try:
+        estimates = alphavantage.fetch_estimates(TIER1_ESTIMATES)
+        if estimates:
+            snap = history.setdefault("estimates", {}).setdefault(today_str, {})
+            for ticker, data in estimates.items():
+                if data.get("fy1_eps") is not None:
+                    snap[ticker] = data["fy1_eps"]
+    except Exception as e:
+        logger.error("[AlphaVantage] 取得失敗: %s", e)
+        errors.append(f"Alpha Vantage EPS consensus: {e}")
+
+    try:
+        metrics = market.collect_market_metrics(
+            prices, history.get("estimates", {}), len(AI_BASKET_V1), today
+        )
+        storage.merge_daily(history, today_str, metrics)
+        logger.info("[Market] metrics: %s", metrics)
+    except Exception as e:
+        logger.error("[Market] メトリクス計算失敗: %s", e)
+        errors.append(f"Marketメトリクス計算: {e}")
+
+
 def run() -> None:
     logger.info("=== AI Bubble Dashboard 実行開始 ===")
     history = storage.load_history()
@@ -78,6 +117,7 @@ def run() -> None:
     errors: list[str] = []
     _fetch_fred(history, errors)
     _fetch_gpu_prices(history, errors)
+    _fetch_market(history, errors)
 
     results, composite = signals.evaluate_all(history, manual)
 
@@ -112,6 +152,7 @@ def run() -> None:
     generate_dashboard(history, results, composite)
 
     logger.info("複合判定: %s", composite.summary)
+    logger.info("%s / %s", composite.market_summary, composite.stage_label)
     for r in results:
         logger.info("  [%s] %s: %s (%s)", r.level.value, r.name, r.value_text, r.detail)
     logger.info("=== AI Bubble Dashboard 実行完了 (取得エラー%d件) ===", len(errors))

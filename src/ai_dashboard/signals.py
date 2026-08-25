@@ -29,6 +29,7 @@ from . import manual as m
 from . import storage
 from .config import BOND_STALE_DAYS, DAILY_STALE_DAYS
 from .models import (
+    ALERT_GROUPS,
     CONF_CONFIRMED,
     CONF_NONE,
     CONF_PROVISIONAL,
@@ -38,6 +39,7 @@ from .models import (
     GROUP_DATACENTER,
     GROUP_DEMAND,
     GROUP_LABEL_JA,
+    GROUP_MARKET,
     GROUP_ORDER,
     GROUP_POWER,
     GROUP_UTILIZATION,
@@ -552,13 +554,17 @@ def eval_apld(manual: dict) -> IndicatorResult:
 
 
 def eval_dlr(manual: dict) -> IndicatorResult:
-    latest, prev = m.latest_and_previous(manual, "dlr")
-    if not latest:
+    """DLR DC Demand。四半期bookingsは大型契約でブレるためLTM (直近4四半期合計) で
+    見る。LTM↓ + backlog↓ + 更新賃料マイナス が同時なら🟠以上に引き上げる。"""
+    entries = m.series_entries(manual, "dlr")
+    if not entries:
         return IndicatorResult(
-            key="dlr_rent", name="DLR Bookings/更新賃料", group=GROUP_DATACENTER,
+            key="dlr_rent", name="DLR DC Demand", group=GROUP_DATACENTER,
             level=Level.UNKNOWN, value_text="-", detail="データ未入力",
             source="DLR決算 (手動)", confidence=CONF_NONE,
         )
+    latest = entries[-1]
+    prev = entries[-2] if len(entries) >= 2 else None
     rent = m.as_float(latest.get("renewal_rent_cash_pct"))
     bookings = m.as_float(latest.get("bookings_annualized_musd"))
     conf = CONF_CONFIRMED
@@ -574,19 +580,52 @@ def eval_dlr(manual: dict) -> IndicatorResult:
         level, detail = Level.ORANGE, f"更新賃料 {rent:.1f}% (過剰供給の兆候)"
     else:
         level, detail = Level.RED, f"更新賃料 {rent:.1f}% (過剰供給)"
-    if bookings is not None and prev is not None:
-        pb = m.as_float(prev.get("bookings_annualized_musd"))
-        if pb:
-            chg = (bookings - pb) / pb
-            detail += f" / bookings QoQ {chg:+.0%}"
-            if chg <= -0.30 and LEVEL_RANK[level] < LEVEL_RANK[Level.ORANGE]:
-                level = Level.ORANGE
-    value = f"${bookings:,.0f}M bookings" if bookings is not None else "-"
+
+    # LTM bookings (5四半期以上あればLTM同士のQoQ比較)
+    def _ltm(idx_end: int) -> float | None:
+        window = entries[max(0, idx_end - 4): idx_end]
+        vals = [m.as_float(e.get("bookings_annualized_musd")) for e in window]
+        vals = [v for v in vals if v is not None]
+        return sum(vals) if len(vals) == 4 else None
+
+    ltm = _ltm(len(entries))
+    prev_ltm = _ltm(len(entries) - 1)
+    ltm_declining = False
+    if ltm is not None and prev_ltm:
+        chg = (ltm - prev_ltm) / prev_ltm
+        detail += f" / LTM bookings ${ltm:,.0f}M ({chg:+.1%})"
+        ltm_declining = chg < -0.05
+    elif bookings is not None:
+        detail += f" / bookings ${bookings:,.0f}M (LTMは4四半期蓄積後)"
+
+    backlog_declining = False
+    if prev is not None:
+        b_cur = m.as_float(latest.get("backlog_busd"))
+        b_prev = m.as_float(prev.get("backlog_busd"))
+        if b_cur is not None and b_prev:
+            b_chg = (b_cur - b_prev) / b_prev
+            detail += f" / backlog QoQ {b_chg:+.0%}"
+            backlog_declining = b_chg < 0
+
+    rent_negative = rent is not None and rent < 0
+    if ltm_declining and backlog_declining and rent_negative:
+        if LEVEL_RANK[level] < LEVEL_RANK[Level.ORANGE]:
+            level = Level.ORANGE
+        detail += " ⚠ LTM bookings・backlog・賃料が同時悪化"
+
+    value_parts = []
+    if ltm is not None:
+        value_parts.append(f"LTM ${ltm:,.0f}M")
+    elif bookings is not None:
+        value_parts.append(f"${bookings:,.0f}M bookings")
     if rent is not None:
-        value += f" / 賃料{rent:+.0f}%"
+        value_parts.append(f"賃料{rent:+.0f}%")
+    mw = m.as_float(latest.get("mw_leased"))
+    if mw is not None:
+        value_parts.append(f"{mw:,.0f}MW leased")
     return IndicatorResult(
-        key="dlr_rent", name="DLR Bookings/更新賃料", group=GROUP_DATACENTER,
-        level=level, value_text=value, detail=detail,
+        key="dlr_rent", name="DLR DC Demand", group=GROUP_DATACENTER,
+        level=level, value_text=" / ".join(value_parts) or "-", detail=detail,
         as_of=str(latest.get("quarter", "")), source="DLR決算 (手動)",
         confidence=conf,
     )
@@ -653,6 +692,150 @@ def eval_power_forecast(manual: dict) -> IndicatorResult:
         level=level, value_text=value, detail=f"前年forecast比 {pct} - {note}",
         as_of=str(latest.get("year", "")), source="PJM Load Forecast (手動)",
         confidence=CONF_CONFIRMED,
+    )
+
+
+# ---------------------------------------------------------------
+# Market Early Warning (⑨⑩⑪)
+# 注意: このグループは複合判定 (悪化グループ数・EXIT) に含めない。
+# 別のMarket警報ラインとクロスシグナルにのみ使う。
+# ---------------------------------------------------------------
+
+_ESCALATE = {
+    Level.GREEN: Level.YELLOW,
+    Level.YELLOW: Level.ORANGE,
+    Level.ORANGE: Level.RED,
+    Level.RED: Level.RED,
+}
+
+
+def eval_market_breadth(history: dict) -> IndicatorResult:
+    """⑨ AI Basket (固定v1・24銘柄) の50/200DMA上回り率 + 20日変化。
+
+    🟢 200DMA>65% / 🟡50-65 / 🟠30-50 / 🔴<30。20日で-20pt以上なら1段階悪化。
+    """
+    b200 = storage.latest_value(history, "breadth_200_pct")
+    if b200 is None:
+        return IndicatorResult(
+            key="market_breadth", name="AI Market Breadth", group=GROUP_MARKET,
+            level=Level.UNKNOWN, value_text="-",
+            detail="株価データ未取得 (次回実行で自動取得)",
+            source="Stooq / AI_BASKET_V1 (自動)", confidence=CONF_NONE,
+        )
+    date_str, pct200 = b200
+    stale = _is_stale_daily(date_str)
+    b50 = storage.latest_value(history, "breadth_50_pct")
+    cov = storage.latest_value(history, "breadth_coverage")
+    coverage = cov[1] if cov else 100.0
+
+    if pct200 > 65:
+        level, note = Level.GREEN, "内部は健全"
+    elif pct200 > 50:
+        level, note = Level.YELLOW, "内部がやや軟化"
+    elif pct200 > 30:
+        level, note = Level.ORANGE, "指数の内部が壊れつつある"
+    else:
+        level, note = Level.RED, "内部崩壊 (少数銘柄だけの相場)"
+
+    trend_note = ""
+    b200_20d = storage.value_near_days_ago(history, "breadth_200_pct", 20, tolerance=7)
+    if b200_20d and b200_20d[0] != date_str:
+        d = pct200 - b200_20d[1]
+        trend_note = f" / 20日変化 {d:+.0f}pt"
+        if d <= -20:
+            level = _ESCALATE[level]
+            trend_note += " (急落→1段階悪化)"
+
+    value = f"200DMA上 {pct200:.0f}%"
+    if b50:
+        value += f" / 50DMA上 {b50[1]:.0f}%"
+    conf = CONF_CONFIRMED
+    if coverage < 60:
+        conf = CONF_PROVISIONAL
+        note += f" (カバレッジ{coverage:.0f}%と低め)"
+    if stale:
+        conf = CONF_PROVISIONAL
+    return IndicatorResult(
+        key="market_breadth", name="AI Market Breadth", group=GROUP_MARKET,
+        level=level, value_text=value,
+        detail=f"{note}{trend_note} / basket {coverage:.0f}%取得",
+        as_of=date_str, source="Stooq / AI_BASKET_V1 24銘柄 (自動)",
+        confidence=conf, stale=stale,
+    )
+
+
+def eval_revision_breadth(history: dict) -> IndicatorResult:
+    """⑩ Tier1 12社のFY1 EPS consensus 30日前比の上方修正率"""
+    total = storage.latest_value(history, "rev_total_n")
+    if total is None or total[1] == 0:
+        has_snapshots = bool(history.get("estimates"))
+        detail = (
+            "EPSスナップショット蓄積中 (30日分貯まると判定開始)"
+            if has_snapshots
+            else "ALPHAVANTAGE_API_KEY 未設定または未取得"
+        )
+        return IndicatorResult(
+            key="revision_breadth", name="EPS Revision Breadth", group=GROUP_MARKET,
+            level=Level.UNKNOWN, value_text="-", detail=detail,
+            source="Alpha Vantage / Tier1 12社 (自動)", confidence=CONF_NONE,
+        )
+    date_str, n = total
+    stale = _is_stale_daily(date_str)
+    up = storage.latest_value(history, "rev_up_n")
+    down = storage.latest_value(history, "rev_down_n")
+    up_n = up[1] if up else 0
+    down_n = down[1] if down else 0
+    ratio = up_n / n * 100
+    if ratio >= 55:
+        level, note = Level.GREEN, "利益予想は広く上方修正中"
+    elif ratio >= 35:
+        level, note = Level.YELLOW, "上方修正の勢いが鈍化"
+    elif ratio >= 20:
+        level, note = Level.ORANGE, "下方修正が優勢になりつつある"
+    else:
+        level, note = Level.RED, "利益期待の広範な悪化"
+    return IndicatorResult(
+        key="revision_breadth", name="EPS Revision Breadth", group=GROUP_MARKET,
+        level=level,
+        value_text=f"上方 {up_n:.0f} / 下方 {down_n:.0f} / {n:.0f}社 ({ratio:.0f}%↑)",
+        detail=f"{note} (FY1 EPS consensus 30日前比, net {up_n - down_n:+.0f})",
+        as_of=date_str, source="Alpha Vantage / Tier1 12社 (自動)",
+        confidence=CONF_PROVISIONAL if stale else CONF_CONFIRMED, stale=stale,
+    )
+
+
+def eval_multiple_expansion(history: dict) -> IndicatorResult:
+    """⑪ Multiple Expansion: 90日株価リターン − 90日FY1 EPS修正 (Tier1中央値)。
+
+    「利益予想の上昇で説明できない株価上昇」がどれだけあるか。
+    """
+    me = storage.latest_value(history, "me_90d_pt")
+    if me is None:
+        px = storage.latest_value(history, "px_ret90_med")
+        value = f"株価90日 {px[1]:+.0f}% (中央値)" if px else "-"
+        return IndicatorResult(
+            key="multiple_expansion", name="Multiple Expansion", group=GROUP_MARKET,
+            level=Level.UNKNOWN, value_text=value,
+            detail="EPSスナップショットが90日分貯まると判定開始 (それまで株価側のみ表示)",
+            as_of=px[0] if px else "",
+            source="Stooq + Alpha Vantage (自動)", confidence=CONF_NONE,
+        )
+    date_str, pt = me
+    stale = _is_stale_daily(date_str)
+    if pt <= 10:
+        level, note = Level.GREEN, "株価上昇は利益予想で概ね説明できる"
+    elif pt <= 25:
+        level, note = Level.YELLOW, "倍率拡大が進行"
+    elif pt <= 45:
+        level, note = Level.ORANGE, "利益予想を大きく超えた株価上昇"
+    else:
+        level, note = Level.RED, "利益期待と無関係な倍率拡大 (バブル的)"
+    return IndicatorResult(
+        key="multiple_expansion", name="Multiple Expansion", group=GROUP_MARKET,
+        level=level, value_text=f"{pt:+.0f}pt (90日, Tier1中央値)",
+        detail=f"{note} (株価リターン − EPS修正)",
+        as_of=date_str, source="Stooq + Alpha Vantage (自動)",
+        confidence=CONF_PROVISIONAL if stale else CONF_CONFIRMED, stale=stale,
     )
 
 
@@ -931,6 +1114,9 @@ def eval_liquidity(manual: dict) -> IndicatorResult:
 
 def evaluate_all(history: dict, manual: dict) -> tuple[list[IndicatorResult], CompositeResult]:
     results = [
+        eval_market_breadth(history),
+        eval_revision_breadth(history),
+        eval_multiple_expansion(history),
         eval_hyperscalers(manual),
         eval_crwv_backlog(manual),
         eval_nbis_commitments(manual),
@@ -951,13 +1137,61 @@ def evaluate_all(history: dict, manual: dict) -> tuple[list[IndicatorResult], Co
     return results, composite
 
 
+def _market_line(results: list[IndicatorResult]) -> tuple[Level, str]:
+    """Market Early Warning: 3指標中いくつ🟠以上か (EXITには使わない)"""
+    market = [r for r in results if r.group == GROUP_MARKET]
+    known = [r for r in market if r.level is not Level.UNKNOWN]
+    if not known:
+        return Level.UNKNOWN, "Market: データ蓄積中"
+    bad = sum(1 for r in known if LEVEL_RANK[r.level] >= LEVEL_RANK[Level.ORANGE])
+    if bad == 0:
+        return Level.GREEN, "Market: 🟢 bull確認 (先行指標に悪化なし)"
+    if bad == 1:
+        return Level.YELLOW, "Market: 🟡 Watch (先行指標1つが悪化)"
+    if bad == 2:
+        return Level.ORANGE, "Market: 🟠 Early warning (先行指標2つが同時悪化)"
+    return Level.RED, "Market: 🔴 Market regime deterioration"
+
+
+STAGE_LABELS = {
+    1: "Stage 1 — Expansion (需要・利益・CapEx すべて拡大)",
+    2: "Stage 2 — Exuberance (Valuation先行、実需はまだ強い)",
+    3: "Stage 3 — Divergence (Breadth/Revisions悪化、実需はまだ強い)",
+    4: "Stage 4 — Fundamental rollover (Bookings/Utilization悪化)",
+    5: "Stage 5 — Credit stress (Spread拡大・調達条件悪化)",
+    6: "Stage 6 — Bust",
+}
+
+
+def _compute_stage(
+    state: dict[str, Level], market_level: Level, me_level: Level
+) -> int:
+    warn = lambda lv: LEVEL_RANK[lv] >= LEVEL_RANK[Level.ORANGE]  # noqa: E731
+    credit = state.get("credit", Level.UNKNOWN)
+    fundamentals = state.get("fundamentals", Level.UNKNOWN)
+    infra = state.get("infrastructure", Level.UNKNOWN)
+    if credit is Level.RED and (warn(fundamentals) or warn(infra)):
+        return 6
+    if warn(credit):
+        return 5
+    if warn(fundamentals) or warn(infra):
+        return 4
+    if warn(market_level):
+        return 3
+    if warn(me_level):
+        return 2
+    return 1
+
+
 def compute_composite(results: list[IndicatorResult]) -> CompositeResult:
     group_levels: dict[str, Level] = {}
     for g in GROUP_ORDER:
         group_levels[g] = worst_level([r.level for r in results if r.group == g])
 
+    # Marketは悪化グループ数・EXIT判定に含めない (ALERT_GROUPSのみ対象)
     alert_groups = [
-        g for g, lv in group_levels.items() if LEVEL_RANK[lv] >= LEVEL_RANK[Level.ORANGE]
+        g for g in ALERT_GROUPS
+        if LEVEL_RANK[group_levels.get(g, Level.UNKNOWN)] >= LEVEL_RANK[Level.ORANGE]
     ]
     n = len(alert_groups)
 
@@ -968,6 +1202,26 @@ def compute_composite(results: list[IndicatorResult]) -> CompositeResult:
     confirmed = sum(1 for r in results if r.confidence == CONF_CONFIRMED)
     total = len(results)
     confidence_pct = round(confirmed / total * 100) if total else 0
+
+    market_level, market_summary = _market_line(results)
+
+    # AI Bubble State (4行)
+    state = {
+        "market": market_level,
+        "fundamentals": worst_level(
+            [group_levels[GROUP_DEMAND], group_levels[GROUP_UTILIZATION]]
+        ),
+        "infrastructure": worst_level([
+            group_levels[GROUP_COMPUTE],
+            group_levels[GROUP_DATACENTER],
+            group_levels[GROUP_POWER],
+        ]),
+        "credit": group_levels[GROUP_CREDIT],
+    }
+    me_level = next(
+        (r.level for r in results if r.key == "multiple_expansion"), Level.UNKNOWN
+    )
+    stage = _compute_stage(state, market_level, me_level)
 
     if exit_signal:
         level = Level.RED
@@ -988,8 +1242,9 @@ def compute_composite(results: list[IndicatorResult]) -> CompositeResult:
             + GROUP_LABEL_JA[alert_groups[0]]
         )
     else:
-        yellow_n = sum(1 for lv in group_levels.values() if lv is Level.YELLOW)
-        unknown_n = sum(1 for lv in group_levels.values() if lv is Level.UNKNOWN)
+        core_levels = [group_levels[g] for g in ALERT_GROUPS]
+        yellow_n = sum(1 for lv in core_levels if lv is Level.YELLOW)
+        unknown_n = sum(1 for lv in core_levels if lv is Level.UNKNOWN)
         level = Level.GREEN
         summary = "悪化グループなし"
         extras = []
@@ -1009,4 +1264,9 @@ def compute_composite(results: list[IndicatorResult]) -> CompositeResult:
         confidence_pct=confidence_pct,
         confirmed_count=confirmed,
         total_count=total,
+        market_level=market_level,
+        market_summary=market_summary,
+        state=state,
+        stage=stage,
+        stage_label=STAGE_LABELS[stage],
     )

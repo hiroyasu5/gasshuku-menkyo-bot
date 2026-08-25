@@ -49,15 +49,17 @@ def worst_level(levels: list[Level]) -> Level:
     return max(known, key=lambda lv: LEVEL_RANK[lv])
 
 
-# 指標グループ(バブル崩壊の因果連鎖に対応する6分類)
+# 指標グループ(バブル崩壊の因果連鎖に対応する6分類 + Market overlay)
 GROUP_DEMAND = "demand"            # Hyperscaler / Backlog / RPO (未来の需要)
 GROUP_COMPUTE = "compute"          # GPUレンタル価格 / spot比率
 GROUP_UTILIZATION = "utilization"  # Revenue/Active GW 等の稼働率proxy
 GROUP_DATACENTER = "datacenter"    # APLD契約MW / DLR bookings・賃料
 GROUP_POWER = "power"              # AEP契約GW / PJM需要予測
 GROUP_CREDIT = "credit"            # HY OAS / CRWVスプレッド / 借入条件 / 流動性
+GROUP_MARKET = "market"            # Breadth / Revisions / Multiple Expansion (先行警報)
 
 GROUP_LABEL_JA = {
+    GROUP_MARKET: "Market Early Warning (株式市場の先行指標)",
     GROUP_DEMAND: "需要 (Hyperscaler / Backlog / RPO)",
     GROUP_COMPUTE: "Compute価格",
     GROUP_UTILIZATION: "稼働率 (Utilization Proxy)",
@@ -66,7 +68,16 @@ GROUP_LABEL_JA = {
     GROUP_CREDIT: "信用市場",
 }
 
+# 表示順 (Marketを先頭に置く: 先行指標なので)
 GROUP_ORDER = [
+    GROUP_MARKET,
+    GROUP_DEMAND, GROUP_COMPUTE, GROUP_UTILIZATION,
+    GROUP_DATACENTER, GROUP_POWER, GROUP_CREDIT,
+]
+
+# 複合判定 (悪化グループ数・EXIT) の対象。Marketはノイズが多いため
+# 意図的に含めない — 別のMarket警報ラインとクロスシグナルにのみ使う
+ALERT_GROUPS = [
     GROUP_DEMAND, GROUP_COMPUTE, GROUP_UTILIZATION,
     GROUP_DATACENTER, GROUP_POWER, GROUP_CREDIT,
 ]
@@ -125,3 +136,11 @@ class CompositeResult:
     confidence_pct: int = 0     # confirmed指標の割合 (%)
     confirmed_count: int = 0
     total_count: int = 0
+    # Market Early Warning (EXIT判定には使わない別ライン)
+    market_level: Level = Level.UNKNOWN
+    market_summary: str = ""
+    # AI Bubble State (Market / Fundamentals / Infrastructure / Credit)
+    state: dict[str, Level] = field(default_factory=dict)
+    # Stage 1-6
+    stage: int = 1
+    stage_label: str = ""

@@ -30,9 +30,13 @@ TABLE_DAYS = 30
 
 # ダッシュボードに載せる日次メトリクスの表示定義
 DAILY_METRIC_LABELS = {
+    "breadth_200_pct": "Breadth 200DMA (%)",
+    "breadth_50_pct": "Breadth 50DMA (%)",
+    "me_90d_pt": "Multiple Expansion (pt)",
     "hy_oas_bps": "HY OAS (bp)",
     "single_b_oas_bps": "Single-B OAS (bp)",
     "ig_oas_bps": "IG OAS (bp)",
+    "ust7y_bps": "UST 7y (bp)",
     "sd_b300_rental": "B300 ($/GPU-h)",
     "sd_b200_rental": "B200 ($/GPU-h)",
     "sd_h200_rental": "H200 ($/GPU-h)",
@@ -68,8 +72,14 @@ def generate_dashboard(
             _series_for_chart(history, "sd_h200_rental", "H200", 3),
         ] if s
     ]
+    breadth_series = [
+        s for s in [
+            _series_for_chart(history, "breadth_200_pct", "200DMA上", 1),
+            _series_for_chart(history, "breadth_50_pct", "50DMA上", 2),
+        ] if s
+    ]
 
-    html = _render(history, results, composite, credit_series, gpu_series)
+    html = _render(history, results, composite, credit_series, gpu_series, breadth_series)
     DASHBOARD_DIR.mkdir(parents=True, exist_ok=True)
     with open(DASHBOARD_FILE, "w", encoding="utf-8") as f:
         f.write(html)
@@ -140,12 +150,21 @@ def _table_rows(history: dict) -> tuple[list[str], list[list[str]]]:
     return header, rows
 
 
+STATE_ROWS = [
+    ("market", "Market", "株式市場の先行指標"),
+    ("fundamentals", "Fundamentals", "需要・稼働率"),
+    ("infrastructure", "Infrastructure", "Compute・DC・電力"),
+    ("credit", "Credit", "信用市場・調達"),
+]
+
+
 def _render(
     history: dict,
     results: list[IndicatorResult],
     composite: CompositeResult,
     credit_series: list[dict],
     gpu_series: list[dict],
+    breadth_series: list[dict],
 ) -> str:
     clv = composite.level.value
     group_pills = "".join(
@@ -169,8 +188,33 @@ def _render(
         "<tr>" + "".join(f"<td>{_esc(c)}</td>" for c in row) + "</tr>" for row in rows
     )
 
+    state_rows = ""
+    for key, label, desc in STATE_ROWS:
+        lv = composite.state.get(key, Level.UNKNOWN)
+        state_rows += (
+            f'<div class="state-row"><span class="chip chip-{lv.value}">'
+            f'<span class="chip-icon">{LEVEL_EMOJI[lv]}</span>{LEVEL_LABEL_JA[lv]}</span>'
+            f"<strong>{_esc(label)}</strong><span class='muted'>{_esc(desc)}</span></div>"
+        )
+    state_html = f"""
+  <div class="state-panel">
+    <div class="state-head">
+      <h2 style="margin:0">AI Bubble State</h2>
+      <span class="stage">{_esc(composite.stage_label)}</span>
+    </div>
+    <div class="state-grid">{state_rows}</div>
+    <p class="muted state-note">{_esc(composite.market_summary)} ・
+    MarketはEXIT判定に含めない先行警報 (クロスシグナル用)</p>
+  </div>"""
+
     charts_html = ""
     chart_data = {}
+    if breadth_series:
+        charts_html += (
+            '<div class="chart-card"><h3>AI Market Breadth % (直近180日)</h3>'
+            '<div class="chart" id="chart-breadth"></div></div>'
+        )
+        chart_data["chart-breadth"] = {"series": breadth_series, "unit": "%"}
     if credit_series:
         charts_html += (
             '<div class="chart-card"><h3>クレジットスプレッド (直近180日)</h3>'
@@ -276,6 +320,17 @@ h3 {{ font-size: 0.95rem; margin: 8px 0 4px; }}
   border: 1px solid var(--border); color: var(--ink-2); background: var(--unknown-bg);
 }}
 .confidence {{ color: var(--ink-2); font-size: 0.82rem; margin: 10px 0 0; }}
+.state-panel {{
+  border: 1px solid var(--border); border-radius: 12px; background: var(--surface);
+  padding: 16px 18px; margin: 16px 0;
+}}
+.state-head {{ display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; }}
+.state-head h2 {{ margin: 0; }}
+.stage {{ font-size: 0.85rem; font-weight: 600; color: var(--ink-2); }}
+.state-grid {{ display: grid; gap: 8px; margin-top: 12px; grid-template-columns: 1fr; }}
+@media (min-width: 760px) {{ .state-grid {{ grid-template-columns: 1fr 1fr; }} }}
+.state-row {{ display: flex; align-items: center; gap: 10px; font-size: 0.9rem; }}
+.state-note {{ font-size: 0.75rem; margin: 10px 0 0; }}
 .minitablewrap {{ overflow-x: auto; margin: 8px 0 2px; }}
 .minitable {{ border-collapse: collapse; width: 100%; font-size: 0.74rem; }}
 .minitable th, .minitable td {{
@@ -329,6 +384,7 @@ footer code {{ background: var(--surface); border: 1px solid var(--border); bord
     (実データで確認済み {composite.confirmed_count}/{composite.total_count}指標 ・
     残りはデータ不足⚪または暫定判定)</p>
   </div>
+  {state_html}
 
   {"".join(sections)}
 
