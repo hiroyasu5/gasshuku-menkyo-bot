@@ -151,6 +151,43 @@ def _card(r: IndicatorResult) -> str:
       </div>"""
 
 
+def _level_badge(value: str) -> str:
+    """"green"等はemoji+ラベル、"Stage 3"等はそのまま"""
+    try:
+        lv = Level(value)
+    except ValueError:
+        return _esc(value)
+    return f"{LEVEL_EMOJI[lv]} {LEVEL_LABEL_JA[lv]}"
+
+
+def _events_html(history: dict) -> str:
+    events = history.get("events", [])
+    if not events:
+        return (
+            '<p class="muted">まだ色変化イベントはありません。指標のレベルが変わると'
+            "ここに「いつ・何が・どう変わったか」が永続記録されます。</p>"
+        )
+    rows = ""
+    for ev in reversed(events[-200:]):
+        backfill = ' <span class="badge badge-prov">遡及復元</span>' if ev.get("backfill") else ""
+        rows += (
+            "<tr>"
+            f"<td>{_esc(ev.get('date', ''))}</td>"
+            f"<td>{_esc(ev.get('name', ''))}{backfill}</td>"
+            f"<td>{_level_badge(str(ev.get('from', '')))} → {_level_badge(str(ev.get('to', '')))}</td>"
+            f"<td class='ev-value'>{_esc(ev.get('value', ''))}</td>"
+            "</tr>"
+        )
+    return f"""
+    <div class="tablewrap"><table class="events-table">
+      <thead><tr><th>日付</th><th>指標</th><th>変化</th><th>当時の値</th></tr></thead>
+      <tbody>{rows}</tbody>
+    </table></div>
+    <p class="muted" style="font-size:0.75rem">全{len(events)}件を記録中 (表示は直近200件)。
+    「遡及復元」はgitコミット履歴から復元した稼働初期の変化。⚪との往復は
+    データの取得開始/停止を意味する。</p>"""
+
+
 def _table_rows(history: dict) -> tuple[list[str], list[list[str]]]:
     dates = sorted(history["daily"].keys())[-TABLE_DAYS:]
     metrics = [k for k in DAILY_METRIC_LABELS if any(
@@ -418,6 +455,8 @@ table {{ border-collapse: collapse; width: 100%; font-size: 0.78rem; background:
 th, td {{ padding: 6px 10px; text-align: right; border-bottom: 1px solid var(--grid); font-variant-numeric: tabular-nums; }}
 th:first-child, td:first-child {{ text-align: left; }}
 th {{ color: var(--muted); font-weight: 600; position: sticky; top: 0; background: var(--surface); }}
+.events-table th, .events-table td {{ text-align: left; white-space: nowrap; }}
+.events-table td.ev-value {{ white-space: normal; min-width: 200px; color: var(--ink-2); font-size: 0.75rem; }}
 footer {{ margin-top: 40px; color: var(--muted); font-size: 0.78rem; }}
 footer code {{ background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; }}
 </style>
@@ -438,6 +477,9 @@ footer code {{ background: var(--surface); border: 1px solid var(--border); bord
   {state_html}
 
   {"".join(sections)}
+
+  <h2>イベントログ (色変化の履歴)</h2>
+  {_events_html(history)}
 
   <h2>時系列チャート</h2>
   <div class="charts">{charts_html}</div>

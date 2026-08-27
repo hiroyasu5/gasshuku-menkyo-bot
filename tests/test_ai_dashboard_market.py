@@ -299,3 +299,30 @@ def test_stage_label_confidence_prefix():
     assert signals.compute_composite(mk(4, 6)).stage_label.startswith("Leaning Stage 1")
     # 2/10 = 20% → uncertain
     assert signals.compute_composite(mk(2, 8)).stage_label.startswith("Stage uncertain")
+
+
+# --- イベントログ ---
+
+def test_detect_events():
+    history = {
+        "levels": {"market_breadth": "green", "hy_oas": "green"},
+        "composite_level": "green",
+        "market_level": "green",
+        "stage": 1,
+    }
+    results = [
+        _result("market_breadth", GROUP_MARKET, Level.YELLOW),
+        _result("hy_oas", GROUP_CREDIT, Level.GREEN),
+    ]
+    comp = signals.compute_composite(results)
+    events = signals.detect_events(history, results, comp, "2026-08-28")
+    keys = [(e["key"], e["from"], e["to"]) for e in events]
+    assert ("market_breadth", "green", "yellow") in keys
+    assert not any(k == "hy_oas" for k, _, _ in keys)  # 変化なしは記録しない
+
+
+def test_detect_events_first_run_records_nothing():
+    history = {"levels": {}, "composite_level": "", "market_level": "", "stage": 0}
+    results = [_result("hy_oas", GROUP_CREDIT, Level.GREEN)]
+    comp = signals.compute_composite(results)
+    assert signals.detect_events(history, results, comp, "2026-08-28") == []

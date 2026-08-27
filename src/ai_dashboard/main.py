@@ -145,9 +145,18 @@ def run() -> None:
     if datetime.now(JST).weekday() == WEEKLY_SUMMARY_WEEKDAY or is_first_run:
         notifier.notify_weekly_summary(results, composite)
 
+    # --- イベントログ (色変化の永続記録) ---
+    events = signals.detect_events(history, results, composite, storage.today_jst())
+    if events:
+        history.setdefault("events", []).extend(events)
+        for ev in events:
+            logger.info("[EVENT] %s %s %s→%s", ev["date"], ev["name"], ev["from"], ev["to"])
+
     # --- 保存・ダッシュボード生成 ---
     history["levels"] = {r.key: r.level.value for r in results}
     history["composite_level"] = composite.level.value
+    history["market_level"] = composite.market_level.value
+    history["stage"] = composite.stage
     storage.save_history(history)
     generate_dashboard(history, results, composite)
 

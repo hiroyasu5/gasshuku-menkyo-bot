@@ -14,8 +14,15 @@ EMPTY_HISTORY = {
     "estimates": {},       # {"YYYY-MM-DD": {"NVDA": 4.32, ...}} FY1 EPS consensus
     "levels": {},          # 前回実行時の各指標レベル {"crwv_backlog": "green", ...}
     "composite_level": "",
+    "market_level": "",
+    "stage": 0,
+    # 色変化のイベントログ (将来「最初に鳴った警報は何か」を検証するための履歴)
+    # {"date", "key", "name", "from", "to", "value", "backfill"?}
+    "events": [],
     "reminders_sent": {},  # {"CRWV-2026-11-10": "2026-11-04"}
 }
+
+MAX_EVENTS = 2000  # 事実上無制限 (日次実行で数十年分)
 
 
 def now_jst() -> str:
@@ -95,3 +102,5 @@ def _trim_daily(history: dict) -> None:
     history["estimates"] = {
         d: v for d, v in history.get("estimates", {}).items() if d >= cutoff
     }
+    # イベントログは古いものも検証価値があるため日数では消さず、件数上限のみ
+    history["events"] = history.get("events", [])[-MAX_EVENTS:]

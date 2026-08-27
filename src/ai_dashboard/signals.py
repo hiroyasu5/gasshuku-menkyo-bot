@@ -1159,6 +1159,58 @@ def eval_liquidity(manual: dict) -> IndicatorResult:
 
 
 # ---------------------------------------------------------------
+# イベントログ (色変化の検出)
+# ---------------------------------------------------------------
+
+def detect_events(
+    history: dict,
+    results: list[IndicatorResult],
+    composite: CompositeResult,
+    today: str,
+) -> list[dict]:
+    """前回実行時と比べて色が変わった指標・複合判定・Market・Stageを
+    イベントとして返す (⚪との往復も「データが入った/消えた」として記録)。
+
+    将来AIサイクルが崩れた時に「最初に鳴った警報は何だったか」を検証するための
+    永続履歴。呼び出し側で history["events"] に追記する。
+    """
+    events: list[dict] = []
+    old_levels: dict = history.get("levels", {})
+    for r in results:
+        old = old_levels.get(r.key)
+        if old and old != r.level.value:
+            events.append({
+                "date": today, "key": r.key, "name": r.name,
+                "from": old, "to": r.level.value, "value": r.value_text,
+            })
+
+    old_composite = history.get("composite_level", "")
+    if old_composite and old_composite != composite.level.value:
+        events.append({
+            "date": today, "key": "composite", "name": "複合判定",
+            "from": old_composite, "to": composite.level.value,
+            "value": composite.summary,
+        })
+
+    old_market = history.get("market_level", "")
+    if old_market and old_market != composite.market_level.value:
+        events.append({
+            "date": today, "key": "market_line", "name": "Market警報ライン",
+            "from": old_market, "to": composite.market_level.value,
+            "value": composite.market_summary,
+        })
+
+    old_stage = history.get("stage", 0)
+    if old_stage and old_stage != composite.stage:
+        events.append({
+            "date": today, "key": "stage", "name": "Stage",
+            "from": f"Stage {old_stage}", "to": f"Stage {composite.stage}",
+            "value": composite.stage_label,
+        })
+    return events
+
+
+# ---------------------------------------------------------------
 # 全体評価
 # ---------------------------------------------------------------
 

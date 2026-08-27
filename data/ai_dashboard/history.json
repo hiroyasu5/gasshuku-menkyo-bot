@@ -3199,7 +3199,71 @@
       "VRT": 9.0988
     }
   },
-  "last_updated": "2026-08-27T21:28:24+09:00",
+  "events": [
+    {
+      "backfill": true,
+      "date": "2026-08-22",
+      "from": "unknown",
+      "key": "hy_oas",
+      "name": "HY OAS",
+      "to": "green",
+      "value": ""
+    },
+    {
+      "backfill": true,
+      "date": "2026-08-22",
+      "from": "red",
+      "key": "spot_ratio",
+      "name": "Spot/On-demand比率 (CW B200)",
+      "to": "green",
+      "value": ""
+    },
+    {
+      "backfill": true,
+      "date": "2026-08-22",
+      "from": "yellow",
+      "key": "composite",
+      "name": "複合判定",
+      "to": "green",
+      "value": ""
+    },
+    {
+      "backfill": true,
+      "date": "2026-08-22",
+      "from": "green",
+      "key": "gpu_price",
+      "name": "GPUレンタル価格",
+      "to": "unknown",
+      "value": ""
+    },
+    {
+      "backfill": true,
+      "date": "2026-08-22",
+      "from": "green",
+      "key": "power_forecast",
+      "name": "PJM需要予測 (Dominion)",
+      "to": "unknown",
+      "value": ""
+    },
+    {
+      "backfill": true,
+      "date": "2026-08-26",
+      "from": "unknown",
+      "key": "market_breadth",
+      "name": "AI Market Breadth",
+      "to": "green",
+      "value": ""
+    },
+    {
+      "date": "2026-08-27",
+      "from": "green",
+      "key": "market_breadth",
+      "name": "AI Market Breadth",
+      "to": "yellow",
+      "value": "200DMA上 67% / 50DMA上 50%"
+    }
+  ],
+  "last_updated": "2026-08-27T21:53:17+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
@@ -3212,7 +3276,7 @@
     "hy_oas": "green",
     "hyperscalers": "green",
     "liquidity": "unknown",
-    "market_breadth": "green",
+    "market_breadth": "yellow",
     "multiple_expansion": "unknown",
     "nbis_commitments": "green",
     "orcl_rpo": "unknown",
@@ -3220,5 +3284,7 @@
     "revision_breadth": "unknown",
     "spot_ratio": "green"
   },
-  "reminders_sent": {}
+  "market_level": "green",
+  "reminders_sent": {},
+  "stage": 1
 }

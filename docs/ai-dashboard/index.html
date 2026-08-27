@@ -152,6 +152,8 @@ table { border-collapse: collapse; width: 100%; font-size: 0.78rem; background: 
 th, td { padding: 6px 10px; text-align: right; border-bottom: 1px solid var(--grid); font-variant-numeric: tabular-nums; }
 th:first-child, td:first-child { text-align: left; }
 th { color: var(--muted); font-weight: 600; position: sticky; top: 0; background: var(--surface); }
+.events-table th, .events-table td { text-align: left; white-space: nowrap; }
+.events-table td.ev-value { white-space: normal; min-width: 200px; color: var(--ink-2); font-size: 0.75rem; }
 footer { margin-top: 40px; color: var(--muted); font-size: 0.78rem; }
 footer code { background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; }
 </style>
@@ -159,7 +161,7 @@ footer code { background: var(--surface); border: 1px solid var(--border); borde
 <body>
 <main>
   <h1>AI Bubble Escape Dashboard</h1>
-  <p class="updated">最終更新: 2026-08-27T21:28:24+09:00 (JST) ・ 日次自動更新 + 四半期手動入力</p>
+  <p class="updated">最終更新: 2026-08-27T21:53:17+09:00 (JST) ・ 日次自動更新 + 四半期手動入力</p>
   
   <div class="banner">
     <p class="summary"><span class="chip chip-green"><span class="chip-icon">🟢</span>正常</span>
@@ -568,6 +570,16 @@ footer code { background: var(--surface); border: 1px solid var(--border); borde
         </details>
         <p class="source">各社決算 (手動)</p>
       </div></div></section>
+
+  <h2>イベントログ (色変化の履歴)</h2>
+  
+    <div class="tablewrap"><table class="events-table">
+      <thead><tr><th>日付</th><th>指標</th><th>変化</th><th>当時の値</th></tr></thead>
+      <tbody><tr><td>2026-08-27</td><td>AI Market Breadth</td><td>🟢 正常 → 🟡 注意</td><td class='ev-value'>200DMA上 67% / 50DMA上 50%</td></tr><tr><td>2026-08-26</td><td>AI Market Breadth <span class="badge badge-prov">遡及復元</span></td><td>⚪ データ不足 → 🟢 正常</td><td class='ev-value'></td></tr><tr><td>2026-08-22</td><td>PJM需要予測 (Dominion) <span class="badge badge-prov">遡及復元</span></td><td>🟢 正常 → ⚪ データ不足</td><td class='ev-value'></td></tr><tr><td>2026-08-22</td><td>GPUレンタル価格 <span class="badge badge-prov">遡及復元</span></td><td>🟢 正常 → ⚪ データ不足</td><td class='ev-value'></td></tr><tr><td>2026-08-22</td><td>複合判定 <span class="badge badge-prov">遡及復元</span></td><td>🟡 注意 → 🟢 正常</td><td class='ev-value'></td></tr><tr><td>2026-08-22</td><td>Spot/On-demand比率 (CW B200) <span class="badge badge-prov">遡及復元</span></td><td>🔴 危険 → 🟢 正常</td><td class='ev-value'></td></tr><tr><td>2026-08-22</td><td>HY OAS <span class="badge badge-prov">遡及復元</span></td><td>⚪ データ不足 → 🟢 正常</td><td class='ev-value'></td></tr></tbody>
+    </table></div>
+    <p class="muted" style="font-size:0.75rem">全7件を記録中 (表示は直近200件)。
+    「遡及復元」はgitコミット履歴から復元した稼働初期の変化。⚪との往復は
+    データの取得開始/停止を意味する。</p>
 
   <h2>時系列チャート</h2>
   <div class="charts"><div class="chart-card"><h3>AI Market Breadth % (直近180日)</h3><div class="chart" id="chart-breadth"></div></div><div class="chart-card"><h3>クレジットスプレッド (直近180日)</h3><div class="chart" id="chart-credit"></div></div><div class="chart-card"><h3>GPUレンタル価格 $/GPU-h (直近180日)</h3><div class="chart" id="chart-gpu"></div></div></div>
