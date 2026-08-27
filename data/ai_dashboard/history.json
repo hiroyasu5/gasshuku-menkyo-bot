@@ -3183,8 +3183,23 @@
       "sd_h200_rental": 3.1
     }
   },
-  "estimates": {},
-  "last_updated": "2026-08-27T13:39:40+09:00",
+  "estimates": {
+    "2026-08-27": {
+      "AMD": 15.4599,
+      "AMZN": 10.467,
+      "APLD": -0.25,
+      "AVGO": 19.5323,
+      "CRWV": -4.2377,
+      "GOOGL": 14.8373,
+      "META": 33.8919,
+      "MSFT": 23.5733,
+      "NBIS": -4.6586,
+      "NVDA": 13.0273,
+      "ORCL": 10.9149,
+      "VRT": 9.0988
+    }
+  },
+  "last_updated": "2026-08-27T21:17:24+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
