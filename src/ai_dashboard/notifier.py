@@ -63,30 +63,41 @@ def _fmt_indicator(r: IndicatorResult) -> str:
     return line
 
 
-def notify_level_changes(
-    changes: list[tuple[IndicatorResult, str]], composite: CompositeResult
-) -> None:
-    """changes: (result, old_level_str) のリスト"""
-    if not changes:
+def _badge(value: str) -> str:
+    """"green"等はemoji、"Stage 3"等はそのまま"""
+    if value in Level._value2member_map_:
+        return LEVEL_EMOJI[Level(value)]
+    return value
+
+
+def notify_events(events: list[dict], composite: CompositeResult) -> None:
+    """イベントログに記録された色変化をそのままDiscordへ通知する。
+
+    イベントログと通知は同じ detect_events() を源にする (片方だけ鳴らない
+    ケースを作らない)。⚪との往復 = データ取得開始/停止も通知される。
+    """
+    if not events:
         return
-    worst = max(
-        (r.level for r, _ in changes),
-        key=lambda lv: ["unknown", "green", "yellow", "orange", "red"].index(lv.value),
-    )
+    worst = Level.UNKNOWN
+    for ev in events:
+        to = ev.get("to", "")
+        if to in Level._value2member_map_:
+            lv = Level(to)
+            order = ["unknown", "green", "yellow", "orange", "red"]
+            if order.index(lv.value) > order.index(worst.value):
+                worst = lv
     embed = DiscordEmbed(
         title="📊 AI Bubble Dashboard: シグナル変化",
         color=LEVEL_COLOR[worst],
     )
     lines = []
-    for r, old in changes:
-        old_level = Level(old) if old in Level._value2member_map_ else Level.UNKNOWN
-        lines.append(
-            f"{LEVEL_EMOJI[old_level]}→{LEVEL_EMOJI[r.level]} **{r.name}** "
-            f"({LEVEL_LABEL_JA[old_level]}→{LEVEL_LABEL_JA[r.level]})\n"
-            f"　{r.value_text} - {r.detail}"
-        )
+    for ev in events:
+        line = f"{_badge(str(ev['from']))}→{_badge(str(ev['to']))} **{ev['name']}**"
+        if ev.get("value"):
+            line += f"\n　{ev['value']}"
+        lines.append(line)
     embed.description = "\n".join(lines)[:MAX_DESCRIPTION_LEN]
-    embed.set_footer(text=f"複合判定: {composite.summary}")
+    embed.set_footer(text=f"複合判定: {composite.summary} / {composite.stage_label}")
     _send([embed])
 
 

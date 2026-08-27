@@ -20,7 +20,7 @@ from .basket import AI_BASKET_V1, TIER1_ESTIMATES
 from .config import FRED_BACKFILL_DAYS, FRED_SERIES, WEEKLY_SUMMARY_WEEKDAY
 from .dashboard import generate_dashboard
 from .fetchers import alphavantage, coreweave, fred, silicon_data, yahoo
-from .models import Level
+
 
 logging.basicConfig(
     level=logging.INFO,
@@ -121,36 +121,28 @@ def run() -> None:
 
     results, composite = signals.evaluate_all(history, manual)
 
-    # レベル変化の検出
-    old_levels: dict = history.get("levels", {})
-    changes = [
-        (r, old_levels.get(r.key, ""))
-        for r in results
-        if old_levels.get(r.key) not in ("", None)
-        and old_levels.get(r.key) != r.level.value
-        and r.level is not Level.UNKNOWN
-    ]
-    old_composite = history.get("composite_level", "")
-    composite_changed = old_composite not in ("", None) and old_composite != composite.level.value
-
-    due = reminders.due_reminders(manual, history)
-
-    # --- 通知 ---
-    notifier.notify_fetch_errors(errors)
-    notifier.notify_level_changes(changes, composite)
-    if composite_changed:
-        notifier.notify_composite_change(composite, old_composite)
-    notifier.notify_reminders(due)
-    is_first_run = not old_levels
-    if datetime.now(JST).weekday() == WEEKLY_SUMMARY_WEEKDAY or is_first_run:
-        notifier.notify_weekly_summary(results, composite)
-
-    # --- イベントログ (色変化の永続記録) ---
+    # --- イベントログ (色変化の検出・永続記録) ---
+    # 通知もこのイベントを源にする: イベントログに載る変化 = 必ずDiscord通知
     events = signals.detect_events(history, results, composite, storage.today_jst())
     if events:
         history.setdefault("events", []).extend(events)
         for ev in events:
             logger.info("[EVENT] %s %s %s→%s", ev["date"], ev["name"], ev["from"], ev["to"])
+
+    old_composite = history.get("composite_level", "")
+    composite_changed = any(ev["key"] == "composite" for ev in events)
+
+    due = reminders.due_reminders(manual, history)
+
+    # --- 通知 ---
+    notifier.notify_fetch_errors(errors)
+    notifier.notify_events(events, composite)
+    if composite_changed:
+        notifier.notify_composite_change(composite, old_composite)
+    notifier.notify_reminders(due)
+    is_first_run = not history.get("levels")
+    if datetime.now(JST).weekday() == WEEKLY_SUMMARY_WEEKDAY or is_first_run:
+        notifier.notify_weekly_summary(results, composite)
 
     # --- 保存・ダッシュボード生成 ---
     history["levels"] = {r.key: r.level.value for r in results}
