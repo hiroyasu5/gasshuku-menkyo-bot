@@ -164,19 +164,19 @@ footer code { background: var(--surface); border: 1px solid var(--border); borde
   <div class="banner">
     <p class="summary"><span class="chip chip-green"><span class="chip-icon">🟢</span>正常</span>
     悪化グループなし (データ不足⚪ 1グループ)</p>
-    <div class="pills"><span class="chip chip-green"><span class="chip-icon">🟢</span>Market Early Warning (株式市場の先行指標)</span><span class="chip chip-green"><span class="chip-icon">🟢</span>需要 (Hyperscaler / Backlog / RPO)</span><span class="chip chip-green"><span class="chip-icon">🟢</span>Compute価格</span><span class="chip chip-unknown"><span class="chip-icon">⚪</span>稼働率 (Utilization Proxy)</span><span class="chip chip-green"><span class="chip-icon">🟢</span>データセンター需給</span><span class="chip chip-green"><span class="chip-icon">🟢</span>電力需要</span><span class="chip chip-green"><span class="chip-icon">🟢</span>信用市場</span></div>
-    <p class="confidence">Data confidence: <strong>33%</strong>
-    (実データで確認済み 6/18指標 ・
+    <div class="pills"><span class="chip chip-yellow"><span class="chip-icon">🟡</span>Market Early Warning (株式市場の先行指標)</span><span class="chip chip-green"><span class="chip-icon">🟢</span>需要 (Hyperscaler / Backlog / RPO)</span><span class="chip chip-green"><span class="chip-icon">🟢</span>Compute価格</span><span class="chip chip-unknown"><span class="chip-icon">⚪</span>稼働率 (Utilization Proxy)</span><span class="chip chip-green"><span class="chip-icon">🟢</span>データセンター需給</span><span class="chip chip-green"><span class="chip-icon">🟢</span>電力需要</span><span class="chip chip-green"><span class="chip-icon">🟢</span>信用市場</span></div>
+    <p class="confidence">Data confidence: <strong>28%</strong>
+    (実データで確認済み 5/18指標 ・
     残りはデータ不足⚪または暫定判定)</p>
   </div>
   
   <div class="state-panel">
     <div class="state-head">
       <h2 style="margin:0">AI Bubble State</h2>
-      <span class="stage">Stage 1 — Expansion (需要・利益・CapEx すべて拡大)</span>
+      <span class="stage">Stage uncertain (confidence 28%) — 参考: Stage 1 — Expansion (需要・利益・CapEx すべて拡大)</span>
     </div>
     <div class="state-grid"><div class="state-row"><span class="chip chip-green"><span class="chip-icon">🟢</span>正常</span><strong>Market</strong><span class='muted'>株式市場の先行指標</span></div><div class="state-row"><span class="chip chip-green"><span class="chip-icon">🟢</span>正常</span><strong>Fundamentals</strong><span class='muted'>需要・稼働率</span></div><div class="state-row"><span class="chip chip-green"><span class="chip-icon">🟢</span>正常</span><strong>Infrastructure</strong><span class='muted'>Compute・DC・電力</span></div><div class="state-row"><span class="chip chip-green"><span class="chip-icon">🟢</span>正常</span><strong>Credit</strong><span class='muted'>信用市場・調達</span></div></div>
-    <p class="muted state-note">Market: 🟢 bull確認 (先行指標に悪化なし) ・
+    <p class="muted state-note">Market: 🟢〜🟡 概ねbull (注意🟡 1指標) ・
     MarketはEXIT判定に含めない先行警報 (クロスシグナル用)</p>
     <details class="explain">
       <summary>❔ 複合判定・Stage・confidenceの意味</summary>
@@ -190,15 +190,15 @@ footer code { background: var(--surface); border: 1px solid var(--border); borde
   </div>
 
   <section><h2>Market Early Warning (株式市場の先行指標)</h2><div class="grid">
-      <div class="card" data-level="green">
+      <div class="card" data-level="yellow">
         <div class="card-head">
-          <span class="chip chip-green"><span class="chip-icon">🟢</span>正常</span>
+          <span class="chip chip-yellow"><span class="chip-icon">🟡</span>注意</span>
           <span class="badges"></span>
           <span class="asof">2026-08-27</span>
         </div>
         <h3>AI Market Breadth</h3>
         <div class="value">200DMA上 67% / 50DMA上 50%</div>
-        <p class="detail">内部は健全 / basket 100%取得</p>
+        <p class="detail">長期Bull維持 / 短期Breadthが軟化 / basket 100%取得</p>
         
         
         <details class="explain">
@@ -206,10 +206,10 @@ footer code { background: var(--surface); border: 1px solid var(--border); borde
           <div class="explain-body">
             <p><strong>なぜ見るか:</strong> NASDAQやNVDAが最高値でも、AI関連銘柄の大半が下落トレンドなら「指数の中身が壊れている」。相場の内部崩壊は実体悪化より先に出ることが多いので、先行警報として見る。銘柄は固定バスケット(AI_BASKET_V1・24銘柄)で、都合よく入れ替えない。</p>
             <dl><dt>Breadth(ブレッド)</dt><dd>市場の「広がり」。上昇している銘柄がどれだけ多いか。少数の巨大銘柄だけが指数を支えている状態はBreadthが低い</dd><dt>50DMA / 200DMA</dt><dd>50日/200日移動平均線。株価がこの線より上なら中期/長期の上昇トレンドとみなす</dd><dt>20日変化</dt><dd>絶対値より変化速度が重要。78%→48%のような急落は、48%という水準そのものより情報量が多い</dd></dl>
-            <p><strong>見方:</strong> 200DMA上回り率が65%超🟢 / 50-65🟡 / 30-50🟠 / 30%未満🔴。20日で-20pt以上落ちたら1段階悪化させる。</p>
+            <p><strong>見方:</strong> 長期と短期の両方を見る: 200DMA&gt;65%かつ50DMA&gt;55%🟢 / 200&gt;65だが50DMAが40-55%🟡 (長期Bull維持・短期軟化) / 50DMA&lt;40%🟠。200DMAが50-65%🟡 / 30-50%🟠 / 30%未満🔴。20日で-20pt以上落ちたら1段階悪化。セクター別内訳も表で表示。</p>
           </div>
         </details>
-        <p class="source">Stooq / AI_BASKET_V1 24銘柄 (自動)</p>
+        <p class="source">Yahoo / AI_BASKET_V1 24銘柄 (自動)</p>
       </div>
       <div class="card" data-level="unknown">
         <div class="card-head">
@@ -227,7 +227,7 @@ footer code { background: var(--surface); border: 1px solid var(--border); borde
           <div class="explain-body">
             <p><strong>なぜ見るか:</strong> 株価より先に「アナリストの来期利益予想」が動くことが多い。今の利益ではなく、市場が将来の利益予想を上げているのか下げているのかを見る。Breadth下落と同時にこれも下がり始めたら、株価調整ではなく利益期待そのものの悪化。</p>
             <dl><dt>EPS</dt><dd>1株あたり利益。企業の稼ぐ力の基本単位</dd><dt>Consensus(コンセンサス)</dt><dd>アナリスト予想の平均値。市場の「共通見解」</dd><dt>FY1</dt><dd>今会計年度(直近の通期)の予想。ここではFY1 EPSコンセンサスの30日前比を見る</dd><dt>上方/下方修正</dt><dd>予想値の引き上げ/引き下げ。±0.5%以内は「変化なし」扱い</dd></dl>
-            <p><strong>見方:</strong> Tier1 12社中の上方修正率が55%以上🟢 / 35-55🟡 / 20-35🟠 / 20%未満🔴。</p>
+            <p><strong>見方:</strong> Net Revision Breadth = (上方社数−下方社数)÷有効社数。+25%以上🟢 / -10〜+25%🟡 / -35〜-10%🟠 / -35%未満🔴。上方率ではなくnetを使うのは「全社変化なし」を悪化と誤判定しないため。</p>
           </div>
         </details>
         <p class="source">Alpha Vantage / Tier1 12社 (自動)</p>
@@ -248,7 +248,7 @@ footer code { background: var(--surface); border: 1px solid var(--border); borde
           <div class="explain-body">
             <p><strong>なぜ見るか:</strong> 「PERが高いから危険」は成長速度が変わると意味を失う。代わりに、直近90日の株価上昇のうち利益予想の上昇で説明できない部分を測る。利益予想が下がっているのに株価が上がっていたら、投資家がより高い倍率を払っているだけ=バブル的。</p>
             <dl><dt>Multiple(倍率)</dt><dd>利益の何倍まで買われているか(PER等)。株価 = 利益 × 倍率</dd><dt>Multiple Expansion</dt><dd>倍率の拡大。株価リターン − EPS予想の変化 で近似する。例: 株価+40%でEPS予想+10%なら約+30ptの倍率拡大</dd><dt>Forward EPS</dt><dd>将来(FY1)の予想EPS。過去の実績ではなく期待値</dd></dl>
-            <p><strong>見方:</strong> Tier1中央値で+10pt以下🟢 / +25まで🟡 / +45まで🟠 / それ以上🔴。EPS Revisionsが↓なのにこれが↑の組み合わせが最も危険。</p>
+            <p><strong>見方:</strong> 両時点でForward EPS&gt;0の企業のみで計算 (赤字のCRWV/NBIS/APLD等は変化率が発散するため除外。将来はRevenue Multipleで別途)。中央値+10pt以下🟢 / +25まで🟡 / +45まで🟠 / それ以上🔴。EPS Revisionsが↓なのにこれが↑の組み合わせが最も危険。</p>
           </div>
         </details>
         <p class="source">Stooq + Alpha Vantage (自動)</p>
@@ -256,20 +256,20 @@ footer code { background: var(--surface); border: 1px solid var(--border); borde
       <div class="card" data-level="green">
         <div class="card-head">
           <span class="chip chip-green"><span class="chip-icon">🟢</span>正常</span>
-          <span class="badges"></span>
+          <span class="badges"><span class="badge badge-prov">暫定</span></span>
           <span class="asof">2026Q2</span>
         </div>
         <h3>Hyperscaler 5社 (breadth)</h3>
-        <div class="value">CapEx下方修正 0/5 ・ 減速 0/5 ・ capacity constrained 2/5</div>
-        <p class="detail">CapEx維持・Cloud成長継続 - GOOGL 2026 CapEx $195-205Bへ引き上げ・FCF -$5.9B。META 2026 ~7GW / 2027 ~14GW目標。他3社は次回決算で記入</p>
-        <div class="minitablewrap"><table class="minitable"><thead><tr><th>社</th><th>Cloud YoY</th><th>加速度</th><th>CapEx guide</th><th>制約発言</th></tr></thead><tbody><tr><td>MSFT</td><td>—</td><td>—</td><td>—</td><td>-</td></tr><tr><td>AMZN</td><td>—</td><td>—</td><td>—</td><td>-</td></tr><tr><td>GOOGL</td><td>+82%</td><td>—</td><td>↑</td><td>Yes</td></tr><tr><td>META</td><td>—</td><td>—</td><td>↑</td><td>Yes</td></tr><tr><td>ORCL</td><td>—</td><td>—</td><td>—</td><td>-</td></tr></tbody></table></div>
+        <div class="value">CapEx下方修正 0/2観測 ・ 減速 0/0観測 ・ constrained 2/2観測</div>
+        <p class="detail">観測範囲ではCapEx維持・Cloud成長継続 (観測 2/5社のみ・暫定) - GOOGL 2026 CapEx $195-205Bへ引き上げ・FCF -$5.9B。META 2026 ~7GW / 2027 ~14GW目標。他3社は次回決算で記入</p>
+        <div class="minitablewrap"><table class="minitable"><thead><tr><th>社</th><th>Cloud YoY</th><th>加速度</th><th>CapEx guide</th><th>制約発言</th></tr></thead><tbody><tr><td>MSFT</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>AMZN</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>GOOGL</td><td>+82%</td><td>—</td><td>↑</td><td>Yes</td></tr><tr><td>META</td><td>—</td><td>—</td><td>↑</td><td>Yes</td></tr><tr><td>ORCL</td><td>—</td><td>—</td><td>—</td><td>—</td></tr></tbody></table></div>
         
         <details class="explain">
           <summary>❔ この指標の意図と用語</summary>
           <div class="explain-body">
             <p><strong>なぜ見るか:</strong> AI設備投資の資金源はこの5社のCapEx。彼らが投資を続ける条件は「Cloud売上が伸び続けること」。1社の減速は企業固有要因だが、複数社同時の減速・CapExガイダンス下方修正はAIサイクル全体の転換点。だから5社まとめず、何社が悪化したか(breadth)で見る。</p>
             <dl><dt>CapEx</dt><dd>設備投資。データセンター・GPU購入等。AIインフラ需要の source of truth</dd><dt>CapEx guide</dt><dd>会社が発表する投資計画(ガイダンス)。↑引き上げ/↓引き下げ。実績より先に意思が変わる</dd><dt>加速度</dt><dd>Cloud成長率の前四半期との差。+31%でも前が+38%なら-7ptの減速</dd><dt>FCF</dt><dd>フリーキャッシュフロー。CapEx拡大でマイナス化=cash burn。需要が強いうちは許容されるが、Cloud減速と同時なら危険</dd><dt>Capacity constrained</dt><dd>「需要が供給能力を上回っている」という経営陣の発言。これが消えたら需要飽和のサイン</dd></dl>
-            <p><strong>見方:</strong> CapEx下方修正2社以上orCloud縮小🔴 / 下方修正1社or減速3社🟠 / 減速2社🟡 / それ以外🟢。</p>
+            <p><strong>見方:</strong> CapEx下方修正2社以上orCloud縮小🔴 / 下方修正1社or減速3社🟠 / 減速2社🟡。分母は各指標を「観測できた社数」(0/2観測 ≠ 0/5)。5社中3社以上観測できるまでは暫定扱い。</p>
           </div>
         </details>
         <p class="source">MSFT/AMZN/GOOGL/META/ORCL決算 (手動)</p>

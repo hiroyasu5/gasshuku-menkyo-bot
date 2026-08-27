@@ -32,10 +32,12 @@ def _sma(values: list[float], window: int) -> float | None:
 
 
 def compute_breadth(
-    prices: dict[str, list[tuple[str, float]]], basket_size: int
+    prices: dict[str, list[tuple[str, float]]], basket: dict[str, str]
 ) -> dict[str, float]:
-    """50/200DMA上回り率。200DMAを計算できた銘柄のみ分母に入れる"""
+    """50/200DMA上回り率 (全体 + セクター別200DMA)。
+    DMAを計算できた銘柄のみ分母に入れる。basket は ticker->セクター"""
     above50 = above200 = n50 = n200 = 0
+    sector_counts: dict[str, list[int]] = {}  # sector -> [above200, n200]
     for ticker, series in prices.items():
         closes = [c for _, c in series]
         if not closes:
@@ -49,8 +51,15 @@ def compute_breadth(
                 above50 += 1
         if sma200 is not None:
             n200 += 1
+            sector = basket.get(ticker)
+            counts = sector_counts.setdefault(sector, [0, 0]) if sector else None
+            if counts is not None:
+                counts[1] += 1
             if last > sma200:
                 above200 += 1
+                if counts is not None:
+                    counts[0] += 1
+    basket_size = len(basket)
     out: dict[str, float] = {
         "breadth_coverage": round(len(prices) / basket_size * 100, 1) if basket_size else 0.0,
     }
@@ -58,6 +67,9 @@ def compute_breadth(
         out["breadth_50_pct"] = round(above50 / n50 * 100, 1)
     if n200:
         out["breadth_200_pct"] = round(above200 / n200 * 100, 1)
+    for sector, (above, n) in sector_counts.items():
+        if n:
+            out[f"breadth200_{sector}"] = round(above / n * 100, 1)
     return out
 
 
@@ -143,27 +155,31 @@ def compute_multiple_expansion(
         if today_snap and base_snap and base_snap is not today_snap:
             cur = today_snap.get(ticker)
             prev = base_snap.get(ticker)
-            if cur is not None and prev not in (None, 0):
-                eps_chg = (cur - prev) / abs(prev) * 100
+            # 両時点でForward EPS > 0 の企業のみ (赤字/ゼロ近傍のEPSは
+            # 変化率が発散して倍率の意味を失うため除外。CRWV/NBIS/APLD等は
+            # 将来Revenue Multipleで別途見る)
+            if cur is not None and prev is not None and cur > 0 and prev > 0:
+                eps_chg = (cur - prev) / prev * 100
                 me_values.append(ret - eps_chg)
 
     out: dict[str, float] = {}
     if px_returns:
         out["px_ret90_med"] = round(median(px_returns), 1)
-    if len(me_values) >= 6:  # Tier1の半数以上でMEを計算できた時のみ
+    if len(me_values) >= 5:  # EPS>0でMEを計算できた社数が5社以上の時のみ
         out["me_90d_pt"] = round(median(me_values), 1)
+        out["me_n"] = len(me_values)
     return out
 
 
 def collect_market_metrics(
     prices: dict[str, list[tuple[str, float]]],
     estimates_hist: dict[str, dict],
-    basket_size: int,
+    basket: dict[str, str],
     today: date,
 ) -> dict[str, float]:
     metrics: dict[str, float] = {}
     if prices:
-        metrics.update(compute_breadth(prices, basket_size))
+        metrics.update(compute_breadth(prices, basket))
         metrics.update(compute_multiple_expansion(prices, estimates_hist, today))
     metrics.update(compute_revision_metrics(estimates_hist, today))
     return metrics

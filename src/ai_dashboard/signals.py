@@ -368,6 +368,8 @@ def eval_hyperscalers(manual: dict) -> IndicatorResult:
     decelerating: list[str] = []
     cloud_negative: list[str] = []
     constrained: list[str] = []
+    # 指標ごとの「観測できた社数」= 分母。データがない会社を分母に入れない
+    guide_n = accel_n = cloud_n = constrained_n = 0
     rows: list[list[str]] = [["社", "Cloud YoY", "加速度", "CapEx guide", "制約発言"]]
     for name in ["MSFT", "AMZN", "GOOGL", "META", "ORCL"]:
         c = companies.get(name)
@@ -375,29 +377,37 @@ def eval_hyperscalers(manual: dict) -> IndicatorResult:
             continue
         yoy = m.as_float(c.get("cloud_yoy_pct"))
         prev_yoy = m.as_float(c.get("prev_cloud_yoy_pct"))
-        guide = str(c.get("capex_guide", "")).lower()
-        constrained_flag = bool(c.get("capacity_constrained"))
+        guide_raw = c.get("capex_guide")
+        guide = str(guide_raw).lower() if guide_raw is not None else ""
+        constrained_raw = c.get("capacity_constrained")
         accel = None
         if yoy is not None and prev_yoy is not None:
             accel = yoy - prev_yoy
-        if guide == "down":
-            guide_down.append(name)
-        if accel is not None and accel <= -5:
-            decelerating.append(name)
-        if yoy is not None and yoy < 0:
-            cloud_negative.append(name)
-        if constrained_flag:
-            constrained.append(name)
+            accel_n += 1
+            if accel <= -5:
+                decelerating.append(name)
+        if yoy is not None:
+            cloud_n += 1
+            if yoy < 0:
+                cloud_negative.append(name)
+        if guide in ("up", "flat", "down"):
+            guide_n += 1
+            if guide == "down":
+                guide_down.append(name)
+        if constrained_raw is not None:
+            constrained_n += 1
+            if constrained_raw:
+                constrained.append(name)
         rows.append([
             name,
             f"{yoy:+.0f}%" if yoy is not None else "—",
             f"{accel:+.0f}pt" if accel is not None else "—",
             TREND_WORDS.get(guide, "—"),
-            "Yes" if constrained_flag else "-",
+            ("Yes" if constrained_raw else "No") if constrained_raw is not None else "—",
         ])
 
     n = len(rows) - 1
-    if n == 0:
+    if n == 0 or (guide_n == 0 and cloud_n == 0):
         return _eval_hyperscalers_legacy(latest)
 
     if len(guide_down) >= 2 or cloud_negative:
@@ -411,19 +421,24 @@ def eval_hyperscalers(manual: dict) -> IndicatorResult:
         note = f"減速(≥5pt) {len(decelerating)}社 ({'/'.join(decelerating)})"
     else:
         level = Level.GREEN
-        note = "CapEx維持・Cloud成長継続"
+        note = "観測範囲ではCapEx維持・Cloud成長継続"
     breadth = (
-        f"CapEx下方修正 {len(guide_down)}/{n} ・ "
-        f"減速 {len(decelerating)}/{n} ・ "
-        f"capacity constrained {len(constrained)}/{n}"
+        f"CapEx下方修正 {len(guide_down)}/{guide_n}観測 ・ "
+        f"減速 {len(decelerating)}/{accel_n}観測 ・ "
+        f"constrained {len(constrained)}/{constrained_n}観測"
     )
+    # 5社中3社以上でCapEx guideとCloud YoYの両方が観測できて初めて「確認済み」
+    well_observed = guide_n >= 3 and cloud_n >= 3
+    if not well_observed:
+        note += f" (観測 {max(guide_n, cloud_n)}/5社のみ・暫定)"
     return IndicatorResult(
         key="hyperscalers", name="Hyperscaler 5社 (breadth)", group=GROUP_DEMAND,
         level=level, value_text=breadth,
         detail=note + (f" - {latest.get('note')}" if latest.get("note") else ""),
         as_of=str(latest.get("quarter", "")),
         source="MSFT/AMZN/GOOGL/META/ORCL決算 (手動)",
-        confidence=CONF_CONFIRMED, detail_rows=rows,
+        confidence=CONF_CONFIRMED if well_observed else CONF_PROVISIONAL,
+        detail_rows=rows,
     )
 
 
@@ -709,10 +724,21 @@ _ESCALATE = {
 }
 
 
+SECTOR_LABELS_JA = {
+    "hyperscaler": "Hyperscaler",
+    "semi": "半導体",
+    "network": "Network/Server",
+    "neocloud": "NeoCloud/DC",
+    "power": "電力",
+}
+
+
 def eval_market_breadth(history: dict) -> IndicatorResult:
     """⑨ AI Basket (固定v1・24銘柄) の50/200DMA上回り率 + 20日変化。
 
-    🟢 200DMA>65% / 🟡50-65 / 🟠30-50 / 🔴<30。20日で-20pt以上なら1段階悪化。
+    長期(200DMA)と短期(50DMA)の両方を見る早期警報:
+    200>65 & 50>55 🟢 / 200>65 & 50が40-55 🟡 / 200>65 & 50<40 🟠
+    200が50-65 🟡 / 30-50 🟠 / <30 🔴。20日で-20pt以上なら1段階悪化。
     """
     b200 = storage.latest_value(history, "breadth_200_pct")
     if b200 is None:
@@ -720,18 +746,24 @@ def eval_market_breadth(history: dict) -> IndicatorResult:
             key="market_breadth", name="AI Market Breadth", group=GROUP_MARKET,
             level=Level.UNKNOWN, value_text="-",
             detail="株価データ未取得 (次回実行で自動取得)",
-            source="Stooq / AI_BASKET_V1 (自動)", confidence=CONF_NONE,
+            source="Yahoo / AI_BASKET_V1 (自動)", confidence=CONF_NONE,
         )
     date_str, pct200 = b200
     stale = _is_stale_daily(date_str)
     b50 = storage.latest_value(history, "breadth_50_pct")
+    pct50 = b50[1] if b50 else None
     cov = storage.latest_value(history, "breadth_coverage")
     coverage = cov[1] if cov else 100.0
 
     if pct200 > 65:
-        level, note = Level.GREEN, "内部は健全"
+        if pct50 is None or pct50 > 55:
+            level, note = Level.GREEN, "内部は健全 (長期・短期とも)"
+        elif pct50 >= 40:
+            level, note = Level.YELLOW, "長期Bull維持 / 短期Breadthが軟化"
+        else:
+            level, note = Level.ORANGE, "長期は維持だが短期内部が崩れている"
     elif pct200 > 50:
-        level, note = Level.YELLOW, "内部がやや軟化"
+        level, note = Level.YELLOW, "長期Breadthがやや軟化"
     elif pct200 > 30:
         level, note = Level.ORANGE, "指数の内部が壊れつつある"
     else:
@@ -746,9 +778,19 @@ def eval_market_breadth(history: dict) -> IndicatorResult:
             level = _ESCALATE[level]
             trend_note += " (急落→1段階悪化)"
 
+    # セクター別200DMA breadth (収集できていれば表で出す)
+    sector_rows: list[list[str]] | None = None
+    rows = [["セクター", "200DMA上"]]
+    for sector, label in SECTOR_LABELS_JA.items():
+        v = storage.latest_value(history, f"breadth200_{sector}")
+        if v and v[0] == date_str:
+            rows.append([label, f"{v[1]:.0f}%"])
+    if len(rows) > 1:
+        sector_rows = rows
+
     value = f"200DMA上 {pct200:.0f}%"
-    if b50:
-        value += f" / 50DMA上 {b50[1]:.0f}%"
+    if pct50 is not None:
+        value += f" / 50DMA上 {pct50:.0f}%"
     conf = CONF_CONFIRMED
     if coverage < 60:
         conf = CONF_PROVISIONAL
@@ -759,8 +801,8 @@ def eval_market_breadth(history: dict) -> IndicatorResult:
         key="market_breadth", name="AI Market Breadth", group=GROUP_MARKET,
         level=level, value_text=value,
         detail=f"{note}{trend_note} / basket {coverage:.0f}%取得",
-        as_of=date_str, source="Stooq / AI_BASKET_V1 24銘柄 (自動)",
-        confidence=conf, stale=stale,
+        as_of=date_str, source="Yahoo / AI_BASKET_V1 24銘柄 (自動)",
+        confidence=conf, stale=stale, detail_rows=sector_rows,
     )
 
 
@@ -785,20 +827,26 @@ def eval_revision_breadth(history: dict) -> IndicatorResult:
     down = storage.latest_value(history, "rev_down_n")
     up_n = up[1] if up else 0
     down_n = down[1] if down else 0
-    ratio = up_n / n * 100
-    if ratio >= 55:
+    flat_n = n - up_n - down_n
+    # Net Revision Breadth = (上方 − 下方) / 有効社数。
+    # 「全社変化なし」を🔴にしないため、上方率ではなくnetで判定する
+    net = (up_n - down_n) / n * 100
+    if net >= 25:
         level, note = Level.GREEN, "利益予想は広く上方修正中"
-    elif ratio >= 35:
-        level, note = Level.YELLOW, "上方修正の勢いが鈍化"
-    elif ratio >= 20:
-        level, note = Level.ORANGE, "下方修正が優勢になりつつある"
+    elif net >= -10:
+        level, note = Level.YELLOW, "修正は中立圏 (方向感なし)"
+    elif net >= -35:
+        level, note = Level.ORANGE, "下方修正が優勢"
     else:
         level, note = Level.RED, "利益期待の広範な悪化"
     return IndicatorResult(
         key="revision_breadth", name="EPS Revision Breadth", group=GROUP_MARKET,
         level=level,
-        value_text=f"上方 {up_n:.0f} / 下方 {down_n:.0f} / {n:.0f}社 ({ratio:.0f}%↑)",
-        detail=f"{note} (FY1 EPS consensus 30日前比, net {up_n - down_n:+.0f})",
+        value_text=(
+            f"Net {net:+.0f}% / 上方 {up_n:.0f}・変化なし {flat_n:.0f}・"
+            f"下方 {down_n:.0f} ({n:.0f}社)"
+        ),
+        detail=f"{note} (FY1 EPS consensus 30日前比)",
         as_of=date_str, source="Alpha Vantage / Tier1 12社 (自動)",
         confidence=CONF_PROVISIONAL if stale else CONF_CONFIRMED, stale=stale,
     )
@@ -822,6 +870,8 @@ def eval_multiple_expansion(history: dict) -> IndicatorResult:
         )
     date_str, pt = me
     stale = _is_stale_daily(date_str)
+    me_n = storage.latest_value(history, "me_n")
+    n_note = f"EPS>0の{me_n[1]:.0f}社中央値" if me_n else "Tier1中央値"
     if pt <= 10:
         level, note = Level.GREEN, "株価上昇は利益予想で概ね説明できる"
     elif pt <= 25:
@@ -832,9 +882,9 @@ def eval_multiple_expansion(history: dict) -> IndicatorResult:
         level, note = Level.RED, "利益期待と無関係な倍率拡大 (バブル的)"
     return IndicatorResult(
         key="multiple_expansion", name="Multiple Expansion", group=GROUP_MARKET,
-        level=level, value_text=f"{pt:+.0f}pt (90日, Tier1中央値)",
-        detail=f"{note} (株価リターン − EPS修正)",
-        as_of=date_str, source="Stooq + Alpha Vantage (自動)",
+        level=level, value_text=f"{pt:+.0f}pt (90日, {n_note})",
+        detail=f"{note} (株価リターン − EPS修正。赤字企業は除外)",
+        as_of=date_str, source="Yahoo + Alpha Vantage (自動)",
         confidence=CONF_PROVISIONAL if stale else CONF_CONFIRMED, stale=stale,
     )
 
@@ -1144,7 +1194,10 @@ def _market_line(results: list[IndicatorResult]) -> tuple[Level, str]:
     if not known:
         return Level.UNKNOWN, "Market: データ蓄積中"
     bad = sum(1 for r in known if LEVEL_RANK[r.level] >= LEVEL_RANK[Level.ORANGE])
+    yellow = sum(1 for r in known if r.level is Level.YELLOW)
     if bad == 0:
+        if yellow:
+            return Level.GREEN, f"Market: 🟢〜🟡 概ねbull (注意🟡 {yellow}指標)"
         return Level.GREEN, "Market: 🟢 bull確認 (先行指標に悪化なし)"
     if bad == 1:
         return Level.YELLOW, "Market: 🟡 Watch (先行指標1つが悪化)"
@@ -1222,6 +1275,17 @@ def compute_composite(results: list[IndicatorResult]) -> CompositeResult:
         (r.level for r in results if r.key == "multiple_expansion"), Level.UNKNOWN
     )
     stage = _compute_stage(state, market_level, me_level)
+    # Stage表示はconfidenceに応じて弱める:
+    # 「正常っぽい」と「正常を十分確認した」を区別する
+    base_label = STAGE_LABELS[stage]
+    if confidence_pct >= 70:
+        stage_label = base_label
+    elif confidence_pct >= 50:
+        stage_label = f"Likely {base_label}"
+    elif confidence_pct >= 30:
+        stage_label = f"Leaning {base_label}"
+    else:
+        stage_label = f"Stage uncertain (confidence {confidence_pct}%) — 参考: {base_label}"
 
     if exit_signal:
         level = Level.RED
@@ -1268,5 +1332,5 @@ def compute_composite(results: list[IndicatorResult]) -> CompositeResult:
         market_summary=market_summary,
         state=state,
         stage=stage,
-        stage_label=STAGE_LABELS[stage],
+        stage_label=stage_label,
     )

@@ -325,6 +325,32 @@ def test_hyperscaler_two_guide_down_is_red():
     assert signals.eval_hyperscalers(manual).level is Level.RED
 
 
+def test_hyperscaler_observed_denominators():
+    # 5社中2社しかデータがない場合、分母は5ではなく観測できた社数になり暫定扱い
+    manual = _hyper_companies({
+        "MSFT": {},
+        "AMZN": {},
+        "GOOGL": {"cloud_yoy_pct": 82, "capex_guide": "up", "capacity_constrained": True},
+        "META": {"capex_guide": "up", "capacity_constrained": True},
+        "ORCL": {},
+    })
+    r = signals.eval_hyperscalers(manual)
+    assert "0/2観測" in r.value_text      # CapEx guide観測は2社
+    assert "0/0観測" in r.value_text      # 加速度は0社
+    assert "2/2観測" in r.value_text      # constrainedは2社
+    assert r.confidence == "provisional"  # 3社未満の観測なので暫定
+
+
+def test_hyperscaler_full_observation_is_confirmed():
+    manual = _hyper_companies({
+        "MSFT": {"cloud_yoy_pct": 31, "capex_guide": "up", "capacity_constrained": True},
+        "AMZN": {"cloud_yoy_pct": 18, "capex_guide": "up", "capacity_constrained": True},
+        "GOOGL": {"cloud_yoy_pct": 40, "capex_guide": "up", "capacity_constrained": True},
+    })
+    r = signals.eval_hyperscalers(manual)
+    assert r.confidence == "confirmed"
+
+
 def test_hyperscaler_legacy_format_is_provisional():
     manual = {"quarterly": {"hyperscalers": [
         {"quarter": "2026Q2", "capex_trend": "up", "cloud_growth_trend": "up",

@@ -95,7 +95,7 @@ def _fetch_market(history: dict, errors: list[str]) -> None:
 
     try:
         metrics = market.collect_market_metrics(
-            prices, history.get("estimates", {}), len(AI_BASKET_V1), today
+            prices, history.get("estimates", {}), AI_BASKET_V1, today
         )
         storage.merge_daily(history, today_str, metrics)
         logger.info("[Market] metrics: %s", metrics)
