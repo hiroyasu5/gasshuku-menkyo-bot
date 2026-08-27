@@ -162,8 +162,9 @@ def notify_reminders(events: list[dict]) -> None:
     lines = []
     for ev in events:
         when = "今日" if ev["days_until"] == 0 else f"{ev['days_until']}日後"
+        stage = f" [{ev['stage']}]" if ev.get("stage") else ""
         lines.append(
-            f"**{ev.get('ticker', '?')}** {ev['date']} ({when}): {ev.get('note', '')}"
+            f"**{ev.get('ticker', '?')}** {ev['date']} ({when}){stage}: {ev.get('note', '')}"
         )
     lines.append("\n決算後に `data/ai_dashboard/manual_inputs.yaml` を更新してください。")
     embed.description = "\n".join(lines)[:MAX_DESCRIPTION_LEN]

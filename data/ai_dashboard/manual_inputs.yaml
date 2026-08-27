@@ -194,18 +194,22 @@ balance_sheets:
       debt_due_36m_busd: null
       total_debt_busd: null
 
-# --- 決算リマインダー ---------------------------------------------
-# date の7日前からDiscordにリマインダーが届く。日付は目安なので確定次第修正。
+# --- 決算リマインダー (アラーム) -----------------------------------
+# 各イベントにつきDiscordへ2回通知される: 7日前と前日。
+# 日付は2026-08-27時点の確定/予想 (予想は各社のIR発表が出たら修正)。
 earnings_calendar:
-  - {ticker: DLR,   date: "2026-10-23", note: "Q3決算: bookings / renewal rent 更新"}
-  - {ticker: GOOGL, date: "2026-10-28", note: "Q3決算: CapEx / Cloud / FCF 更新"}
-  - {ticker: MSFT,  date: "2026-10-28", note: "FY27Q1決算: CapEx / Azure成長 更新"}
-  - {ticker: META,  date: "2026-10-29", note: "Q3決算: CapEx / capacity目標 更新"}
-  - {ticker: AMZN,  date: "2026-10-30", note: "Q3決算: CapEx / AWS成長 更新"}
-  - {ticker: AEP,   date: "2026-11-05", note: "Q3決算: contracted large-load GW 更新"}
-  - {ticker: APLD,  date: "2026-11-06", note: "FY27Q2決算: contracted MW / live MW 更新"}
-  - {ticker: NBIS,  date: "2026-11-10", note: "Q3決算: customer commitments 更新"}
-  - {ticker: CRWV,  date: "2026-11-11", note: "Q3決算: backlog / commitments / power 更新"}
+  - {ticker: ORCL,  date: "2026-09-14", note: "FY27Q1決算 [確定・引け後]: RPO / Cloud成長 更新"}
+  - {ticker: APLD,  date: "2026-10-14", note: "FY27Q1決算 [確定・寄り前]: contracted MW / live MW / 負債 更新"}
+  - {ticker: DLR,   date: "2026-10-22", note: "Q3決算 [予想]: bookings / backlog / renewal rent 更新"}
+  - {ticker: GOOGL, date: "2026-10-27", note: "Q3決算 [予想]: CapEx / Cloud / FCF 更新"}
+  - {ticker: VRT,   date: "2026-10-28", note: "Q3決算 [予想・寄り前]: EPS consensus動向の確認"}
+  - {ticker: MSFT,  date: "2026-10-28", note: "FY27Q1決算 [予想・引け後]: CapEx / Azure成長 更新"}
+  - {ticker: META,  date: "2026-10-28", note: "Q3決算 [予想・引け後]: CapEx / capacity目標 更新"}
+  - {ticker: AMZN,  date: "2026-10-29", note: "Q3決算 [予想]: CapEx / AWS成長 更新"}
+  - {ticker: AEP,   date: "2026-11-04", note: "Q3決算 [予想]: contracted large-load GW 更新"}
+  - {ticker: CRWV,  date: "2026-11-09", note: "Q3決算 [予想・11/5-16の間]: backlog / commitments / power / 負債 更新"}
+  - {ticker: NBIS,  date: "2026-11-10", note: "Q3決算 [予想]: customer commitments 更新"}
+  - {ticker: NVDA,  date: "2026-11-25", note: "FY27Q3決算 [予想]: AI需要のベルウェザー (手動入力は不要・観戦用)"}
   - {ticker: PJM,   date: "2027-01-15", note: "PJM Load Forecast 年次更新: Dominion zone 2030予測"}
 
 # (workflow起動用コメント: AlphaVantageキー検証)

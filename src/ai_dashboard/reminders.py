@@ -1,7 +1,11 @@
 """AI Bubble Dashboard - 決算・データ更新リマインダー。
 
-manual_inputs.yaml の earnings_calendar を見て、7日前〜当日のイベントを
-1回だけDiscordに通知する。送信済みは history.json の reminders_sent に記録。
+manual_inputs.yaml の earnings_calendar を見て、各イベントにつき2回
+Discordへ通知する (アラーム):
+- 7日前 (2〜7日前の最初の実行で1回)
+- 前日〜当日 (0〜1日前の最初の実行で1回)
+
+送信済みは history.json の reminders_sent にステージ別キーで記録する。
 """
 from __future__ import annotations
 
@@ -15,6 +19,12 @@ logger = logging.getLogger(__name__)
 
 JST = timezone(timedelta(hours=9))
 
+# (ステージキー, 窓の下限日, 窓の上限日, 表示ラベル)
+STAGES = [
+    ("pre7", 2, REMINDER_LOOKAHEAD_DAYS, "1週間前"),
+    ("pre1", 0, 1, "直前"),
+]
+
 
 def due_reminders(manual: dict, history: dict) -> list[dict]:
     """通知すべきイベント一覧。副作用として reminders_sent に記録する"""
@@ -27,9 +37,10 @@ def due_reminders(manual: dict, history: dict) -> list[dict]:
         except ValueError:
             logger.warning("earnings_calendarの日付が不正: %r", event)
             continue
-        key = f"{event.get('ticker', '?')}-{event['date']}"
         days_until = (event_date - today).days
-        if 0 <= days_until <= REMINDER_LOOKAHEAD_DAYS and key not in sent:
-            due.append({**event, "days_until": days_until})
-            sent[key] = today.isoformat()
+        for stage, lo, hi, label in STAGES:
+            key = f"{event.get('ticker', '?')}-{event['date']}-{stage}"
+            if lo <= days_until <= hi and key not in sent:
+                due.append({**event, "days_until": days_until, "stage": label})
+                sent[key] = today.isoformat()
     return due

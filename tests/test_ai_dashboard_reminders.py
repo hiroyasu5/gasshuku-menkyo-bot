@@ -14,7 +14,8 @@ def test_reminder_within_window():
     due = due_reminders(manual, history)
     assert len(due) == 1
     assert due[0]["ticker"] == "CRWV"
-    assert f"CRWV-{ev_date}" in history["reminders_sent"]
+    assert due[0]["stage"] == "1週間前"
+    assert f"CRWV-{ev_date}-pre7" in history["reminders_sent"]
 
 
 def test_reminder_not_sent_twice():
@@ -23,6 +24,28 @@ def test_reminder_not_sent_twice():
     history = {"reminders_sent": {}}
     assert len(due_reminders(manual, history)) == 1
     assert len(due_reminders(manual, history)) == 0
+
+
+def test_reminder_two_stages():
+    # 7日前ステージ→前日ステージの2回鳴る
+    ev_date = (date.today() + timedelta(days=6)).isoformat()
+    manual = _manual([{"ticker": "ORCL", "date": ev_date}])
+    history = {"reminders_sent": {}}
+    due1 = due_reminders(manual, history)
+    assert [d["stage"] for d in due1] == ["1週間前"]
+    # 前日になったと仮定 (dateを付け替えて再判定)
+    manual2 = _manual([{"ticker": "ORCL", "date": (date.today() + timedelta(days=1)).isoformat()}])
+    due2 = due_reminders(manual2, history)
+    assert [d["stage"] for d in due2] == ["直前"]
+
+
+def test_reminder_day_of_event_fires_pre1():
+    ev_date = date.today().isoformat()
+    manual = _manual([{"ticker": "APLD", "date": ev_date}])
+    history = {"reminders_sent": {}}
+    due = due_reminders(manual, history)
+    assert len(due) == 1
+    assert due[0]["stage"] == "直前"
 
 
 def test_reminder_outside_window():
