@@ -141,8 +141,12 @@ def run() -> None:
         notifier.notify_composite_change(composite, old_composite)
     notifier.notify_reminders(due)
     is_first_run = not history.get("levels")
-    if datetime.now(JST).weekday() == WEEKLY_SUMMARY_WEEKDAY or is_first_run:
+    today_str = storage.today_jst()
+    want_summary = datetime.now(JST).weekday() == WEEKLY_SUMMARY_WEEKDAY or is_first_run
+    # cronが1日2回走るため、サマリーは1日1回まで
+    if want_summary and history.get("last_summary_date") != today_str:
         notifier.notify_weekly_summary(results, composite)
+        history["last_summary_date"] = today_str
 
     # --- 保存・ダッシュボード生成 ---
     history["levels"] = {r.key: r.level.value for r in results}

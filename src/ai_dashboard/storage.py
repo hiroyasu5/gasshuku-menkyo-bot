@@ -16,6 +16,7 @@ EMPTY_HISTORY = {
     "composite_level": "",
     "market_level": "",
     "stage": 0,
+    "last_summary_date": "",
     # 色変化のイベントログ (将来「最初に鳴った警報は何か」を検証するための履歴)
     # {"date", "key", "name", "from", "to", "value", "backfill"?}
     "events": [],
