@@ -3187,7 +3187,8 @@
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
       "sd_h200_rental": 3.1,
-      "single_b_oas_bps": 276.0
+      "single_b_oas_bps": 276.0,
+      "ust7y_bps": 451.99999999999994
     },
     "2026-08-28": {
       "breadth200_hyperscaler": 60.0,
@@ -3210,13 +3211,13 @@
       "breadth200_neocloud": 60.0,
       "breadth200_network": 100.0,
       "breadth200_power": 0.0,
-      "breadth200_semi": 83.3,
-      "breadth_200_pct": 66.7,
-      "breadth_50_pct": 37.5,
+      "breadth200_semi": 100.0,
+      "breadth_200_pct": 70.8,
+      "breadth_50_pct": 50.0,
       "breadth_coverage": 100.0,
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
-      "px_ret90_med": -9.6,
+      "px_ret90_med": -10.1,
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
       "sd_h200_rental": 3.1
@@ -3252,17 +3253,17 @@
       "VRT": 9.0988
     },
     "2026-08-29": {
-      "AMD": 15.4599,
-      "AMZN": 10.467,
+      "AMD": 15.4507,
+      "AMZN": 10.4821,
       "APLD": -0.25,
       "AVGO": 19.5323,
-      "CRWV": -4.2377,
+      "CRWV": -4.3724,
       "GOOGL": 14.8373,
       "META": 33.8919,
       "MSFT": 23.5733,
-      "NBIS": -4.6586,
-      "NVDA": 13.0273,
-      "ORCL": 10.9149,
+      "NBIS": -4.6914,
+      "NVDA": 13.1277,
+      "ORCL": 10.9261,
       "VRT": 9.0988
     }
   },
@@ -3344,10 +3345,26 @@
       "name": "Market警報ライン",
       "to": "yellow",
       "value": "Market: 🟡 Watch (先行指標1つが悪化)"
+    },
+    {
+      "date": "2026-08-29",
+      "from": "orange",
+      "key": "market_breadth",
+      "name": "AI Market Breadth",
+      "to": "yellow",
+      "value": "200DMA上 71% / 50DMA上 50%"
+    },
+    {
+      "date": "2026-08-29",
+      "from": "yellow",
+      "key": "market_line",
+      "name": "Market警報ライン",
+      "to": "green",
+      "value": "Market: 🟢〜🟡 概ねbull (注意🟡 1指標)"
     }
   ],
   "last_summary_date": "",
-  "last_updated": "2026-08-29T02:00:16+09:00",
+  "last_updated": "2026-08-29T13:12:08+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
@@ -3360,7 +3377,7 @@
     "hy_oas": "green",
     "hyperscalers": "green",
     "liquidity": "unknown",
-    "market_breadth": "orange",
+    "market_breadth": "yellow",
     "multiple_expansion": "unknown",
     "nbis_commitments": "green",
     "orcl_rpo": "unknown",
@@ -3368,7 +3385,7 @@
     "revision_breadth": "unknown",
     "spot_ratio": "green"
   },
-  "market_level": "yellow",
+  "market_level": "green",
   "reminders_sent": {},
   "stage": 1
 }
