@@ -3221,6 +3221,22 @@
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
       "sd_h200_rental": 3.1
+    },
+    "2026-08-30": {
+      "breadth200_hyperscaler": 60.0,
+      "breadth200_neocloud": 60.0,
+      "breadth200_network": 100.0,
+      "breadth200_power": 0.0,
+      "breadth200_semi": 83.3,
+      "breadth_200_pct": 66.7,
+      "breadth_50_pct": 37.5,
+      "breadth_coverage": 100.0,
+      "cw_b200_od_node": 68.8,
+      "cw_b200_spot_node": 34.11,
+      "px_ret90_med": -9.6,
+      "sd_b200_rental": 5.45,
+      "sd_h100_rental": 2.53,
+      "sd_h200_rental": 3.1
     }
   },
   "estimates": {
@@ -3253,6 +3269,20 @@
       "VRT": 9.0988
     },
     "2026-08-29": {
+      "AMD": 15.4507,
+      "AMZN": 10.4821,
+      "APLD": -0.25,
+      "AVGO": 19.5323,
+      "CRWV": -4.3724,
+      "GOOGL": 14.8373,
+      "META": 33.8919,
+      "MSFT": 23.5733,
+      "NBIS": -4.6914,
+      "NVDA": 13.1277,
+      "ORCL": 10.9261,
+      "VRT": 9.0988
+    },
+    "2026-08-30": {
       "AMD": 15.4507,
       "AMZN": 10.4821,
       "APLD": -0.25,
@@ -3361,10 +3391,26 @@
       "name": "Market警報ライン",
       "to": "green",
       "value": "Market: 🟢〜🟡 概ねbull (注意🟡 1指標)"
+    },
+    {
+      "date": "2026-08-30",
+      "from": "yellow",
+      "key": "market_breadth",
+      "name": "AI Market Breadth",
+      "to": "orange",
+      "value": "200DMA上 67% / 50DMA上 38%"
+    },
+    {
+      "date": "2026-08-30",
+      "from": "green",
+      "key": "market_line",
+      "name": "Market警報ライン",
+      "to": "yellow",
+      "value": "Market: 🟡 Watch (先行指標1つが悪化)"
     }
   ],
   "last_summary_date": "",
-  "last_updated": "2026-08-29T20:25:33+09:00",
+  "last_updated": "2026-08-30T10:17:38+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
@@ -3377,7 +3423,7 @@
     "hy_oas": "green",
     "hyperscalers": "green",
     "liquidity": "unknown",
-    "market_breadth": "yellow",
+    "market_breadth": "orange",
     "multiple_expansion": "unknown",
     "nbis_commitments": "green",
     "orcl_rpo": "unknown",
@@ -3385,7 +3431,7 @@
     "revision_breadth": "unknown",
     "spot_ratio": "green"
   },
-  "market_level": "green",
+  "market_level": "yellow",
   "reminders_sent": {},
   "stage": 1
 }
