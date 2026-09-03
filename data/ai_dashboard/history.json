@@ -3299,17 +3299,17 @@
       "sd_h200_rental": 3.1
     },
     "2026-09-03": {
-      "breadth200_hyperscaler": 40.0,
+      "breadth200_hyperscaler": 60.0,
       "breadth200_neocloud": 60.0,
       "breadth200_network": 100.0,
       "breadth200_power": 0.0,
-      "breadth200_semi": 100.0,
+      "breadth200_semi": 83.3,
       "breadth_200_pct": 66.7,
-      "breadth_50_pct": 33.3,
+      "breadth_50_pct": 41.7,
       "breadth_coverage": 100.0,
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
-      "px_ret90_med": -18.0,
+      "px_ret90_med": -12.5,
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
       "sd_h200_rental": 3.1
@@ -3571,10 +3571,26 @@
       "name": "Market警報ライン",
       "to": "yellow",
       "value": "Market: 🟡 Watch (先行指標1つが悪化)"
+    },
+    {
+      "date": "2026-09-03",
+      "from": "orange",
+      "key": "market_breadth",
+      "name": "AI Market Breadth",
+      "to": "yellow",
+      "value": "200DMA上 67% / 50DMA上 42%"
+    },
+    {
+      "date": "2026-09-03",
+      "from": "yellow",
+      "key": "market_line",
+      "name": "Market警報ライン",
+      "to": "green",
+      "value": "Market: 🟢〜🟡 概ねbull (注意🟡 1指標)"
     }
   ],
   "last_summary_date": "2026-08-31",
-  "last_updated": "2026-09-03T10:09:28+09:00",
+  "last_updated": "2026-09-03T18:17:08+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
@@ -3587,7 +3603,7 @@
     "hy_oas": "green",
     "hyperscalers": "green",
     "liquidity": "unknown",
-    "market_breadth": "orange",
+    "market_breadth": "yellow",
     "multiple_expansion": "unknown",
     "nbis_commitments": "green",
     "orcl_rpo": "unknown",
@@ -3595,7 +3611,7 @@
     "revision_breadth": "unknown",
     "spot_ratio": "green"
   },
-  "market_level": "yellow",
+  "market_level": "green",
   "reminders_sent": {},
   "stage": 1
 }
