@@ -3333,10 +3333,14 @@
       "breadth_coverage": 100.0,
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
+      "hy_oas_bps": 268.0,
+      "ig_oas_bps": 81.0,
       "px_ret90_med": -7.2,
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
-      "sd_h200_rental": 3.1
+      "sd_h200_rental": 3.1,
+      "single_b_oas_bps": 277.0,
+      "ust7y_bps": 465.00000000000006
     },
     "2026-09-05": {
       "breadth200_hyperscaler": 60.0,
@@ -3381,12 +3385,31 @@
       "breadth_coverage": 100.0,
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
+      "hy_oas_bps": 268.0,
+      "ig_oas_bps": 81.0,
+      "px_ret90_med": -3.6,
+      "sd_b200_rental": 5.45,
+      "sd_h100_rental": 2.53,
+      "sd_h200_rental": 3.1,
+      "single_b_oas_bps": 277.0
+    },
+    "2026-09-08": {
+      "breadth200_hyperscaler": 60.0,
+      "breadth200_neocloud": 60.0,
+      "breadth200_network": 100.0,
+      "breadth200_power": 33.3,
+      "breadth200_semi": 83.3,
+      "breadth_200_pct": 70.8,
+      "breadth_50_pct": 62.5,
+      "breadth_coverage": 100.0,
+      "cw_b200_od_node": 68.8,
+      "cw_b200_spot_node": 34.11,
       "px_ret90_med": -3.6,
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
       "sd_h200_rental": 3.1
     },
-    "2026-09-08": {
+    "2026-09-09": {
       "breadth200_hyperscaler": 60.0,
       "breadth200_neocloud": 60.0,
       "breadth200_network": 100.0,
@@ -3585,6 +3608,20 @@
       "NVDA": 15.4581,
       "ORCL": 10.9676,
       "VRT": 9.0988
+    },
+    "2026-09-09": {
+      "AMD": 15.4507,
+      "AMZN": 10.4917,
+      "APLD": -0.25,
+      "AVGO": 19.3721,
+      "CRWV": -4.2361,
+      "GOOGL": 14.8643,
+      "META": 33.9462,
+      "MSFT": 23.5733,
+      "NBIS": -5.6486,
+      "NVDA": 15.4581,
+      "ORCL": 10.9676,
+      "VRT": 9.0988
     }
   },
   "events": [
@@ -3756,7 +3793,7 @@
     }
   ],
   "last_summary_date": "2026-09-07",
-  "last_updated": "2026-09-08T18:12:03+09:00",
+  "last_updated": "2026-09-09T10:17:10+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
