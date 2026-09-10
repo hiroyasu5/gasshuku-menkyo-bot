@@ -3433,14 +3433,14 @@
       "breadth200_hyperscaler": 60.0,
       "breadth200_neocloud": 80.0,
       "breadth200_network": 100.0,
-      "breadth200_power": 33.3,
+      "breadth200_power": 0.0,
       "breadth200_semi": 83.3,
-      "breadth_200_pct": 75.0,
-      "breadth_50_pct": 75.0,
+      "breadth_200_pct": 70.8,
+      "breadth_50_pct": 66.7,
       "breadth_coverage": 100.0,
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
-      "px_ret90_med": 5.9,
+      "px_ret90_med": 1.8,
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
       "sd_h200_rental": 3.1
@@ -3827,7 +3827,7 @@
     }
   ],
   "last_summary_date": "2026-09-07",
-  "last_updated": "2026-09-10T10:05:32+09:00",
+  "last_updated": "2026-09-10T18:16:28+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
