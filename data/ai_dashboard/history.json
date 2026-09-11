@@ -3451,16 +3451,16 @@
     },
     "2026-09-11": {
       "breadth200_hyperscaler": 60.0,
-      "breadth200_neocloud": 80.0,
-      "breadth200_network": 100.0,
+      "breadth200_neocloud": 60.0,
+      "breadth200_network": 80.0,
       "breadth200_power": 0.0,
       "breadth200_semi": 83.3,
-      "breadth_200_pct": 70.8,
-      "breadth_50_pct": 66.7,
+      "breadth_200_pct": 62.5,
+      "breadth_50_pct": 58.3,
       "breadth_coverage": 100.0,
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
-      "px_ret90_med": 1.8,
+      "px_ret90_med": -3.7,
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
       "sd_h200_rental": 3.1
@@ -3858,10 +3858,18 @@
       "name": "AI Market Breadth",
       "to": "green",
       "value": "200DMA上 71% / 50DMA上 62%"
+    },
+    {
+      "date": "2026-09-11",
+      "from": "green",
+      "key": "market_breadth",
+      "name": "AI Market Breadth",
+      "to": "yellow",
+      "value": "200DMA上 62% / 50DMA上 58%"
     }
   ],
   "last_summary_date": "2026-09-07",
-  "last_updated": "2026-09-11T10:06:04+09:00",
+  "last_updated": "2026-09-11T18:13:25+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
@@ -3874,7 +3882,7 @@
     "hy_oas": "green",
     "hyperscalers": "green",
     "liquidity": "unknown",
-    "market_breadth": "green",
+    "market_breadth": "yellow",
     "multiple_expansion": "unknown",
     "nbis_commitments": "green",
     "orcl_rpo": "unknown",
