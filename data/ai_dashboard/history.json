@@ -1,12 +1,6 @@
 {
   "composite_level": "green",
   "daily": {
-    "2024-08-23": {
-      "hy_oas_bps": 319.0,
-      "ig_oas_bps": 96.0,
-      "single_b_oas_bps": 292.0,
-      "ust7y_bps": 371.0
-    },
     "2024-08-26": {
       "hy_oas_bps": 315.0,
       "ig_oas_bps": 96.0,
@@ -3478,6 +3472,22 @@
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
       "sd_h200_rental": 3.1
+    },
+    "2026-09-13": {
+      "breadth200_hyperscaler": 80.0,
+      "breadth200_neocloud": 60.0,
+      "breadth200_network": 80.0,
+      "breadth200_power": 0.0,
+      "breadth200_semi": 83.3,
+      "breadth_200_pct": 66.7,
+      "breadth_50_pct": 66.7,
+      "breadth_coverage": 100.0,
+      "cw_b200_od_node": 68.8,
+      "cw_b200_spot_node": 34.11,
+      "px_ret90_med": -4.3,
+      "sd_b200_rental": 5.45,
+      "sd_h100_rental": 2.53,
+      "sd_h200_rental": 3.1
     }
   },
   "estimates": {
@@ -3718,6 +3728,20 @@
       "NVDA": 15.5191,
       "ORCL": 10.9667,
       "VRT": 9.1224
+    },
+    "2026-09-13": {
+      "AMD": 15.6118,
+      "AMZN": 10.4917,
+      "APLD": -0.25,
+      "AVGO": 19.3721,
+      "CRWV": -4.2361,
+      "GOOGL": 14.8641,
+      "META": 33.9428,
+      "MSFT": 23.5733,
+      "NBIS": -5.6486,
+      "NVDA": 15.5191,
+      "ORCL": 10.9667,
+      "VRT": 9.1224
     }
   },
   "events": [
@@ -3905,7 +3929,7 @@
     }
   ],
   "last_summary_date": "2026-09-07",
-  "last_updated": "2026-09-12T17:55:20+09:00",
+  "last_updated": "2026-09-13T10:01:36+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
@@ -3928,6 +3952,7 @@
   },
   "market_level": "green",
   "reminders_sent": {
+    "ORCL-2026-09-14-pre1": "2026-09-13",
     "ORCL-2026-09-14-pre7": "2026-09-07"
   },
   "stage": 1
