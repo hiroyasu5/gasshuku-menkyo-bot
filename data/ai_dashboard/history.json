@@ -1,12 +1,6 @@
 {
   "composite_level": "green",
   "daily": {
-    "2024-08-26": {
-      "hy_oas_bps": 315.0,
-      "ig_oas_bps": 96.0,
-      "single_b_oas_bps": 288.0,
-      "ust7y_bps": 372.0
-    },
     "2024-08-27": {
       "hy_oas_bps": 317.0,
       "ig_oas_bps": 96.0,
@@ -3504,10 +3498,14 @@
       "breadth_coverage": 100.0,
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
+      "hy_oas_bps": 271.0,
+      "ig_oas_bps": 80.0,
       "px_ret90_med": -4.3,
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
-      "sd_h200_rental": 3.1
+      "sd_h200_rental": 3.1,
+      "single_b_oas_bps": 279.0,
+      "ust7y_bps": 488.0
     },
     "2026-09-15": {
       "breadth200_hyperscaler": 80.0,
@@ -3521,6 +3519,25 @@
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
       "px_ret90_med": -7.4,
+      "sd_b200_rental": 5.45,
+      "sd_h100_rental": 2.53,
+      "sd_h200_rental": 3.1
+    },
+    "2026-09-16": {
+      "breadth200_hyperscaler": 80.0,
+      "breadth200_neocloud": 40.0,
+      "breadth200_network": 80.0,
+      "breadth200_power": 0.0,
+      "breadth200_semi": 83.3,
+      "breadth_200_pct": 62.5,
+      "breadth_50_pct": 41.7,
+      "breadth_coverage": 100.0,
+      "cw_b200_od_node": 68.8,
+      "cw_b200_spot_node": 34.11,
+      "px_ret90_med": -7.4,
+      "rev_down_n": 2,
+      "rev_total_n": 12,
+      "rev_up_n": 2,
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
       "sd_h200_rental": 3.1
@@ -3806,6 +3823,20 @@
       "NVDA": 15.5675,
       "ORCL": 11.0212,
       "VRT": 9.1224
+    },
+    "2026-09-16": {
+      "AMD": 15.5105,
+      "AMZN": 10.4935,
+      "APLD": -0.25,
+      "AVGO": 19.3839,
+      "CRWV": -4.2361,
+      "GOOGL": 14.8824,
+      "META": 33.9428,
+      "MSFT": 23.573,
+      "NBIS": -5.6486,
+      "NVDA": 15.5675,
+      "ORCL": 11.0212,
+      "VRT": 9.1224
     }
   },
   "events": [
@@ -3998,10 +4029,18 @@
       "name": "AI Market Breadth",
       "to": "yellow",
       "value": "200DMA上 62% / 50DMA上 42%"
+    },
+    {
+      "date": "2026-09-16",
+      "from": "unknown",
+      "key": "revision_breadth",
+      "name": "EPS Revision Breadth",
+      "to": "yellow",
+      "value": "Net +0% / 上方 2・変化なし 8・下方 2 (12社)"
     }
   ],
   "last_summary_date": "2026-09-14",
-  "last_updated": "2026-09-15T18:40:33+09:00",
+  "last_updated": "2026-09-16T10:27:18+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
@@ -4019,7 +4058,7 @@
     "nbis_commitments": "green",
     "orcl_rpo": "unknown",
     "power_forecast": "unknown",
-    "revision_breadth": "unknown",
+    "revision_breadth": "yellow",
     "spot_ratio": "green"
   },
   "market_level": "green",
