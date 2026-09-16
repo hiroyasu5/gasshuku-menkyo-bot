@@ -3530,11 +3530,11 @@
       "breadth200_power": 0.0,
       "breadth200_semi": 83.3,
       "breadth_200_pct": 62.5,
-      "breadth_50_pct": 41.7,
+      "breadth_50_pct": 37.5,
       "breadth_coverage": 100.0,
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
-      "px_ret90_med": -7.4,
+      "px_ret90_med": -9.4,
       "rev_down_n": 2,
       "rev_total_n": 12,
       "rev_up_n": 2,
@@ -4040,7 +4040,7 @@
     }
   ],
   "last_summary_date": "2026-09-14",
-  "last_updated": "2026-09-16T10:27:18+09:00",
+  "last_updated": "2026-09-16T18:35:54+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
