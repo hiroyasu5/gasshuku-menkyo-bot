@@ -3564,11 +3564,11 @@
       "breadth200_power": 0.0,
       "breadth200_semi": 83.3,
       "breadth_200_pct": 66.7,
-      "breadth_50_pct": 45.8,
+      "breadth_50_pct": 58.3,
       "breadth_coverage": 100.0,
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
-      "px_ret90_med": -12.2,
+      "px_ret90_med": -10.6,
       "rev_down_n": 2,
       "rev_total_n": 12,
       "rev_up_n": 2,
@@ -4099,10 +4099,18 @@
       "name": "EPS Revision Breadth",
       "to": "yellow",
       "value": "Net +0% / 上方 2・変化なし 8・下方 2 (12社)"
+    },
+    {
+      "date": "2026-09-18",
+      "from": "yellow",
+      "key": "market_breadth",
+      "name": "AI Market Breadth",
+      "to": "green",
+      "value": "200DMA上 67% / 50DMA上 58%"
     }
   ],
   "last_summary_date": "2026-09-14",
-  "last_updated": "2026-09-18T10:19:25+09:00",
+  "last_updated": "2026-09-18T18:17:12+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
@@ -4115,7 +4123,7 @@
     "hy_oas": "green",
     "hyperscalers": "green",
     "liquidity": "unknown",
-    "market_breadth": "yellow",
+    "market_breadth": "green",
     "multiple_expansion": "unknown",
     "nbis_commitments": "green",
     "orcl_rpo": "unknown",
