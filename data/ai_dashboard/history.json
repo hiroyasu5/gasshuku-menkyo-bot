@@ -1,12 +1,6 @@
 {
   "composite_level": "green",
   "daily": {
-    "2024-08-29": {
-      "hy_oas_bps": 315.0,
-      "ig_oas_bps": 96.0,
-      "single_b_oas_bps": 289.0,
-      "ust7y_bps": 376.0
-    },
     "2024-08-30": {
       "hy_oas_bps": 313.0,
       "ig_oas_bps": 95.0,
@@ -3549,7 +3543,30 @@
       "breadth_coverage": 100.0,
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
+      "hy_oas_bps": 270.0,
+      "ig_oas_bps": 78.0,
       "px_ret90_med": -12.2,
+      "rev_down_n": 2,
+      "rev_total_n": 12,
+      "rev_up_n": 2,
+      "sd_b200_rental": 5.45,
+      "sd_h100_rental": 2.53,
+      "sd_h200_rental": 3.1,
+      "single_b_oas_bps": 277.0,
+      "ust7y_bps": 486.00000000000006
+    },
+    "2026-09-18": {
+      "breadth200_hyperscaler": 80.0,
+      "breadth200_neocloud": 60.0,
+      "breadth200_network": 80.0,
+      "breadth200_power": 0.0,
+      "breadth200_semi": 83.3,
+      "breadth_200_pct": 66.7,
+      "breadth_50_pct": 58.3,
+      "breadth_coverage": 100.0,
+      "cw_b200_od_node": 68.8,
+      "cw_b200_spot_node": 34.11,
+      "px_ret90_med": -10.6,
       "rev_down_n": 2,
       "rev_total_n": 12,
       "rev_up_n": 2,
@@ -3557,7 +3574,7 @@
       "sd_h100_rental": 2.53,
       "sd_h200_rental": 3.1
     },
-    "2026-09-18": {
+    "2026-09-19": {
       "breadth200_hyperscaler": 80.0,
       "breadth200_neocloud": 60.0,
       "breadth200_network": 80.0,
@@ -3899,6 +3916,20 @@
       "NVDA": 15.5675,
       "ORCL": 11.0212,
       "VRT": 9.1224
+    },
+    "2026-09-19": {
+      "AMD": 15.5105,
+      "AMZN": 10.4935,
+      "APLD": -0.25,
+      "AVGO": 19.3839,
+      "CRWV": -4.2361,
+      "GOOGL": 14.8824,
+      "META": 33.9428,
+      "MSFT": 23.573,
+      "NBIS": -5.6486,
+      "NVDA": 15.5675,
+      "ORCL": 11.0212,
+      "VRT": 9.1224
     }
   },
   "events": [
@@ -4110,7 +4141,7 @@
     }
   ],
   "last_summary_date": "2026-09-14",
-  "last_updated": "2026-09-18T18:17:12+09:00",
+  "last_updated": "2026-09-19T10:12:06+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
