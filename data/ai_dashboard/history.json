@@ -1,11 +1,6 @@
 {
   "composite_level": "green",
   "daily": {
-    "2024-08-31": {
-      "hy_oas_bps": 317.0,
-      "ig_oas_bps": 96.0,
-      "single_b_oas_bps": 300.0
-    },
     "2024-09-02": {
       "hy_oas_bps": 317.0,
       "ig_oas_bps": 96.0,
@@ -3605,6 +3600,25 @@
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
       "sd_h200_rental": 3.1
+    },
+    "2026-09-21": {
+      "breadth200_hyperscaler": 80.0,
+      "breadth200_neocloud": 60.0,
+      "breadth200_network": 80.0,
+      "breadth200_power": 0.0,
+      "breadth200_semi": 83.3,
+      "breadth_200_pct": 66.7,
+      "breadth_50_pct": 62.5,
+      "breadth_coverage": 100.0,
+      "cw_b200_od_node": 68.8,
+      "cw_b200_spot_node": 34.11,
+      "px_ret90_med": -9.0,
+      "rev_down_n": 3,
+      "rev_total_n": 12,
+      "rev_up_n": 3,
+      "sd_b200_rental": 5.45,
+      "sd_h100_rental": 2.53,
+      "sd_h200_rental": 3.1
     }
   },
   "estimates": {
@@ -3957,6 +3971,20 @@
       "NVDA": 15.6826,
       "ORCL": 10.9939,
       "VRT": 9.1224
+    },
+    "2026-09-21": {
+      "AMD": 15.5707,
+      "AMZN": 10.4686,
+      "APLD": -0.2525,
+      "AVGO": 19.3839,
+      "CRWV": -4.2361,
+      "GOOGL": 14.8646,
+      "META": 33.9428,
+      "MSFT": 23.573,
+      "NBIS": -5.6486,
+      "NVDA": 15.6826,
+      "ORCL": 10.9939,
+      "VRT": 9.1224
     }
   },
   "events": [
@@ -4165,10 +4193,18 @@
       "name": "AI Market Breadth",
       "to": "green",
       "value": "200DMA上 67% / 50DMA上 58%"
+    },
+    {
+      "date": "2026-09-21",
+      "from": "unknown",
+      "key": "gpu_price",
+      "name": "GPUレンタル価格 (B200)",
+      "to": "green",
+      "value": "$5.45/GPU-h"
     }
   ],
-  "last_summary_date": "2026-09-14",
-  "last_updated": "2026-09-20T18:31:46+09:00",
+  "last_summary_date": "2026-09-21",
+  "last_updated": "2026-09-21T10:06:12+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
@@ -4177,7 +4213,7 @@
     "crwv_utilization": "unknown",
     "dlr_rent": "green",
     "financing": "green",
-    "gpu_price": "unknown",
+    "gpu_price": "green",
     "hy_oas": "green",
     "hyperscalers": "green",
     "liquidity": "unknown",
