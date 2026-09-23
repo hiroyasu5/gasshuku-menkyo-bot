@@ -1,11 +1,6 @@
 {
   "composite_level": "green",
   "daily": {
-    "2024-09-02": {
-      "hy_oas_bps": 317.0,
-      "ig_oas_bps": 96.0,
-      "single_b_oas_bps": 300.0
-    },
     "2024-09-03": {
       "hy_oas_bps": 331.0,
       "ig_oas_bps": 98.0,
@@ -3616,7 +3611,30 @@
       "breadth_coverage": 100.0,
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
+      "hy_oas_bps": 266.0,
+      "ig_oas_bps": 77.0,
       "px_ret90_med": -9.0,
+      "rev_down_n": 3,
+      "rev_total_n": 12,
+      "rev_up_n": 3,
+      "sd_b200_rental": 5.45,
+      "sd_h100_rental": 2.53,
+      "sd_h200_rental": 3.1,
+      "single_b_oas_bps": 270.0,
+      "ust7y_bps": 488.99999999999994
+    },
+    "2026-09-22": {
+      "breadth200_hyperscaler": 80.0,
+      "breadth200_neocloud": 60.0,
+      "breadth200_network": 80.0,
+      "breadth200_power": 0.0,
+      "breadth200_semi": 83.3,
+      "breadth_200_pct": 66.7,
+      "breadth_50_pct": 75.0,
+      "breadth_coverage": 100.0,
+      "cw_b200_od_node": 68.8,
+      "cw_b200_spot_node": 34.11,
+      "px_ret90_med": -1.0,
       "rev_down_n": 3,
       "rev_total_n": 12,
       "rev_up_n": 3,
@@ -3624,7 +3642,7 @@
       "sd_h100_rental": 2.53,
       "sd_h200_rental": 3.1
     },
-    "2026-09-22": {
+    "2026-09-23": {
       "breadth200_hyperscaler": 80.0,
       "breadth200_neocloud": 60.0,
       "breadth200_network": 80.0,
@@ -4022,6 +4040,20 @@
       "NVDA": 15.6826,
       "ORCL": 10.9972,
       "VRT": 9.1224
+    },
+    "2026-09-23": {
+      "AMD": 15.5707,
+      "AMZN": 10.4686,
+      "APLD": -0.2525,
+      "AVGO": 19.3839,
+      "CRWV": -4.2572,
+      "GOOGL": 14.9061,
+      "META": 33.9428,
+      "MSFT": 23.573,
+      "NBIS": -5.6486,
+      "NVDA": 15.6826,
+      "ORCL": 10.9972,
+      "VRT": 9.1224
     }
   },
   "events": [
@@ -4241,7 +4273,7 @@
     }
   ],
   "last_summary_date": "2026-09-21",
-  "last_updated": "2026-09-22T18:32:57+09:00",
+  "last_updated": "2026-09-23T10:32:12+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
