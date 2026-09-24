@@ -3660,17 +3660,17 @@
       "sd_h200_rental": 3.1
     },
     "2026-09-24": {
-      "breadth200_hyperscaler": 80.0,
+      "breadth200_hyperscaler": 60.0,
       "breadth200_neocloud": 60.0,
       "breadth200_network": 80.0,
       "breadth200_power": 0.0,
       "breadth200_semi": 83.3,
-      "breadth_200_pct": 66.7,
-      "breadth_50_pct": 70.8,
+      "breadth_200_pct": 62.5,
+      "breadth_50_pct": 58.3,
       "breadth_coverage": 100.0,
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
-      "px_ret90_med": -1.4,
+      "px_ret90_med": -3.4,
       "rev_down_n": 3,
       "rev_total_n": 12,
       "rev_up_n": 3,
@@ -4071,6 +4071,20 @@
       "NVDA": 15.6826,
       "ORCL": 10.9972,
       "VRT": 9.1224
+    },
+    "2026-09-24": {
+      "AMD": 15.5707,
+      "AMZN": 10.4686,
+      "APLD": -0.2525,
+      "AVGO": 19.3839,
+      "CRWV": -4.2572,
+      "GOOGL": 14.9061,
+      "META": 33.9428,
+      "MSFT": 23.573,
+      "NBIS": -5.6486,
+      "NVDA": 15.6826,
+      "ORCL": 10.9972,
+      "VRT": 9.1224
     }
   },
   "events": [
@@ -4287,10 +4301,18 @@
       "name": "GPUレンタル価格 (B200)",
       "to": "green",
       "value": "$5.45/GPU-h"
+    },
+    {
+      "date": "2026-09-24",
+      "from": "green",
+      "key": "market_breadth",
+      "name": "AI Market Breadth",
+      "to": "yellow",
+      "value": "200DMA上 62% / 50DMA上 58%"
     }
   ],
   "last_summary_date": "2026-09-21",
-  "last_updated": "2026-09-24T10:25:18+09:00",
+  "last_updated": "2026-09-24T18:37:35+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
@@ -4303,7 +4325,7 @@
     "hy_oas": "green",
     "hyperscalers": "green",
     "liquidity": "unknown",
-    "market_breadth": "green",
+    "market_breadth": "yellow",
     "multiple_expansion": "unknown",
     "nbis_commitments": "green",
     "orcl_rpo": "unknown",
