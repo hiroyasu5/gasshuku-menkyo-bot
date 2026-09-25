@@ -3677,17 +3677,17 @@
       "sd_h200_rental": 3.1
     },
     "2026-09-25": {
-      "breadth200_hyperscaler": 60.0,
+      "breadth200_hyperscaler": 80.0,
       "breadth200_neocloud": 60.0,
       "breadth200_network": 80.0,
       "breadth200_power": 0.0,
       "breadth200_semi": 83.3,
-      "breadth_200_pct": 62.5,
-      "breadth_50_pct": 58.3,
+      "breadth_200_pct": 66.7,
+      "breadth_50_pct": 54.2,
       "breadth_coverage": 100.0,
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
-      "px_ret90_med": -3.4,
+      "px_ret90_med": 1.4,
       "rev_down_n": 3,
       "rev_total_n": 12,
       "rev_up_n": 3,
@@ -4343,7 +4343,7 @@
     }
   ],
   "last_summary_date": "2026-09-21",
-  "last_updated": "2026-09-25T10:31:00+09:00",
+  "last_updated": "2026-09-25T18:53:12+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
