@@ -3724,6 +3724,25 @@
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
       "sd_h200_rental": 3.1
+    },
+    "2026-09-28": {
+      "breadth200_hyperscaler": 80.0,
+      "breadth200_neocloud": 40.0,
+      "breadth200_network": 80.0,
+      "breadth200_power": 0.0,
+      "breadth200_semi": 83.3,
+      "breadth_200_pct": 62.5,
+      "breadth_50_pct": 54.2,
+      "breadth_coverage": 100.0,
+      "cw_b200_od_node": 68.8,
+      "cw_b200_spot_node": 34.11,
+      "px_ret90_med": 0.3,
+      "rev_down_n": 3,
+      "rev_total_n": 12,
+      "rev_up_n": 5,
+      "sd_b200_rental": 5.45,
+      "sd_h100_rental": 2.53,
+      "sd_h200_rental": 3.1
     }
   },
   "estimates": {
@@ -4174,6 +4193,20 @@
       "NVDA": 15.6826,
       "ORCL": 10.9972,
       "VRT": 9.1224
+    },
+    "2026-09-28": {
+      "AMD": 15.5707,
+      "AMZN": 10.4849,
+      "APLD": -0.4835,
+      "AVGO": 19.3814,
+      "CRWV": -4.1487,
+      "GOOGL": 14.9221,
+      "META": 34.0198,
+      "MSFT": 23.6759,
+      "NBIS": -5.6486,
+      "NVDA": 15.6826,
+      "ORCL": 10.9972,
+      "VRT": 9.1224
     }
   },
   "events": [
@@ -4400,8 +4433,8 @@
       "value": "200DMA上 62% / 50DMA上 58%"
     }
   ],
-  "last_summary_date": "2026-09-21",
-  "last_updated": "2026-09-27T19:17:04+09:00",
+  "last_summary_date": "2026-09-28",
+  "last_updated": "2026-09-28T10:41:19+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
