@@ -3760,9 +3760,9 @@
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
       "px_ret90_med": -5.8,
-      "rev_down_n": 1,
-      "rev_total_n": 6,
-      "rev_up_n": 3,
+      "rev_down_n": 3,
+      "rev_total_n": 11,
+      "rev_up_n": 5,
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
       "sd_h200_rental": 3.1
@@ -4234,10 +4234,15 @@
     "2026-09-29": {
       "AMD": 15.5783,
       "AMZN": 10.5028,
+      "APLD": -0.4835,
       "AVGO": 19.3814,
       "GOOGL": 14.9221,
+      "META": 34.0317,
       "MSFT": 23.6759,
-      "NVDA": 15.6826
+      "NBIS": -5.2292,
+      "NVDA": 15.6826,
+      "ORCL": 10.9972,
+      "VRT": 9.1612
     }
   },
   "events": [
@@ -4470,10 +4475,18 @@
       "name": "EPS Revision Breadth",
       "to": "green",
       "value": "Net +33% / 上方 3・変化なし 2・下方 1 (6社)"
+    },
+    {
+      "date": "2026-09-29",
+      "from": "green",
+      "key": "revision_breadth",
+      "name": "EPS Revision Breadth",
+      "to": "yellow",
+      "value": "Net +18% / 上方 5・変化なし 3・下方 3 (11社)"
     }
   ],
   "last_summary_date": "2026-09-28",
-  "last_updated": "2026-09-29T11:37:25+09:00",
+  "last_updated": "2026-09-29T20:01:26+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
@@ -4491,7 +4504,7 @@
     "nbis_commitments": "green",
     "orcl_rpo": "unknown",
     "power_forecast": "unknown",
-    "revision_breadth": "green",
+    "revision_breadth": "yellow",
     "spot_ratio": "green"
   },
   "market_level": "green",
