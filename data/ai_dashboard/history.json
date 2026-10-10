@@ -1,12 +1,6 @@
 {
   "composite_level": "green",
   "daily": {
-    "2024-09-19": {
-      "hy_oas_bps": 310.0,
-      "ig_oas_bps": 93.0,
-      "single_b_oas_bps": 302.0,
-      "ust7y_bps": 360.0
-    },
     "2024-09-20": {
       "hy_oas_bps": 315.0,
       "ig_oas_bps": 93.0,
@@ -3914,13 +3908,17 @@
       "breadth_coverage": 100.0,
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
+      "hy_oas_bps": 315.0,
+      "ig_oas_bps": 82.0,
       "px_ret90_med": 2.4,
       "rev_down_n": 2,
       "rev_total_n": 12,
       "rev_up_n": 4,
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
-      "sd_h200_rental": 3.1
+      "sd_h200_rental": 3.1,
+      "single_b_oas_bps": 315.0,
+      "ust7y_bps": 511.00000000000006
     },
     "2026-10-09": {
       "breadth200_hyperscaler": 80.0,
@@ -3934,6 +3932,25 @@
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
       "px_ret90_med": -1.2,
+      "rev_down_n": 2,
+      "rev_total_n": 12,
+      "rev_up_n": 4,
+      "sd_b200_rental": 5.45,
+      "sd_h100_rental": 2.53,
+      "sd_h200_rental": 3.1
+    },
+    "2026-10-10": {
+      "breadth200_hyperscaler": 80.0,
+      "breadth200_neocloud": 40.0,
+      "breadth200_network": 80.0,
+      "breadth200_power": 66.7,
+      "breadth200_semi": 83.3,
+      "breadth_200_pct": 70.8,
+      "breadth_50_pct": 58.3,
+      "breadth_coverage": 100.0,
+      "cw_b200_od_node": 68.8,
+      "cw_b200_spot_node": 34.11,
+      "px_ret90_med": 0.6,
       "rev_down_n": 2,
       "rev_total_n": 12,
       "rev_up_n": 4,
@@ -4557,6 +4574,20 @@
       "NVDA": 15.6951,
       "ORCL": 10.9972,
       "VRT": 9.1743
+    },
+    "2026-10-10": {
+      "AMD": 15.5833,
+      "AMZN": 10.5149,
+      "APLD": -0.4835,
+      "AVGO": 19.3938,
+      "CRWV": -4.3252,
+      "GOOGL": 14.9494,
+      "META": 34.0681,
+      "MSFT": 23.6759,
+      "NBIS": -5.6426,
+      "NVDA": 15.6951,
+      "ORCL": 10.9972,
+      "VRT": 9.1743
     }
   },
   "events": [
@@ -4840,7 +4871,7 @@
     }
   ],
   "last_summary_date": "2026-10-05",
-  "last_updated": "2026-10-09T20:34:50+09:00",
+  "last_updated": "2026-10-10T11:21:30+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
